@@ -185,7 +185,32 @@
       touch-action: manipulation
     }
 
-    /* ==========================================================================
+    
+  /* Desktop Viewport Alignment & Overflow Clipping Protection */
+  #elevex-home {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .ex-wrap {
+    width: 100%;
+    max-width: var(--wrap);
+    margin-inline: auto;
+    padding-inline: var(--pad);
+    box-sizing: border-box;
+  }
+
+  .ex-sec {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  :where(#elevex-home) * {
+    max-width: 100%;
+  }
+
+/* ==========================================================================
    2 · PRIMITIVES
    ========================================================================== */
     .ex-wrap {
@@ -1685,12 +1710,24 @@
       flex: 1;
       display: flex;
       align-items: center;
-      padding-block: clamp(30px, 4vw, 56px)
+      padding-block: clamp(30px, 4vw, 56px);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    @media(min-width:1040px) {
+      .ex-hero__inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        align-items: center;
+        gap: clamp(24px, 3vw, 48px);
+      }
     }
 
     .ex-hero__copy {
       max-width: min(100%, 640px);
-      width: 100%
+      width: 100%;
+      box-sizing: border-box;
     }
 
     @media(max-width:1039px) {
@@ -2103,16 +2140,24 @@
 
     /* Interactive Machine Stage & Telemetry Hotspots */
     .ex-hero__stage {
-      position: absolute;
-      right: clamp(1%, 3vw, 5%);
-      bottom: 88px;
+      position: relative;
       z-index: 2;
-      height: min(76%, 620px);
-      width: min(48vw, 620px);
+      width: 100%;
+      max-width: 580px;
+      margin-inline: auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      perspective: 1000px
+      perspective: 1000px;
+      box-sizing: border-box;
+    }
+
+    @media(min-width:1040px) {
+      .ex-hero__stage {
+        height: auto;
+        min-height: 480px;
+        max-height: 580px;
+      }
     }
 
     @media(max-width:1039px) {
