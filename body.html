@@ -1561,21 +1561,7 @@
     opacity: 1
   }
 
-  .ex-hero__tab-bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2.5px;
-    width: 100%;
-    background: var(--ink);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 5s linear
-  }
 
-  .ex-hero__tab.ex-active .ex-hero__tab-bar {
-    transform: scaleX(1)
-  }
 
   .ex-hero__hint {
     display: inline-flex;
@@ -5141,13 +5127,13 @@
 
           <div class="ex-hero__tabs" id="exHeroTabs" data-rv="down" style="--d:100ms">
             <button class="ex-hero__tab ex-active" type="button" data-hero-eq="0"><i class="bi bi-ev-front"></i>
-              Scissor 14m <i class="ex-hero__tab-bar"></i></button>
+              Scissor 14m</button>
             <button class="ex-hero__tab" type="button" data-hero-eq="1"><i class="bi bi-arrows-expand"></i> Boom 22m
-              <i class="ex-hero__tab-bar"></i></button>
+             </button>
             <button class="ex-hero__tab" type="button" data-hero-eq="2"><i class="bi bi-truck-front"></i> Terrain 4WD
-              <i class="ex-hero__tab-bar"></i></button>
+             </button>
             <button class="ex-hero__tab" type="button" data-hero-eq="3"><i class="bi bi-arrow-up-circle"></i> Mast
-              Lift <i class="ex-hero__tab-bar"></i></button>
+              Lift</button>
           </div>
 
           <h1 data-split="lines">
@@ -5385,39 +5371,37 @@
       </div>
     </section>
 
-    <!-- ══════════════════════════ WHY / BENTO ══════════════════════════ -->
+        <!-- ══════════════════════════ WHY / BENTO ══════════════════════════ -->
     <section class="ex-sec ex-dark ex-noise" id="why" data-spotlight style="overflow:hidden">
       <span class="ex-gridlines" style="opacity:.6"></span>
       <div class="ex-wrap" style="position:relative;z-index:2">
 
         <div class="ex-sec-head">
           <div>
-            <span class="ex-eyebrow" data-rv="up">Why Elevex</span>
+            <span class="ex-eyebrow" data-rv="up">Why Elevex Access</span>
             <h2 class="ex-h2" data-split="lines" style="margin-top:20px">
-              <span class="ex-line"><span>Built for sites that</span></span>
-              <span class="ex-line"><span><em class="ex-outline-txt" style="font-style:normal">can't afford</em>
-                  downtime.</span></span>
+              <span class="ex-line"><span>Engineered for zero fumes.</span></span>
+              <span class="ex-line"><span><em class="ex-outline-txt" style="font-style:normal">Built for zero</em> downtime.</span></span>
             </h2>
           </div>
           <div data-rv="up" style="--d:180ms">
-            <p class="ex-lead" style="max-width:440px">
-              Diesel lifts cost you ventilation, permits, noise complaints and fuel logistics.
-              Ours cost you a wall socket.
+            <p class="ex-lead" style="max-width:460px">
+              Traditional diesel lifts cost you ventilation ducts, noise complaints, site permits, and fuel logistics.
+              ELEVEX electric platforms give you 100% duty cycle with a standard wall socket.
             </p>
           </div>
         </div>
 
         <div class="ex-bento">
-          <!-- A · impact -->
+          <!-- 01 · Impact & Emission Control -->
           <div class="ex-cell ex-cell--a ex-shine" data-spot data-live data-tilt data-tilt-max="4" data-rv="rise">
             <span class="ex-cell__idx">01</span>
             <div>
-              <span class="ex-cell__ico"><i class="bi bi-cloud-check"></i></span>
-              <h3 style="margin-top:22px">Nothing comes out of the exhaust, because there isn't one.</h3>
-              <p style="margin-top:10px;max-width:340px">Measured across the 2025 rental year against the diesel
-                equivalent of every machine we put on site.</p>
+              <span class="ex-cell__ico"><i class="bi bi-cloud-haze2-fill"></i></span>
+              <h3 style="margin-top:22px">100% Zero Emissions — Cleanroom &amp; Indoor Rated</h3>
+              <p style="margin-top:10px;max-width:360px">Operate safely inside live pharmaceutical plants, data centres, airports, and food processing facilities with zero tailpipe fumes.</p>
             </div>
-            <div>
+            <div style="margin-top:24px">
               <p class="ex-kicker" style="margin-bottom:12px">CO₂ avoided vs. an equivalent diesel fleet</p>
               <div class="ex-cell__big"><span data-count="412" data-dur="2200">0</span><u> t / yr</u></div>
               <div class="ex-cell__bars" data-bars>
@@ -5429,12 +5413,11 @@
             </div>
           </div>
 
-          <!-- B · diesel vs electric -->
-          <div class="ex-cell ex-cell--b" data-spot data-live data-tilt data-tilt-max="3" data-rv="rise"
-            style="--d:90ms">
+          <!-- 02 · Acoustic & Noise Benchmark -->
+          <div class="ex-cell ex-cell--b" data-spot data-live data-tilt data-tilt-max="3" data-rv="rise" style="--d:90ms">
             <span class="ex-cell__idx">02</span>
-            <span class="ex-cell__ico"><i class="bi bi-bar-chart-line"></i></span>
-            <h3 style="margin-top:20px">The same shift, on two different machines</h3>
+            <span class="ex-cell__ico"><i class="bi bi-volume-mute-fill"></i></span>
+            <h3 style="margin-top:20px">The same 8-hour shift. Two completely different environments.</h3>
 
             <div class="ex-vs">
               <div class="ex-vs__legend">
@@ -5443,47 +5426,38 @@
               </div>
 
               <div class="ex-vs__row">
-                <span class="ex-vs__lbl">Noise at 10 m</span>
+                <span class="ex-vs__lbl">Acoustic Noise at 10 m</span>
                 <div class="ex-vs__pair">
-                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d"
-                        style="--fill:1;--d:120ms"></i></span><b class="ex-vs__val">96 dB</b></div>
-                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e"
-                        style="--fill:.646;--d:260ms"></i></span><b class="ex-vs__val ex-vs__val--e">62 dB</b></div>
+                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d" style="--fill:1;--d:120ms"></i></span><b class="ex-vs__val">96 dB</b></div>
+                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e" style="--fill:.646;--d:260ms"></i></span><b class="ex-vs__val ex-vs__val--e">62 dB (Whisper)</b></div>
                 </div>
               </div>
 
               <div class="ex-vs__row">
-                <span class="ex-vs__lbl">Tailpipe CO₂ per 8-hour shift</span>
+                <span class="ex-vs__lbl">Tailpipe CO₂ per Shift</span>
                 <div class="ex-vs__pair">
-                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d"
-                        style="--fill:1;--d:320ms"></i></span><b class="ex-vs__val">58 kg</b></div>
-                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e"
-                        style="--fill:.015;--d:460ms"></i></span><b class="ex-vs__val ex-vs__val--e">0 kg</b></div>
+                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d" style="--fill:1;--d:320ms"></i></span><b class="ex-vs__val">58 kg</b></div>
+                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e" style="--fill:.015;--d:460ms"></i></span><b class="ex-vs__val ex-vs__val--e">0 kg (Zero)</b></div>
                 </div>
               </div>
 
               <div class="ex-vs__row">
-                <span class="ex-vs__lbl">Indoor ventilation clearance</span>
+                <span class="ex-vs__lbl">Indoor Air Clearance</span>
                 <div class="ex-vs__pair">
-                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d"
-                        style="--fill:1;--d:520ms"></i></span><b class="ex-vs__val">5 days</b></div>
-                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e"
-                        style="--fill:.015;--d:660ms"></i></span><b class="ex-vs__val ex-vs__val--e">None</b></div>
+                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d" style="--fill:1;--d:520ms"></i></span><b class="ex-vs__val">5 days</b></div>
+                  <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e" style="--fill:.015;--d:660ms"></i></span><b class="ex-vs__val ex-vs__val--e">Instant</b></div>
                 </div>
               </div>
 
-              <p class="ex-vs__foot">Diesel figures are the class-average for an equivalent-reach machine. Electric
-                noise and emission figures are measured on our own fleet.</p>
+              <p class="ex-vs__foot">Diesel benchmark metrics based on industry averages for equivalent reach machines. ELEVEX metrics measured directly on active fleet units.</p>
             </div>
           </div>
 
-          <!-- C · coverage map -->
-          <div class="ex-cell ex-cell--c ex-cell--map" data-spot data-live data-tilt data-tilt-max="3" data-rv="rise"
-            style="--d:150ms">
+          <!-- 03 · Pan-India Coverage -->
+          <div class="ex-cell ex-cell--c ex-cell--map" data-spot data-live data-tilt data-tilt-max="3" data-rv="rise" style="--d:150ms">
             <div class="ex-map" data-map>
               <svg viewBox="0 0 200 240" aria-hidden="true">
-                <path class="ex-map__path"
-                  d="M72,10 L78,24 L88,34 L100,40 L112,46 L124,50 L136,52 L144,56 L156,52 L168,48 L178,54 L182,64 L172,70 L160,66 L150,64 L144,72 L140,84 L132,90 L126,104 L120,116 L114,132 L108,150 L104,166 L100,182 L96,196 L92,206 L86,190 L80,172 L74,156 L66,140 L58,124 L50,112 L42,106 L32,104 L28,96 L36,92 L46,94 L52,86 L44,74 L40,62 L48,52 L58,44 L60,32 L66,20 Z" />
+                <path class="ex-map__path" d="M72,10 L78,24 L88,34 L100,40 L112,46 L124,50 L136,52 L144,56 L156,52 L168,48 L178,54 L182,64 L172,70 L160,66 L150,64 L144,72 L140,84 L132,90 L126,104 L120,116 L114,132 L108,150 L104,166 L100,182 L96,196 L92,206 L86,190 L80,172 L74,156 L66,140 L58,124 L50,112 L42,106 L32,104 L28,96 L36,92 L46,94 L52,86 L44,74 L40,62 L48,52 L58,44 L60,32 L66,20 Z" />
                 <g class="ex-map__pins">
                   <circle class="ex-map__ring" cx="72" cy="52" r="2" style="animation-delay:0.0s" />
                   <circle class="ex-map__dot" cx="72" cy="52" r="2.4" style="animation-delay:0.0s" />
@@ -5506,9 +5480,8 @@
             </div>
             <div class="ex-map__cap">
               <span class="ex-cell__idx" style="position:static;display:block;margin-bottom:12px">03</span>
-              <h3>25 cities. One number.</h3>
-              <p style="margin-top:8px;max-width:300px">Owned transport out of 7 regional hubs — no third-party
-                handoffs, no surprise freight bills.</p>
+              <h3>25 Cities. 7 Regional Hubs.</h3>
+              <p style="margin-top:8px;max-width:320px">Company-owned flatbed trucks &amp; dedicated transport crews — guaranteed delivery without middleman delays.</p>
               <div class="ex-map__hubs" data-stagger style="--sd:60ms">
                 <span>Mumbai</span><span>Pune</span><span>Delhi NCR</span><span>Ahmedabad</span>
                 <span>Bengaluru</span><span>Chennai</span><span>Hyderabad</span>
@@ -5516,55 +5489,46 @@
             </div>
           </div>
 
-          <!-- D · noise -->
-          <div class="ex-cell ex-cell--d" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
-            style="--d:210ms">
+          <!-- 04 · Noise Clearance -->
+          <div class="ex-cell ex-cell--d" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise" style="--d:210ms">
             <span class="ex-cell__idx">04</span>
-            <span class="ex-cell__ico"><i class="bi bi-volume-mute"></i></span>
+            <span class="ex-cell__ico"><i class="bi bi-moon-stars-fill"></i></span>
             <div class="ex-cell__fig" style="margin-top:20px"><span data-count="62">0</span><u> dB</u></div>
-            <h3 style="margin-top:6px">Work while they sleep</h3>
-            <p>Clears night-work noise limits in every metro — so hospital, hotel and retail jobs don't wait for a
-              shutdown window.</p>
+            <h3 style="margin-top:6px">Work While They Sleep</h3>
+            <p>Passes 24/7 acoustic noise limits in metro zones so retail, hotel, and hospital fit-outs run overnight without shutdowns.</p>
           </div>
 
-          <!-- E · lead time -->
-          <div class="ex-cell ex-cell--e" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
-            style="--d:270ms">
+          <!-- 05 · Lead Time -->
+          <div class="ex-cell ex-cell--e" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise" style="--d:270ms">
             <span class="ex-cell__idx">05</span>
-            <span class="ex-cell__ico"><i class="bi bi-stopwatch"></i></span>
+            <span class="ex-cell__ico"><i class="bi bi-clock-history"></i></span>
             <div class="ex-cell__fig" style="margin-top:20px"><span data-count="48">0</span><u> hrs</u></div>
-            <h3 style="margin-top:6px">Quote to slab</h3>
-            <p>Median time from a signed quote to the machine standing on your floor, anywhere we cover.</p>
+            <h3 style="margin-top:6px">Quote to Slab Delivery</h3>
+            <p>Pan-India 48-hour delivery commitment from signed quote to machine standing charged on your job site floor.</p>
           </div>
 
-          <!-- F · inspection -->
-          <div class="ex-cell ex-cell--f" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
-            style="--d:330ms">
+          <!-- 06 · Certified PDI -->
+          <div class="ex-cell ex-cell--f" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise" style="--d:330ms">
             <span class="ex-cell__idx">06</span>
             <span class="ex-cell__ico"><i class="bi bi-shield-check"></i></span>
-            <h3>Inspected before it ships</h3>
-            <p>A 42-point PDI covers battery health, hydraulic seals, guard-rail integrity and a full-load function
-              test. The signed sheet travels with the machine.</p>
+            <h3>100% Certified PDI Pre-Delivery</h3>
+            <p>Every unit undergoes a 42-point safety check including battery health, hydraulic seals, and load test before dispatch.</p>
           </div>
 
-          <!-- G · operators -->
-          <div class="ex-cell ex-cell--g" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
-            style="--d:390ms">
+          <!-- 07 · Certified Operators -->
+          <div class="ex-cell ex-cell--g" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise" style="--d:390ms">
             <span class="ex-cell__idx">07</span>
-            <span class="ex-cell__ico"><i class="bi bi-person-badge"></i></span>
-            <h3>Certified operators on request</h3>
-            <p>IPAF-trained operators and on-site familiarisation for your crew, bundled into the rental rather than
-              billed after it.</p>
+            <span class="ex-cell__ico"><i class="bi bi-person-badge-fill"></i></span>
+            <h3>Certified Operators Available</h3>
+            <p>IPAF-certified operators and hands-on safety orientation for your site crew, bundled transparently into your quote.</p>
           </div>
 
-          <!-- H · support -->
-          <div class="ex-cell ex-cell--h" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
-            style="--d:450ms">
+          <!-- 08 · 24/7 Breakdown Warranty -->
+          <div class="ex-cell ex-cell--h" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise" style="--d:450ms">
             <span class="ex-cell__idx">08</span>
             <span class="ex-cell__ico"><i class="bi bi-headset"></i></span>
-            <h3>24/7 breakdown cover</h3>
-            <p>Four-hour response in metros, and a swap unit dispatched if it can't be closed out on site. No billing
-              for the gap.</p>
+            <h3>Direct Company Ownership &amp; 24/7 Cover</h3>
+            <p>Zero sub-renting. Direct 4-hour technician response in major metros with instant swap-out unit guarantee if required.</p>
           </div>
         </div>
       </div>
