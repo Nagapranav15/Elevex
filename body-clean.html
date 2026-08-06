@@ -1,0 +1,1007 @@
+  <div id="elevex-home">
+    <!-- ══════════════════════════ PRELOADER ══════════════════════════ -->
+    <div class="ex-loader" id="exLoader" aria-hidden="true">
+      <div class="ex-loader__sheets"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="ex-loader__inner">
+        <div class="ex-loader__mark">ELEVE<b>X</b></div>
+        <div class="ex-loader__bar"><i id="exLoadBar"></i></div>
+        <div class="ex-loader__num"><span id="exLoadNum">0</span>% &nbsp;·&nbsp; PREPARING THE LIFT</div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════ CURSOR + PROGRESS ══════════════════════ -->
+    <div class="ex-progress" id="exProgress" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════ HEADER ══════════════════════════ -->
+    <header class="ex-header" id="exHeader">
+      <div class="ex-nav">
+        <a href="#home" class="ex-logo" aria-label="ELEVEX Rentals — home">
+          <span class="ex-logo__plate"><img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white.png"
+              alt="ELEVEX Rentals" width="2560" height="768" /></span>
+        </a>
+
+        <nav class="ex-navlinks" id="exNavLinks" aria-label="Primary">
+          <span class="ex-navpill" id="exNavPill" aria-hidden="true"></span>
+          <a class="ex-navlink ex-active" href="#home" data-spy="home"><i class="bi bi-house-door"></i>Home</a>
+          <a class="ex-navlink" href="about.html"><i class="bi bi-info-circle"></i>About</a>
+          <a class="ex-navlink" href="fleet.html"><i class="bi bi-truck-front"></i>Fleet</a>
+          <a class="ex-navlink" href="testimonials.html"><i class="bi bi-star"></i>Reviews</a>
+          <a class="ex-navlink" href="contact.html"><i class="bi bi-telephone"></i>Contact</a>
+        </nav>
+
+        <div class="ex-navcta">
+          <a href="tel:+917028096111" class="ex-navphone"><i class="bi bi-telephone-fill"></i>+91 70280 96111</a>
+          <a href="#quote" class="ex-btn ex-btn--brand ex-navquote">Get a quote <i class="bi bi-arrow-up-right"></i></a>
+          <button class="ex-burger" id="exBurger" aria-label="Open menu" aria-expanded="false"
+            aria-controls="exMenu"><i></i><i></i><i></i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════ FULLSCREEN MENU ══════════════════════ -->
+    <div class="ex-menu" id="exMenu" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="ex-menu__grid">
+        <ul class="ex-menu__list" id="exMenuList">
+          <li><a class="ex-menu__link" href="index-new.html#home"><em>01</em>Home</a></li>
+          <li><a class="ex-menu__link" href="about.html"><em>02</em>About Us</a></li>
+          <li><a class="ex-menu__link" href="fleet.html"><em>03</em>Equipment Fleet</a></li>
+          <li><a class="ex-menu__link" href="testimonials.html"><em>04</em>Client Reviews</a></li>
+          <li><a class="ex-menu__link" href="contact.html"><em>05</em>Contact &amp; Hubs</a></li>
+          <li><a class="ex-menu__link" href="index-new.html#quote"><em>06</em>Get a Quote</a></li>
+        </ul>
+
+        <div class="ex-menu__side">
+          <div class="ex-menu__card">
+            <p class="ex-kicker" style="color:rgba(255,255,255,.4)">Rental desk · Mon–Sat, 8am–8pm</p>
+            <a href="tel:+917028096111" class="ex-display"
+              style="display:block;margin-top:12px;font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-.02em">+91
+              70280 96111</a>
+            <a href="mailto:hello@elevex.co.in"
+              style="display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--brand)">hello@elevex.co.in</a>
+          </div>
+          <div class="ex-menu__card">
+            <p class="ex-kicker" style="color:rgba(255,255,255,.4)">Fleet status</p>
+            <p style="margin-top:12px;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.6);font-weight:500">
+              <span class="ex-live"><i></i></span> 68 machines available across 25 cities · next-day dispatch on most
+              SKUs.
+            </p>
+          </div>
+          <div class="ex-menu__socials">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://wa.me/917028096111" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+
+      <!-- ══════════════════════════ HERO ══════════════════════════ -->
+      <section class="ex-hero ex-dark" id="home">
+        <div class="ex-hero__media">
+          <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main.png" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="ex-wrap ex-hero__inner">
+          <div class="ex-hero__copy" id="exHeroCopy">
+
+            <!-- Live status & interactive equipment category tabs -->
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:14px" data-rv="down">
+              <span class="ex-eyebrow-hero"><span></span>India's Pioneer in Electric Aerial Access</span>
+            </div>
+
+            <div class="ex-hero__tabs" id="exHeroTabs" data-rv="down" style="--d:100ms">
+              <button class="ex-hero__tab ex-active" type="button" data-hero-eq="0"><i class="bi bi-ev-front"></i>
+                Scissor 14m <i class="ex-hero__tab-bar"></i></button>
+              <button class="ex-hero__tab" type="button" data-hero-eq="1"><i class="bi bi-arrows-expand"></i> Boom 22m
+                <i class="ex-hero__tab-bar"></i></button>
+              <button class="ex-hero__tab" type="button" data-hero-eq="2"><i class="bi bi-truck-front"></i> Terrain 4WD
+                <i class="ex-hero__tab-bar"></i></button>
+              <button class="ex-hero__tab" type="button" data-hero-eq="3"><i class="bi bi-arrow-up-circle"></i> Mast
+                Lift <i class="ex-hero__tab-bar"></i></button>
+            </div>
+
+            <h1 data-split="lines">
+              <span class="ex-line"><span>The quiet</span></span>
+              <span class="ex-line"><span>way <em>up.</em></span></span>
+            </h1>
+
+            <p class="ex-hero__sub" data-rv="up" style="--d:240ms">
+              All-electric scissor, boom and rough-terrain platforms — <b>no fumes, no permits,
+                no 3 a.m. noise complaints.</b> On your site within 48 hours, anywhere in India.
+            </p>
+
+            <div class="ex-hero__acts" data-rv="up" style="--d:380ms">
+              <a href="#equipment" class="ex-btn ex-btn--brand">Explore the fleet <i
+                  class="bi bi-arrow-up-right"></i></a>
+              <a href="#quote" class="ex-btn ex-btn--ghost">Get a quote <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+
+            <!-- Interactive Action Cards (Mirroring Industries Section) -->
+            <div class="ex-hero__cards" data-rv="up" style="--d:450ms">
+              <div class="ex-hcard" data-spot data-tilt data-tilt-max="6">
+                <div class="ex-hcard__top">
+                  <span class="ex-hcard__ico"><i class="bi bi-lightning-charge-fill"></i></span>
+                  <span class="ex-kicker" style="color:var(--brand)">01</span>
+                </div>
+                <h4>100% Electric</h4>
+                <p>Sealed cleanrooms &amp; indoor fit-outs with zero exhaust fumes or ventilation overhead.</p>
+                <span class="ex-hcard__bar"></span>
+              </div>
+
+              <div class="ex-hcard" data-spot data-tilt data-tilt-max="6">
+                <div class="ex-hcard__top">
+                  <span class="ex-hcard__ico"><i class="bi bi-truck-flatbed"></i></span>
+                  <span class="ex-kicker" style="color:var(--brand)">02</span>
+                </div>
+                <h4>48h Pan-India</h4>
+                <p>Dispatched fully charged from 7 hubs with certified PDI sheet to your jobsite.</p>
+                <span class="ex-hcard__bar"></span>
+              </div>
+
+              <div class="ex-hcard" data-spot data-tilt data-tilt-max="6">
+                <div class="ex-hcard__top">
+                  <span class="ex-hcard__ico"><i class="bi bi-shield-check"></i></span>
+                  <span class="ex-kicker" style="color:var(--brand)">03</span>
+                </div>
+                <h4>Zero Downtime</h4>
+                <p>24/7 on-site repair support. Breakdown unit swapped fast with zero billing gap.</p>
+                <span class="ex-hcard__bar"></span>
+              </div>
+            </div>
+
+            <div class="ex-cred" data-rv="up" style="--d:550ms">
+              <span class="ex-cred__lbl">Trusted on site by</span>
+              <span class="ex-cred__names"><b>BOSCH</b><i></i><b>TATA
+                  MOTORS</b><i></i><b>XCMG</b><i></i><b>L&amp;T</b></span>
+            </div>
+
+          </div>
+
+          <!-- Interactive Machine Stage & Telemetry Hotspots -->
+          <div class="ex-hero__stage" id="exHeroStage" data-tilt data-tilt-max="5" data-rv="right" style="--d:200ms">
+            <span class="ex-hero__glow"></span>
+            <picture>
+              <source id="exHeroSrc" srcset="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main.png" />
+              <img class="ex-hero__unit-img ex-render" id="exHeroImg" src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main.png" alt="ELEVEX all-electric scissor lift" />
+            </picture>
+
+            <!-- Dynamic Spec Tag Overlay -->
+            <div class="ex-hero__spectag" id="exHeroSpecTag">
+              <i class="bi bi-shield-fill-check"></i>
+              <span><b id="exHeroTagTitle">Electric Scissor Lift</b> — <small id="exHeroTagSub">14m Reach • 450kg
+                  Capacity</small></span>
+            </div>
+
+            <!-- Guidance Hint Badge -->
+            <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);z-index:15;pointer-events:none">
+              <span class="ex-hero__hint"><i class="bi bi-cursor-fill"></i> Tap nodes or tabs to explore specs</span>
+            </div>
+
+            <!-- Hotspot 1: Platform -->
+            <div class="ex-hotspot" data-hs="platform">
+              <button class="ex-hotspot__btn" aria-label="Platform telemetry"><i
+                  class="bi bi-arrows-angle-expand"></i></button>
+              <span class="ex-hotspot__pill" id="exHs1Pill">📐 450kg Deck</span>
+              <div class="ex-hotspot__card">
+                <b id="exHs1Title">Extensible Deck</b>
+                <span id="exHs1Desc">450kg heavy-duty payload with non-marking platform decks.</span>
+              </div>
+            </div>
+
+            <!-- Hotspot 2: Battery / Chassis -->
+            <div class="ex-hotspot" data-hs="battery">
+              <button class="ex-hotspot__btn" aria-label="Battery telemetry"><i
+                  class="bi bi-battery-charging"></i></button>
+              <span class="ex-hotspot__pill" id="exHs2Pill">⚡ Li-ion Battery</span>
+              <div class="ex-hotspot__card">
+                <b id="exHs2Title">Li-ion Fast Charge</b>
+                <span id="exHs2Desc">Full 8-hour shift per charge with 15A standard socket top-up.</span>
+              </div>
+            </div>
+
+            <!-- Hotspot 3: Drive / Tyres -->
+            <div class="ex-hotspot" data-hs="drive">
+              <button class="ex-hotspot__btn" aria-label="Drive telemetry"><i
+                  class="bi bi-volume-mute-fill"></i></button>
+              <span class="ex-hotspot__pill" id="exHs3Pill">🔇 62dB Drive</span>
+              <div class="ex-hotspot__card">
+                <b id="exHs3Title">Silent 62dB Drive</b>
+                <span id="exHs3Desc">Whisper-quiet electric wheel motors &amp; non-marking indoor tyres.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ex-hero__foot">
+          <div class="ex-wrap" style="padding-inline:0">
+            <div class="ex-hero__figs" data-stagger style="--sd:90ms">
+              <div class="ex-fig"><b data-count="100" data-suffix="+">0</b><small>Machines in fleet</small></div>
+              <div class="ex-fig"><b data-count="25" data-suffix="+">0</b><small>Cities pan-India</small></div>
+              <div class="ex-fig"><b data-count="48" data-suffix="hr">0</b><small>To site, typical</small></div>
+              <div class="ex-fig"><b><i>0</i></b><small>Tailpipe emissions</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════ BRANDS ══════════════════════════ -->
+      <section class="ex-brands">
+        <div class="ex-wrap">
+          <div class="ex-brands__head" data-rv="up">
+            <p class="ex-kicker">Trusted on site by India's builders &amp; operators</p>
+            <p class="ex-small" style="max-width:280px">Over 500 projects delivered since 2019 — from data-centre
+              fit-outs to metro depots.</p>
+          </div>
+        </div>
+        <div class="ex-marq" data-marq data-rv="up">
+          <div class="ex-marq__row" style="--dur:46s">
+            <span class="ex-brand"
+              style="font-size:clamp(24px,2.6vw,34px);font-weight:700;letter-spacing:-.03em">adani</span>
+            <span class="ex-brand ex-display"
+              style="font-size:clamp(21px,2.2vw,29px);font-weight:700;letter-spacing:.1em">TATA</span>
+            <span class="ex-brand ex-display"
+              style="font-size:clamp(14px,1.4vw,19px);font-weight:700;letter-spacing:.02em">LARSEN &amp; TOUBRO</span>
+            <span class="ex-brand"
+              style="font-family:Georgia,serif;font-size:clamp(22px,2.4vw,31px);font-weight:600;font-style:italic">Godrej</span>
+            <span class="ex-brand"
+              style="font-size:clamp(22px,2.4vw,30px);font-weight:600;letter-spacing:-.03em">mahindra</span>
+            <span class="ex-brand ex-display"
+              style="font-size:clamp(22px,2.4vw,31px);font-weight:700;font-style:italic;letter-spacing:.1em">DHL</span>
+            <span class="ex-brand"
+              style="font-family:Georgia,serif;font-size:clamp(21px,2.3vw,30px);font-weight:600">Reliance</span>
+            <span class="ex-brand"
+              style="font-size:clamp(22px,2.4vw,30px);font-weight:700;letter-spacing:-.02em">vedanta</span>
+            <span class="ex-brand ex-display"
+              style="font-size:clamp(18px,1.9vw,25px);font-weight:700;letter-spacing:.06em">JSW</span>
+          </div>
+        </div>
+      </section>
+      <!-- ══════════════════════════ EQUIPMENT ══════════════════════════ -->
+      <section class="ex-sec ex-eq" id="equipment">
+        <img class="ex-eq__wm ex-render" src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-outline.png"
+          alt="" aria-hidden="true" data-px="0.06" />
+        <div class="ex-wrap">
+
+          <div class="ex-sec-head">
+            <div>
+              <span class="ex-eyebrow" data-rv="up">The fleet</span>
+              <h2 class="ex-h2" data-split="lines" style="margin-top:20px">
+                <span class="ex-line"><span>Right machine.</span></span>
+                <span class="ex-line"><span>Right height.</span></span>
+              </h2>
+            </div>
+            <div data-rv="up" style="--d:200ms">
+              <p class="ex-lead" style="max-width:420px">
+                Every unit is battery-electric, pre-delivery inspected and dispatched charged.
+                Pick a category to see live specs.
+              </p>
+              <a href="fleet.html" class="ex-ulink" style="margin-top:22px"><span>View all equipment</span><i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="ex-eq__body">
+            <!-- selector -->
+            <div class="ex-eqlist" id="exEqList" data-rv="left">
+              <button class="ex-eqrow ex-active" type="button" data-eq="0">
+                <span class="ex-eqrow__n">01</span>
+                <span class="ex-eqrow__t">Scissor Lifts<em>Straight-up vertical reach for indoor fit-outs, MEP and
+                    racking work.</em></span>
+                <span class="ex-eqrow__go"><i class="bi bi-arrow-up-right"></i></span>
+              </button>
+              <button class="ex-eqrow" type="button" data-eq="1">
+                <span class="ex-eqrow__n">02</span>
+                <span class="ex-eqrow__t">Articulating Boom Lifts<em>Up-and-over access where the obstacle sits between
+                    you and the work.</em></span>
+                <span class="ex-eqrow__go"><i class="bi bi-arrow-up-right"></i></span>
+              </button>
+              <button class="ex-eqrow" type="button" data-eq="2">
+                <span class="ex-eqrow__n">03</span>
+                <span class="ex-eqrow__t">Rough-Terrain Lifts<em>Four-wheel drive and oscillating axles for unfinished
+                    ground.</em></span>
+                <span class="ex-eqrow__go"><i class="bi bi-arrow-up-right"></i></span>
+              </button>
+              <button class="ex-eqrow" type="button" data-eq="3">
+                <span class="ex-eqrow__n">04</span>
+                <span class="ex-eqrow__t">Low-Level &amp; Mast Lifts<em>Single-person, push-around units that fit
+                    through a standard doorway.</em></span>
+                <span class="ex-eqrow__go"><i class="bi bi-arrow-up-right"></i></span>
+              </button>
+            </div>
+
+            <!-- viewer -->
+            <div class="ex-eqview" id="exEqView" data-rv="right" data-tilt data-tilt-max="5">
+              <span class="ex-gridlines ex-eqview__grid"></span>
+              <span class="ex-eqview__glow"></span>
+              <span class="ex-eqview__tag"><i class="bi bi-lightning-charge-fill"></i><span id="exEqTag">Electric ·
+                  Indoor rated</span></span>
+              <div class="ex-eqview__stage">
+                <picture>
+                  <source id="exEqSrc" srcset="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main.jpg" />
+                  <img class="ex-eqview__img ex-render" id="exEqImg"
+                    src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main.jpg"
+                    alt="ELEVEX electric scissor lift" />
+                </picture>
+              </div>
+              <div class="ex-eqspecs" id="exEqSpecs">
+                <div class="ex-eqspec"><b><span data-spec="0">14</span><u>m</u></b><small>Working height</small></div>
+                <div class="ex-eqspec"><b><span data-spec="1">450</span><u>kg</u></b><small>Platform capacity</small>
+                </div>
+                <div class="ex-eqspec"><b><span data-spec="2">8</span><u>hr</u></b><small>Runtime / charge</small></div>
+                <div class="ex-eqspec"><b><span data-spec="3">62</span><u>dB</u></b><small>Noise level</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════ WHY / BENTO ══════════════════════════ -->
+      <section class="ex-sec ex-dark ex-noise" id="why" data-spotlight style="overflow:hidden">
+        <span class="ex-gridlines" style="opacity:.6"></span>
+        <div class="ex-wrap" style="position:relative;z-index:2">
+
+          <div class="ex-sec-head">
+            <div>
+              <span class="ex-eyebrow" data-rv="up">Why Elevex</span>
+              <h2 class="ex-h2" data-split="lines" style="margin-top:20px">
+                <span class="ex-line"><span>Built for sites that</span></span>
+                <span class="ex-line"><span><em class="ex-outline-txt" style="font-style:normal">can't afford</em>
+                    downtime.</span></span>
+              </h2>
+            </div>
+            <div data-rv="up" style="--d:180ms">
+              <p class="ex-lead" style="max-width:440px">
+                Diesel lifts cost you ventilation, permits, noise complaints and fuel logistics.
+                Ours cost you a wall socket.
+              </p>
+            </div>
+          </div>
+
+          <div class="ex-bento">
+            <!-- A · impact -->
+            <div class="ex-cell ex-cell--a ex-shine" data-spot data-live data-tilt data-tilt-max="4" data-rv="rise">
+              <span class="ex-cell__idx">01</span>
+              <div>
+                <span class="ex-cell__ico"><i class="bi bi-cloud-check"></i></span>
+                <h3 style="margin-top:22px">Nothing comes out of the exhaust, because there isn't one.</h3>
+                <p style="margin-top:10px;max-width:340px">Measured across the 2025 rental year against the diesel
+                  equivalent of every machine we put on site.</p>
+              </div>
+              <div>
+                <p class="ex-kicker" style="margin-bottom:12px">CO₂ avoided vs. an equivalent diesel fleet</p>
+                <div class="ex-cell__big"><span data-count="412" data-dur="2200">0</span><u> t / yr</u></div>
+                <div class="ex-cell__bars" data-bars>
+                  <i style="--h:22%;--dd:0ms"></i><i style="--h:34%;--dd:70ms"></i><i style="--h:29%;--dd:140ms"></i>
+                  <i style="--h:48%;--dd:210ms"></i><i style="--h:41%;--dd:280ms"></i><i style="--h:63%;--dd:350ms"></i>
+                  <i style="--h:57%;--dd:420ms"></i><i style="--h:78%;--dd:490ms"></i><i style="--h:71%;--dd:560ms"></i>
+                  <i style="--h:92%;--dd:630ms"></i><i style="--h:84%;--dd:700ms"></i><i
+                    style="--h:100%;--dd:770ms"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- B · diesel vs electric -->
+            <div class="ex-cell ex-cell--b" data-spot data-live data-tilt data-tilt-max="3" data-rv="rise"
+              style="--d:90ms">
+              <span class="ex-cell__idx">02</span>
+              <span class="ex-cell__ico"><i class="bi bi-bar-chart-line"></i></span>
+              <h3 style="margin-top:20px">The same shift, on two different machines</h3>
+
+              <div class="ex-vs">
+                <div class="ex-vs__legend">
+                  <span class="ex-vs__leg ex-vs__leg--d"><i></i>Diesel equivalent</span>
+                  <span class="ex-vs__leg ex-vs__leg--e"><i></i>ELEVEX electric</span>
+                </div>
+
+                <div class="ex-vs__row">
+                  <span class="ex-vs__lbl">Noise at 10 m</span>
+                  <div class="ex-vs__pair">
+                    <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d"
+                          style="--fill:1;--d:120ms"></i></span><b class="ex-vs__val">96 dB</b></div>
+                    <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e"
+                          style="--fill:.646;--d:260ms"></i></span><b class="ex-vs__val ex-vs__val--e">62 dB</b></div>
+                  </div>
+                </div>
+
+                <div class="ex-vs__row">
+                  <span class="ex-vs__lbl">Tailpipe CO₂ per 8-hour shift</span>
+                  <div class="ex-vs__pair">
+                    <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d"
+                          style="--fill:1;--d:320ms"></i></span><b class="ex-vs__val">58 kg</b></div>
+                    <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e"
+                          style="--fill:.015;--d:460ms"></i></span><b class="ex-vs__val ex-vs__val--e">0 kg</b></div>
+                  </div>
+                </div>
+
+                <div class="ex-vs__row">
+                  <span class="ex-vs__lbl">Indoor ventilation clearance</span>
+                  <div class="ex-vs__pair">
+                    <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--d"
+                          style="--fill:1;--d:520ms"></i></span><b class="ex-vs__val">5 days</b></div>
+                    <div class="ex-vs__line"><span class="ex-vs__track"><i class="ex-vs__bar ex-vs__bar--e"
+                          style="--fill:.015;--d:660ms"></i></span><b class="ex-vs__val ex-vs__val--e">None</b></div>
+                  </div>
+                </div>
+
+                <p class="ex-vs__foot">Diesel figures are the class-average for an equivalent-reach machine. Electric
+                  noise and emission figures are measured on our own fleet.</p>
+              </div>
+            </div>
+
+            <!-- C · coverage map -->
+            <div class="ex-cell ex-cell--c ex-cell--map" data-spot data-live data-tilt data-tilt-max="3" data-rv="rise"
+              style="--d:150ms">
+              <div class="ex-map" data-map>
+                <svg viewBox="0 0 200 240" aria-hidden="true">
+                  <path class="ex-map__path"
+                    d="M72,10 L78,24 L88,34 L100,40 L112,46 L124,50 L136,52 L144,56 L156,52 L168,48 L178,54 L182,64 L172,70 L160,66 L150,64 L144,72 L140,84 L132,90 L126,104 L120,116 L114,132 L108,150 L104,166 L100,182 L96,196 L92,206 L86,190 L80,172 L74,156 L66,140 L58,124 L50,112 L42,106 L32,104 L28,96 L36,92 L46,94 L52,86 L44,74 L40,62 L48,52 L58,44 L60,32 L66,20 Z" />
+                  <g class="ex-map__pins">
+                    <circle class="ex-map__ring" cx="72" cy="52" r="2" style="animation-delay:0.0s" />
+                    <circle class="ex-map__dot" cx="72" cy="52" r="2.4" style="animation-delay:0.0s" />
+                    <circle class="ex-map__ring" cx="52" cy="108" r="2" style="animation-delay:0.3s" />
+                    <circle class="ex-map__dot" cx="52" cy="108" r="2.4" style="animation-delay:0.3s" />
+                    <circle class="ex-map__ring" cx="63" cy="128" r="2" style="animation-delay:0.7s" />
+                    <circle class="ex-map__dot" cx="63" cy="128" r="2.4" style="animation-delay:0.7s" />
+                    <circle class="ex-map__ring" cx="67" cy="136" r="2" style="animation-delay:1.1s" />
+                    <circle class="ex-map__dot" cx="67" cy="136" r="2.4" style="animation-delay:1.1s" />
+                    <circle class="ex-map__ring" cx="86" cy="148" r="2" style="animation-delay:1.4s" />
+                    <circle class="ex-map__dot" cx="86" cy="148" r="2.4" style="animation-delay:1.4s" />
+                    <circle class="ex-map__ring" cx="88" cy="178" r="2" style="animation-delay:1.8s" />
+                    <circle class="ex-map__dot" cx="88" cy="178" r="2.4" style="animation-delay:1.8s" />
+                    <circle class="ex-map__ring" cx="99" cy="172" r="2" style="animation-delay:2.1s" />
+                    <circle class="ex-map__dot" cx="99" cy="172" r="2.4" style="animation-delay:2.1s" />
+                    <circle class="ex-map__ring" cx="136" cy="86" r="2" style="animation-delay:2.5s" />
+                    <circle class="ex-map__dot" cx="136" cy="86" r="2.4" style="animation-delay:2.5s" />
+                  </g>
+                </svg>
+              </div>
+              <div class="ex-map__cap">
+                <span class="ex-cell__idx" style="position:static;display:block;margin-bottom:12px">03</span>
+                <h3>25 cities. One number.</h3>
+                <p style="margin-top:8px;max-width:300px">Owned transport out of 7 regional hubs — no third-party
+                  handoffs, no surprise freight bills.</p>
+                <div class="ex-map__hubs" data-stagger style="--sd:60ms">
+                  <span>Mumbai</span><span>Pune</span><span>Delhi NCR</span><span>Ahmedabad</span>
+                  <span>Bengaluru</span><span>Chennai</span><span>Hyderabad</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- D · noise -->
+            <div class="ex-cell ex-cell--d" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
+              style="--d:210ms">
+              <span class="ex-cell__idx">04</span>
+              <span class="ex-cell__ico"><i class="bi bi-volume-mute"></i></span>
+              <div class="ex-cell__fig" style="margin-top:20px"><span data-count="62">0</span><u> dB</u></div>
+              <h3 style="margin-top:6px">Work while they sleep</h3>
+              <p>Clears night-work noise limits in every metro — so hospital, hotel and retail jobs don't wait for a
+                shutdown window.</p>
+            </div>
+
+            <!-- E · lead time -->
+            <div class="ex-cell ex-cell--e" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
+              style="--d:270ms">
+              <span class="ex-cell__idx">05</span>
+              <span class="ex-cell__ico"><i class="bi bi-stopwatch"></i></span>
+              <div class="ex-cell__fig" style="margin-top:20px"><span data-count="48">0</span><u> hrs</u></div>
+              <h3 style="margin-top:6px">Quote to slab</h3>
+              <p>Median time from a signed quote to the machine standing on your floor, anywhere we cover.</p>
+            </div>
+
+            <!-- F · inspection -->
+            <div class="ex-cell ex-cell--f" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
+              style="--d:330ms">
+              <span class="ex-cell__idx">06</span>
+              <span class="ex-cell__ico"><i class="bi bi-shield-check"></i></span>
+              <h3>Inspected before it ships</h3>
+              <p>A 42-point PDI covers battery health, hydraulic seals, guard-rail integrity and a full-load function
+                test. The signed sheet travels with the machine.</p>
+            </div>
+
+            <!-- G · operators -->
+            <div class="ex-cell ex-cell--g" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
+              style="--d:390ms">
+              <span class="ex-cell__idx">07</span>
+              <span class="ex-cell__ico"><i class="bi bi-person-badge"></i></span>
+              <h3>Certified operators on request</h3>
+              <p>IPAF-trained operators and on-site familiarisation for your crew, bundled into the rental rather than
+                billed after it.</p>
+            </div>
+
+            <!-- H · support -->
+            <div class="ex-cell ex-cell--h" data-spot data-live data-tilt data-tilt-max="5" data-rv="rise"
+              style="--d:450ms">
+              <span class="ex-cell__idx">08</span>
+              <span class="ex-cell__ico"><i class="bi bi-headset"></i></span>
+              <h3>24/7 breakdown cover</h3>
+              <p>Four-hour response in metros, and a swap unit dispatched if it can't be closed out on site. No billing
+                for the gap.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════ PROCESS ══════════════════════════ -->
+      <section class="ex-proc" id="process">
+        <div class="ex-proc__pin">
+          <div class="ex-wrap" style="position:relative;z-index:2">
+            <div class="ex-sec-head">
+              <div>
+                <span class="ex-eyebrow" data-rv="up">How it works</span>
+                <h2 class="ex-h2" data-split="lines" style="margin-top:20px">
+                  <span class="ex-line"><span>Four steps from</span></span>
+                  <span class="ex-line"><span>enquiry to elevation.</span></span>
+                </h2>
+              </div>
+              <div data-rv="up" style="--d:180ms">
+                <p class="ex-lead" style="max-width:400px">No dealer network, no sub-renting. You deal with the company
+                  that owns the machine.</p>
+              </div>
+            </div>
+
+            <div class="ex-proc__track">
+              <div class="ex-proc__line"><i id="exProcLine"></i></div>
+              <div class="ex-proc__rail" id="exProcRail">
+                <div class="ex-step" data-step>
+                  <div class="ex-step__head">
+                    <span class="ex-step__ico"><i class="bi bi-chat-left-dots-fill"></i></span>
+                    <span class="ex-step__n">01</span>
+                  </div>
+                  <h3>Spec the job</h3>
+                  <p>Tell us the working height, the surface and how many people need to be up there. We shortlist two
+                    machines — never more.</p>
+                  <span class="ex-step__meta"><i class="bi bi-clock-history"></i> Same day response</span>
+                </div>
+                <div class="ex-step" data-step>
+                  <div class="ex-step__head">
+                    <span class="ex-step__ico"><i class="bi bi-file-earmark-check-fill"></i></span>
+                    <span class="ex-step__n">02</span>
+                  </div>
+                  <h3>Fixed quote</h3>
+                  <p>Rental, transport both ways and an operator if you want one. One number, no line-item surprises at
+                    invoice time.</p>
+                  <span class="ex-step__meta"><i class="bi bi-lightning-charge-fill"></i> Inside 4 hours</span>
+                </div>
+                <div class="ex-step" data-step>
+                  <div class="ex-step__head">
+                    <span class="ex-step__ico"><i class="bi bi-truck-flatbed"></i></span>
+                    <span class="ex-step__n">03</span>
+                  </div>
+                  <h3>Delivered charged</h3>
+                  <p>Our own flatbeds, our own crew. The machine arrives at 100% with its inspection sheet, ready to
+                    work the same shift.</p>
+                  <span class="ex-step__meta"><i class="bi bi-geo-alt-fill"></i> 48 Hours Pan-India</span>
+                </div>
+                <div class="ex-step" data-step>
+                  <div class="ex-step__head">
+                    <span class="ex-step__ico"><i class="bi bi-shield-check"></i></span>
+                    <span class="ex-step__n">04</span>
+                  </div>
+                  <h3>Covered till pickup</h3>
+                  <p>Extend, swap or return with a single message. Breakdown support runs the whole rental, not just the
+                    first week.</p>
+                  <span class="ex-step__meta"><i class="bi bi-check-circle-fill"></i> Full term warranty</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ══════════════════════════ INDUSTRIES ══════════════════════════ -->
+      <section class="ex-ind" id="industries">
+        <div class="ex-ind__pin">
+          <div class="ex-wrap">
+            <div class="ex-sec-head" style="align-items:end">
+              <div>
+                <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+                  <span class="ex-eyebrow" data-rv="up">Where we work</span>
+                  <span class="ex-ind__count" id="exIndCount"><b>01</b> / 06 — Construction</span>
+                </div>
+                <h2 class="ex-h2" data-split="lines" style="margin-top:20px">
+                  <span class="ex-line"><span>Industries we serve.</span></span>
+                </h2>
+              </div>
+              <div data-rv="up" style="--d:150ms;display:flex;align-items:end;justify-content:space-between;gap:22px">
+                <p class="ex-small" style="max-width:260px">Keep scrolling — the rail moves with you. Every sector below
+                  has a machine spec'd for it.</p>
+                <div style="display:flex;gap:10px;flex:0 0 auto">
+                  <button class="ex-iconbtn" data-rail="prev" aria-label="Previous industry"><i
+                      class="bi bi-arrow-left"></i></button>
+                  <button class="ex-iconbtn" data-rail="next" aria-label="Next industry"
+                    style="background:var(--ink);border-color:var(--ink);color:#fff"><i
+                      class="bi bi-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ex-ind__viewport">
+            <div class="ex-ind__track" id="exIndTrack" data-rv="up">
+              <a class="ex-card" href="#quote">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&amp;q=80"
+                  alt="Construction site" loading="lazy" />
+                <span class="ex-card__veil"></span>
+                <span class="ex-card__n">01</span><span class="ex-card__ico"><i class="bi bi-buildings"></i></span>
+                <div class="ex-card__body">
+                  <h3>Construction</h3>
+                  <p>Facade work, MEP first-fix and structural steel — on decks that can't take a diesel machine's
+                    fumes.</p><span class="ex-card__bar"></span>
+                </div>
+              </a>
+              <a class="ex-card" href="#quote">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&amp;q=80"
+                  alt="Warehouse interior" loading="lazy" />
+                <span class="ex-card__veil"></span>
+                <span class="ex-card__n">02</span><span class="ex-card__ico"><i class="bi bi-box-seam"></i></span>
+                <div class="ex-card__body">
+                  <h3>Warehousing</h3>
+                  <p>Racking installs and sprinkler maintenance inside sealed buildings — no ventilation plan required.
+                  </p><span class="ex-card__bar"></span>
+                </div>
+              </a>
+              <a class="ex-card" href="#quote">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&amp;q=80"
+                  alt="Manufacturing plant" loading="lazy" />
+                <span class="ex-card__veil"></span>
+                <span class="ex-card__n">03</span><span class="ex-card__ico"><i class="bi bi-gear"></i></span>
+                <div class="ex-card__body">
+                  <h3>Manufacturing</h3>
+                  <p>Overhead conveyor and crane-rail servicing during running shifts, without shutting the line down.
+                  </p><span class="ex-card__bar"></span>
+                </div>
+              </a>
+              <a class="ex-card" href="#quote">
+                <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=800&amp;q=80"
+                  alt="Infrastructure project" loading="lazy" />
+                <span class="ex-card__veil"></span>
+                <span class="ex-card__n">04</span><span class="ex-card__ico"><i class="bi bi-cone-striped"></i></span>
+                <div class="ex-card__body">
+                  <h3>Infrastructure</h3>
+                  <p>Metro depots, airport terminals and bridge soffits — rough-terrain units where the ground isn't
+                    finished.</p><span class="ex-card__bar"></span>
+                </div>
+              </a>
+              <a class="ex-card" href="#quote">
+                <img src="https://images.unsplash.com/photo-1565610222536-ef125c59da2e?w=800&amp;q=80" alt="Retail mall"
+                  loading="lazy" />
+                <span class="ex-card__veil"></span>
+                <span class="ex-card__n">05</span><span class="ex-card__ico"><i class="bi bi-bag"></i></span>
+                <div class="ex-card__body">
+                  <h3>Retail &amp; Malls</h3>
+                  <p>Non-marking tyres and a whisper-quiet drive, so signage and lighting work can happen in trading
+                    hours.</p><span class="ex-card__bar"></span>
+                </div>
+              </a>
+              <a class="ex-card" href="#quote">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&amp;q=80"
+                  alt="Utilities work" loading="lazy" />
+                <span class="ex-card__veil"></span>
+                <span class="ex-card__n">06</span><span class="ex-card__ico"><i class="bi bi-lightning"></i></span>
+                <div class="ex-card__body">
+                  <h3>Utilities &amp; Events</h3>
+                  <p>Insulated platforms for line work, and silent units for stage rigging and broadcast builds.</p>
+                  <span class="ex-card__bar"></span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="ex-wrap">
+            <div class="ex-ind__bar"><i id="exIndBar"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════ TESTIMONIALS ══════════════════════════ -->
+      <section class="ex-sec ex-dark ex-noise" id="clients" data-spotlight data-sp style="overflow:hidden">
+        <span class="ex-gridlines" style="opacity:.5"></span>
+        <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero.jpg" alt="" aria-hidden="true"
+          data-drift
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.08;filter:grayscale(1) contrast(1.1);--drift:-70px" />
+        <div class="ex-wrap" style="position:relative;z-index:2">
+          <div class="ex-testi">
+
+            <div data-rv="up">
+              <span class="ex-eyebrow">Client desk</span>
+              <div class="ex-quote" style="margin-top:26px">
+                <span class="ex-quote__mark">&ldquo;</span>
+                <p class="ex-quote__txt" id="exQuoteTxt">The machines turned up charged, the PDI sheet was in the
+                  operator's hand, and we were working the same afternoon. That's not normal in this industry.</p>
+                <div class="ex-quote__who" id="exQuoteWho">
+                  <span class="ex-quote__ava" id="exQuoteAva">RK</span>
+                  <span>
+                    <b id="exQuoteName">Rahul Kulkarni</b>
+                    <small id="exQuoteRole">Project Manager · L&amp;T Construction</small>
+                  </span>
+                </div>
+              </div>
+              <div class="ex-quote__nav">
+                <button class="ex-iconbtn" id="exQuotePrev" aria-label="Previous testimonial"><i
+                    class="bi bi-arrow-left"></i></button>
+                <button class="ex-iconbtn" id="exQuoteNext" aria-label="Next testimonial"
+                  style="background:var(--brand);border-color:var(--brand);color:var(--ink)"><i
+                    class="bi bi-arrow-right"></i></button>
+                <span class="ex-quote__count"><b id="exQuoteIdx">01</b> / <span id="exQuoteTot">04</span></span>
+                <span class="ex-dots" id="exQuoteDots"></span>
+              </div>
+            </div>
+
+            <div class="ex-scoreboard" data-rv="right">
+              <div class="ex-score"><i class="bi bi-truck-flatbed"></i><b data-count="100"
+                  data-suffix="+">0</b><small>Machines in fleet</small></div>
+              <div class="ex-score"><i class="bi bi-geo-alt"></i><b data-count="25" data-suffix="+">0</b><small>Cities
+                  covered</small></div>
+              <div class="ex-score"><i class="bi bi-people"></i><b data-count="500" data-suffix="+">0</b><small>Projects
+                  delivered</small></div>
+              <div class="ex-score"><i class="bi bi-patch-check"></i><b data-count="98"
+                  data-suffix="%">0</b><small>On-time delivery</small></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════ FAQ ══════════════════════════ -->
+      <section class="ex-sec" id="faq" data-parallax="0.03">
+        <div class="ex-wrap">
+          <div class="ex-faq">
+
+            <div>
+              <span class="ex-eyebrow" data-rv="up">Support desk</span>
+              <h2 class="ex-h2" data-split="lines" style="margin-top:20px;font-size:clamp(30px,3.6vw,48px)">
+                <span class="ex-line"><span>Questions,</span></span>
+                <span class="ex-line"><span>answered.</span></span>
+              </h2>
+              <div class="ex-faq__aside" style="margin-top:34px" data-rv="up">
+                <div class="ex-faq__ppl"><span>AS</span><span>MP</span><span>RK</span><span
+                    style="background:var(--brand);color:var(--ink)">+4</span></div>
+                <h3 class="ex-h3">Still not sure which lift?</h3>
+                <p class="ex-small" style="margin-top:10px">Send us a photo of the work area. We'll come back with a
+                  machine, a height and a price — usually inside the hour.</p>
+                <a href="https://wa.me/917028096111" class="ex-btn ex-btn--dark" style="margin-top:22px"><i
+                    class="bi bi-whatsapp"></i> WhatsApp us</a>
+              </div>
+            </div>
+
+            <div class="ex-acc" id="exAcc" data-rv="up" style="--d:120ms">
+              <div class="ex-acc__item">
+                <button class="ex-acc__q" type="button" aria-expanded="false"><em>01</em><span>Is the entire fleet
+                    really zero-emission?</span><span class="ex-acc__ico"></span></button>
+                <div class="ex-acc__a">
+                  <p>Yes — every machine we rent is battery-electric. There is no diesel or LPG unit in the fleet, so
+                    there are no tailpipe emissions, no fuel storage on your site, and no ventilation assessment needed
+                    for indoor work.</p>
+                </div>
+              </div>
+              <div class="ex-acc__item">
+                <button class="ex-acc__q" type="button" aria-expanded="false"><em>02</em><span>How long does a charge
+                    last on a working shift?</span><span class="ex-acc__ico"></span></button>
+                <div class="ex-acc__a">
+                  <p>A full charge covers a standard eight-hour shift of mixed drive-and-lift duty. Machines arrive at
+                    100%, and recharging needs nothing more exotic than a 15A socket — around six hours from empty, so
+                    an overnight top-up is all a multi-week hire requires.</p>
+                </div>
+              </div>
+              <div class="ex-acc__item">
+                <button class="ex-acc__q" type="button" aria-expanded="false"><em>03</em><span>Do you supply certified
+                    operators?</span><span class="ex-acc__ico"></span></button>
+                <div class="ex-acc__a">
+                  <p>We do. IPAF-trained operators can be added to any rental, and we run a free familiarisation session
+                    for your own crew at handover. Operator cost is quoted upfront in the same fixed number as the
+                    machine and transport.</p>
+                </div>
+              </div>
+              <div class="ex-acc__item">
+                <button class="ex-acc__q" type="button" aria-expanded="false"><em>04</em><span>Which cities do you
+                    deliver to?</span><span class="ex-acc__ico"></span></button>
+                <div class="ex-acc__a">
+                  <p>Seven owned hubs serve 25 industrial cities including Mumbai, Pune, Delhi NCR, Ahmedabad,
+                    Bengaluru, Chennai, Hyderabad and Kolkata. Sites outside that radius are quoted case by case — we
+                    have delivered as far as Guwahati and Kochi.</p>
+                </div>
+              </div>
+              <div class="ex-acc__item">
+                <button class="ex-acc__q" type="button" aria-expanded="false"><em>05</em><span>What happens if a machine
+                    fails on site?</span><span class="ex-acc__ico"></span></button>
+                <div class="ex-acc__a">
+                  <p>Call the 24/7 line. Metro response is under four hours; if the fault can't be closed on site we
+                    dispatch a replacement unit and you are not billed for the downtime. Breakdown cover runs the entire
+                    rental term.</p>
+                </div>
+              </div>
+              <div class="ex-acc__item">
+                <button class="ex-acc__q" type="button" aria-expanded="false"><em>06</em><span>What are the minimum and
+                    maximum rental terms?</span><span class="ex-acc__ico"></span></button>
+                <div class="ex-acc__a">
+                  <p>One day is the minimum. Beyond that, weekly and monthly slabs bring the daily rate down
+                    significantly, and long-term contracts over six months are priced individually with a dedicated
+                    machine allocated to your site.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════ CTA / QUOTE ══════════════════════════ -->
+      <section class="ex-sec" id="quote" style="padding-top:0;padding-bottom:clamp(48px,6vw,88px)">
+        <div class="ex-wrap">
+          <div class="ex-cta ex-noise" data-rv="up" data-spotlight data-sp>
+            <span class="ex-cta__glow"></span>
+            <picture>
+              <source srcset="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.jpg" />
+              <img class="ex-cta__machine ex-render"
+                src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.jpg" alt="" aria-hidden="true"
+                data-drift style="--drift:-54px" />
+            </picture>
+            <span class="ex-gridlines" style="opacity:.5"></span>
+
+            <div class="ex-cta__body">
+              <div>
+                <span class="ex-eyebrow">Get a quote</span>
+                <h2 style="margin-top:20px">Tell us the height.<br /><span class="ex-outline-txt">We'll do the
+                    rest.</span></h2>
+                <ul class="ex-cta__pts" data-stagger style="--sd:110ms">
+                  <li><i class="bi bi-check2-circle"></i> Fixed price — machine, transport both ways, operator optional
+                  </li>
+                  <li><i class="bi bi-check2-circle"></i> Response inside four working hours</li>
+                  <li><i class="bi bi-check2-circle"></i> No obligation, no dealer middlemen</li>
+                </ul>
+                <div style="display:flex;flex-wrap:wrap;gap:22px;margin-top:34px">
+                  <a href="tel:+917028096111" class="ex-ulink" style="color:#fff"><span>+91 70280 96111</span><i
+                      class="bi bi-telephone"></i></a>
+                  <a href="mailto:hello@elevex.co.in" class="ex-ulink"
+                    style="color:#fff"><span>hello@elevex.co.in</span><i class="bi bi-envelope"></i></a>
+                </div>
+              </div>
+
+              <form class="ex-form" id="exForm" novalidate>
+                <div class="ex-form__grid">
+                  <div class="ex-field"><input type="text" id="fName" name="name" placeholder=" " required /><label
+                      for="fName">Full name</label></div>
+                  <div class="ex-field"><input type="tel" id="fPhone" name="phone" placeholder=" " required /><label
+                      for="fPhone">Phone number</label></div>
+                  <div class="ex-field ex-field--full"><input type="email" id="fMail" name="email"
+                      placeholder=" " /><label for="fMail">Work email</label></div>
+                  <div class="ex-field">
+                    <select id="fType" name="equipment">
+                      <option>Scissor lift</option>
+                      <option>Articulating boom lift</option>
+                      <option>Rough-terrain lift</option>
+                      <option>Low-level / mast lift</option>
+                      <option>Not sure yet</option>
+                    </select>
+                    <label for="fType">Equipment</label><i class="bi bi-chevron-down ex-field__chev"></i>
+                  </div>
+                  <div class="ex-field">
+                    <select id="fCity" name="city">
+                      <option>Mumbai</option>
+                      <option>Pune</option>
+                      <option>Delhi NCR</option>
+                      <option>Ahmedabad</option>
+                      <option>Bengaluru</option>
+                      <option>Chennai</option>
+                      <option>Hyderabad</option>
+                      <option>Kolkata</option>
+                      <option>Other</option>
+                    </select>
+                    <label for="fCity">Site city</label><i class="bi bi-chevron-down ex-field__chev"></i>
+                  </div>
+                  <div class="ex-field ex-field--full"><textarea id="fMsg" name="message"
+                      placeholder=" "></textarea><label for="fMsg">Working height &amp; duration</label></div>
+                </div>
+
+                <div class="ex-form__foot">
+                  <p class="ex-form__note">We reply within four working hours. Your details are never shared.</p>
+                  <button type="submit" class="ex-btn ex-btn--brand">Request quote <i
+                      class="bi bi-arrow-up-right"></i></button>
+                </div>
+                <div class="ex-form__ok" id="exFormOk"><i class="bi bi-check-circle-fill"></i> Thanks — your request is
+                  in. We'll call you shortly.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+    <footer class="ex-foot ex-dark ex-noise" id="contact" data-spotlight>
+      <span class="ex-gridlines" style="opacity:.45"></span>
+      <div class="ex-wrap" style="position:relative;z-index:2">
+
+        <div class="ex-foot__top">
+          <div data-rv="up">
+            <a href="#home" class="ex-logo" style="display:inline-flex">
+              <span class="ex-logo__plate"><img
+                  src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white.png" alt="ELEVEX Rentals"
+                  width="2560" height="768" /></span>
+            </a>
+            <p class="ex-small" style="margin-top:22px;max-width:330px;color:rgba(255,255,255,.55)">
+              India's all-electric aerial work platform rental company. We own every machine we rent,
+              and we deliver it ourselves.
+            </p>
+            <div class="ex-menu__socials" style="margin-top:24px">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                  class="bi bi-linkedin"></i></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+                  class="bi bi-instagram"></i></a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+                  class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+
+          <div data-rv="up" style="--d:90ms">
+            <h4>Company</h4>
+            <a class="ex-flink" href="#home">Home</a>
+            <a class="ex-flink" href="about.html">About us</a>
+            <a class="ex-flink" href="#why">Why Elevex</a>
+            <a class="ex-flink" href="#industries">Industries</a>
+            <a class="ex-flink" href="testimonials.html">Testimonials</a>
+            <a class="ex-flink" href="contact.html">Contact</a>
+          </div>
+
+          <div data-rv="up" style="--d:150ms">
+            <h4>Equipment</h4>
+            <a class="ex-flink" href="fleet.html?cat=scissor">Scissor lifts</a>
+            <a class="ex-flink" href="fleet.html?cat=boom">Boom lifts</a>
+            <a class="ex-flink" href="fleet.html?cat=terrain">Rough-terrain lifts</a>
+            <a class="ex-flink" href="fleet.html?cat=mast">Mast &amp; low-level lifts</a>
+            <a class="ex-flink" href="fleet.html">Full fleet</a>
+          </div>
+
+          <div data-rv="up" style="--d:210ms">
+            <h4>Get in touch</h4>
+            <div class="ex-foot__contact">
+              <a href="tel:+917028096111"><i class="bi bi-telephone-fill"></i>+91 70280 96111</a>
+              <a href="mailto:hello@elevex.co.in"><i class="bi bi-envelope-fill"></i>hello@elevex.co.in</a>
+              <a href="https://wa.me/917028096111" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>WhatsApp
+                the rental desk</a>
+              <span style="display:flex;gap:12px;font-size:14px;font-weight:600;color:rgba(255,255,255,.55)"><i
+                  class="bi bi-geo-alt-fill" style="color:var(--brand)"></i>7 hubs · 25 cities · Pan India</span>
+            </div>
+            <h4 style="margin-top:28px">Fleet updates</h4>
+            <form class="ex-foot__news" id="exNews">
+              <input type="email" placeholder="you@company.com" aria-label="Email address" required />
+              <button type="submit" aria-label="Subscribe"><i class="bi bi-arrow-up-right"></i></button>
+            </form>
+            <p class="ex-small" id="exNewsMsg" style="margin-top:10px;color:var(--brand);display:none">Subscribed —
+              welcome aboard.</p>
+          </div>
+        </div>
+
+        <div class="ex-wordmark" data-rv="up" data-sp><b data-drift style="--drift:-46px">ELEVE<span>X</span></b></div>
+
+        <div class="ex-foot__bot">
+          <p>© <span id="exYear">2026</span> ELEVEX Access Solutions Pvt. Ltd. All rights reserved.</p>
+          <div class="ex-foot__legal">
+            <span class="ex-live"><i></i> Rental desk open · <span id="exClock">--:--</span> IST</span>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a class="ex-wa" href="https://wa.me/917028096111" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i
+        class="bi bi-whatsapp"></i><span>Chat with us</span></a>
+
+    <button class="ex-top" id="exTop" aria-label="Back to top">
+      <svg viewBox="0 0 60 60" aria-hidden="true">
+        <circle cx="30" cy="30" r="27" />
+        <circle cx="30" cy="30" r="27" id="exTopRing" />
+      </svg>
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    
+  </div>
+  <!-- /#elevex-home -->

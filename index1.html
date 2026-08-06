@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ELEVEX | Electric Aerial Work Platform Rentals</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Fonts & Icons from elevex.co.in -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0" rel="stylesheet" />
+
+    <!-- Tailwind Config Mapping Brand Identity -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#27B669",             // Brand Safety Green
+                        "primary-dark": "#1f9655",
+                        "accent-orange": "#FF792D",         // Accent Orange
+                        "accent-blue": "#215676",           // Accent Teal/Blue
+                        "industrial-slate": "#1E2023",     // Base dark color
+                        "deep-void": "#121315",             // Dark mode pitch black
+                        "pure-white": "#ffffff",
+                        "steel-gray": "#f4f5f6",
+                        "on-surface-variant": "#555555"
+                    },
+                    fontFamily: {
+                        "display": ["Urbanist", "sans-serif"],
+                        "accent": ["Rubik", "sans-serif"],
+                        "body": ["Roboto", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+
+    <!-- Motion Library & Custom CSS Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js"></script>
+    <link href="assets/css/animations.css" rel="stylesheet" />
+
+    <!-- Custom CSS Styles -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        body {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f4f5f6;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #121315;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c1c8c2;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #27B669;
+        }
+
+        /* Unique Navbar active link highlight pill */
+        .nav-pill-active {
+            background: rgba(39, 182, 105, 0.15);
+            border: 1px solid rgba(39, 182, 105, 0.3);
+            color: #27B669 !important;
+        }
+        .dark .nav-pill-active {
+            background: rgba(39, 182, 105, 0.25);
+            border: 1px solid rgba(39, 182, 105, 0.5);
+            color: #27B669 !important;
+        }
+
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        .marquee-wrapper {
+            position: relative;
+            overflow: hidden;
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        /* Premium Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(30, 32, 35, 0.04);
+        }
+        .dark .glass-card {
+            background: rgba(30, 32, 35, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        /* Unique Floating Capsule Header */
+        .navbar-capsule {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(30, 32, 35, 0.08);
+            box-shadow: 0 10px 30px rgba(30, 32, 35, 0.05);
+        }
+        .dark .navbar-capsule {
+            background: rgba(18, 19, 21, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Scroll Reveal */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover Lift card */
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(39, 182, 105, 0.15);
+        }
+        .dark .hover-lift:hover {
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Mouse Tracker Hover Glow */
+        .glow-card {
+            position: relative;
+        }
+        .glow-card::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(39, 182, 105, 0.15), transparent 45%);
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .glow-card:hover::before {
+            opacity: 1;
+        }
+        .glow-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 60;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .dark .mobile-menu {
+            background: rgba(18, 19, 21, 0.98);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 40;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            pointer-events: none;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* Custom Navbar animations */
+        .nav-item-liquid {
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, color 0.3s ease;
+        }
+
+        @keyframes float-y {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float-y 4s ease-in-out infinite;
+        }
+
+        @keyframes gradient-shift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .animate-gradient {
+            animation: gradient-shift 5s ease infinite;
+        }
+
+        /* Next-Level Text Stagger Reveal */
+        @keyframes slide-up-reveal {
+            0% {
+                opacity: 0;
+                transform: translateY(30px) skewY(1deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) skewY(0deg);
+            }
+        }
+        .reveal-line {
+            display: inline-block;
+            opacity: 0;
+            animation: slide-up-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-deep-void text-industrial-slate dark:text-pure-white font-body antialiased overflow-x-hidden transition-colors duration-400">
+
+    <!-- ===== REDESIGNED UNIFIED FLOATING MAGNETIC NAVBAR ===== -->
+    <nav id="navbar-unified" class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl z-50 rounded-full px-6 py-2.5 glass-card border border-white/20 dark:border-white/5 flex items-center justify-between navbar-unified shadow-lg">
+        
+        <!-- Left: Logo & Live Status -->
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="https://elevex.co.in/wp-content/uploads/2025/08/logo-white-border-scaled.png" alt="ELEVEX Logo" class="h-6 w-auto block dark:brightness-100 dark:contrast-100 light:brightness-0" />
+            </a>
+            <div class="flex items-center gap-1.5 pl-3 border-l border-gray-200 dark:border-white/10">
+                <span class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-sm shadow-primary/50"></span>
+                <span class="text-[9px] font-accent font-bold tracking-widest text-primary uppercase whitespace-nowrap">Fleet Live</span>
+            </div>
+        </div>
+
+        <!-- Center: Links with Magnetic Indicator (Only visible in desktop) -->
+        <div id="nav-links-container" class="relative hidden md:flex items-center gap-1 p-0.5 rounded-full z-10">
+            <!-- Sliding Indicator Pill -->
+            <div id="nav-indicator" class="absolute bg-primary/10 dark:bg-primary/20 border border-primary/20 rounded-full pointer-events-none transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] z-0"></div>
+
+            <!-- Home -->
+            <a href="index.html" class="nav-link-item active px-4 py-2 rounded-full text-xs font-accent font-bold text-primary hover:text-primary transition-colors">Home</a>
+            
+            <!-- About Us -->
+            <a href="about.html" class="nav-link-item px-4 py-2 rounded-full text-xs font-accent font-bold text-on-surface-variant dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
+            
+            <!-- Our Fleet -->
+            <a href="fleet.html" class="nav-link-item px-4 py-2 rounded-full text-xs font-accent font-bold text-on-surface-variant dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Our Fleet</a>
+            
+            <!-- Client Stories -->
+            <a href="testimonials.html" class="nav-link-item px-4 py-2 rounded-full text-xs font-accent font-bold text-on-surface-variant dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Client Stories</a>
+            
+            <!-- Contact Us -->
+            <a href="contact.html" class="nav-link-item px-4 py-2 rounded-full text-xs font-accent font-bold text-on-surface-variant dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact Us</a>
+        </div>
+
+        <!-- Right: Actions (Theme, WhatsApp CTA, Hamburger) -->
+        <div class="flex items-center gap-3">
+            <!-- Theme Toggle -->
+            <button id="themeToggle" class="p-1.5 rounded-full hover:bg-black/5 dark:hover:bg-white/10 text-industrial-slate dark:text-pure-white transition-colors duration-200" aria-label="Toggle dark mode">
+                <span id="themeToggleIcon" class="material-symbols-outlined text-[18px] block">dark_mode</span>
+            </button>
+
+            <!-- WhatsApp CTA -->
+            <a href="https://wa.link/fbvu5p" target="_blank" class="hidden lg:inline-flex bg-primary hover:bg-primary-dark text-white px-4.5 py-2 rounded-full text-[10px] font-bold font-accent uppercase tracking-widest items-center gap-1.5 shadow-md shadow-primary/10 transition-all duration-300 hover:-translate-y-0.5">
+                <span class="material-symbols-outlined text-[12px]">chat</span> Enquire
+            </a>
+
+            <!-- Mobile Hamburger Menu Button -->
+            <button id="menuToggle" class="md:hidden flex flex-col gap-1.5 p-1.5 text-industrial-slate dark:text-pure-white focus:outline-none" aria-label="Toggle menu">
+                <span class="block w-5 h-0.5 bg-current transition-all duration-300"></span>
+                <span class="block w-5 h-0.5 bg-current transition-all duration-300"></span>
+                <span class="block w-5 h-0.5 bg-current transition-all duration-300"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu Overlay -->
+    <div id="mobileMenu" class="mobile-menu">
+        <a class="font-display text-2xl font-bold hover:text-primary text-industrial-slate dark:text-white" href="index.html">Home</a>
+        <a class="font-display text-2xl font-bold hover:text-primary text-industrial-slate dark:text-white" href="about.html">About Us</a>
+        <a class="font-display text-2xl font-bold hover:text-primary text-industrial-slate dark:text-white" href="fleet.html">Our Fleet</a>
+        <a class="font-display text-2xl font-bold hover:text-primary text-industrial-slate dark:text-white" href="testimonials.html">Client Stories</a>
+        <a class="font-display text-2xl font-bold hover:text-primary text-industrial-slate dark:text-white" href="contact.html">Contact Us</a>
+        <a href="https://wa.link/fbvu5p" target="_blank" class="bg-primary text-white px-8 py-3 rounded-full text-sm font-bold font-accent uppercase tracking-wider flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">chat</span> Connect WhatsApp
+        </a>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <header id="hero" class="relative w-full h-screen flex items-center justify-center overflow-hidden pt-20 bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: linear-gradient(to right, rgba(13, 16, 14, 0.95) 30%, rgba(18, 19, 21, 0.8) 60%, rgba(18, 19, 21, 0.4) 100%), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80');">
+        <!-- Atmospheric glowing layers -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(39,182,105,0.1),transparent_50%)] z-0"></div>
+        
+        <!-- Clean linear grid mesh -->
+        <div class="absolute inset-0 bg-[linear-gradient(rgba(39,182,105,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(39,182,105,0.02)_1px,transparent_1px)] bg-[size:40px_40px] z-0"></div>
+
+        <div class="container mx-auto px-6 relative z-10 flex items-center">
+            <div class="max-w-3xl space-y-6">
+                <!-- Staggered animated badge -->
+                <span class="framer-typewriter text-primary font-accent text-xs font-bold tracking-wider uppercase inline-block">
+                    REACH HIGHER. WORK SAFER.
+                </span>
+                <h1 class="font-display text-4xl sm:text-5xl md:text-[64px] font-extrabold leading-[1.08] tracking-tight text-white">
+                    <span class="framer-slide-down inline-block">Rent Our Young,</span> <br />
+                    <span class="framer-slide-down bg-gradient-to-r from-primary via-emerald-400 to-green-500 bg-[size:200%] animate-gradient bg-clip-text text-transparent inline-block">All-Electric Fleet</span> <br />
+                    <span class="framer-slide-down inline-block">for High-Reach Projects</span>
+                </h1>
+                <p class="framer-slide-up text-gray-300 font-body text-base sm:text-lg max-w-xl leading-relaxed">
+                    Zero emissions. Whisper-quiet operation. Maximum safety. Elevex electric lifts range from 6 to 19 meters for any indoor or rugged industrial reach work.
+                </p>
+                <div class="framer-slide-up flex flex-wrap gap-4 pt-2">
+                    <a href="https://wa.link/fbvu5p" target="_blank" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold font-accent shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5">
+                        Explore Fleet
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                    <a href="fleet.html" class="bg-white/10 border border-white/20 hover:border-primary text-white px-8 py-4 rounded-xl font-bold font-accent hover:bg-white/20 transition-all duration-300 flex items-center gap-1 hover:-translate-y-0.5">
+                        View Fleet Details
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll down indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 opacity-50 text-white z-10">
+            <span class="font-accent text-[10px] uppercase tracking-widest">Scroll</span>
+            <div class="w-px h-8 bg-gradient-to-b from-primary to-transparent"></div>
+        </div>
+    </header>
+
+    <!-- ===== CLIENTS PARTNERS MARQUEE ===== -->
+    <section class="py-10 bg-steel-gray dark:bg-deep-void overflow-hidden border-y border-gray-200/50 dark:border-white/5">
+        <div class="marquee-wrapper">
+            <div class="flex animate-marquee whitespace-nowrap gap-28 items-center opacity-60 dark:opacity-40 hover:opacity-100 dark:hover:opacity-80 transition-opacity duration-300 font-display font-bold text-xl tracking-wider text-industrial-slate dark:text-pure-white">
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> BOSCH</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> TATA MOTORS</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> ROYAL ENFIELD</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> CEAT</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> XCMG</div>
+                <!-- loop duplicates -->
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> BOSCH</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> TATA MOTORS</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> ROYAL ENFIELD</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> CEAT</div>
+                <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> XCMG</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS SECTION ===== -->
+    <section class="py-20 bg-white dark:bg-[#0a0c0c] transition-colors duration-400 relative overflow-hidden">
+        <!-- Boom Lift Watermark positioned cleanly in bottom corner -->
+        <div class="absolute right-0 bottom-0 w-48 h-48 pointer-events-none opacity-[0.03] dark:opacity-[0.012] dark:invert mix-blend-multiply dark:mix-blend-screen bg-no-repeat bg-contain bg-right-bottom z-0" style="background-image: url('assets/boom-lift-outline.png');"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16 framer-slide-up">
+                <span class="text-primary font-accent text-xs font-bold uppercase tracking-widest">Simple & Reliable</span>
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold mt-2 text-industrial-slate dark:text-pure-white">
+                    The ELEVEX Rental Process
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 mt-3 text-sm sm:text-base font-body">
+                    We streamline aerial platform procurement from selection to site support. Here is how it works:
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 framer-stagger-parent">
+                <!-- Step 1 -->
+                <div class="framer-stagger-item p-6 bg-steel-gray dark:bg-white/5 rounded-2xl border border-gray-150 dark:border-white/5 hover:border-primary transition-all duration-300 relative bg-white/60 dark:bg-deep-void/40 backdrop-blur-sm">
+                    <span class="font-display text-4xl font-extrabold text-primary/20 dark:text-primary/10 absolute top-4 right-6">01</span>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4">pageview</span>
+                    <h4 class="font-display font-bold text-lg mb-2">Select Your Height</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Identify work height (6m to 19m) and capacity requirements in our online fleet catalog.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="framer-stagger-item p-6 bg-steel-gray dark:bg-white/5 rounded-2xl border border-gray-150 dark:border-white/5 hover:border-primary transition-all duration-300 relative bg-white/60 dark:bg-deep-void/40 backdrop-blur-sm">
+                    <span class="font-display text-4xl font-extrabold text-primary/20 dark:text-primary/10 absolute top-4 right-6">02</span>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4">engineering</span>
+                    <h4 class="font-display font-bold text-lg mb-2">Site Inspection</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Our team performs capacity audits and clearance checks for narrow spaces.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="framer-stagger-item p-6 bg-steel-gray dark:bg-white/5 rounded-2xl border border-gray-150 dark:border-white/5 hover:border-primary transition-all duration-300 relative bg-white/60 dark:bg-deep-void/40 backdrop-blur-sm">
+                    <span class="font-display text-4xl font-extrabold text-primary/20 dark:text-primary/10 absolute top-4 right-6">03</span>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4">local_shipping</span>
+                    <h4 class="font-display font-bold text-lg mb-2">On-Time Dispatch</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Fully charged battery platforms are delivered directly to your site via our transport system.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="framer-stagger-item p-6 bg-steel-gray dark:bg-white/5 rounded-2xl border border-gray-150 dark:border-white/5 hover:border-primary transition-all duration-300 relative bg-white/60 dark:bg-deep-void/40 backdrop-blur-sm">
+                    <span class="font-display text-4xl font-extrabold text-primary/20 dark:text-primary/10 absolute top-4 right-6">04</span>
+                    <span class="material-symbols-outlined text-primary text-3xl mb-4">support_agent</span>
+                    <h4 class="font-display font-bold text-lg mb-2">Continuous Support</h4>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Benefit from 24/7 technical breakdown support and certified AWP operator services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FLEET SUMMARY SHOWCASE ===== -->
+    <section id="fleet" class="py-20 bg-white dark:bg-[#0f1111] transition-colors duration-400 relative overflow-hidden">
+        <!-- Giant Watermark background from user image -->
+        <div class="absolute right-0 top-0 w-[55%] h-[90%] pointer-events-none opacity-[0.06] dark:opacity-[0.03] dark:invert mix-blend-multiply dark:mix-blend-screen bg-no-repeat bg-contain bg-right-top z-0" style="background-image: url('assets/boom-lift-outline.png');"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 framer-slide-up">
+                <div>
+                    <h2 class="font-display text-3xl md:text-5xl font-extrabold text-industrial-slate dark:text-pure-white leading-tight">
+                        Our All-Electric <span class="text-primary">High-Reach Fleet</span>
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-400 mt-2 font-body text-base max-w-xl">
+                        Clean battery operations built for efficiency. Rent scissors and boom lifts ranging from 6 to 19 meters for any indoor or rugged industrial reach work.
+                    </p>
+                </div>
+                <a href="fleet.html" class="inline-flex items-center gap-2 font-accent text-sm font-bold text-primary hover:text-primary-dark group">
+                    View Technical Specifications
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+                </a>
+            </div>
+
+            <!-- Fleet categories grid matching the reference screenshots exactly -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 framer-stagger-parent">
+                
+                <!-- Card 1: 6m Mini Electric Scissor -->
+                <div class="framer-stagger-item framer-img-tilt framer-spotlight glow-card glass-card rounded-3xl border border-gray-200/60 dark:border-white/5 shadow-lg p-6 hover-lift transition-all duration-300 flex flex-col justify-between">
+                    <div class="flex gap-4 items-start">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg text-industrial-slate dark:text-pure-white leading-tight">6m Mini Electric Scissor</h3>
+                                <p class="text-xs text-gray-400 mt-1 font-body leading-relaxed">Ultra-narrow profile. Fits inside standard freight elevators.</p>
+                            </div>
+                            
+                            <!-- Badges Specs -->
+                            <div class="space-y-2 max-w-[200px]">
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">height</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Reach Height</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            6.0 <span class="text-[8px] font-normal text-gray-500 lowercase">Meters</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">weight</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Platform Capacity</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            230 <span class="text-[8px] font-normal text-gray-500 lowercase">kg</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vector Outline -->
+                        <div class="w-[30%] shrink-0 text-gray-300 dark:text-white/10 mt-2">
+                            <img src="assets/scissor-lift-outline.png" alt="Scissor lift outline" class="w-full h-auto dark:invert mix-blend-multiply dark:mix-blend-screen pointer-events-none opacity-85" />
+                        </div>
+                    </div>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between border-t border-gray-100 dark:border-white/5 pt-4 mt-5">
+                        <span class="text-[10px] font-extrabold font-accent text-gray-400">XE-100W</span>
+                        <button class="open-drawer-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-xl text-xs font-bold font-accent flex items-center gap-1 transition-all duration-300">
+                            Inspect Specifications <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: 10m Wide Scissor -->
+                <div class="framer-stagger-item framer-img-tilt framer-spotlight glow-card glass-card rounded-3xl border border-gray-200/60 dark:border-white/5 shadow-lg p-6 hover-lift transition-all duration-300 flex flex-col justify-between">
+                    <div class="flex gap-4 items-start">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg text-industrial-slate dark:text-pure-white leading-tight">10m Wide Scissor</h3>
+                                <p class="text-xs text-gray-400 mt-1 font-body leading-relaxed">Extended work deck allows up to 3 operators with heavy installation gear.</p>
+                            </div>
+                            
+                            <!-- Badges Specs -->
+                            <div class="space-y-2 max-w-[200px]">
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">height</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Reach Height</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            10.0 <span class="text-[8px] font-normal text-gray-500 lowercase">Meters</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">weight</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Platform Capacity</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            450 <span class="text-[8px] font-normal text-gray-500 lowercase">kg</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vector Outline -->
+                        <div class="w-[30%] shrink-0 text-gray-300 dark:text-white/10 mt-2">
+                            <img src="assets/scissor-lift-outline.png" alt="Scissor lift outline" class="w-full h-auto dark:invert mix-blend-multiply dark:mix-blend-screen pointer-events-none opacity-85" />
+                        </div>
+                    </div>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between border-t border-gray-100 dark:border-white/5 pt-4 mt-5">
+                        <span class="text-[10px] font-extrabold font-accent text-gray-400">XE-140H</span>
+                        <button class="open-drawer-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-xl text-xs font-bold font-accent flex items-center gap-1 transition-all duration-300">
+                            Inspect Specifications <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: 14m Electric Scissor -->
+                <div class="framer-stagger-item framer-img-tilt framer-spotlight glow-card glass-card rounded-3xl border border-gray-200/60 dark:border-white/5 shadow-lg p-6 hover-lift transition-all duration-300 flex flex-col justify-between">
+                    <div class="flex gap-4 items-start">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg text-industrial-slate dark:text-pure-white leading-tight">14m Electric Scissor</h3>
+                                <p class="text-xs text-gray-400 mt-1 font-body leading-relaxed">Built for high tier racks, ductwork and roof sprinkler installations.</p>
+                            </div>
+                            
+                            <!-- Badges Specs -->
+                            <div class="space-y-2 max-w-[200px]">
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">height</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Reach Height</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            14.0 <span class="text-[8px] font-normal text-gray-500 lowercase">Meters</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">weight</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Platform Capacity</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            320 <span class="text-[8px] font-normal text-gray-500 lowercase">kg</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vector Outline -->
+                        <div class="w-[30%] shrink-0 text-gray-300 dark:text-white/10 mt-2">
+                            <img src="assets/scissor-lift-outline.png" alt="Scissor lift outline" class="w-full h-auto dark:invert mix-blend-multiply dark:mix-blend-screen pointer-events-none opacity-85" />
+                        </div>
+                    </div>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between border-t border-gray-100 dark:border-white/5 pt-4 mt-5">
+                        <span class="text-[10px] font-extrabold font-accent text-gray-400">XGA-14ACK</span>
+                        <button class="open-drawer-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-xl text-xs font-bold font-accent flex items-center gap-1 transition-all duration-300">
+                            Inspect Specifications <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: 14m Articulating Boom -->
+                <div class="framer-stagger-item framer-img-tilt framer-spotlight glow-card glass-card rounded-3xl border border-gray-200/60 dark:border-white/5 shadow-lg p-6 hover-lift transition-all duration-300 flex flex-col justify-between">
+                    <div class="flex gap-4 items-start">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg text-industrial-slate dark:text-pure-white leading-tight">14m Articulating Boom</h3>
+                                <p class="text-xs text-gray-400 mt-1 font-body leading-relaxed">Up-and-over capability. Perfect for wiring over plant assembly lines.</p>
+                            </div>
+                            
+                            <!-- Badges Specs -->
+                            <div class="space-y-2 max-w-[200px]">
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">height</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Reach Height</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            14.0 <span class="text-[8px] font-normal text-gray-500 lowercase">Meters</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-100 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">swap_horiz</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Horizontal Outreach</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            7.6 <span class="text-[8px] font-normal text-gray-500 lowercase">Meters</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vector Outline -->
+                        <div class="w-[30%] shrink-0 text-gray-300 dark:text-white/10 mt-2">
+                            <img src="assets/boom-lift-outline.png" alt="Boom lift outline" class="w-full h-auto dark:invert mix-blend-multiply dark:mix-blend-screen pointer-events-none opacity-85" />
+                        </div>
+                    </div>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between border-t border-gray-100 dark:border-white/5 pt-4 mt-5">
+                        <span class="text-[10px] font-extrabold font-accent text-gray-400">XGA-19ACK</span>
+                        <button class="open-drawer-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-xl text-xs font-bold font-accent flex items-center gap-1 transition-all duration-300">
+                            Inspect Specifications <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 5: 19m Articulating Boom -->
+                <div class="framer-stagger-item framer-img-tilt framer-spotlight glow-card glass-card rounded-3xl border border-gray-200/60 dark:border-white/5 shadow-lg p-6 hover-lift transition-all duration-300 flex flex-col justify-between" data-model="XGA-25ACK">
+                    <div class="flex gap-4 items-start">
+                        <div class="flex-1 space-y-4">
+                            <div>
+                                <h3 class="font-display font-extrabold text-lg text-industrial-slate dark:text-pure-white leading-tight">19m Articulating Boom</h3>
+                                <p class="text-xs text-gray-400 mt-1 font-body leading-relaxed">Maximum range limits. Suitable for high hangar structures and outer facades.</p>
+                            </div>
+                            
+                            <!-- Badges Specs -->
+                            <div class="space-y-2 max-w-[200px]">
+                                <div class="bg-gray-50 dark:bg-white/5 rounded-xl p-2 flex items-center gap-2.5 border border-gray-150 dark:border-white/5">
+                                    <span class="material-symbols-outlined text-primary text-[18px]">height</span>
+                                    <div>
+                                        <p class="text-[8px] uppercase tracking-wider text-gray-400 font-accent">Reach Height</p>
+                                        <p class="font-display font-extrabold text-xs text-primary flex items-baseline gap-0.5 leading-none mt-0.5">
+                                            19.0 <span class="text-[8px] font-normal text-gray-500 lowercase">Meters</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vector Outline -->
+                        <div class="w-[30%] shrink-0 text-gray-300 dark:text-white/10 mt-2">
+                            <img src="assets/boom-lift-outline.png" alt="Boom lift outline" class="w-full h-auto dark:invert mix-blend-multiply dark:mix-blend-screen pointer-events-none opacity-85" />
+                        </div>
+                    </div>
+                    
+                    <!-- Footer -->
+                    <div class="flex items-center justify-between border-t border-gray-150 dark:border-white/5 pt-4 mt-5">
+                        <span class="text-[10px] font-extrabold font-accent text-gray-400">XGA-25ACK</span>
+                        <button class="open-drawer-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-xl text-xs font-bold font-accent flex items-center gap-1 transition-all duration-300">
+                            Inspect Specifications <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INDUSTRIES SERVED ===== -->
+    <section class="py-20 bg-steel-gray dark:bg-deep-void/60 transition-colors duration-400 relative overflow-hidden">
+        <!-- Scissor Lift Watermark positioned cleanly in bottom corner -->
+        <div class="absolute left-0 bottom-0 w-48 h-48 pointer-events-none opacity-[0.03] dark:opacity-[0.012] dark:invert mix-blend-multiply dark:mix-blend-screen bg-no-repeat bg-contain bg-left-bottom z-0" style="background-image: url('assets/scissor-lift-outline.png');"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
+                <span class="text-primary font-accent text-xs font-bold uppercase tracking-widest">APPLICATIONS</span>
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold mt-2 text-industrial-slate dark:text-pure-white">
+                    Industries We Serve
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 mt-3 text-sm sm:text-base font-body">
+                    Our zero-emission, silent electric lifts are highly optimized for indoor, warehouse, and clean manufacturing operations.
+                </p>
+            </div>
+
+            <!-- Industries Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+                <!-- Industry 1 -->
+                <div class="p-6 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 rounded-2xl hover-lift flex flex-col justify-between backdrop-blur-sm">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">inventory_2</span>
+                        <h4 class="font-display font-bold text-lg mb-2">Warehousing & Logistics</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Narrow scissor lifts with high gradeability, perfect for stocking vertical rack systems.</p>
+                    </div>
+                </div>
+                <!-- Industry 2 -->
+                <div class="p-6 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 rounded-2xl hover-lift flex flex-col justify-between backdrop-blur-sm">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">precision_manufacturing</span>
+                        <h4 class="font-display font-bold text-lg mb-2">Automobile & Heavy Mfg</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Direct battery power creates zero exhaust, keeping assembly plant environments healthy.</p>
+                    </div>
+                </div>
+                <!-- Industry 3 -->
+                <div class="p-6 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 rounded-2xl hover-lift flex flex-col justify-between backdrop-blur-sm">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">flight</span>
+                        <h4 class="font-display font-bold text-lg mb-2">Aviation & Hangars</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Articulated outreach allows technicians to safely wrap around complex airplane frames.</p>
+                    </div>
+                </div>
+                <!-- Industry 4 -->
+                <div class="p-6 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/5 rounded-2xl hover-lift flex flex-col justify-between backdrop-blur-sm">
+                    <div>
+                        <span class="material-symbols-outlined text-primary text-4xl mb-4">apartment</span>
+                        <h4 class="font-display font-bold text-lg mb-2">Commercial Construction</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-body">Rugged non-marking operations fit perfectly for pre-handover fitout installations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RENTAL VS OWNERSHIP ADVANTAGE SECTION ===== -->
+    <section class="py-20 bg-white dark:bg-[#0a0c0c] transition-colors duration-400 relative overflow-hidden">
+        <!-- Giant Watermark background from user image -->
+        <div class="absolute left-4 bottom-4 md:left-12 md:bottom-6 w-32 h-32 md:w-[350px] md:h-[250px] pointer-events-none opacity-[0.06] dark:opacity-[0.02] dark:invert mix-blend-multiply dark:mix-blend-screen bg-no-repeat bg-contain bg-left-bottom z-0" style="background-image: url('assets/boom-lift-outline.png');"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
+                <span class="text-primary font-accent text-xs font-bold uppercase tracking-widest">Financial Strategy</span>
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold mt-2 text-industrial-slate dark:text-pure-white">
+                    Why Renting with ELEVEX Beats Owning
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 mt-3 text-sm sm:text-base font-body">
+                    Save capital, avoid maintenance overheads, and enjoy access to the newest all-electric equipment with 24/7 technical backup.
+                </p>
+            </div>
+
+            <!-- Comparison Table Card -->
+            <div class="glass-card rounded-2xl overflow-hidden border border-gray-200 dark:border-white/5 shadow-xl max-w-4xl mx-auto reveal-on-scroll">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100 dark:bg-white/5 border-b border-gray-200 dark:border-white/10">
+                                <th class="p-5 font-display font-extrabold text-industrial-slate dark:text-pure-white">Comparison Parameter</th>
+                                <th class="p-5 font-display font-extrabold text-primary">Renting with ELEVEX</th>
+                                <th class="p-5 font-display font-extrabold text-gray-400 dark:text-gray-500">Buying & Owning AWPs</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 dark:divide-white/5">
+                            <tr class="hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-semibold text-industrial-slate dark:text-pure-white">Capital Expenditure</td>
+                                <td class="p-5 text-primary font-semibold flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span> Zero CapEx; Pay as you go
+                                </td>
+                                <td class="p-5 text-gray-500">High upfront cost (₹12 Lakh+ per unit)</td>
+                            </tr>
+                            <tr class="hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-semibold text-industrial-slate dark:text-pure-white">Maintenance & Certification</td>
+                                <td class="p-5 text-primary font-semibold flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span> Covered entirely by ELEVEX team
+                                </td>
+                                <td class="p-5 text-gray-500">Annual safety audits and spare costs</td>
+                            </tr>
+                            <tr class="hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-semibold text-industrial-slate dark:text-pure-white">Technology Depreciation</td>
+                                <td class="p-5 text-primary font-semibold flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span> Always access young, new EV units
+                                </td>
+                                <td class="p-5 text-gray-500">Own aging machines with depreciated batteries</td>
+                            </tr>
+                            <tr class="hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-semibold text-industrial-slate dark:text-pure-white">Operational Downtime</td>
+                                <td class="p-5 text-primary font-semibold flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span> 24/7 service or instant replacement
+                                </td>
+                                <td class="p-5 text-gray-500">Project delayed during breakdown servicing</td>
+                            </tr>
+                            <tr class="hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                                <td class="p-5 font-semibold text-industrial-slate dark:text-pure-white">Trained Operators</td>
+                                <td class="p-5 text-primary font-semibold flex items-center gap-1.5">
+                                    <span class="material-symbols-outlined text-[16px]">check_circle</span> Certified operators provided upon request
+                                </td>
+                                <td class="p-5 text-gray-500">Cost of recruiting, training and payroll</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SAFETY STANDARDS & OPERATOR TRAINING SECTION ===== -->
+    <section class="py-20 bg-steel-gray dark:bg-[#0f1111] transition-colors duration-400 relative overflow-hidden">
+        <!-- Boom Lift Watermark positioned cleanly in bottom left margin -->
+        <div class="absolute left-0 bottom-0 w-48 h-48 pointer-events-none opacity-[0.03] dark:opacity-[0.012] dark:invert mix-blend-multiply dark:mix-blend-screen bg-no-repeat bg-contain bg-left-bottom z-0" style="background-image: url('assets/boom-lift-outline.png');"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Visual Box -->
+                <div class="lg:col-span-6 framer-slide-up">
+                    <div class="framer-img-reveal framer-img-tilt framer-spotlight relative group p-3 border border-gray-200 dark:border-white/5 rounded-2xl bg-white dark:bg-white/5">
+                        <img loading="lazy" alt="Industrial technician checking battery levels"
+                            class="w-full h-auto rounded-xl shadow-xl object-cover aspect-[4/3]"
+                            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" />
+                        <div class="absolute -inset-2 bg-gradient-to-r from-primary to-emerald-300 rounded-2xl opacity-5 blur-xl group-hover:opacity-10 transition-opacity"></div>
+                    </div>
+                </div>
+
+                <!-- Content Box -->
+                <div class="lg:col-span-6 space-y-6 framer-slide-up">
+                    <span class="bg-primary/15 text-primary px-4 py-1 rounded-full font-accent text-[11px] font-bold uppercase tracking-wider inline-block">
+                        🛡️ SAFETY PLATFORM
+                    </span>
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-industrial-slate dark:text-pure-white leading-tight">
+                        Zero Incidents, <span class="text-primary font-extrabold">100% Certified Safety</span>
+                    </h2>
+                    <p class="text-gray-500 dark:text-gray-300 font-body text-base leading-relaxed">
+                        AWP work at heights requires absolute precision. We maintain our fleet to strict international OEM guidelines and perform rigorous checklists before delivery.
+                    </p>
+                    
+                    <!-- Safety Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="p-5 bg-white dark:bg-white/5 rounded-xl border border-gray-100 dark:border-white/5 backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-2">assignment_turned_in</span>
+                            <h4 class="font-display font-bold text-sm text-industrial-slate dark:text-pure-white">200-Point Audit</h4>
+                            <p class="text-xs text-gray-400 mt-1 font-body">Every machine goes through extensive checklist runs prior to dispatch.</p>
+                        </div>
+                        <div class="p-5 bg-white dark:bg-white/5 rounded-xl border border-gray-100 dark:border-white/5 backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-2">badge</span>
+                            <h4 class="font-display font-bold text-sm text-industrial-slate dark:text-pure-white">IPAF Training Guidelines</h4>
+                            <p class="text-xs text-gray-400 mt-1 font-body">Our hired operators are formally certified for elevated safe works.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ACCORDION SECTION ===== -->
+    <section class="py-20 bg-white dark:bg-deep-void transition-colors duration-400">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16 reveal-on-scroll">
+                <span class="text-primary font-accent text-xs font-bold uppercase tracking-widest">SUPPORT CORE</span>
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold mt-2 text-industrial-slate dark:text-pure-white">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400 mt-3 text-sm sm:text-base font-body">
+                    Find answers regarding fleet shipping logistics, battery capabilities, certifications, and rental agreements.
+                </p>
+            </div>
+
+            <!-- FAQs accordion wrapper -->
+            <div class="max-w-3xl mx-auto space-y-4 reveal-on-scroll">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-100 dark:border-white/5 rounded-2xl bg-steel-gray dark:bg-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center font-display font-bold text-base sm:text-lg text-industrial-slate dark:text-pure-white focus:outline-none">
+                        <span>How long does the battery of an electric lift last on one charge?</span>
+                        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-sm text-gray-500 dark:text-gray-300 leading-relaxed border-t border-gray-200/20">
+                            Our electric lifts are powered by heavy-duty lead-acid or optional lithium-ion battery configurations. A full overnight charge (approx. 7-8 hours) provides up to 8-10 hours of continuous typical warehouse duty cycles.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-100 dark:border-white/5 rounded-2xl bg-steel-gray dark:bg-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center font-display font-bold text-base sm:text-lg text-industrial-slate dark:text-pure-white focus:outline-none">
+                        <span>Do you provide operators along with the equipment rental?</span>
+                        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-sm text-gray-500 dark:text-gray-300 leading-relaxed border-t border-gray-200/20">
+                            Yes, ELEVEX offers rental agreements with fully certified, safety-trained AWP operators. Our operators are trained to ensure safe operations under challenging conditions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-100 dark:border-white/5 rounded-2xl bg-steel-gray dark:bg-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center font-display font-bold text-base sm:text-lg text-industrial-slate dark:text-pure-white focus:outline-none">
+                        <span>Which regions in India does ELEVEX serve?</span>
+                        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-sm text-gray-500 dark:text-gray-300 leading-relaxed border-t border-gray-200/20">
+                            While our primary hubs and service yards are based in Navi Mumbai, Pune, and Jalgaon (serving Maharashtra industrial zones), we coordinate fleet transport for long-term projects across Western and Central India.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-100 dark:border-white/5 rounded-2xl bg-steel-gray dark:bg-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-toggle w-full p-6 text-left flex justify-between items-center font-display font-bold text-base sm:text-lg text-industrial-slate dark:text-pure-white focus:outline-none">
+                        <span>How are machine breakdowns and servicing handled?</span>
+                        <span class="material-symbols-outlined text-primary transition-transform duration-300">expand_more</span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="p-6 pt-0 text-sm text-gray-500 dark:text-gray-300 leading-relaxed border-t border-gray-200/20">
+                            We provide a 24/7 service hotline. In the rare event of a breakdown, our mobile service technicians are deployed with parts. If a repair takes more than 24 hours, we coordinate a replacement machine from the closest depot.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO SHOWCASE SECTION ===== -->
+    <section class="py-20 bg-industrial-slate dark:bg-[#02130d] relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="max-w-3xl mx-auto space-y-6 framer-slide-up">
+                <span class="text-primary font-accent text-xs font-bold uppercase tracking-widest">ELEVEX In Action</span>
+                <h2 class="font-display text-3xl md:text-4xl font-extrabold text-white">
+                    Watch Our Fleet Powering Industrial Progress
+                </h2>
+                <p class="text-gray-400 font-body text-sm leading-relaxed max-w-xl mx-auto">
+                    See our silent, zero-emission electric scissor lifts and boom lifts executing work in high-tier warehouses.
+                </p>
+                
+                <!-- Video block visual thumbnail -->
+                <div class="framer-img-reveal relative w-full aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl group max-w-2xl mx-auto mt-8 bg-black">
+                    <img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" 
+                        src="https://images.unsplash.com/photo-1581092335873-4d2f6b1c4d4e?w=800&q=80" alt="Video Thumbnail" />
+                    <!-- Play icon overlay -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <a href="https://www.youtube.com/watch?v=SF4aHwxHtZ0" target="_blank" class="w-16 h-16 sm:w-20 sm:h-20 bg-primary hover:bg-primary-dark text-white rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+                            <span class="material-symbols-outlined text-3xl sm:text-4xl">play_arrow</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(39,182,105,0.06),transparent_40%)] pointer-events-none"></div>
+    </section>
+
+    <!-- ===== CONTACT & CTA INQUIRY FORM ===== -->
+    <section id="contact" class="py-20 bg-steel-gray dark:bg-deep-void relative transition-colors duration-400">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto space-y-10 reveal-on-scroll">
+                <div class="text-center space-y-3">
+                    <span class="text-primary font-accent text-xs font-bold uppercase tracking-widest">GET A QUOTE</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-industrial-slate dark:text-pure-white">
+                        Consult Our Fleet Experts Today
+                    </h2>
+                    <p class="font-body text-gray-500 dark:text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
+                        Our experts assess your requirements and help you configure the right electric scissor or articulating boom mix.
+                    </p>
+                </div>
+
+                <!-- Sleek Glass Form Card -->
+                <div class="glass-card rounded-3xl p-8 border border-gray-200 dark:border-white/5 shadow-2xl max-w-2xl mx-auto">
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Our fleet consultants will contact you within 2 business hours.'); this.reset();">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-300">Name</label>
+                                <input type="text" required placeholder="John Doe" 
+                                    class="w-full bg-white/50 dark:bg-black/35 border border-gray-200 dark:border-white/10 focus:border-primary dark:focus:border-primary rounded-xl p-3 text-sm focus:outline-none text-industrial-slate dark:text-pure-white" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-300">Email Address</label>
+                                <input type="email" required placeholder="john@company.com" 
+                                    class="w-full bg-white/50 dark:bg-black/35 border border-gray-200 dark:border-white/10 focus:border-primary dark:focus:border-primary rounded-xl p-3 text-sm focus:outline-none text-industrial-slate dark:text-pure-white" />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-300">Phone</label>
+                                <input type="tel" required placeholder="+91 98765 43210" 
+                                    class="w-full bg-white/50 dark:bg-black/35 border border-gray-200 dark:border-white/10 focus:border-primary dark:focus:border-primary rounded-xl p-3 text-sm focus:outline-none text-industrial-slate dark:text-pure-white" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-300">Rental Duration</label>
+                                <select class="w-full bg-white/50 dark:bg-black/35 border border-gray-200 dark:border-white/10 focus:border-primary dark:focus:border-primary rounded-xl p-3 text-sm focus:outline-none text-industrial-slate dark:text-pure-white transition-colors">
+                                    <option class="text-industrial-slate">Short Term (1 - 3 months)</option>
+                                    <option class="text-industrial-slate">Medium Term (3 - 12 months)</option>
+                                    <option class="text-industrial-slate">Long Term (1 Year+)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-300">Project Requirements / Models</label>
+                            <textarea rows="3" placeholder="Describe platform height requirement, warehouse floor type..." 
+                                class="w-full bg-white/50 dark:bg-black/35 border border-gray-200 dark:border-white/10 focus:border-primary dark:focus:border-primary rounded-xl p-3 text-sm focus:outline-none text-industrial-slate dark:text-pure-white"></textarea>
+                        </div>
+
+                        <button type="submit" 
+                            class="bg-primary hover:bg-primary-dark text-white w-full py-4 rounded-xl font-bold font-accent shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 flex items-center justify-center gap-2 hover:-translate-y-0.5">
+                            Submit Consultation Request
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-industrial-slate dark:bg-deep-void border-t border-gray-200/50 dark:border-white/5 w-full py-16 transition-colors duration-400 text-white font-accent">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 px-6 max-w-6xl mx-auto border-b border-white/5 pb-12">
+            <!-- Left Info Block -->
+            <div class="md:col-span-5 space-y-6">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="https://elevex.co.in/wp-content/uploads/2025/08/logo-white-border-scaled.png" alt="ELEVEX Logo" class="h-6 w-auto block brightness-100 contrast-100" />
+                </a>
+                <p class="text-gray-400 font-body text-sm leading-relaxed max-w-sm">
+                    Electric Aerial Work Platform Rentals. Combining premium electric machinery with 80+ years legacy of the Palod Group.
+                </p>
+                <!-- Contacts info -->
+                <div class="space-y-2 text-xs text-gray-400">
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[16px]">call</span>
+                        +91 70280 96111
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[16px]">mail</span>
+                        info@elevex.co.in
+                    </p>
+                    <p class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-[16px]">location_on</span>
+                        MIDC Industrial Area, Ghansoli, Navi Mumbai, MH
+                    </p>
+                </div>
+            </div>
+
+            <!-- Page Link Blocks -->
+            <div class="md:col-span-4 flex flex-col gap-3">
+                <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-2">Corporate Pages</h5>
+                <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="index.html">Home</a>
+                <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="about.html">About Us & Legacy</a>
+                <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="fleet.html">Electric Fleet Catalog</a>
+                <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="testimonials.html">Client Success Stories</a>
+                <a class="text-gray-400 hover:text-primary text-sm transition-colors" href="contact.html">Contact & Yards Map</a>
+            </div>
+
+            <div class="md:col-span-3 flex flex-col gap-3">
+                <h5 class="text-white font-bold text-xs uppercase tracking-wider mb-2">Social Hub</h5>
+                <div class="flex gap-4">
+                    <a class="w-9 h-9 rounded-full border border-white/10 hover:border-primary flex items-center justify-center hover:bg-white/5 transition-all text-gray-400 hover:text-primary" href="#">
+                        <span class="material-symbols-outlined text-[16px]">share</span>
+                    </a>
+                    <a class="w-9 h-9 rounded-full border border-white/10 hover:border-primary flex items-center justify-center hover:bg-white/5 transition-all text-gray-400 hover:text-primary" href="#">
+                        <span class="material-symbols-outlined text-[16px]">language</span>
+                    </a>
+                </div>
+                <p class="text-[10px] text-gray-400 leading-relaxed font-body mt-2">
+                    Elevex Pvt. Ltd. represents the AWP specialized division of Palod Group. XCMG AWP partner.
+                </p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 mt-8 text-center text-gray-500 text-xs tracking-wider">
+            © 2026 ELEVEX INDUSTRIES PVT. LTD. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP BUTTON ===== -->
+    <button id="backToTop" class="back-to-top bg-primary hover:bg-primary-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110" aria-label="Back to top">
+        <span class="material-symbols-outlined text-[22px] block">arrow_upward</span>
+    </button>
+
+    <!-- JavaScript Interactive Logic -->
+    <script src="assets/js/animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ============================================
+            // 1. Back to Top Toggle
+            // ============================================
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', () => {
+                    backToTop.classList.toggle('visible', window.scrollY > 500);
+                });
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ============================================
+            // 2. FAQ Accordion Toggle
+            // ============================================
+            document.querySelectorAll('.faq-toggle').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('.material-symbols-outlined');
+                    const isOpen = content.style.maxHeight !== '0px' && content.style.maxHeight !== '';
+
+                    // Close all FAQs first
+                    document.querySelectorAll('.faq-content').forEach(c => {
+                        c.style.maxHeight = '0px';
+                        c.previousElementSibling.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                    });
+
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

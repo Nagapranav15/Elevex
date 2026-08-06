@@ -1,0 +1,682 @@
+<!-- Google Fonts & Bootstrap Icons -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<script>
+  (function () { var noop = function () { }; var _ec = window.elementorCommon || {}; _ec.helpers = _ec.helpers || {}; if (typeof _ec.helpers.softDeprecated !== 'function') { _ec.helpers.softDeprecated = noop; } window.elementorCommon = _ec; try { Object.defineProperty(window, 'elementorCommon', { get: function () { if (!_ec) _ec = {}; if (!_ec.helpers) _ec.helpers = {}; if (typeof _ec.helpers.softDeprecated !== 'function') { _ec.helpers.softDeprecated = noop; } return _ec; }, set: function (val) { _ec = val || {}; if (_ec && typeof _ec === 'object') { _ec.helpers = _ec.helpers || {}; if (typeof _ec.helpers.softDeprecated !== 'function') { _ec.helpers.softDeprecated = noop; } } }, configurable: true, enumerable: true }); } catch (e) { } })(); document.documentElement.classList.add('js');
+</script>
+
+<style>
+  /* ==========================================================================
+     0 · TOKENS & RESET
+     ========================================================================== */
+  #elevex-home {
+    --brand: #27B669;
+    --brand-hi: #3ED989;
+    --brand-dim: #16824A;
+    --brand-wash: #E7F7EE;
+    --accent: #FF792D;
+    --deep: #215676;
+    --ink: #131619;
+    --ink-2: #1E2023;
+    --ink-3: #2A2F33;
+    --paper: #FFFFFF;
+    --mist: #F3F6F4;
+    --line: rgba(19, 22, 25, .10);
+    --line-d: rgba(255, 255, 255, .10);
+    --muted: rgba(19, 22, 25, .56);
+    --muted-d: rgba(255, 255, 255, .56);
+    --r-s: 14px;
+    --r-m: 22px;
+    --r-l: 32px;
+    --ease: cubic-bezier(.16, 1, .3, 1);
+    --ease-io: cubic-bezier(.65, 0, .35, 1);
+    --pad: clamp(20px, 4vw, 48px);
+    --wrap: 1420px;
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #elevex-home *,
+  #elevex-home *::before,
+  #elevex-home *::after {
+    box-sizing: border-box;
+  }
+
+  /* ==========================================================================
+     1 · HEADER & NAVBAR
+     ========================================================================== */
+  .ex-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 16px var(--pad) 0;
+    display: flex;
+    justify-content: center;
+    transition: transform .6s var(--ease), padding .5s var(--ease);
+  }
+
+  .ex-header.ex-hide {
+    transform: translateY(-140%);
+  }
+
+  .ex-nav {
+    position: relative;
+    width: 100%;
+    max-width: var(--wrap);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 9px 9px 9px 22px;
+    border-radius: 999px;
+    background: rgba(19, 22, 25, .75);
+    border: 1px solid rgba(39, 182, 105, .22);
+    backdrop-filter: blur(22px) saturate(1.4);
+    -webkit-backdrop-filter: blur(22px) saturate(1.4);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(39, 182, 105, .12);
+    transition: background-color .5s var(--ease), border-color .5s var(--ease), box-shadow .5s var(--ease), padding .4s var(--ease);
+  }
+
+  .ex-header.ex-stuck .ex-nav {
+    background: rgba(255, 255, 255, .88);
+    border-color: rgba(39, 182, 105, .28);
+    box-shadow: 0 18px 50px rgba(19, 22, 25, .12), 0 0 0 1px rgba(39, 182, 105, .15);
+  }
+
+  .ex-logo {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    text-decoration: none;
+  }
+
+  .ex-logo__plate {
+    display: block;
+    padding: 9px 15px;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, .22);
+    transition: transform .6s var(--ease), box-shadow .5s var(--ease);
+  }
+
+  .ex-logo:hover .ex-logo__plate {
+    box-shadow: 0 8px 26px rgba(39, 182, 105, .32);
+  }
+
+  .ex-logo__plate img {
+    height: 26px;
+    width: auto;
+    display: block;
+  }
+
+  @media(min-width:700px) {
+    .ex-logo__plate img {
+      height: 30px;
+    }
+  }
+
+  /* Navigation Links & Pill */
+  .ex-navlinks {
+    position: relative;
+    display: none;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+  }
+
+  @media(min-width:1160px) {
+    .ex-navlinks {
+      display: flex;
+    }
+  }
+
+  .ex-navpill {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: calc(100% - 6px);
+    border-radius: 999px;
+    background: rgba(39, 182, 105, .16);
+    border: 1px solid rgba(39, 182, 105, .35);
+    opacity: 0;
+    transition: all .45s var(--ease);
+    pointer-events: none;
+  }
+
+  .ex-header.ex-stuck .ex-navpill {
+    background: rgba(39, 182, 105, .20);
+  }
+
+  .ex-navlink {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .62);
+    transition: color .35s var(--ease);
+    text-decoration: none;
+  }
+
+  .ex-navlink i {
+    font-size: 14px;
+    opacity: .7;
+    transition: opacity .35s, color .35s, transform .5s var(--ease);
+  }
+
+  .ex-navlink:hover,
+  .ex-navlink.ex-active {
+    color: #fff;
+  }
+
+  .ex-navlink:hover i,
+  .ex-navlink.ex-active i {
+    opacity: 1;
+    color: var(--brand);
+    transform: translateY(-1px);
+  }
+
+  .ex-header.ex-stuck .ex-navlink {
+    color: var(--muted);
+  }
+
+  .ex-header.ex-stuck .ex-navlink:hover,
+  .ex-header.ex-stuck .ex-navlink.ex-active {
+    color: var(--ink);
+  }
+
+  /* CTA Buttons & Phone */
+  .ex-navcta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .ex-navphone {
+    display: none;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, .14);
+    transition: border-color .4s, color .4s, background-color .4s;
+    text-decoration: none;
+  }
+
+  @media(min-width:1420px) {
+    .ex-navphone {
+      display: inline-flex;
+    }
+  }
+
+  .ex-navphone i {
+    color: var(--brand);
+  }
+
+  .ex-navphone:hover {
+    border-color: var(--brand);
+    background: rgba(39, 182, 105, .1);
+  }
+
+  .ex-header.ex-stuck .ex-navphone {
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  .ex-navquote {
+    display: inline-flex;
+    padding: 13px 22px;
+    font-size: 10.5px;
+  }
+
+  .ex-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 30px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    isolation: isolate;
+    transition: color .45s var(--ease), border-color .45s var(--ease), box-shadow .5s var(--ease), transform .3s var(--ease);
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .ex-btn i {
+    transition: transform .45s var(--ease), color .35s;
+  }
+
+  .ex-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--brand-dim) 0%, var(--brand) 50%, var(--brand-hi) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .55s cubic-bezier(.16, 1, .3, 1);
+  }
+
+  .ex-btn:hover::before {
+    transform: scaleX(1);
+  }
+
+  .ex-btn--brand {
+    background: var(--brand);
+    color: var(--ink);
+    box-shadow: 0 10px 34px rgba(39, 182, 105, .34);
+  }
+
+  .ex-btn--brand:hover {
+    color: #fff;
+    box-shadow: 0 0 0 1.5px var(--brand), 0 14px 44px rgba(39, 182, 105, .6);
+    transform: translateY(-3px);
+  }
+
+  .ex-btn--brand:hover i {
+    transform: translate(4px, -4px) scale(1.15);
+    color: #fff;
+  }
+
+  /* Burger Toggle Button */
+  .ex-burger {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .16);
+    display: grid;
+    place-items: center;
+    gap: 0;
+    transition: background-color .4s, border-color .4s;
+    cursor: pointer;
+  }
+
+  @media(min-width:1160px) {
+    .ex-burger {
+      display: none !important;
+    }
+  }
+
+  .ex-header.ex-stuck .ex-burger {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+
+  .ex-burger i {
+    position: absolute;
+    left: 14px;
+    width: 18px;
+    height: 1.8px;
+    border-radius: 2px;
+    background: #fff;
+    transition: transform .45s var(--ease), opacity .3s, width .45s var(--ease);
+  }
+
+  .ex-burger i:nth-child(1) {
+    transform: translateY(-5px);
+  }
+
+  .ex-burger i:nth-child(2) {
+    width: 12px;
+  }
+
+  .ex-burger i:nth-child(3) {
+    transform: translateY(5px);
+  }
+
+  .ex-burger.ex-open i:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .ex-burger.ex-open i:nth-child(2) {
+    opacity: 0;
+    width: 18px;
+  }
+
+  .ex-burger.ex-open i:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  /* ==========================================================================
+     2 · FULLSCREEN MENU DRAWER
+     ========================================================================== */
+  .ex-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: var(--ink);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 110px var(--pad) 40px;
+    clip-path: circle(0% at calc(100% - 60px) 44px);
+    transition: clip-path .85s var(--ease);
+    pointer-events: none;
+    overflow-y: auto;
+  }
+
+  .ex-menu.ex-open {
+    clip-path: circle(150% at calc(100% - 60px) 44px);
+    pointer-events: auto;
+  }
+
+  .ex-menu__grid {
+    width: 100%;
+    max-width: var(--wrap);
+    margin-inline: auto;
+    display: grid;
+    gap: 44px;
+    grid-template-columns: 1fr;
+  }
+
+  @media(min-width:900px) {
+    .ex-menu__grid {
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+      align-items: center;
+      gap: 70px;
+    }
+  }
+
+  .ex-menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ex-menu__list li {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+  }
+
+  .ex-menu__link {
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+    padding: 16px 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(30px, 6.4vw, 68px);
+    font-weight: 700;
+    letter-spacing: -.035em;
+    color: #fff;
+    transform: translateY(105%);
+    transition: transform .8s var(--ease), color .4s;
+    opacity: .86;
+    text-decoration: none;
+  }
+
+  .ex-menu.ex-open .ex-menu__link {
+    transform: translateY(0);
+  }
+
+  .ex-menu__link em {
+    font-style: normal;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+    color: var(--brand);
+    opacity: .75;
+  }
+
+  .ex-menu__link:hover {
+    color: var(--brand);
+    opacity: 1;
+  }
+
+  .ex-menu__side {
+    display: grid;
+    gap: 24px;
+  }
+
+  .ex-menu__card {
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: var(--r-m);
+    padding: 26px;
+    background: rgba(255, 255, 255, .03);
+  }
+
+  .ex-kicker {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .4);
+    margin: 0;
+  }
+
+  .ex-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .ex-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--brand);
+    font-weight: 700;
+  }
+
+  .ex-live i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--brand);
+    box-shadow: 0 0 10px var(--brand);
+  }
+
+  .ex-menu__socials {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .ex-menu__socials a {
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    display: grid;
+    place-items: center;
+    transition: all .4s var(--ease);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .ex-menu__socials a:hover {
+    background: var(--brand);
+    color: var(--ink);
+    border-color: var(--brand);
+  }
+</style>
+
+<!-- #elevex-home wrapper -->
+<div id="elevex-home">
+
+  <!-- ══════════════════════════ HEADER / NAVBAR ══════════════════════════ -->
+  <header class="ex-header" id="exHeader">
+    <div class="ex-nav">
+      <a href="#home" class="ex-logo" aria-label="ELEVEX Rentals — home">
+        <span class="ex-logo__plate"><img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png"
+            alt="ELEVEX Rentals" width="2560" height="768" /></span>
+      </a>
+
+      <nav class="ex-navlinks" id="exNavLinks" aria-label="Primary">
+        <span class="ex-navpill" id="exNavPill" aria-hidden="true"></span>
+        <a class="ex-navlink ex-active" href="#home" data-spy="home"><i class="bi bi-house-door"></i>Home</a>
+        <a class="ex-navlink" href="about.html"><i class="bi bi-info-circle"></i>About</a>
+        <a class="ex-navlink" href="fleet.html"><i class="bi bi-truck-front"></i>Fleet</a>
+        <a class="ex-navlink" href="testimonials.html"><i class="bi bi-star"></i>Reviews</a>
+        <a class="ex-navlink" href="contact.html"><i class="bi bi-telephone"></i>Contact</a>
+      </nav>
+
+      <div class="ex-navcta">
+        <a href="tel:+917028096111" class="ex-navphone"><i class="bi bi-telephone-fill"></i>+91 70280 96111</a>
+        <a href="#quote" class="ex-btn ex-btn--brand ex-navquote">Get a quote <i class="bi bi-arrow-up-right"></i></a>
+        <button class="ex-burger" id="exBurger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="exMenu"><i></i><i></i><i></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════ FULLSCREEN MENU ══════════════════════ -->
+  <div class="ex-menu" id="exMenu" role="dialog" aria-modal="true" aria-label="Site menu">
+    <div class="ex-menu__grid">
+      <ul class="ex-menu__list" id="exMenuList">
+        <li><a class="ex-menu__link" href="#home"><em>01</em>Home</a></li>
+        <li><a class="ex-menu__link" href="about.html"><em>02</em>About Us</a></li>
+        <li><a class="ex-menu__link" href="fleet.html"><em>03</em>Equipment Fleet</a></li>
+        <li><a class="ex-menu__link" href="testimonials.html"><em>04</em>Client Reviews</a></li>
+        <li><a class="ex-menu__link" href="contact.html"><em>05</em>Contact &amp; Hubs</a></li>
+        <li><a class="ex-menu__link" href="#quote"><em>06</em>Get a Quote</a></li>
+      </ul>
+
+      <div class="ex-menu__side">
+        <div class="ex-menu__card">
+          <p class="ex-kicker">Rental desk · Mon–Sat, 8am–8pm</p>
+          <a href="tel:+917028096111" class="ex-display"
+            style="display:block;margin-top:12px;font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-.02em;color:#fff;text-decoration:none">+91
+            70280 96111</a>
+          <a href="mailto:hello@elevex.co.in"
+            style="display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--brand);text-decoration:none">hello@elevex.co.in</a>
+        </div>
+        <div class="ex-menu__card">
+          <p class="ex-kicker">Fleet status</p>
+          <p style="margin-top:12px;font-size:13.5px;line-height:1.7;color:rgba(255,255,255,.6);font-weight:500">
+            <span class="ex-live"><i></i></span> 68 machines available across 25 cities · next-day dispatch on most
+            SKUs.
+          </p>
+        </div>
+        <div class="ex-menu__socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i
+              class="bi bi-youtube"></i></a>
+          <a href="https://wa.me/917028096111" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+              class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function navbarComplete() {
+  var head = document.getElementById('exHeader');
+  var pill = document.getElementById('exNavPill');
+  var box = document.getElementById('exNavLinks');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.ex-navlink'));
+  var burger = document.getElementById('exBurger');
+  var panel = document.getElementById('exMenu');
+  var last = 0;
+
+  // 1. Sliding Pill Tracking
+  function place(el) {
+    if (!pill || !box || !el) { if (pill) pill.style.opacity = '0'; return; }
+    var b = box.getBoundingClientRect(), r = el.getBoundingClientRect();
+    pill.style.opacity = '1';
+    pill.style.width = r.width + 'px';
+    pill.style.left = (r.left - b.left) + 'px';
+  }
+  function active() { return document.querySelector('.ex-navlink.ex-active') || links[0]; }
+
+  links.forEach(function (l) { l.addEventListener('mouseenter', function () { place(l); }); });
+  if (box) box.addEventListener('mouseleave', function () { place(active()); });
+  window.addEventListener('resize', function () { place(active()); });
+  setTimeout(function () { place(active()); }, 400);
+
+  // 2. Sticky Header & Hide/Reveal on Scroll
+  window.addEventListener('scroll', function () {
+    if (!head) return;
+    var y = window.pageYOffset || window.scrollY || 0;
+    head.classList.toggle('ex-stuck', y > 60);
+    if (panel && panel.classList.contains('ex-open')) { last = y; return; }
+    if (y > 420 && y > last + 6) head.classList.add('ex-hide');
+    else if (y < last - 6) head.classList.remove('ex-hide');
+    last = y;
+  }, { passive: true });
+
+  // 3. Scroll-Spy
+  var spySections = Array.prototype.slice.call(document.querySelectorAll('[data-spy]')).map(function (l) {
+    return { link: l, el: document.getElementById(l.getAttribute('data-spy')) };
+  }).filter(function (s) { return s.el; });
+
+  if (spySections.length && 'IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var match = spySections.filter(function (s) { return s.el === e.target; })[0];
+        if (!match) return;
+        links.forEach(function (l) { l.classList.remove('ex-active'); });
+        match.link.classList.add('ex-active');
+        place(match.link);
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    spySections.forEach(function (s) { spy.observe(s.el); });
+  }
+
+  // 4. Fullscreen Mobile & Desktop Menu Drawer
+  if (burger && panel) {
+    var menuLinks = Array.prototype.slice.call(panel.querySelectorAll('.ex-menu__link'));
+    function setOpen(open) {
+      panel.classList.toggle('ex-open', open);
+      burger.classList.toggle('ex-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+      menuLinks.forEach(function (l, i) {
+        l.style.transitionDelay = open ? (0.14 + i * 0.07) + 's' : '0s';
+      });
+    }
+    burger.addEventListener('click', function () { setOpen(!panel.classList.contains('ex-open')); });
+    menuLinks.forEach(function (l) { l.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && panel.classList.contains('ex-open')) setOpen(false);
+    });
+  }
+
+  // 5. Smooth Anchor Scroll with Header Clearing Offset
+  Array.prototype.slice.call(document.querySelectorAll('a[href^="#"]')).forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (id === '#' || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + (window.pageYOffset || window.scrollY || 0) - 90;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+})();
+</script>

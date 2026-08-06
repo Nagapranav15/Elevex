@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#131619" />
+<title>Equipment Fleet | ELEVEX All-Electric AWP Rentals</title>
+<meta name="description" content="Explore ELEVEX's pan-India all-electric rental fleet — scissor lifts, articulating booms, rough-terrain 4WDs, and low-level mast units." />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23131619'/%3E%3Ctext x='50' y='69' font-size='58' font-family='Arial Black,Arial' font-weight='900' fill='%2327B669' text-anchor='middle'%3EX%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+
+<style>
+#elevex-home{
+  --brand:#27B669;
+  --brand-hi:#3ED989;
+  --brand-dim:#16824A;
+  --brand-wash:#E7F7EE;
+  --accent:#FF792D;
+  --deep:#215676;
+  --ink:#131619;
+  --ink-2:#1E2023;
+  --ink-3:#2A2F33;
+  --paper:#FFFFFF;
+  --mist:#F3F6F4;
+  --line:rgba(19,22,25,.10);
+  --line-d:rgba(255,255,255,.10);
+  --muted:rgba(19,22,25,.56);
+  --muted-d:rgba(255,255,255,.56);
+  --shadow-s:0 8px 24px rgba(19,22,25,.05);
+  --shadow-m:0 20px 60px rgba(19,22,25,.10);
+  --shadow-l:0 40px 100px rgba(19,22,25,.16);
+  --glow:0 0 0 1px rgba(39,182,105,.30),0 8px 40px rgba(39,182,105,.35);
+  --r-s:14px;
+  --r-m:22px;
+  --r-l:32px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --pad:clamp(20px,4vw,48px);
+  --wrap:1420px;
+}
+
+#elevex-home *,#elevex-home *::before,#elevex-home *::after{box-sizing:border-box}
+#elevex-home{margin:0;font-family:'Manrope',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;overflow-x:clip;position:relative}
+:where(#elevex-home) img{max-width:100%;display:block}
+:where(#elevex-home) a{color:inherit;text-decoration:none}
+:where(#elevex-home) button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:where(#elevex-home) p{margin:0}
+:where(#elevex-home) :is(h1,h2,h3,h4){margin:0;font-family:'Space Grotesk','Manrope',sans-serif;font-weight:700;letter-spacing:-.03em;line-height:1.03}
+:where(#elevex-home) ul{margin:0;padding:0;list-style:none}
+#elevex-home ::selection{background:var(--brand);color:var(--ink)}
+html.js body{margin:0}
+html{scroll-behavior:smooth}
+
+.ex-wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.ex-sec{position:relative;padding-block:clamp(60px,8vw,120px)}
+.ex-dark{background:var(--ink);color:#fff}
+.ex-dark h1,.ex-dark h2,.ex-dark h3,.ex-dark h4{color:#fff}
+.ex-mist{background:var(--mist)}
+.ex-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--brand-dim)}
+.ex-dark .ex-eyebrow{color:var(--brand)}
+.ex-eyebrow::before{content:"";width:22px;height:1px;background:currentColor;opacity:.55}
+.ex-h2{font-size:clamp(32px,4.5vw,60px)}
+
+/* EV Charging Buttons */
+.ex-btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:16px 30px;border-radius:999px;font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;overflow:hidden;isolation:isolate;transition:color .45s var(--ease),border-color .45s var(--ease),box-shadow .5s var(--ease),transform .3s var(--ease)}
+.ex-btn i{transition:transform .45s var(--ease),color .35s}
+.ex-btn::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(90deg,var(--brand-dim) 0%,var(--brand) 50%,var(--brand-hi) 100%);transform:scaleX(0);transform-origin:left;transition:transform .55s cubic-bezier(.16,1,.3,1)}
+.ex-btn::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-25deg);transition:left 0s}
+.ex-btn:hover::before{transform:scaleX(1)}
+.ex-btn:hover::after{left:160%;transition:left .75s ease-in-out}
+.ex-btn:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(39,182,105,.6),0 0 24px rgba(39,182,105,.5),0 12px 36px rgba(39,182,105,.35)}
+.ex-btn:hover i{transform:translate(4px,-4px) scale(1.15);color:#fff}
+.ex-btn--brand{background:var(--brand);color:var(--ink);box-shadow:0 10px 34px rgba(39,182,105,.34)}
+.ex-btn--brand::before{background:linear-gradient(90deg,var(--ink) 0%,#262A2E 100%)}
+.ex-btn--brand:hover{color:var(--brand);box-shadow:0 0 0 1.5px var(--brand),0 14px 44px rgba(39,182,105,.6)}
+
+/* Header */
+.ex-header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px var(--pad) 0;display:flex;justify-content:center;transition:transform .6s var(--ease),padding .5s var(--ease)}
+.ex-nav{position:relative;width:100%;max-width:var(--wrap);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:9px 9px 9px 22px;border-radius:999px;background:rgba(19,22,25,.80);border:1px solid rgba(39,182,105,.30);backdrop-filter:blur(22px) saturate(1.4);-webkit-backdrop-filter:blur(22px) saturate(1.4);box-shadow:0 12px 40px rgba(0,0,0,.45),0 0 24px rgba(39,182,105,.18);transition:all .5s var(--ease)}
+.ex-header.ex-stuck .ex-nav{background:rgba(255,255,255,.90);border-color:rgba(39,182,105,.40);box-shadow:0 18px 50px rgba(19,22,25,.15),0 0 28px rgba(39,182,105,.22)}
+.ex-logo__plate{display:block;padding:9px 15px;border-radius:13px;background:#fff;box-shadow:0 6px 22px rgba(0,0,0,.22)}
+.ex-logo__plate img{height:28px;width:auto}
+.ex-navlinks{position:relative;display:none;align-items:center;gap:2px;padding:3px}
+@media(min-width:1160px){.ex-navlinks{display:flex}}
+.ex-navlink{position:relative;z-index:1;display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);transition:color .35s var(--ease)}
+.ex-navlink.ex-active,.ex-navlink:hover{color:#fff}
+.ex-header.ex-stuck .ex-navlink{color:var(--muted)}
+.ex-header.ex-stuck .ex-navlink.ex-active,.ex-header.ex-stuck .ex-navlink:hover{color:var(--ink)}
+
+.ex-navcta{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.ex-navphone{display:none;align-items:center;gap:9px;padding:10px 16px;border-radius:999px;font-size:11.5px;font-weight:800;letter-spacing:.06em;color:#fff;border:1px solid rgba(255,255,255,.14);transition:border-color .4s,color .4s,background-color .4s}
+@media(min-width:1420px){.ex-navphone{display:inline-flex}}
+.ex-navphone i{color:var(--brand)}
+.ex-navphone:hover{border-color:var(--brand);background:rgba(39,182,105,.1)}
+.ex-header.ex-stuck .ex-navphone{color:var(--ink);border-color:var(--line)}
+.ex-navquote{display:none;padding:13px 22px;font-size:10.5px}
+@media(min-width:560px){.ex-navquote{display:inline-flex}}
+
+.ex-burger{position:relative;width:46px;height:46px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;gap:0;transition:background-color .4s,border-color .4s}
+@media(min-width:1160px){.ex-burger{display:none}}
+.ex-header.ex-stuck .ex-burger{background:var(--ink);border-color:var(--ink)}
+.ex-burger i{position:absolute;left:14px;width:18px;height:1.8px;border-radius:2px;background:#fff;transition:transform .45s var(--ease),opacity .3s,width .45s var(--ease)}
+.ex-burger i:nth-child(1){transform:translateY(-5px)}
+.ex-burger i:nth-child(2){width:12px}
+.ex-burger i:nth-child(3){transform:translateY(5px)}
+.ex-burger.ex-open i:nth-child(1){transform:rotate(45deg)}
+.ex-burger.ex-open i:nth-child(2){opacity:0;width:18px}
+.ex-burger.ex-open i:nth-child(3){transform:rotate(-45deg)}
+
+/* fullscreen menu */
+.ex-menu{position:fixed;inset:0;z-index:999;background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:110px var(--pad) 40px;clip-path:circle(0% at calc(100% - 60px) 44px);transition:clip-path .85s var(--ease);pointer-events:none;overflow-y:auto}
+.ex-menu.ex-open{clip-path:circle(150% at calc(100% - 60px) 44px);pointer-events:auto}
+.ex-menu__grid{width:100%;max-width:var(--wrap);margin-inline:auto;display:grid;gap:44px;grid-template-columns:1fr}
+@media(min-width:900px){.ex-menu__grid{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);align-items:center;gap:70px}}
+.ex-menu__list li{overflow:hidden;border-bottom:1px solid rgba(255,255,255,.08)}
+.ex-menu__link{display:flex;align-items:baseline;gap:18px;padding:14px 0;font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,6.4vw,68px);font-weight:700;letter-spacing:-.035em;color:#fff;transform:translateY(105%);transition:transform .8s var(--ease),color .4s;opacity:.86}
+.ex-menu.ex-open .ex-menu__link{transform:translateY(0)}
+.ex-menu__link em{font-style:normal;font-family:'Manrope',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;color:var(--brand);opacity:.55}
+.ex-menu__link:hover{color:var(--brand);opacity:1}
+.ex-menu__side{display:grid;gap:26px}
+.ex-menu__card{border:1px solid rgba(255,255,255,.1);border-radius:var(--r-m);padding:26px;background:rgba(255,255,255,.03)}
+.ex-menu__socials{display:flex;gap:10px;flex-wrap:wrap}
+.ex-menu__socials a{width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;transition:all .4s var(--ease)}
+.ex-menu__socials a:hover{background:var(--brand);color:var(--ink);border-color:var(--brand)}
+
+/* Fleet Page Styling */
+.ex-fleet-hero{position:relative;padding-top:140px;padding-bottom:60px;background:var(--ink);color:#fff;overflow:hidden}
+.ex-fleet-filter{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}
+.ex-ff-btn{padding:9px 20px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:all .35s var(--ease);cursor:pointer}
+.ex-ff-btn:hover,.ex-ff-btn.ex-active{background:var(--brand);color:var(--ink);border-color:var(--brand);box-shadow:0 0 20px rgba(39,182,105,.4)}
+
+.ex-fleet-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:40px}
+@media(min-width:700px){.ex-fleet-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.ex-fleet-grid{grid-template-columns:repeat(3,1fr)}}
+
+/* Scroll-driven section parallax */
+[data-parallax]{will-change:transform;transition:transform .1s linear}
+
+/* Cursor spotlight on dark panels */
+[data-spotlight]{position:relative}
+[data-spotlight]::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .6s;background:radial-gradient(650px circle at var(--cx,50%) var(--cy,50%),rgba(39,182,105,.06),transparent 55%);z-index:0}
+[data-spotlight]:hover::before{opacity:1}
+
+.ex-fleet-card{border-radius:var(--r-m);background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow-s);overflow:hidden;transition:transform .5s var(--ease),border-color .4s,background-color .4s,box-shadow .5s;display:flex;flex-direction:column;transform-style:preserve-3d;perspective:800px;position:relative}
+.ex-fleet-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(19,22,25,.10),0 0 0 1px rgba(39,182,105,.25);border-color:var(--brand)}
+.ex-fleet-card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s;background:radial-gradient(350px circle at var(--mx,50%) var(--my,50%),rgba(39,182,105,.12),transparent 62%)}
+.ex-fleet-card:hover::after{opacity:1}
+
+.ex-fleet-card__stage{position:relative;padding:30px 20px;background:var(--mist);display:grid;place-items:center;min-height:220px}
+.ex-fleet-card__stage img{max-height:170px;width:auto;object-fit:contain;transition:transform .5s var(--ease)}
+.ex-fleet-card:hover .ex-fleet-card__stage img{transform:scale(1.06)}
+.ex-fleet-card__body{padding:24px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.ex-fleet-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-block:16px;padding-top:16px;border-top:1px solid var(--line)}
+.ex-fspec b{display:block;font-size:16px;font-weight:700;font-family:'Space Grotesk',sans-serif}
+.ex-fspec small{display:block;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+html.js [data-rv]{opacity:0;transform:translateY(30px);transition:all .9s var(--ease)}
+html.js [data-rv].ex-in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div id="elevex-home">
+
+<header class="ex-header" id="exHeader">
+  <div class="ex-nav">
+    <a href="index-new.html" class="ex-logo">
+      <span class="ex-logo__plate"><img src="assets/logo-elevex-white.png" alt="ELEVEX Rentals" /></span>
+    </a>
+    <nav class="ex-navlinks" id="exNavLinks" aria-label="Primary">
+      <span class="ex-navpill" id="exNavPill" aria-hidden="true"></span>
+      <a class="ex-navlink" href="index-new.html"><i class="bi bi-house-door"></i>Home</a>
+      <a class="ex-navlink" href="about.html"><i class="bi bi-info-circle"></i>About</a>
+      <a class="ex-navlink ex-active" href="fleet.html"><i class="bi bi-truck-front"></i>Fleet</a>
+      <a class="ex-navlink" href="testimonials.html"><i class="bi bi-star"></i>Reviews</a>
+      <a class="ex-navlink" href="contact.html"><i class="bi bi-telephone"></i>Contact</a>
+    </nav>
+    <div class="ex-navcta">
+      <a href="tel:+917028096111" class="ex-navphone"><i class="bi bi-telephone-fill"></i>+91 70280 96111</a>
+      <a href="index-new.html#quote" class="ex-btn ex-btn--brand ex-navquote">Get Quote <i class="bi bi-arrow-up-right"></i></a>
+      <button class="ex-burger" id="exBurger" aria-label="Open menu" aria-expanded="false" aria-controls="exMenu"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════════ FULLSCREEN MENU ══════════════════════ -->
+<div class="ex-menu" id="exMenu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="ex-menu__grid">
+    <ul class="ex-menu__list" id="exMenuList">
+      <li><a class="ex-menu__link" href="index-new.html#home"><em>01</em>Home</a></li>
+      <li><a class="ex-menu__link" href="about.html"><em>02</em>About Us</a></li>
+      <li><a class="ex-menu__link" href="fleet.html"><em>03</em>Equipment Fleet</a></li>
+      <li><a class="ex-menu__link" href="testimonials.html"><em>04</em>Client Reviews</a></li>
+      <li><a class="ex-menu__link" href="contact.html"><em>05</em>Contact &amp; Hubs</a></li>
+      <li><a class="ex-menu__link" href="index-new.html#quote"><em>06</em>Get a Quote</a></li>
+    </ul>
+    <div class="ex-menu__side">
+      <div class="ex-menu__card">
+        <p class="ex-kicker" style="color:rgba(255,255,255,.4)">Rental desk · Mon–Sat, 8am–8pm</p>
+        <a href="tel:+917028096111" class="ex-display" style="display:block;margin-top:12px;font-size:clamp(20px,2.4vw,28px);font-weight:700;letter-spacing:-.02em">+91 70280 96111</a>
+        <a href="mailto:hello@elevex.co.in" style="display:block;margin-top:8px;font-size:14px;font-weight:600;color:var(--brand)">hello@elevex.co.in</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section class="ex-fleet-hero" data-spotlight>
+  <div class="ex-wrap">
+    <span class="ex-eyebrow" data-rv="down">Pan-India Rental Fleet</span>
+    <h1 class="ex-h2" style="margin-top:20px;font-size:clamp(38px,5.8vw,86px)" data-rv="up">
+      All-Electric Aerial Work Platforms.
+    </h1>
+
+    <div class="ex-fleet-filter" data-rv="up">
+      <button class="ex-ff-btn ex-active" type="button" data-filter="all">All Lifts (100+)</button>
+      <button class="ex-ff-btn" type="button" data-filter="scissor">Scissor Lifts</button>
+      <button class="ex-ff-btn" type="button" data-filter="boom">Articulating Booms</button>
+      <button class="ex-ff-btn" type="filter" data-filter="terrain">Rough-Terrain 4WD</button>
+      <button class="ex-ff-btn" type="button" data-filter="mast">Low-Level Mast</button>
+    </div>
+  </div>
+</section>
+
+<section class="ex-sec">
+  <div class="ex-wrap">
+    <div class="ex-fleet-grid" id="exFleetGrid">
+
+      <div class="ex-fleet-card" data-cat="scissor" data-spot data-tilt data-tilt-max="4" data-rv="up">
+        <div class="ex-fleet-card__stage">
+          <img src="assets/cutouts/scissor-lift-main.png" alt="Electric Scissor Lift 14m" />
+        </div>
+        <div class="ex-fleet-card__body">
+          <div>
+            <span class="ex-eyebrow">Scissor Series</span>
+            <h3 style="margin-top:8px;font-size:22px">ELEVEX Electric Scissor 14m</h3>
+            <p style="margin-top:6px;font-size:12.5px;color:var(--muted)">Straight vertical reach for indoor MEP, cleanroom fit-outs, and warehouse racking.</p>
+          </div>
+          <div class="ex-fleet-specs">
+            <div class="ex-fspec"><b>14.0 m</b><small>Working Height</small></div>
+            <div class="ex-fspec"><b>450 kg</b><small>Deck Capacity</small></div>
+            <div class="ex-fspec"><b>8 Hours</b><small>Shift Runtime</small></div>
+            <div class="ex-fspec"><b>62 dB</b><small>Silent Drive</small></div>
+          </div>
+          <a href="index-new.html#quote" class="ex-btn ex-btn--brand" style="width:100%;justify-content:center;margin-top:12px">Rent This Lift <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="ex-fleet-card" data-cat="boom" data-spot data-tilt data-tilt-max="4" data-rv="up" style="--d:100ms">
+        <div class="ex-fleet-card__stage">
+          <img src="assets/cutouts/boom-lift-main.png" alt="Electric Articulating Boom 22m" />
+        </div>
+        <div class="ex-fleet-card__body">
+          <div>
+            <span class="ex-eyebrow">Boom Series</span>
+            <h3 style="margin-top:8px;font-size:22px">ELEVEX Articulating Boom 22m</h3>
+            <p style="margin-top:6px;font-size:12.5px;color:var(--muted)">Up-and-over access above obstacles in manufacturing plants and metro soffits.</p>
+          </div>
+          <div class="ex-fleet-specs">
+            <div class="ex-fspec"><b>22.0 m</b><small>Working Height</small></div>
+            <div class="ex-fspec"><b>230 kg</b><small>Platform Load</small></div>
+            <div class="ex-fspec"><b>12.5 m</b><small>Horizontal Reach</small></div>
+            <div class="ex-fspec"><b>0 Fumes</b><small>100% Electric</small></div>
+          </div>
+          <a href="index-new.html#quote" class="ex-btn ex-btn--brand" style="width:100%;justify-content:center;margin-top:12px">Rent This Lift <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+      <div class="ex-fleet-card" data-cat="terrain" data-spot data-tilt data-tilt-max="4" data-rv="up" style="--d:200ms">
+        <div class="ex-fleet-card__stage">
+          <img src="assets/cutouts/terrain-lift-main.png" alt="Rough-Terrain 4WD Lift 18m" />
+        </div>
+        <div class="ex-fleet-card__body">
+          <div>
+            <span class="ex-eyebrow">4WD Terrain Series</span>
+            <h3 style="margin-top:8px;font-size:22px">ELEVEX Rough-Terrain 18m</h3>
+            <p style="margin-top:6px;font-size:12.5px;color:var(--muted)">Oscillating 4WD electric axles for mud, gravel, and unpaved infrastructure sites.</p>
+          </div>
+          <div class="ex-fleet-specs">
+            <div class="ex-fspec"><b>18.0 m</b><small>Working Height</small></div>
+            <div class="ex-fspec"><b>320 kg</b><small>Deck Load</small></div>
+            <div class="ex-fspec"><b>4WD EV</b><small>Active Traction</small></div>
+            <div class="ex-fspec"><b>IP67</b><small>Weather Rated</small></div>
+          </div>
+          <a href="index-new.html#quote" class="ex-btn ex-btn--brand" style="width:100%;justify-content:center;margin-top:12px">Rent This Lift <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ex-sec ex-dark" data-spotlight style="border-top:1px solid rgba(255,255,255,.1);padding-block:40px">
+  <div class="ex-wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px">
+    <p style="font-size:12px;color:rgba(255,255,255,.5)">© 2026 ELEVEX Access Solutions Pvt. Ltd. All rights reserved.</p>
+    <div style="display:flex;gap:20px;font-size:12px;color:rgba(255,255,255,.6)">
+      <a href="index-new.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="fleet.html">Fleet</a>
+      <a href="testimonials.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function() {
+  var CALM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var FINE = window.matchMedia('(pointer: fine)').matches;
+
+  function $$(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
+  function lerp(a, b, n) { return (1 - n) * a + n * b; }
+  function clamp(x, min, max) { return Math.max(min, Math.min(x, max)); }
+
+  /* ---------------------------------------------------------------- 1 · REVEALS */
+  var els = document.querySelectorAll('[data-rv]');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('ex-in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(function(el) { io.observe(el); });
+  } else {
+    els.forEach(function(el) { el.classList.add('ex-in'); });
+  }
+
+  /* ---------------------------------------------------------------- 2 · FLEET FILTERING */
+  var btns = document.querySelectorAll('.ex-ff-btn');
+  var cards = document.querySelectorAll('.ex-fleet-card');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b){ b.classList.remove('ex-active'); });
+      btn.classList.add('ex-active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(c) {
+        if (filter === 'all' || c.getAttribute('data-cat') === filter) {
+          c.style.display = 'flex';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  /* ---------------------------------------------------------------- 3 · STUCK HEADER */
+  window.addEventListener('scroll', function() {
+    var head = document.getElementById('exHeader');
+    if (head) head.classList.toggle('ex-stuck', window.pageYOffset > 50);
+  });
+
+  /* ---------------------------------------------------------------- 4 · SPOTLIGHT + TILT */
+  (function pointerFx() {
+    if (!FINE) return;
+
+    $$('[data-spot]').forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    if (CALM) return;
+    $$('[data-tilt]').forEach(function (el) {
+      var max = parseFloat(el.getAttribute('data-tilt-max')) || 7;
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        el.style.transform = 'perspective(1100px) rotateX(' + (-py * max) + 'deg) rotateY(' + (px * max) + 'deg)';
+      });
+      el.addEventListener('mouseleave', function () {
+        el.style.transform = 'perspective(1100px) rotateX(0) rotateY(0)';
+      });
+    });
+  })();
+
+  /* ---------------------------------------------------------------- 5 · CURSOR SPOTLIGHT ON DARK SECTIONS */
+  (function cursorSpotlight() {
+    if (!FINE) return;
+    $$('[data-spotlight]').forEach(function (sec) {
+      sec.addEventListener('mousemove', function (e) {
+        var r = sec.getBoundingClientRect();
+        sec.style.setProperty('--cx', (e.clientX - r.left) + 'px');
+        sec.style.setProperty('--cy', (e.clientY - r.top) + 'px');
+      });
+    });
+  })();
+
+  /* ---------------------------------------------------------------- 6 · MAGNETIC BUTTONS */
+  (function magneticBtns() {
+    if (!FINE || CALM) return;
+    $$('.ex-btn, .ex-iconbtn, .ex-ff-btn').forEach(function (btn) {
+      btn.addEventListener('mousemove', function (e) {
+        var r = btn.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width / 2) * 0.25;
+        var y = (e.clientY - r.top - r.height / 2) * 0.25;
+        btn.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px)';
+      });
+      btn.addEventListener('mouseleave', function () {
+        btn.style.transform = '';
+      });
+    });
+  })();
+
+  /* ---------------------------------------------------------------- 7 · SECTION PARALLAX */
+  (function sectionParallax() {
+    if (CALM) return;
+    var secs = $$('[data-parallax]');
+    if (!secs.length) return;
+    var ticking = false;
+
+    function frame() {
+      var vh = window.innerHeight;
+      secs.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        var speed = parseFloat(el.getAttribute('data-parallax')) || 0.04;
+        var center = (r.top + r.height / 2 - vh / 2) / vh;
+        el.style.transform = 'translate3d(0,' + (center * speed * -100).toFixed(1) + 'px,0)';
+      });
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(frame); }
+    }, { passive: true });
+    frame();
+  })();
+
+  /* ---------------------------------------------------------------- 8 · MENU CONTROLLER */
+  (function fullscreenMenu() {
+    var burger = document.getElementById('exBurger');
+    var panel  = document.getElementById('exMenu');
+    if (!burger || !panel) return;
+    var links = $$('.ex-menu__link', panel);
+
+    function setOpen(open) {
+      panel.classList.toggle('ex-open', open);
+      burger.classList.toggle('ex-open', open);
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = open ? 'hidden' : '';
+      links.forEach(function (l, i) {
+        l.style.transitionDelay = open ? (i * 45 + 100) + 'ms' : '0ms';
+      });
+    }
+
+    burger.addEventListener('click', function () {
+      setOpen(!panel.classList.contains('ex-open'));
+    });
+
+    links.forEach(function (l) {
+      l.addEventListener('click', function () { setOpen(false); });
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>
