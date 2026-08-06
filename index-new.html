@@ -1643,7 +1643,7 @@
       flex-direction: column;
       overflow: hidden;
       isolation: isolate;
-      padding-top: 104px
+      padding-top: clamp(72px, 8vh, 96px)
     }
 
     @media(max-width:1039px) {
@@ -1710,7 +1710,7 @@
       flex: 1;
       display: flex;
       align-items: center;
-      padding-block: clamp(30px, 4vw, 56px);
+      padding-block: clamp(12px, 2vh, 36px);
       width: 100%;
       box-sizing: border-box;
     }
@@ -2154,9 +2154,16 @@
 
     @media(min-width:1040px) {
       .ex-hero__stage {
-        height: auto;
-        min-height: 480px;
-        max-height: 580px;
+        height: min(46vh, 420px);
+        max-height: 430px;
+        min-height: 320px;
+        margin-block: auto;
+      }
+      .ex-hero__unit-img {
+        max-height: 100% !important;
+        height: 100% !important;
+        width: auto !important;
+        object-fit: contain;
       }
     }
 
