@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#080B11" />
+  <title>ELEVEX Rentals — Built To Lift. Born To Lead. | Pan-India Heavy Crane Rental</title>
+  <meta name="description"
+    content="ELEVEX Rentals: India's premier heavy crane & aerial work platform rental company. 15T to 500T Mobile Cranes, Crawler Cranes, Boom Lifts & Heavy Equipment. Pan-India 48h Delivery." />
+  <meta name="keywords"
+    content="Crane Rental, Mobile Crane Rental, Crawler Crane Rental, Hydra Crane Rental, Boom Lift Rental, Heavy Equipment Rental, Industrial Crane Rental, Crane Rental Hyderabad, Crane Rental Chennai, Crane Rental Bangalore, Crane Rental Vijayawada" />
+  <link rel="canonical" href="https://elevex.co.in/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elevex.co.in/" />
+  <meta property="og:title" content="ELEVEX Rentals — Built To Lift. Born To Lead." />
+  <meta property="og:description"
+    content="World-class crane rental platform. Mobile Cranes, Crawler Cranes, Hydra Cranes & Articulating Boom Lifts." />
+  <meta property="og:image" content="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23080B11'/%3E%3Cpath d='M25 75 L50 25 L75 75 Z' fill='none' stroke='%23F59E4B' stroke-width='8'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Space Grotesk, Manrope, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Third-Party CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- CDNs: Lenis, GSAP, Swiper, AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ELEVEX Rentals",
+    "url": "https://elevex.co.in/",
+    "logo": "https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png",
+    "description": "World-class crane & heavy equipment rental company in India.",
+    "telephone": "+917028096111"
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       PRO-LEVEL UI REPLICA DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-dark: #080B11;
+      --bg-card: rgba(15, 23, 38, 0.75);
+      --bg-card-hover: rgba(22, 34, 56, 0.90);
+      
+      --accent-orange: #FF5A1F;
+      --accent-amber: #F59E4B;
+      --accent-blue: #2867AB;
+      --accent-cyan: #00D2FF;
+      --text-muted: #8E9BAE;
+
+      --font-display: 'Space Grotesk', 'Manrope', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-pill: 999px;
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+      background: var(--bg-dark);
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: #ffffff;
+      background-color: var(--bg-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Mouse Spotlight Glow */
+    .ex-spotlight {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 550px;
+      height: 550px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(40, 103, 171, 0.16) 0%, rgba(245, 158, 75, 0.08) 45%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: transform 0.05s ease-out;
+    }
+
+    #elevex-replica {
+      position: relative;
+      width: 100%;
+      overflow-x: clip;
+    }
+
+    /* Progress Bar */
+    .ex-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-amber), var(--accent-orange));
+      z-index: 10000;
+      width: 0%;
+    }
+
+    /* Left Vertical Index Track */
+    .ex-left-track {
+      position: fixed;
+      left: 28px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    @media (max-width: 1200px) {
+      .ex-left-track { display: none; }
+    }
+
+    .ex-track-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .ex-track-item::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .ex-track-item.active {
+      color: #ffffff;
+    }
+
+    .ex-track-item.active::before {
+      background: var(--accent-orange);
+      box-shadow: 0 0 12px var(--accent-orange);
+      transform: scale(1.4);
+    }
+
+    .ex-scroll-explore {
+      position: fixed;
+      left: 28px;
+      bottom: 40px;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .ex-scroll-explore::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 2px solid var(--accent-amber);
+      display: block;
+    }
+
+    /* Header Nav */
+    .ex-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 24px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.4s var(--ease-out);
+    }
+
+    @media (max-width: 991px) {
+      .ex-header { padding: 18px 20px; }
+    }
+
+    .ex-header.scrolled {
+      padding: 14px 48px;
+      background: rgba(8, 11, 17, 0.92);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .ex-logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .ex-logo-brand img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .ex-nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .ex-nav-link {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+    }
+
+    .ex-nav-link:hover, .ex-nav-link.active {
+      color: #ffffff;
+    }
+
+    .ex-nav-link.active::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--accent-orange);
+      margin-top: 4px;
+    }
+
+    .ex-header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ex-btn-quote {
+      background: linear-gradient(135deg, rgba(255, 90, 31, 0.15), rgba(245, 158, 75, 0.15));
+      border: 1px solid rgba(255, 90, 31, 0.6);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: all 0.35s var(--ease-out);
+    }
+
+    .ex-btn-quote:hover {
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
+      color: #ffffff;
+      box-shadow: 0 0 25px rgba(255, 90, 31, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .ex-icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .ex-icon-circle:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* ══════════════════════════ HERO SECTION ══════════════════════════ */
+    .ex-hero-replica {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 110px;
+      padding-bottom: 30px;
+      padding-left: clamp(20px, 6vw, 100px);
+      padding-right: clamp(20px, 4vw, 60px);
+      background: var(--bg-dark);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .ex-hero-crane-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .ex-hero-crane-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 65% 35%;
+      filter: saturate(0.8) contrast(1.15) brightness(0.45);
+    }
+
+    .ex-hero-crane-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 75% 35%, rgba(40, 103, 171, 0.18), transparent 60%),
+        linear-gradient(90deg, var(--bg-dark) 10%, rgba(8, 11, 17, 0.85) 45%, rgba(8, 11, 17, 0.4) 75%, var(--bg-dark) 98%),
+        linear-gradient(180deg, var(--bg-dark) 0%, transparent 25%, transparent 70%, var(--bg-dark) 98%);
+    }
+
+    .ex-eyebrow-blue {
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #00D2FF;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .ex-eyebrow-blue::before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: #00D2FF;
+    }
+
+    .ex-hero-title-replica {
+      font-family: var(--font-display);
+      font-size: clamp(48px, 6.5vw, 96px);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      margin-bottom: 28px;
+    }
+
+    .ex-hero-title-replica .txt-orange { color: var(--accent-amber); }
+    .ex-hero-title-replica .txt-blue { color: var(--accent-blue); }
+
+    .ex-hero-desc-replica {
+      font-size: clamp(15px, 1.1vw, 18px);
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .ex-btn-explore {
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 16px 36px;
+      border-radius: var(--radius-pill);
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(255, 90, 31, 0.4);
+      text-decoration: none;
+      transition: all 0.35s var(--ease-out);
+    }
+
+    .ex-btn-explore:hover {
+      color: #ffffff;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(255, 90, 31, 0.6);
+    }
+
+    .ex-btn-showreel {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 16px 32px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(12px);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: all 0.35s var(--ease-out);
+    }
+
+    .ex-hud-ring {
+      position: absolute;
+      top: 25%;
+      right: 32%;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    @media (max-width: 1200px) { .ex-hud-ring { display: none; } }
+
+    .ex-hud-tag {
+      background: rgba(15, 23, 38, 0.85);
+      border: 1px solid rgba(0, 210, 255, 0.4);
+      backdrop-filter: blur(16px);
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      color: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .ex-hud-tag small {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+    }
+
+    .ex-hud-tag b {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+
+    .ex-right-features {
+      position: absolute;
+      right: 48px;
+      top: 25%;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media (max-width: 1200px) { .ex-right-features { display: none; } }
+
+    .ex-feature-pill {
+      background: rgba(15, 23, 38, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .ex-feature-pill:hover {
+      background: rgba(22, 34, 56, 0.9);
+      border-color: var(--accent-amber);
+      transform: translateX(-6px);
+    }
+
+    .ex-feature-pill i { font-size: 20px; color: var(--accent-amber); }
+    .ex-feature-pill b { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 800; color: #ffffff; line-height: 1.1; }
+    .ex-feature-pill small { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .ex-promise-badge {
+      position: absolute;
+      right: 48px;
+      bottom: 110px;
+      z-index: 10;
+      background: rgba(15, 23, 38, 0.85);
+      border: 1px solid rgba(255, 90, 31, 0.4);
+      backdrop-filter: blur(16px);
+      padding: 18px 24px;
+      border-radius: var(--radius-md);
+      max-width: 260px;
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 1200px) { .ex-promise-badge { display: none; } }
+
+    .ex-promise-badge small { font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: 0.15em; color: var(--accent-orange); text-transform: uppercase; }
+    .ex-promise-badge h4 { font-family: var(--font-display); font-size: 15px; font-weight: 800; color: #ffffff; margin: 6px 0 0; line-height: 1.25; }
+
+    /* Brands Marquee */
+    .ex-brands-strip {
+      background: rgba(15, 23, 38, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 18px 0;
+      margin-top: 40px;
+    }
+
+    .ex-brands-lbl { font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; color: var(--text-muted); text-transform: uppercase; }
+    .ex-brand-name { font-family: var(--font-display); font-size: 18px; font-weight: 800; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; }
+
+    /* ══════════════════════════ WHAT WE OFFER ══════════════════════════ */
+    .ex-sec-offer { padding: 90px 0; position: relative; }
+
+    .ex-offer-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      transition: all 0.45s var(--ease-out);
+      text-decoration: none;
+    }
+
+    .ex-offer-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.55) contrast(1.1);
+      transition: transform 0.6s var(--ease-out), filter 0.6s var(--ease-out);
+    }
+
+    .ex-offer-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7); }
+    .ex-offer-card:hover img { transform: scale(1.08); filter: brightness(0.75); }
+
+    .ex-offer-card--blue { border-color: rgba(40, 103, 171, 0.5); }
+    .ex-offer-card--blue:hover { border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(40, 103, 171, 0.4); }
+
+    .ex-offer-card--orange { border-color: rgba(255, 90, 31, 0.5); }
+    .ex-offer-card--orange:hover { border-color: var(--accent-orange); box-shadow: 0 0 30px rgba(255, 90, 31, 0.4); }
+
+    .ex-offer-card--amber { border-color: rgba(245, 158, 75, 0.5); }
+    .ex-offer-card--amber:hover { border-color: var(--accent-amber); box-shadow: 0 0 30px rgba(245, 158, 75, 0.4); }
+
+    .ex-offer-card-body { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
+    .ex-offer-card-body h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.2; }
+
+    .ex-arrow-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
+
+    .ex-offer-card:hover .ex-arrow-btn { background: #ffffff; color: var(--bg-dark); transform: translateX(4px); }
+
+    .ex-dock-bar {
+      margin-top: 60px;
+      background: rgba(15, 23, 38, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-lg);
+      padding: 24px 36px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 991px) { .ex-dock-bar { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 24px; } }
+
+    .ex-dock-item { display: flex; align-items: center; gap: 14px; }
+    .ex-dock-item i { font-size: 26px; color: var(--accent-amber); }
+    .ex-dock-item b { display: block; font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #ffffff; line-height: 1.1; }
+    .ex-dock-item small { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* ══════════════════════════ 4-PILLAR WHY ELEVEX ══════════════════════════ */
+    .ex-pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) { .ex-pillar-grid { grid-template-columns: 1fr; } }
+
+    .ex-pillar-box {
+      background: rgba(15, 23, 38, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 36px;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s var(--ease-out);
+    }
+
+    .ex-pillar-box:hover {
+      border-color: var(--accent-amber);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    /* ══════════════════════════ CALCULATOR ══════════════════════════ */
+    .ex-calc-box {
+      background: linear-gradient(145deg, rgba(15, 23, 38, 0.95), rgba(8, 11, 17, 0.98));
+      border: 1px solid rgba(255, 90, 31, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      backdrop-filter: blur(20px);
+    }
+
+    /* Floating WhatsApp */
+    .ex-floating-wa {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      z-index: 9999;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(37,211,102,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .ex-floating-wa:hover { transform: scale(1.1) rotate(12deg); color: #ffffff; }
+
+    /* Footer Logo */
+    .ex-footer-logo-wrap { text-align: center; padding: 40px 0 20px; }
+    .ex-footer-logo-img { max-width: clamp(240px, 35vw, 500px); height: auto; object-fit: contain; filter: drop-shadow(0 12px 36px rgba(0,0,0,0.7)); }
+  </style>
+</head>
+
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="ex-progress-bar" id="exProgress"></div>
+
+  <!-- Mouse Follower Spotlight -->
+  <div class="ex-spotlight" id="exSpotlight"></div>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/917028096111" class="ex-floating-wa" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <div id="elevex-replica">
+
+    <!-- Left Vertical Index Track -->
+    <div class="ex-left-track">
+      <a href="#intro" class="ex-track-item active">01 INTRO</a>
+      <a href="#services" class="ex-track-item">02 SERVICES</a>
+      <a href="#fleet" class="ex-track-item">03 FLEET</a>
+      <a href="#why" class="ex-track-item">04 WHY ELEVEX</a>
+      <a href="#calculator" class="ex-track-item">05 CALCULATOR</a>
+      <a href="#contact" class="ex-track-item">06 CONTACT</a>
+    </div>
+
+    <!-- Scroll Explore Vertical Tag -->
+    <div class="ex-scroll-explore">SCROLL TO EXPLORE</div>
+
+    <!-- ══════════════════════════ HEADER NAVIGATION ══════════════════════════ -->
+    <header class="ex-header" id="exHeader">
+      <a href="#intro" class="ex-logo-brand">
+        <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals Logo" />
+      </a>
+
+      <nav class="ex-nav-menu d-none d-lg:flex">
+        <a href="#intro" class="ex-nav-link active">HOME</a>
+        <a href="#services" class="ex-nav-link">SERVICES <i class="bi bi-chevron-down ms-1 small"></i></a>
+        <a href="#fleet" class="ex-nav-link">FLEET</a>
+        <a href="#why" class="ex-nav-link">WHY ELEVEX</a>
+        <a href="#calculator" class="ex-nav-link">CALCULATOR</a>
+        <a href="#locations" class="ex-nav-link">LOCATIONS</a>
+        <a href="#contact" class="ex-nav-link">CONTACT</a>
+      </nav>
+
+      <div class="ex-header-right">
+        <div class="ex-icon-circle"><i class="bi bi-moon-stars-fill"></i></div>
+        <a href="#contact" class="ex-btn-quote">REQUEST A QUOTE <i class="bi bi-arrow-right"></i></a>
+        <div class="ex-icon-circle d-lg-none"><i class="bi bi-list fs-4"></i></div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════ 01: HERO SECTION ══════════════════════════ -->
+    <section class="ex-hero-replica" id="intro">
+      <div class="ex-hero-crane-bg">
+        <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="ELEVEX Heavy Crane Rig" />
+      </div>
+
+      <div class="ex-hud-ring">
+        <div class="ex-hud-tag">
+          <small>LIFTING HEIGHT</small>
+          <b>78.4M</b>
+          <span class="d-block text-warning font-monospace small">AND BEYOND</span>
+        </div>
+      </div>
+
+      <div class="ex-right-features">
+        <div class="ex-feature-pill"><i class="bi bi-clock-history"></i><div><b>24/7</b><small>SUPPORT</small></div></div>
+        <div class="ex-feature-pill"><i class="bi bi-truck-flatbed"></i><div><b>250+</b><small>CRANES</small></div></div>
+        <div class="ex-feature-pill"><i class="bi bi-patch-check"></i><div><b>25+</b><small>YEARS</small></div></div>
+        <div class="ex-feature-pill"><i class="bi bi-geo-alt"></i><div><b>PAN INDIA</b><small>SERVICE</small></div></div>
+      </div>
+
+      <div class="ex-promise-badge">
+        <small>OUR PROMISE</small>
+        <h4>SAFETY. PRECISION. PERFORMANCE.</h4>
+      </div>
+
+      <div class="position-relative z-2 my-auto" style="max-width:680px;" data-aos="fade-right">
+        <div class="ex-eyebrow-blue">LIFTING INDIA TO NEW HEIGHTS</div>
+        
+        <h1 class="ex-hero-title-replica">
+          BUILT<br />
+          TO <span class="txt-orange">LIFT.</span><br />
+          BORN TO <span class="txt-blue">LEAD.</span>
+        </h1>
+
+        <p class="ex-hero-desc-replica">
+          ELEVEX Rentals provides world-class cranes &amp; lifting solutions with safety, reliability &amp; precision at the core.
+        </p>
+
+        <div class="d-flex flex-wrap align-items-center gap-3">
+          <a href="#fleet" class="ex-btn-explore">
+            EXPLORE OUR FLEET <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="#calculator" class="ex-btn-showreel">
+            <i class="bi bi-calculator-fill fs-5 me-1 text-warning"></i> RENTAL ESTIMATOR
+          </a>
+        </div>
+      </div>
+
+      <!-- Brands Strip -->
+      <div class="ex-brands-strip position-relative z-2">
+        <div class="container-fluid px-lg-5">
+          <div class="row align-items-center g-3">
+            <div class="col-lg-3"><span class="ex-brands-lbl">TRUSTED BY INDIA'S LEADING INDUSTRIES</span></div>
+            <div class="col-lg-9">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                <span class="ex-brand-name">adani</span>
+                <span class="ex-brand-name">LARSEN &amp; TOUBRO</span>
+                <span class="ex-brand-name">TATA</span>
+                <span class="ex-brand-name">JINDAL STEEL &amp; POWER</span>
+                <span class="ex-brand-name">meil</span>
+                <span class="ex-brand-name">AFCONS</span>
+                <span class="ex-brand-name">GMR</span>
+                <span class="ex-brand-name">RAMKY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ 02: WHAT WE OFFER ══════════════════════════ -->
+    <section class="ex-sec-offer" id="services">
+      <div class="container-fluid px-lg-5">
+        <div class="row g-4 align-items-center mb-5">
+          <div class="col-lg-3" data-aos="fade-right">
+            <div class="ex-eyebrow-blue" style="color:var(--accent-orange);">WHAT WE OFFER</div>
+            <h2 class="ex-hero-title-replica fs-2 mb-3">
+              COMPLETE LIFTING<br />
+              <span class="txt-blue">SOLUTIONS</span><br />
+              FOR EVERY CHALLENGE
+            </h2>
+            <p class="ex-hero-desc-replica small mb-4">
+              From heavy lifting to complex projects, we deliver safe, efficient &amp; cost-effective crane rental solutions.
+            </p>
+            <a href="#contact" class="ex-btn-quote" style="border-color:rgba(255,255,255,0.2);">VIEW ALL SERVICES <i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="row g-4">
+              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="100">
+                <a href="#contact" class="ex-offer-card ex-offer-card--blue">
+                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png" alt="Mobile Crane Rental" />
+                  <div class="ex-offer-card-body">
+                    <h3>MOBILE CRANE<br />RENTAL</h3>
+                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="ex-offer-card ex-offer-card--orange">
+                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png" alt="Crawler Crane Rental" />
+                  <div class="ex-offer-card-body">
+                    <h3>CRAWLER CRANE<br />RENTAL</h3>
+                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="300">
+                <a href="#contact" class="ex-offer-card ex-offer-card--amber">
+                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="Hydra Crane Rental" />
+                  <div class="ex-offer-card-body">
+                    <h3>HYDRA CRANE<br />RENTAL</h3>
+                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" class="ex-offer-card ex-offer-card--blue">
+                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png" alt="Boom Lift Rental" />
+                  <div class="ex-offer-card-body">
+                    <h3>BOOM LIFT<br />RENTAL</h3>
+                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ex-dock-bar" data-aos="zoom-in">
+          <div class="ex-dock-item"><i class="bi bi-truck-flatbed"></i><div><b>250+</b><small>CRANES IN FLEET</small></div></div>
+          <div class="ex-dock-item"><i class="bi bi-patch-check-fill"></i><div><b>25+</b><small>YEARS EXPERIENCE</small></div></div>
+          <div class="ex-dock-item"><i class="bi bi-people-fill"></i><div><b>500+</b><small>SKILLED PROFESSIONALS</small></div></div>
+          <div class="ex-dock-item"><i class="bi bi-building-check"></i><div><b>10K+</b><small>PROJECTS COMPLETED</small></div></div>
+          <div class="ex-dock-item"><i class="bi bi-headset"></i><div><b>24/7</b><small>SUPPORT AVAILABLE</small></div></div>
+          <div class="ex-dock-item"><i class="bi bi-shield-check"></i><div><b>100%</b><small>SAFETY RECORD</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ 03: FLEET SHOWCASE ══════════════════════════ -->
+    <section class="py-5" id="fleet">
+      <div class="container-fluid px-lg-5 py-4">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="ex-eyebrow-blue">HIGH-TONNAGE RIGS</div>
+            <h2 class="ex-hero-title-replica fs-1 mb-2">
+              OUR HEAVY <span class="txt-orange">FLEET</span> SHOWCASE
+            </h2>
+          </div>
+          <div class="col-lg-5 text-lg-end" data-aos="fade-left">
+            <p class="ex-hero-desc-replica small mb-0">100% Direct Company Ownership. Certified for safety with 42-point PDI sheet.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.8); border:1px solid rgba(255,255,255,0.12);">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png" alt="500T All Terrain Crane" class="img-fluid mb-4" style="height:220px; object-fit:contain;" />
+              <span class="badge bg-primary mb-2">MOBILE CRANE</span>
+              <h3 class="h4 fw-bold text-white mb-2">500-Ton All-Terrain Crane</h3>
+              <p class="text-white-50 small mb-4">7-Section Telescopic Main Boom up to 84m, 12x8x12 drive axle, IP67 telemetry.</p>
+              <a href="#contact" class="btn-elevex-explore w-100 justify-content-center">Request Unit Specs <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.8); border:1px solid rgba(255,255,255,0.12);">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png" alt="300T Crawler Crane" class="img-fluid mb-4" style="height:220px; object-fit:contain;" />
+              <span class="badge bg-warning text-dark mb-2">CRAWLER CRANE</span>
+              <h3 class="h4 fw-bold text-white mb-2">300-Ton Lattice Crawler Crane</h3>
+              <p class="text-white-50 small mb-4">Heavy track traction for soft ground, pre-cast metro girders &amp; refinery expansion.</p>
+              <a href="#contact" class="btn-elevex-explore w-100 justify-content-center">Request Unit Specs <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.8); border:1px solid rgba(255,255,255,0.12);">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png" alt="22m Boom Lift" class="img-fluid mb-4" style="height:220px; object-fit:contain;" />
+              <span class="badge bg-success mb-2">ELECTRIC BOOM LIFT</span>
+              <h3 class="h4 fw-bold text-white mb-2">22m Electric Articulating Boom</h3>
+              <p class="text-white-50 small mb-4">Up-and-over reach for cleanroom indoor facilities, data centers &amp; airport work.</p>
+              <a href="#contact" class="btn-elevex-explore w-100 justify-content-center">Request Unit Specs <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ 04: WHY ELEVEX (4 PILLARS) ══════════════════════════ -->
+    <section class="py-5" id="why" style="background:rgba(6,10,16,0.95);">
+      <div class="container-fluid px-lg-5 py-4">
+        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
+          <div class="ex-eyebrow-blue justify-content-center">THE ELEVEX ADVANTAGE</div>
+          <h2 class="ex-hero-title-replica fs-1 mb-2">
+            ENGINEERED FOR ZERO DOWNTIME
+          </h2>
+          <p class="ex-hero-desc-replica small mx-auto">100% Direct Company Ownership • Zero Sub-renting • 24/7 Field Cover</p>
+        </div>
+
+        <div class="ex-pillar-grid">
+          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="100">
+            <span class="badge bg-warning text-dark font-monospace mb-3">PILLAR 01</span>
+            <h3 class="h4 fw-bold text-white mb-2">100% Direct Ownership</h3>
+            <p class="text-white-50 mb-0">We own every machine we rent. No third-party sub-renting markups, direct factory maintenance.</p>
+          </div>
+
+          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="200">
+            <span class="badge bg-primary font-monospace mb-3">PILLAR 02</span>
+            <h3 class="h4 fw-bold text-white mb-2">48h Pan-India Dispatch</h3>
+            <p class="text-white-50 mb-0">7 strategic regional hubs guarantee on-site flatbed arrival within 48 hours anywhere in India.</p>
+          </div>
+
+          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="300">
+            <span class="badge bg-info text-dark font-monospace mb-3">PILLAR 03</span>
+            <h3 class="h4 fw-bold text-white mb-2">IPAF Certified Crews</h3>
+            <p class="text-white-50 mb-0">Every crane is dispatched with certified operators and heavy rigging specialists trained in 3D lift planning.</p>
+          </div>
+
+          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="400">
+            <span class="badge bg-danger font-monospace mb-3">PILLAR 04</span>
+            <h3 class="h4 fw-bold text-white mb-2">Zero Downtime Swap</h3>
+            <p class="text-white-50 mb-0">4-hour metro technician response with instant replacement unit warranty if site faults occur.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ 05: CALCULATOR ══════════════════════════ -->
+    <section class="py-5" id="calculator">
+      <div class="container-fluid px-lg-5 py-4">
+        <div class="ex-calc-box" data-aos="zoom-in">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+              <span class="badge bg-warning text-dark font-monospace fw-bold mb-3 px-3 py-2">INSTANT ESTIMATOR</span>
+              <h2 class="ex-hero-title-replica fs-2 mb-3">Calculate Rental Rate Estimate</h2>
+              <p class="text-white-50 mb-4">Select load capacity and duration for a transparent, instant rate estimate.</p>
+
+              <div class="mb-4">
+                <label class="form-label text-white fw-bold d-flex justify-content-between">
+                  <span>Required Tonnage:</span>
+                  <span class="text-warning font-monospace fs-5" id="exCalcCapLabel">100 Tons</span>
+                </label>
+                <input type="range" class="form-range" id="exCalcCapSlider" min="20" max="500" step="10" value="100" />
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label text-white fw-bold d-flex justify-content-between">
+                  <span>Rental Duration:</span>
+                  <span class="text-warning font-monospace fs-5" id="exCalcDurLabel">7 Days</span>
+                </label>
+                <input type="range" class="form-range" id="exCalcDurSlider" min="1" max="30" step="1" value="7" />
+              </div>
+            </div>
+
+            <div class="col-lg-6 text-center text-lg-end">
+              <div class="p-4 p-md-5 rounded-4" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);">
+                <small class="text-white-50 d-block mb-1">Estimated Rental Slab</small>
+                <div class="display-3 text-warning font-monospace fw-bold mb-3" id="exCalcResult">₹ 1,75,000*</div>
+                <p class="text-white-50 small mb-4">*Includes 42-point PDI, certified operator, insurance &amp; transport estimate.</p>
+                <a href="#contact" class="ex-btn-explore w-100 justify-content-center">Lock In Rate Estimate <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ 06: CONTACT DESK ══════════════════════════ -->
+    <section class="py-5" id="contact" style="background:rgba(4,6,10,0.98);">
+      <div class="container-fluid px-lg-5 py-4">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="ex-eyebrow-blue">GET A QUOTE</div>
+            <h2 class="ex-hero-title-replica fs-1 mb-3">
+              TELL US THE HEIGHT.<br />
+              <span class="txt-orange">WE'LL DO THE REST.</span>
+            </h2>
+            <p class="ex-hero-desc-replica mb-4">No obligation, no dealer middlemen. Fixed upfront pricing covering machine, transport, and certified operator.</p>
+
+            <div class="p-4 rounded-4 mb-3" style="background:rgba(15,23,38,0.7); border:1px solid rgba(255,255,255,0.12);">
+              <small class="text-white-50 d-block">24x7 Rental Hotline</small>
+              <a href="tel:+917028096111" class="h3 text-warning fw-bold text-decoration-none font-monospace">+91 70280 96111</a>
+            </div>
+
+            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.7); border:1px solid rgba(255,255,255,0.12);">
+              <small class="text-white-50 d-block">Email Rental Desk</small>
+              <a href="mailto:hello@elevex.co.in" class="h4 text-white fw-bold text-decoration-none">hello@elevex.co.in</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="p-4 p-md-5 rounded-4" style="background:rgba(15,23,38,0.92); border:1px solid rgba(255,90,31,0.4);">
+              <h3 class="h4 fw-bold text-white mb-4">Request Custom Quote</h3>
+              <form id="exContactForm" onsubmit="event.preventDefault(); alert('Thank you! Your quote request has been received. An ELEVEX engineer will call you shortly.');">
+                <div class="mb-3">
+                  <input type="text" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Full Name *" required />
+                </div>
+                <div class="row g-3 mb-3">
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Phone Number *" required />
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="City / Site Location *" required />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <select class="form-select form-select-lg bg-dark text-white border-secondary">
+                    <option selected>Required Tonnage / Machine...</option>
+                    <option value="mobile-50t">Mobile Crane (50T - 100T)</option>
+                    <option value="mobile-220t">Mobile Crane (220T - 500T)</option>
+                    <option value="crawler-300t">Crawler Crane (100T - 800T)</option>
+                    <option value="boom-lift">Articulating / Telescopic Boom Lift</option>
+                  </select>
+                </div>
+                <button type="submit" class="ex-btn-explore w-100 justify-content-center py-3">Submit Request <i class="bi bi-send-fill ms-2"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER LOGO GRAPHIC -->
+    <footer class="py-5" style="background:#02121C; border-top:1px solid rgba(255,255,255,0.08);">
+      <div class="container text-center">
+        <div class="ex-footer-logo-wrap">
+          <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals" class="ex-footer-logo-img" />
+        </div>
+        <p class="small text-white-50 mt-3">&copy; 2026 ELEVEX Access Solutions Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Spotlight Mouse Follower
+      const spotlight = document.getElementById('exSpotlight');
+      window.addEventListener('mousemove', function (e) {
+        if (spotlight) {
+          spotlight.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        }
+      });
+
+      // 2. Scroll Progress & Header
+      const header = document.getElementById('exHeader');
+      const progress = document.getElementById('exProgress');
+      const trackItems = document.querySelectorAll('.ex-track-item');
+      const sections = document.querySelectorAll('section[id]');
+
+      window.addEventListener('scroll', function () {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (progress) progress.style.width = (winScroll / height) * 100 + "%";
+
+        if (header) {
+          if (winScroll > 50) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        }
+
+        // Active Track Update
+        let currentSec = "";
+        sections.forEach(sec => {
+          const top = sec.offsetTop - 200;
+          if (winScroll >= top) currentSec = sec.getAttribute('id');
+        });
+
+        trackItems.forEach(item => {
+          item.classList.remove('active');
+          if (item.getAttribute('href') === '#' + currentSec) {
+            item.classList.add('active');
+          }
+        });
+      });
+
+      // 3. Lenis Smooth Scroll
+      if (typeof Lenis !== 'undefined') {
+        try {
+          const lenis = new Lenis({ duration: 1.1, smoothTouch: false });
+          function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+          requestAnimationFrame(raf);
+        } catch (e) {}
+      }
+
+      // 4. AOS Init
+      if (typeof AOS !== 'undefined') {
+        AOS.init({ duration: 800, once: true });
+      }
+
+      // 5. Rental Calculator
+      const capSlider = document.getElementById('exCalcCapSlider');
+      const capLabel = document.getElementById('exCalcCapLabel');
+      const durSlider = document.getElementById('exCalcDurSlider');
+      const durLabel = document.getElementById('exCalcDurLabel');
+      const calcResult = document.getElementById('exCalcResult');
+
+      function updateCalculator() {
+        if (!capSlider || !durSlider || !calcResult) return;
+        const cap = parseInt(capSlider.value);
+        const dur = parseInt(durSlider.value);
+
+        if (capLabel) capLabel.textContent = cap + " Tons";
+        if (durLabel) durLabel.textContent = dur + (dur === 1 ? " Day" : " Days");
+
+        const dayRate = 18000 + (cap * 220);
+        const totalEst = Math.round(dayRate * dur * (dur > 7 ? 0.85 : 0.95));
+
+        calcResult.textContent = "₹ " + totalEst.toLocaleString('en-IN') + "*";
+      }
+
+      if (capSlider && durSlider) {
+        capSlider.addEventListener('input', updateCalculator);
+        durSlider.addEventListener('input', updateCalculator);
+        updateCalculator();
+      }
+    });
+  </script>
+</body>
+
+</html>

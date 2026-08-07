@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#041E2B" />
+  <title>ELEVEX Rentals — Engineering The Impossible | Futuristic Heavy Crane Digital Experience</title>
+  <meta name="description"
+    content="ELEVEX RENTALS: India's premier heavy equipment & crane rental digital experience. Rent 15T to 500T Mobile Cranes, Crawler Cranes, Boom Lifts & Heavy Machinery. Cinematic 24x7 Pan-India Operations." />
+  <meta name="keywords"
+    content="Crane Rental, Mobile Crane Rental, Crawler Crane Rental, Heavy Crane Rental, Industrial Crane Rental, Crane Rental Hyderabad, Crane Rental Chennai, Crane Rental Bangalore, Crane Rental Vijayawada" />
+  <link rel="canonical" href="https://elevex.co.in/" />
+
+  <!-- Open Graph & Twitter Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://elevex.co.in/" />
+  <meta property="og:title" content="ELEVEX Rentals — Engineering The Impossible" />
+  <meta property="og:description"
+    content="Experience the launch of India's most advanced heavy crane rental platform. 15T to 500T Mobile Cranes, Crawler Cranes & Articulating Boom Lifts." />
+  <meta property="og:image" content="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ELEVEX Rentals — Engineering The Impossible" />
+  <meta name="twitter:description" content="Industrial Luxury. Futuristic Engineering. SpaceX & Tesla level crane rental experience." />
+  <meta name="twitter:image" content="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" />
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23095577'/%3E%3Cpath d='M25 75 L50 25 L75 75 Z' fill='none' stroke='%23F59E4B' stroke-width='8'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Space Grotesk, Manrope, Poppins, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Third-Party CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Lenis & GSAP CDNs -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://elevex.co.in/#organization",
+        "name": "ELEVEX Rentals",
+        "url": "https://elevex.co.in/",
+        "logo": "https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png",
+        "image": "https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg",
+        "description": "India's premier heavy crane and equipment rental company operating 15T-500T Mobile Cranes, Crawler Cranes, and Aerial Access Lifts.",
+        "telephone": "+917028096111",
+        "email": "hello@elevex.co.in",
+        "priceRange": "₹₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ELEVEX Industrial Complex, Highway 44",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": "500001",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "17.3850",
+          "longitude": "78.4867"
+        },
+        "areaServed": ["Hyderabad", "Vijayawada", "Chennai", "Bangalore", "Visakhapatnam", "Telangana", "Andhra Pradesh"],
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       ELEVEX CINEMATIC DIGITAL EXPERIENCE — DESIGN SYSTEM & PALETTE
+       ========================================================================== */
+    :root {
+      --primary-blue: #2867AB;
+      --deep-navy: #095577;
+      --navy-dark: #041E2B;
+      --navy-obsidian: #02121C;
+      --steel-gray: #524E5D;
+      --industrial-brown: #6F5150;
+      --safety-orange: #AC4625;
+      --highlight-gold: #F59E4B;
+      --dark-text: #343434;
+      --border-gray: #717171;
+
+      --font-heading: 'Space Grotesk', 'Manrope', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius-sm: 10px;
+      --radius-md: 20px;
+      --radius-lg: 36px;
+      --radius-pill: 999px;
+
+      --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
+      background: var(--navy-obsidian);
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: #ffffff;
+      background-color: var(--navy-obsidian);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Spotlight Cursor Glow */
+    .ex-cursor-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(40, 103, 171, 0.18) 0%, rgba(245, 158, 75, 0.08) 40%, transparent 70%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: transform 0.08s ease-out;
+    }
+
+    /* Container Isolation */
+    #elevex-cinema {
+      position: relative;
+      width: 100%;
+      overflow-x: clip;
+    }
+
+    /* Top Reading Progress Bar */
+    .ex-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3.5px;
+      background: linear-gradient(90deg, var(--primary-blue), var(--highlight-gold), var(--safety-orange));
+      z-index: 10000;
+      width: 0%;
+    }
+
+    /* Gridline Backdrop Overlay */
+    .ex-gridlines {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 70px 70px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Luxury Buttons */
+    .btn-elevex-gold {
+      background: linear-gradient(135deg, #F59E4B, #D97706);
+      color: var(--navy-dark);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 16px 38px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 0 35px rgba(245, 158, 75, 0.45);
+      transition: all 0.35s var(--ease-smooth);
+      text-decoration: none;
+    }
+
+    .btn-elevex-gold:hover {
+      background: linear-gradient(135deg, #AC4625, #F59E4B);
+      color: #ffffff;
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 16px 45px rgba(172, 70, 37, 0.55);
+    }
+
+    .btn-elevex-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 13.5px;
+      letter-spacing: 0.08em;
+      padding: 15px 34px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(14px);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.35s var(--ease-smooth);
+      text-decoration: none;
+    }
+
+    .btn-elevex-outline:hover {
+      background: #ffffff;
+      color: var(--navy-dark);
+      transform: translateY(-3px);
+    }
+
+    /* Section Eyebrow */
+    .section-eyebrow {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--highlight-gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .section-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--highlight-gold);
+    }
+
+    .section-title {
+      font-size: clamp(36px, 4.5vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    /* Sticky Header */
+    .ex-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 22px 0;
+      transition: all 0.4s var(--ease-smooth);
+    }
+
+    .ex-navbar.scrolled {
+      padding: 12px 0;
+      background: rgba(4, 30, 43, 0.95);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .ex-nav-link {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 13.5px;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      transition: all 0.25s ease;
+    }
+
+    .ex-nav-link:hover, .ex-nav-link.active {
+      color: var(--highlight-gold);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* ==========================================================================
+       SCENE 1: CINEMATIC HERO & PARTICLE CANVAS
+       ========================================================================== */
+    .ex-scene-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--navy-obsidian);
+      color: #fff;
+      overflow: hidden;
+      padding-top: clamp(90px, 10vh, 110px);
+      isolation: isolate;
+    }
+
+    #heroCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ex-hero-bg-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .ex-hero-bg-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 55% 45%;
+      filter: saturate(0.35) contrast(1.2) brightness(0.3);
+      transform: scale(1.05);
+    }
+
+    .ex-hero-crane-wire {
+      position: absolute;
+      right: 12%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--highlight-gold), transparent 80%);
+      opacity: 0.6;
+      z-index: 2;
+    }
+
+    .ex-hero-headline {
+      font-size: clamp(42px, 5.8vw, 84px);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+
+    .ex-hero-headline span {
+      background: linear-gradient(135deg, #ffffff 40%, var(--highlight-gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ==========================================================================
+       SCENE 2: ANATOMY TELEMETRY PINNING (GSAP PIN)
+       ========================================================================== */
+    .ex-scene-anatomy {
+      position: relative;
+      min-height: 100vh;
+      background: var(--navy-dark);
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .ex-anatomy-pin-box {
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: rgba(9, 85, 119, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      padding: 48px;
+    }
+
+    .ex-anatomy-hotspot {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+      transition: all 0.4s var(--ease-smooth);
+    }
+
+    .ex-anatomy-hotspot.active .ex-hotspot-circle {
+      background: var(--highlight-gold);
+      box-shadow: 0 0 30px var(--highlight-gold);
+      transform: scale(1.25);
+    }
+
+    .ex-hotspot-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--primary-blue);
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+
+    .ex-hotspot-label {
+      background: rgba(6, 47, 67, 0.95);
+      border: 1px solid rgba(245, 158, 75, 0.4);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       SCENE 3: KINETIC MORPHING STATS
+       ========================================================================== */
+    .ex-scene-morph {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #02121C;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .ex-morph-text {
+      font-family: var(--font-heading);
+      font-size: clamp(48px, 8vw, 120px);
+      font-weight: 800;
+      color: var(--highlight-gold);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      text-shadow: 0 0 50px rgba(245, 158, 75, 0.4);
+    }
+
+    /* ==========================================================================
+       SCENE 4: LUXURY FLEET CONFIGURATOR
+       ========================================================================== */
+    .ex-scene-fleet {
+      padding: 100px 0;
+      background: var(--navy-dark);
+      position: relative;
+    }
+
+    .ex-fleet-config-card {
+      background: rgba(9, 85, 119, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s var(--ease-smooth);
+    }
+
+    .ex-fleet-config-card:hover {
+      border-color: var(--highlight-gold);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .ex-fleet-img-stage {
+      height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .ex-fleet-img-stage img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+    }
+
+    /* ==========================================================================
+       SCENE 8: INDUSTRIES MATRIX
+       ========================================================================== */
+    .ex-ind-card {
+      position: relative;
+      height: 320px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      text-decoration: none;
+      transition: all 0.4s var(--ease-smooth);
+    }
+
+    .ex-ind-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.4) contrast(1.1);
+      transition: transform 0.6s var(--ease-smooth);
+    }
+
+    .ex-ind-card:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.6);
+    }
+
+    .ex-ind-card-body {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       SCENE 9: SWINGING CRANE HOOK QUOTE CTA & FOOTER
+       ========================================================================== */
+    .ex-scene-cta {
+      position: relative;
+      padding: 120px 0 80px;
+      background: #02121C;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .ex-crane-hook-svg {
+      width: 120px;
+      height: 180px;
+      margin-bottom: 20px;
+      transform-origin: top center;
+      animation: exHookSwing 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes exHookSwing {
+      0% { transform: rotate(-5deg); }
+      100% { transform: rotate(5deg); }
+    }
+
+    .ex-footer-logo-img {
+      max-width: clamp(220px, 35vw, 480px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 36px rgba(0, 0, 0, 0.7));
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Custom Glow Follower -->
+  <div class="ex-cursor-glow" id="exCursorGlow"></div>
+
+  <div id="elevex-cinema">
+
+    <!-- Progress Bar -->
+    <div class="ex-progress-bar" id="exProgress"></div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/917028096111" class="ex-floating-wa" target="_blank" rel="noopener" aria-label="Contact on WhatsApp" style="position:fixed; bottom:28px; right:28px; width:58px; height:58px; border-radius:50%; background:#25D366; color:#fff; display:grid; place-items:center; font-size:28px; z-index:9999; text-decoration:none; box-shadow:0 10px 24px rgba(37,211,102,0.4);">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- ══════════════════════════ STICKY HEADER NAVIGATION ══════════════════════════ -->
+    <header class="ex-navbar" id="exHeader">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="#home" class="d-inline-flex">
+          <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals Logo" width="210" height="58" style="object-fit:contain;" />
+        </a>
+
+        <nav class="d-none d-lg:flex align-items-center gap-1">
+          <a href="#home" class="ex-nav-link active">Launch</a>
+          <a href="#anatomy" class="ex-nav-link">Anatomy</a>
+          <a href="#morph" class="ex-nav-link">Metrics</a>
+          <a href="#fleet" class="ex-nav-link">Configurator</a>
+          <a href="#industries" class="ex-nav-link">Industries</a>
+          <a href="#contact" class="ex-nav-link">Quote Desk</a>
+        </nav>
+
+        <div class="d-flex align-items-center gap-3">
+          <a href="tel:+917028096111" class="d-none d-md-inline-flex text-white text-decoration-none fw-bold me-2">
+            <i class="bi bi-telephone-fill text-warning me-2"></i> +91 70280 96111
+          </a>
+          <a href="#contact" class="btn-elevex-gold text-nowrap">Launch Quote <i class="bi bi-arrow-right-short"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════ SCENE 1: HERO CINEMATIC LAUNCH ══════════════════════════ -->
+    <section class="ex-scene-hero" id="home">
+      <!-- Particle Canvas -->
+      <canvas id="heroCanvas"></canvas>
+
+      <!-- Background Image Overlay -->
+      <div class="ex-hero-bg-media">
+        <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="ELEVEX Heavy Crane Rig" />
+      </div>
+
+      <div class="ex-hero-crane-wire"></div>
+
+      <div class="container position-relative z-2 my-auto py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="section-eyebrow">
+              <i class="bi bi-shield-fill-check text-warning"></i> CINEMATIC HEAVY RIGGING LAUNCH
+            </div>
+            <h1 class="ex-hero-headline">
+              ENGINEERING THE <span>IMPOSSIBLE.</span>
+            </h1>
+            <p class="fs-5 text-white-50 max-w-600 mb-4">
+              Experience India's most advanced heavy mobile crane, crawler, and aerial lift rental platform. 15T to 500T Tonnage. Pan-India 48h Deployment.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#fleet" class="btn-elevex-gold">
+                Enter Configurator <i class="bi bi-cpu-fill"></i>
+              </a>
+              <a href="#anatomy" class="btn-elevex-outline">
+                Inspect Rig Anatomy <i class="bi bi-eye-fill"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Footer Stat Strip -->
+      <div class="py-3 position-relative z-2 border-top border-secondary" style="background:rgba(4,30,43,0.85); backdrop-filter:blur(14px);">
+        <div class="container">
+          <div class="row text-center g-3">
+            <div class="col-6 col-md-3">
+              <div class="h3 fw-bold text-warning font-monospace mb-0">500T</div>
+              <small class="text-white-50 text-uppercase">Max Crane Tonnage</small>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="h3 fw-bold text-warning font-monospace mb-0">24/7</div>
+              <small class="text-white-50 text-uppercase">Emergency Dispatch</small>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="h3 fw-bold text-warning font-monospace mb-0">48h</div>
+              <small class="text-white-50 text-uppercase">Pan-India On-Site</small>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="h3 fw-bold text-warning font-monospace mb-0">0%</div>
+              <small class="text-white-50 text-uppercase">Downtime Guarantee</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SCENE 2: ANATOMY TELEMETRY PINNING ══════════════════════════ -->
+    <section class="ex-scene-anatomy" id="anatomy">
+      <span class="ex-gridlines"></span>
+      <div class="container position-relative z-2 py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="section-eyebrow justify-content-center">SCENE 02 • TELEMETRY ANATOMY</span>
+          <h2 class="section-title">Precision Engineering Up Close</h2>
+          <p class="text-white-50 fs-5">Inspect the critical componentry of ELEVEX heavy lifts.</p>
+        </div>
+
+        <div class="ex-anatomy-pin-box">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7 position-relative text-center">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png" alt="Crane Telemetry Inspection" class="img-fluid" style="max-height:420px; object-fit:contain;" />
+              
+              <!-- Hotspot Pins -->
+              <div class="ex-anatomy-hotspot active" style="top:15%; left:45%;">
+                <div class="ex-hotspot-circle"></div>
+                <div class="ex-hotspot-label">BOOM: 84m Telescopic</div>
+              </div>
+
+              <div class="ex-anatomy-hotspot" style="top:55%; left:65%;">
+                <div class="ex-hotspot-circle"></div>
+                <div class="ex-hotspot-label">HOOK: 10-Reev Block</div>
+              </div>
+
+              <div class="ex-anatomy-hotspot" style="bottom:15%; left:30%;">
+                <div class="ex-hotspot-circle"></div>
+                <div class="ex-hotspot-label">OUTRIGGERS: 12x8x12</div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <span class="badge bg-warning text-dark font-monospace fw-bold mb-3 px-3 py-2">LIVE SENSOR TELEMETRY</span>
+              <h3 class="h2 fw-bold text-white mb-3">LMI Load Cell &amp; Real-time Stability System</h3>
+              <p class="text-white-50 mb-4">Every ELEVEX heavy crane is equipped with wireless load moment indicators (LMI), wind speed anemometers, and automatic outrigger pressure sensors.</p>
+              
+              <div class="p-3 rounded-3 mb-3" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);">
+                <div class="d-flex justify-content-between small text-white-50 mb-1">
+                  <span>Boom Extension Angle</span>
+                  <span class="text-warning font-monospace">78.5°</span>
+                </div>
+                <div class="progress" style="height:6px; background:rgba(255,255,255,0.1);">
+                  <div class="progress-bar bg-warning" style="width: 82%;"></div>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-3" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1);">
+                <div class="d-flex justify-content-between small text-white-50 mb-1">
+                  <span>Outrigger Hydraulic Pressure</span>
+                  <span class="text-warning font-monospace">340 Bar (Optimal)</span>
+                </div>
+                <div class="progress" style="height:6px; background:rgba(255,255,255,0.1);">
+                  <div class="progress-bar bg-info" style="width: 95%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SCENE 3: KINETIC MORPHING STATS ══════════════════════════ -->
+    <section class="ex-scene-morph" id="morph">
+      <div class="container position-relative z-2">
+        <span class="section-eyebrow justify-content-center">SCENE 03 • KINETIC SCALE</span>
+        <div class="ex-morph-text" id="exMorphTarget">250+ CRANES</div>
+        <p class="text-white-50 fs-5 mt-3">Active fleet deployment powering India's largest infrastructure corridors.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SCENE 4: LUXURY FLEET CONFIGURATOR ══════════════════════════ -->
+    <section class="ex-scene-fleet" id="fleet">
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <span class="section-eyebrow">SCENE 04 • LUXURY CONFIGURATOR</span>
+            <h2 class="section-title">Configure Your Heavy Crane Spec</h2>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <p class="text-white-50 mb-0">Select between 500T Mobile Cranes, Heavy Crawlers, or Articulating Aerial Platforms.</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="ex-fleet-config-card">
+              <div class="ex-fleet-img-stage mb-4">
+                <img id="cfgImg" src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png" alt="Configurator Unit" />
+              </div>
+              <h3 class="h3 fw-bold text-white mb-2" id="cfgTitle">22m Electric Articulating Boom</h3>
+              <p class="text-white-50 small mb-4" id="cfgDesc">Zero emissions, 62 dB silent drive, cleanroom certified for pharmaceutical plants and airports.</p>
+
+              <div class="row g-3 text-center border-top border-secondary pt-3">
+                <div class="col-4">
+                  <small class="text-white-50 d-block">Max Height</small>
+                  <strong class="text-warning font-monospace fs-5" id="cfgSpec1">22m</strong>
+                </div>
+                <div class="col-4">
+                  <small class="text-white-50 d-block">Platform Load</small>
+                  <strong class="text-warning font-monospace fs-5" id="cfgSpec2">230 KG</strong>
+                </div>
+                <div class="col-4">
+                  <small class="text-white-50 d-block">Noise</small>
+                  <strong class="text-warning font-monospace fs-5" id="cfgSpec3">62 dB</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex flex-column justify-content-between">
+            <div class="d-flex flex-column gap-3">
+              <button class="btn btn-lg btn-outline-light text-start p-4 rounded-4 active" onclick="updateConfig(0)">
+                <div class="fw-bold fs-5 text-warning">01 • Electric Articulating Boom (22m)</div>
+                <small class="text-white-50">Cleanroom &amp; indoor facility maintenance</small>
+              </button>
+
+              <button class="btn btn-lg btn-outline-light text-start p-4 rounded-4" onclick="updateConfig(1)">
+                <div class="fw-bold fs-5">02 • Rough-Terrain 4WD EV Lift (18m)</div>
+                <small class="text-white-50">Mud, gravel &amp; monsoon site traction</small>
+              </button>
+
+              <button class="btn btn-lg btn-outline-light text-start p-4 rounded-4" onclick="updateConfig(2)">
+                <div class="fw-bold fs-5">03 • 500-Ton All-Terrain Mobile Crane</div>
+                <small class="text-white-50">Mega infrastructure &amp; wind turbine erection</small>
+              </button>
+            </div>
+
+            <div class="pt-4">
+              <a href="#contact" class="btn-elevex-gold w-100 justify-content-center py-3">Request Custom Configuration Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SCENE 8: INDUSTRIES CINEMATIC MATRIX ══════════════════════════ -->
+    <section class="py-5" id="industries" style="background:#041E2B;">
+      <div class="container py-4">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="section-eyebrow justify-content-center">SCENE 08 • INDUSTRIES</span>
+          <h2 class="section-title">Serving India's Critical Sectors</h2>
+          <p class="text-white-50">Custom heavy lifting solutions for strategic industrial verticals.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="#contact" class="ex-ind-card">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="Oil &amp; Gas" />
+              <div class="ex-ind-card-body">
+                <span class="badge bg-warning text-dark mb-2">ENERGY</span>
+                <h3 class="h4 text-white fw-bold">Refineries &amp; Petrochemicals</h3>
+                <p class="text-white-50 small mb-0">Plant shutdown lifts &amp; pressure vessel erection.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <a href="#contact" class="ex-ind-card">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png" alt="Metro Infrastructure" />
+              <div class="ex-ind-card-body">
+                <span class="badge bg-primary mb-2">INFRASTRUCTURE</span>
+                <h3 class="h4 text-white fw-bold">Metro Rail &amp; Highways</h3>
+                <p class="text-white-50 small mb-0">Pre-cast concrete girder placement.</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <a href="#contact" class="ex-ind-card">
+              <img src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png" alt="Ports &amp; Shipping" />
+              <div class="ex-ind-card-body">
+                <span class="badge bg-success mb-2">LOGISTICS</span>
+                <h3 class="h4 text-white fw-bold">Ports &amp; Shipyards</h3>
+                <p class="text-white-50 small mb-0">Heavy container crane assembly.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ SCENE 9: SWINGING HOOK QUOTE CTA & FOOTER ══════════════════════════ -->
+    <section class="ex-scene-cta" id="contact">
+      <div class="container position-relative z-2">
+        <!-- SVG Crane Hook -->
+        <svg class="ex-crane-hook-svg" viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="50" y1="0" x2="50" y2="70" stroke="#F59E4B" stroke-width="4" stroke-dasharray="4 4" />
+          <circle cx="50" cy="75" r="12" fill="#095577" stroke="#F59E4B" stroke-width="3" />
+          <path d="M50 87 C40 105 35 125 50 145 C65 160 85 140 70 120 C60 110 50 125 50 125" stroke="#F59E4B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="section-eyebrow justify-content-center">SCENE 09 • LAUNCH DESK</span>
+        <h2 class="section-title">Ready To Lift The Future?</h2>
+        <p class="text-white-50 fs-5 max-w-600 mx-auto mb-4">Request a custom 3D rigging proposal. Fixed price, 4-hour response, 0% downtime guarantee.</p>
+
+        <div class="d-flex justify-content-center gap-3 mb-5">
+          <a href="tel:+917028096111" class="btn-elevex-gold"><i class="bi bi-telephone-fill"></i> +91 70280 96111</a>
+          <a href="mailto:hello@elevex.co.in" class="btn-elevex-outline"><i class="bi bi-envelope-fill"></i> hello@elevex.co.in</a>
+        </div>
+
+        <div class="ex-footer-logo-wrap border-top border-secondary pt-5">
+          <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals Logo" class="ex-footer-logo-img" />
+          <p class="small text-white-50 mt-3">&copy; 2026 ELEVEX Access Solutions Pvt. Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ══════════════════════════ INLINE CINEMATIC JS ══════════════════════════ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Cursor Glow Follower
+      const glow = document.getElementById('exCursorGlow');
+      window.addEventListener('mousemove', function (e) {
+        if (glow) {
+          glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+        }
+      });
+
+      // 2. Lenis Smooth Scroll
+      if (typeof Lenis !== 'undefined') {
+        try {
+          const lenis = new Lenis({ duration: 1.2, smoothTouch: false });
+          function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+          requestAnimationFrame(raf);
+        } catch (e) {}
+      }
+
+      // 3. Scroll Progress & Header
+      const header = document.getElementById('exHeader');
+      const progress = document.getElementById('exProgress');
+      window.addEventListener('scroll', function () {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        if (progress) progress.style.width = (winScroll / height) * 100 + "%";
+        if (header) {
+          if (winScroll > 60) header.classList.add('scrolled');
+          else header.classList.remove('scrolled');
+        }
+      });
+
+      // 4. Hero Particle Canvas
+      const canvas = document.getElementById('heroCanvas');
+      if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        });
+
+        const particles = [];
+        for (let i = 0; i < 60; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            r: Math.random() * 2 + 1,
+            d: Math.random() * 1.5 + 0.5,
+            opacity: Math.random() * 0.6 + 0.2
+          });
+        }
+
+        function drawParticles() {
+          ctx.clearRect(0, 0, width, height);
+          ctx.fillStyle = 'rgba(245, 158, 75, 0.6)';
+          particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fill();
+            p.y -= p.d;
+            if (p.y < 0) p.y = height;
+          });
+          requestAnimationFrame(drawParticles);
+        }
+        drawParticles();
+      }
+
+      // 5. Morphing Stat Animation Cycle
+      const morphTarget = document.getElementById('exMorphTarget');
+      if (morphTarget) {
+        const MORPH_SLABS = ["250+ HEAVY CRANES", "24/7 EMERGENCY RIGGING", "PAN INDIA DEPLOYMENT"];
+        let morphIdx = 0;
+        setInterval(() => {
+          morphIdx = (morphIdx + 1) % MORPH_SLABS.length;
+          morphTarget.style.opacity = '0';
+          morphTarget.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            morphTarget.textContent = MORPH_SLABS[morphIdx];
+            morphTarget.style.opacity = '1';
+            morphTarget.style.transform = 'translateY(0)';
+          }, 300);
+        }, 3200);
+      }
+    });
+
+    // 6. Configurator Switcher Function
+    const CONFIG_DATA = [
+      {
+        src: 'https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png',
+        title: '22m Electric Articulating Boom',
+        desc: 'Zero emissions, 62 dB silent drive, cleanroom certified for pharmaceutical plants and airports.',
+        s1: '22m', s2: '230 KG', s3: '62 dB'
+      },
+      {
+        src: 'https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png',
+        title: 'Rough-Terrain 4WD EV Lift (18m)',
+        desc: 'Oscillating 4-wheel electric drive with IP67 monsoon and mud traction package.',
+        s1: '18m', s2: '320 KG', s3: '4WD EV'
+      },
+      {
+        src: 'https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png',
+        title: '500-Ton All-Terrain Mobile Crane',
+        desc: 'Mega infrastructure boom setup for bridge girders, refinery vessels, and wind turbine assemblies.',
+        s1: '84m', s2: '500 Tons', s3: '12x8x12'
+      }
+    ];
+
+    function updateConfig(i) {
+      const d = CONFIG_DATA[i];
+      const img = document.getElementById('cfgImg');
+      const title = document.getElementById('cfgTitle');
+      const desc = document.getElementById('cfgDesc');
+      const s1 = document.getElementById('cfgSpec1');
+      const s2 = document.getElementById('cfgSpec2');
+      const s3 = document.getElementById('cfgSpec3');
+
+      if (img) {
+        img.style.opacity = '0';
+        setTimeout(() => {
+          img.src = d.src;
+          if (title) title.textContent = d.title;
+          if (desc) desc.textContent = d.desc;
+          if (s1) s1.textContent = d.s1;
+          if (s2) s2.textContent = d.s2;
+          if (s3) s3.textContent = d.s3;
+          img.style.opacity = '1';
+        }, 200);
+      }
+    }
+  </script>
+</body>
+
+</html>
