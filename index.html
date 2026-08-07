@@ -49,15 +49,20 @@
     #elevex-home {
       /* Brand tokens lifted from elevex.co.in — change these four and the whole
      page retones. Emerald is primary, orange is the spark from the logo's X. */
-      --brand: #27B669;
-      --brand-hi: #3ED989;
-      --brand-dim: #16824A;
-      --brand-wash: #E7F7EE;
-      --accent: #FF792D;
-      --deep: #215676;
-      --ink: #131619;
-      --ink-2: #1E2023;
-      --ink-3: #2A2F33;
+      --brand: #F59E0B;
+      --brand-hi: #FBBF24;
+      --brand-dim: #D97706;
+      --brand-wash: #FFFBEB;
+      --accent: #F59E0B;
+      --brand-blue: #2563EB;
+      --brand-teal: #0E5E79;
+      --brand-slate: #4A4553;
+      --brand-copper: #8C4E43;
+      --brand-red: #BA3C27;
+      --deep: #0E5E79;
+      --ink: #111418;
+      --ink-2: #1A1F26;
+      --ink-3: #262D36;
       --paper: #FFFFFF;
       --mist: #F3F6F4;
       --line: rgba(19, 22, 25, .10);
@@ -67,7 +72,7 @@
       --shadow-s: 0 8px 24px rgba(19, 22, 25, .05);
       --shadow-m: 0 20px 60px rgba(19, 22, 25, .10);
       --shadow-l: 0 40px 100px rgba(19, 22, 25, .16);
-      --glow: 0 0 0 1px rgba(39, 182, 105, .30), 0 8px 40px rgba(39, 182, 105, .35);
+      --glow: 0 0 0 1px rgba(245, 158, 11, .30), 0 8px 40px rgba(245, 158, 11, .35);
       --r-s: 14px;
       --r-m: 22px;
       --r-l: 32px;
@@ -243,7 +248,7 @@
       pointer-events: none;
       opacity: 0;
       transition: opacity .6s;
-      background: radial-gradient(650px circle at var(--cx, 50%) var(--cy, 50%), rgba(39, 182, 105, .06), transparent 55%);
+      background: radial-gradient(650px circle at var(--cx, 50%) var(--cy, 50%), rgba(245, 158, 11, .06), transparent 55%);
       z-index: 0
     }
 
@@ -447,7 +452,7 @@
 
     .ex-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 0 1px rgba(39, 182, 105, .6), 0 0 24px rgba(39, 182, 105, .5), 0 12px 36px rgba(39, 182, 105, .35);
+      box-shadow: 0 0 0 1px rgba(245, 158, 11, .6), 0 0 24px rgba(245, 158, 11, .5), 0 12px 36px rgba(245, 158, 11, .35);
     }
 
     .ex-btn:hover i {
@@ -462,7 +467,7 @@
     .ex-btn--brand {
       background: var(--brand);
       color: var(--ink);
-      box-shadow: 0 10px 34px rgba(39, 182, 105, .34)
+      box-shadow: 0 10px 34px rgba(245, 158, 11, .34)
     }
 
     .ex-btn--brand::before {
@@ -471,7 +476,7 @@
 
     .ex-btn--brand:hover {
       color: var(--brand);
-      box-shadow: 0 0 0 1.5px var(--brand), 0 14px 44px rgba(39, 182, 105, .6)
+      box-shadow: 0 0 0 1.5px var(--brand), 0 14px 44px rgba(245, 158, 11, .6)
     }
 
     .ex-btn--ghost {
@@ -515,7 +520,7 @@
 
     .ex-btn--dark:hover {
       color: var(--ink);
-      box-shadow: 0 0 24px rgba(39, 182, 105, .5)
+      box-shadow: 0 0 24px rgba(245, 158, 11, .5)
     }
 
     .ex-iconbtn {
@@ -552,7 +557,7 @@
     .ex-iconbtn:hover {
       border-color: var(--brand);
       color: var(--ink);
-      box-shadow: 0 0 20px rgba(39, 182, 105, .5);
+      box-shadow: 0 0 20px rgba(245, 158, 11, .5);
       transform: scale(1.08)
     }
 
@@ -702,7 +707,7 @@
     padding: clamp(26px, 3vw, 36px);
     border-radius: var(--r-l);
     background: linear-gradient(145deg, rgba(25, 29, 33, .90), rgba(15, 18, 20, .96));
-    border: 1px solid rgba(39, 182, 105, .18);
+    border: 1px solid rgba(245, 158, 11, .18);
     box-shadow: 0 20px 50px rgba(0, 0, 0, .4);
     display: flex;
     flex-direction: column;
@@ -724,8 +729,8 @@
 
   .ex-pillar-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(39, 182, 105, .45);
-    box-shadow: 0 28px 65px rgba(0, 0, 0, .55), 0 0 24px rgba(39, 182, 105, .15);
+    border-color: rgba(245, 158, 11, .45);
+    box-shadow: 0 28px 65px rgba(0, 0, 0, .55), 0 0 24px rgba(245, 158, 11, .15);
   }
 
   .ex-pillar-card:hover::before {
@@ -744,8 +749,8 @@
     gap: 8px;
     padding: 6px 14px;
     border-radius: 999px;
-    background: rgba(39, 182, 105, .12);
-    border: 1px solid rgba(39, 182, 105, .3);
+    background: rgba(245, 158, 11, .12);
+    border: 1px solid rgba(245, 158, 11, .3);
     font-size: 11px;
     font-weight: 800;
     letter-spacing: .1em;
@@ -848,7 +853,7 @@
     flex: 1;
     border-radius: 4px;
     background: linear-gradient(180deg, var(--brand-hi), var(--brand-dim));
-    box-shadow: 0 0 10px rgba(39, 182, 105, .4);
+    box-shadow: 0 0 10px rgba(245, 158, 11, .4);
     animation: exWavePulse 1.8s ease-in-out infinite alternate;
   }
 
@@ -1187,7 +1192,7 @@
     @media(hover:none) {
       .ex-hcard.ex-live {
         transform: translateY(-5px);
-        border-color: rgba(39, 182, 105, .45);
+        border-color: rgba(245, 158, 11, .45);
         background: rgba(255, 255, 255, .07)
       }
 
@@ -1254,7 +1259,7 @@
       transform-origin: 0 50%;
       transform: scaleX(0);
       background: linear-gradient(90deg, var(--brand-dim), var(--brand), var(--brand-hi));
-      box-shadow: 0 0 14px rgba(39, 182, 105, .7)
+      box-shadow: 0 0 14px rgba(245, 158, 11, .7)
     }
 
     /* ==========================================================================
@@ -1287,17 +1292,17 @@
       padding: 9px 9px 9px 22px;
       border-radius: 999px;
       background: rgba(19, 22, 25, .75);
-      border: 1px solid rgba(39, 182, 105, .22);
+      border: 1px solid rgba(245, 158, 11, .22);
       backdrop-filter: blur(22px) saturate(1.4);
       -webkit-backdrop-filter: blur(22px) saturate(1.4);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(39, 182, 105, .12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .35), 0 0 0 1px rgba(245, 158, 11, .12);
       transition: background-color .5s var(--ease), border-color .5s var(--ease), box-shadow .5s var(--ease), padding .4s var(--ease)
     }
 
     .ex-header.ex-stuck .ex-nav {
       background: rgba(255, 255, 255, .88);
-      border-color: rgba(39, 182, 105, .28);
-      box-shadow: 0 18px 50px rgba(19, 22, 25, .12), 0 0 0 1px rgba(39, 182, 105, .15)
+      border-color: rgba(245, 158, 11, .28);
+      box-shadow: 0 18px 50px rgba(19, 22, 25, .12), 0 0 0 1px rgba(245, 158, 11, .15)
     }
 
     .ex-logo {
@@ -1318,7 +1323,7 @@
     }
 
     .ex-logo:hover .ex-logo__plate {
-      box-shadow: 0 8px 26px rgba(39, 182, 105, .32)
+      box-shadow: 0 8px 26px rgba(245, 158, 11, .32)
     }
 
     .ex-logo__plate img {
@@ -1352,15 +1357,15 @@
       left: 0;
       height: calc(100% - 6px);
       border-radius: 999px;
-      background: rgba(39, 182, 105, .16);
-      border: 1px solid rgba(39, 182, 105, .35);
+      background: rgba(245, 158, 11, .16);
+      border: 1px solid rgba(245, 158, 11, .35);
       opacity: 0;
       transition: all .45s var(--ease);
       pointer-events: none
     }
 
     .ex-header.ex-stuck .ex-navpill {
-      background: rgba(39, 182, 105, .20)
+      background: rgba(245, 158, 11, .20)
     }
 
     .ex-navlink {
@@ -1439,7 +1444,7 @@
 
     .ex-navphone:hover {
       border-color: var(--brand);
-      background: rgba(39, 182, 105, .1)
+      background: rgba(245, 158, 11, .1)
     }
 
     .ex-header.ex-stuck .ex-navphone {
@@ -1814,9 +1819,12 @@
     }
 
     .ex-hero__tab.ex-active {
+    color: #111418 !important;
+    background: var(--brand);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, .45)
       color: var(--ink);
       background: var(--brand);
-      box-shadow: 0 4px 20px rgba(39, 182, 105, .45)
+      box-shadow: 0 4px 20px rgba(245, 158, 11, .45)
     }
 
     .ex-hero__tab.ex-active i {
@@ -1846,8 +1854,8 @@
       gap: 8px;
       padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(39, 182, 105, .14);
-      border: 1px solid rgba(39, 182, 105, .35);
+      background: rgba(245, 158, 11, .14);
+      border: 1px solid rgba(245, 158, 11, .35);
       color: var(--brand);
       font-size: 9.5px;
       font-weight: 800;
@@ -2023,12 +2031,12 @@
       pointer-events: none;
       opacity: 0;
       transition: opacity .4s;
-      background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(39, 182, 105, .18), transparent 65%)
+      background: radial-gradient(300px circle at var(--mx, 50%) var(--my, 50%), rgba(245, 158, 11, .18), transparent 65%)
     }
 
     .ex-hcard:hover {
       transform: translateY(-5px);
-      border-color: rgba(39, 182, 105, .45);
+      border-color: rgba(245, 158, 11, .45);
       background: rgba(255, 255, 255, .07)
     }
 
@@ -2047,8 +2055,8 @@
       width: 34px;
       height: 34px;
       border-radius: 10px;
-      background: rgba(39, 182, 105, .14);
-      border: 1px solid rgba(39, 182, 105, .3);
+      background: rgba(245, 158, 11, .14);
+      border: 1px solid rgba(245, 158, 11, .3);
       display: grid;
       place-items: center;
       font-size: 15px;
@@ -2191,7 +2199,7 @@
       width: 80%;
       height: 80%;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(39, 182, 105, .24) 0%, transparent 65%);
+      background: radial-gradient(circle, rgba(245, 158, 11, .24) 0%, transparent 65%);
       filter: blur(50px);
       pointer-events: none;
       z-index: 0
@@ -2243,7 +2251,7 @@
       padding: 9px 18px;
       border-radius: 999px;
       background: rgba(19, 22, 25, .90);
-      border: 1px solid rgba(39, 182, 105, .4);
+      border: 1px solid rgba(245, 158, 11, .4);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       color: #fff;
@@ -2260,7 +2268,7 @@
 
     .ex-hero__spectag.ex-hs {
       border-color: var(--brand);
-      box-shadow: 0 0 0 3px rgba(39, 182, 105, .16), 0 12px 36px rgba(0, 0, 0, .5)
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, .16), 0 12px 36px rgba(0, 0, 0, .5)
     }
 
     .ex-hero__spectag i {
@@ -2359,14 +2367,14 @@
       width: 28px;
       height: 28px;
       border-radius: 50%;
-      background: rgba(39, 182, 105, .25);
+      background: rgba(245, 158, 11, .25);
       border: 1.5px solid var(--brand);
       display: grid;
       place-items: center;
       color: #fff;
       font-size: 11px;
       transition: all .2s cubic-bezier(.16, 1, .3, 1);
-      box-shadow: 0 0 20px rgba(39, 182, 105, .5)
+      box-shadow: 0 0 20px rgba(245, 158, 11, .5)
     }
 
     .ex-hotspot__btn::before {
@@ -2392,7 +2400,7 @@
       padding: 4px 11px;
       border-radius: 999px;
       background: rgba(19, 22, 25, .88);
-      border: 1px solid rgba(39, 182, 105, .4);
+      border: 1px solid rgba(245, 158, 11, .4);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       font-size: 10px;
@@ -2419,7 +2427,7 @@
       padding: 12px 15px;
       border-radius: var(--r-s);
       background: rgba(19, 22, 25, .94);
-      border: 1px solid rgba(39, 182, 105, .4);
+      border: 1px solid rgba(245, 158, 11, .4);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
       color: #fff;
@@ -2466,7 +2474,7 @@
         background: var(--brand);
         color: var(--ink);
         transform: scale(1.22);
-        box-shadow: 0 0 0 4px rgba(39, 182, 105, .2), 0 0 22px rgba(39, 182, 105, .6)
+        box-shadow: 0 0 0 4px rgba(245, 158, 11, .2), 0 0 22px rgba(245, 158, 11, .6)
       }
     }
 
@@ -2816,7 +2824,7 @@
       width: min(400px, 72%);
       aspect-ratio: 1;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(39, 182, 105, .28), transparent 64%);
+      background: radial-gradient(circle, rgba(245, 158, 11, .28), transparent 64%);
       filter: blur(40px);
       transition: background .6s
     }
@@ -2964,7 +2972,7 @@
       height: 1px;
       z-index: 2;
       pointer-events: none;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .22) 22%, rgba(39, 182, 105, .5) 50%, rgba(255, 255, 255, .22) 78%, transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .22) 22%, rgba(245, 158, 11, .5) 50%, rgba(255, 255, 255, .22) 78%, transparent);
       opacity: .5;
       transition: opacity .5s
     }
@@ -2976,14 +2984,14 @@
       pointer-events: none;
       opacity: 0;
       transition: opacity .5s;
-      background: radial-gradient(440px circle at var(--mx, 50%) var(--my, 50%), rgba(39, 182, 105, .16), transparent 62%)
+      background: radial-gradient(440px circle at var(--mx, 50%) var(--my, 50%), rgba(245, 158, 11, .16), transparent 62%)
     }
 
     .ex-cell:hover,
     .ex-cell.ex-live {
       transform: translateY(-6px);
-      border-color: rgba(39, 182, 105, .55);
-      box-shadow: 0 26px 60px rgba(0, 0, 0, .42), 0 0 0 1px rgba(39, 182, 105, .14)
+      border-color: rgba(245, 158, 11, .55);
+      box-shadow: 0 26px 60px rgba(0, 0, 0, .42), 0 0 0 1px rgba(245, 158, 11, .14)
     }
 
     .ex-cell:hover::after,
@@ -3059,8 +3067,8 @@
       place-items: center;
       font-size: 20px;
       color: var(--brand-hi);
-      background: rgba(39, 182, 105, .13);
-      border: 1px solid rgba(39, 182, 105, .32);
+      background: rgba(245, 158, 11, .13);
+      border: 1px solid rgba(245, 158, 11, .32);
       margin-bottom: auto;
       transition: transform .5s var(--ease), background-color .4s, color .4s, border-color .4s
     }
@@ -3136,7 +3144,7 @@
     .ex-cell__bars i {
       flex: 1;
       border-radius: 3px 3px 0 0;
-      background: linear-gradient(180deg, var(--brand), rgba(39, 182, 105, .16));
+      background: linear-gradient(180deg, var(--brand), rgba(245, 158, 11, .16));
       height: var(--h, 30%);
       transform-origin: bottom;
       transform: scaleY(0);
@@ -3151,7 +3159,7 @@
 
     .ex-cell:hover .ex-cell__bars i,
     .ex-cell.ex-live .ex-cell__bars i {
-      filter: drop-shadow(0 0 10px rgba(39, 182, 105, .45))
+      filter: drop-shadow(0 0 10px rgba(245, 158, 11, .45))
     }
 
     /* ---- B · diesel vs electric comparison --------------------------------- */
@@ -3258,7 +3266,7 @@
 
     .ex-vs__bar--e {
       background: linear-gradient(90deg, var(--brand-dim), var(--brand) 60%, var(--brand-hi));
-      box-shadow: 0 0 16px rgba(39, 182, 105, .5)
+      box-shadow: 0 0 16px rgba(245, 158, 11, .5)
     }
 
     .ex-vs__val {
@@ -3318,7 +3326,7 @@
 
     .ex-map__path {
       fill: rgba(255, 255, 255, .04);
-      stroke: rgba(39, 182, 105, .42);
+      stroke: rgba(245, 158, 11, .42);
       stroke-width: 1.1;
       stroke-dasharray: 1400;
       stroke-dashoffset: 1400;
@@ -3398,7 +3406,7 @@
 
     .ex-cell:hover .ex-map__hubs span,
     .ex-cell.ex-live .ex-map__hubs span {
-      border-color: rgba(39, 182, 105, .4);
+      border-color: rgba(245, 158, 11, .4);
       color: rgba(255, 255, 255, .85)
     }
 
@@ -3492,7 +3500,7 @@
       height: 100%;
       width: 0%;
       background: linear-gradient(90deg, var(--brand-dim), var(--brand), var(--brand-hi));
-      box-shadow: 0 0 14px rgba(39, 182, 105, .8);
+      box-shadow: 0 0 14px rgba(245, 158, 11, .8);
       transition: width .12s linear
     }
 
@@ -3547,7 +3555,7 @@
     .ex-step.ex-on {
       background: #fff;
       border-color: var(--brand);
-      box-shadow: 0 20px 60px rgba(19, 22, 25, .10), 0 0 0 1px rgba(39, 182, 105, .25);
+      box-shadow: 0 20px 60px rgba(19, 22, 25, .10), 0 0 0 1px rgba(245, 158, 11, .25);
       transform: translateY(-6px)
     }
 
@@ -3562,8 +3570,8 @@
       width: 42px;
       height: 42px;
       border-radius: 13px;
-      background: rgba(39, 182, 105, .12);
-      border: 1px solid rgba(39, 182, 105, .3);
+      background: rgba(245, 158, 11, .12);
+      border: 1px solid rgba(245, 158, 11, .3);
       display: grid;
       place-items: center;
       font-size: 18px;
@@ -3930,8 +3938,8 @@
       border-radius: 999px;
       display: grid;
       place-items: center;
-      background: rgba(39, 182, 105, .14);
-      border: 1px solid rgba(39, 182, 105, .35);
+      background: rgba(245, 158, 11, .14);
+      border: 1px solid rgba(245, 158, 11, .35);
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       color: var(--brand);
@@ -4019,7 +4027,7 @@
     .ex-score:hover {
       background: var(--ink-3);
       transform: scale(1.04);
-      box-shadow: inset 0 0 0 1px rgba(39, 182, 105, .2), 0 12px 30px rgba(0, 0, 0, .3)
+      box-shadow: inset 0 0 0 1px rgba(245, 158, 11, .2), 0 12px 30px rgba(0, 0, 0, .3)
     }
 
     .ex-score i {
@@ -4190,7 +4198,7 @@
       width: 230px;
       height: 230px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(39, 182, 105, .3), transparent 66%);
+      background: radial-gradient(circle, rgba(245, 158, 11, .3), transparent 66%);
       filter: blur(30px)
     }
 
@@ -4241,7 +4249,7 @@
       border-radius: 50%;
       left: -14%;
       top: -40%;
-      background: radial-gradient(circle, rgba(39, 182, 105, .22), transparent 62%);
+      background: radial-gradient(circle, rgba(245, 158, 11, .22), transparent 62%);
       filter: blur(70px)
     }
 
@@ -4369,9 +4377,9 @@
     .ex-field input:focus,
     .ex-field select:focus,
     .ex-field textarea:focus {
-      border-color: rgba(39, 182, 105, .55);
-      background: rgba(39, 182, 105, .05);
-      box-shadow: 0 0 0 3px rgba(39, 182, 105, .10)
+      border-color: rgba(245, 158, 11, .55);
+      background: rgba(245, 158, 11, .05);
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, .10)
     }
 
     .ex-field label {
@@ -4427,8 +4435,8 @@
       margin-top: 16px;
       padding: 13px 16px;
       border-radius: 14px;
-      background: rgba(39, 182, 105, .12);
-      border: 1px solid rgba(39, 182, 105, .35);
+      background: rgba(245, 158, 11, .12);
+      border: 1px solid rgba(245, 158, 11, .35);
       color: var(--brand);
       font-size: 12.5px;
       font-weight: 700
@@ -4582,7 +4590,7 @@
 
     .ex-wordmark b span {
       color: transparent;
-      background: linear-gradient(180deg, rgba(39, 182, 105, .55), rgba(39, 182, 105, .05));
+      background: linear-gradient(180deg, rgba(245, 158, 11, .55), rgba(245, 158, 11, .05));
       -webkit-background-clip: text;
       background-clip: text
     }
@@ -4663,7 +4671,7 @@
       display: grid;
       place-items: center;
       font-size: 17px;
-      box-shadow: 0 14px 40px rgba(39, 182, 105, .42);
+      box-shadow: 0 14px 40px rgba(245, 158, 11, .42);
       opacity: 0;
       transform: translateY(20px) scale(.85);
       pointer-events: none;
@@ -4815,7 +4823,7 @@
 
     .ex-fig:hover,
     .ex-fig.ex-live {
-      background: rgba(39, 182, 105, .06)
+      background: rgba(245, 158, 11, .06)
     }
 
     .ex-fig b {
@@ -4895,7 +4903,56 @@
       }
     }
 
-    /* ==========================================================================
+    
+  /* ---------------------------------------------------------------- FOOTER LOGO GRAPHIC & LOGO COLORS */
+  .ex-wordmark {
+    position: relative;
+    padding: clamp(30px, 4vw, 56px) 0 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .ex-wordmark__logo-wrap {
+    width: 100%;
+    max-width: clamp(260px, 42vw, 620px);
+    margin-inline: auto;
+    opacity: 0.95;
+    transition: opacity 0.4s;
+    filter: drop-shadow(0 12px 36px rgba(0, 0, 0, .6));
+  }
+
+  .ex-wordmark__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .ex-wordmark__letters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: min(17.5vw, 240px);
+    font-weight: 800;
+    line-height: .82;
+    letter-spacing: -.03em;
+    user-select: none;
+    margin-top: 8px;
+  }
+
+  .ex-wordmark__letters .ex-l-e1 { color: #1D61B4; opacity: .9; text-shadow: 0 0 20px rgba(29, 97, 180, .3); }
+  .ex-wordmark__letters .ex-l-l  { color: #0E5E79; opacity: .95; text-shadow: 0 0 20px rgba(14, 94, 121, .3); }
+  .ex-wordmark__letters .ex-l-e2 { color: #565A63; opacity: .85; }
+  .ex-wordmark__letters .ex-l-v  { color: #7A4B43; opacity: .9; text-shadow: 0 0 20px rgba(122, 75, 67, .3); }
+  .ex-wordmark__letters .ex-l-e3 { color: #BA3C27; opacity: .92; text-shadow: 0 0 20px rgba(186, 60, 39, .3); }
+  .ex-wordmark__letters .ex-l-x  { color: #F59E0B; text-shadow: 0 0 32px rgba(245, 158, 11, .5); }
+
+/* ==========================================================================
    18 · RESPONSIVE PASS
    --------------------------------------------------------------------------
    Deliberately last in the file so it settles anything the component blocks
@@ -5612,7 +5669,7 @@
               </div>
               <div class="ex-pillar-bar">
                 <span style="color:var(--brand);font-weight:700">ELEVEX EV: 0 kg CO₂ (Clean)</span>
-                <div class="ex-pillar-track"><i style="width:100%;background:linear-gradient(90deg,var(--brand-dim),var(--brand-hi));box-shadow:0 0 12px rgba(39,182,105,.6)"></i></div>
+                <div class="ex-pillar-track"><i style="width:100%;background:linear-gradient(90deg,var(--brand-dim),var(--brand-hi));box-shadow:0 0 12px rgba(245,158,11,.6)"></i></div>
               </div>
             </div>
           </div>
@@ -5665,7 +5722,7 @@
           <!-- Pillar 4: Direct Company Warranty -->
           <div class="ex-pillar-card" data-spot data-live data-tilt data-rv="rise" style="--d:300ms">
             <div class="ex-pillar-card__top">
-              <span class="ex-pillar-card__badge" style="background:rgba(33,86,118,.3);color:#3ED989;border-color:rgba(62,217,137,.4)"><i class="bi bi-shield-lock-fill"></i> 100% Owned Fleet</span>
+              <span class="ex-pillar-card__badge" style="background:rgba(33,86,118,.3);color:#FBBF24;border-color:rgba(62,217,137,.4)"><i class="bi bi-shield-lock-fill"></i> 100% Owned Fleet</span>
               <span class="ex-pillar-card__n">04</span>
             </div>
             <h3 class="ex-pillar-card__title">Direct Company Support. Zero Sub-Renting.</h3>
@@ -6137,7 +6194,11 @@
           </div>
         </div>
 
-        <div class="ex-wordmark" data-rv="up" data-sp><b data-drift style="--drift:-46px">ELEVE<span>X</span></b></div>
+        <div class="ex-wordmark" data-rv="up" data-sp>
+          <div class="ex-wordmark__logo-wrap">
+            <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals Logo" class="ex-wordmark__img" />
+          </div>
+        </div>
 
         <div class="ex-foot__bot">
           <p>© <span id="exYear">2026</span> ELEVEX Access Solutions Pvt. Ltd. All rights reserved.</p>
