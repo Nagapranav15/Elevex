@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>About Us — ELEVEX Rentals | Palod Group 80+ Years Heritage</title>
-  <meta name="description" content="Learn about ELEVEX Rentals and the Palod Group's 80+ years of industrial heritage, core expertise, and zero-emission vision." />
+  <title>Industry Insights &amp; Blogs — ELEVEX Rentals | Palod Group</title>
+  <meta name="description" content="Read ELEVEX's latest articles on work-at-height safety, electric machinery innovations, and site efficiency." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,9 +30,9 @@
 
     .btn-sharp {
       border-radius: 0px !important;
-      padding: 14px 28px;
+      padding: 12px 24px;
       font-family: var(--font-heading);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -42,6 +42,7 @@
       gap: 10px;
     }
     .btn-yellow { background-color: var(--brand-yellow); color: var(--brand-blue) !important; }
+    .btn-blue-outline { border: 2px solid var(--brand-blue) !important; color: var(--brand-blue) !important; }
 
     .header-topbar { background-color: var(--brand-blue-dark); color: #94A3B8; font-size: 12px; padding: 6px 0; }
     .navbar-main { padding: 14px 0; border-bottom: 1px solid #E2E8F0; }
@@ -65,16 +66,15 @@
       padding: 70px 0;
     }
 
-    .expertise-card {
-      background-color: #FFFFFF;
+    .blog-card {
+      background: #FFFFFF;
       border: 1px solid #E2E8F0;
-      border-top: 4px solid var(--brand-blue);
-      padding: 36px 30px;
       height: 100%;
-      box-shadow: 0 10px 30px rgba(6, 43, 79, 0.05);
+      display: flex;
+      flex-direction: column;
     }
-    .expertise-card h3 { font-size: 22px; font-weight: 800; color: var(--brand-blue); margin-bottom: 14px; }
-    .expertise-card p { font-size: 14px; color: #475569; line-height: 1.65; }
+    .blog-card img { width: 100%; height: 220px; object-fit: cover; }
+    .blog-card .blog-body { padding: 24px; display: flex; flex-direction: column; flex-grow: 1; }
 
     .footer-elaborate {
       background-color: #031427;
@@ -102,9 +102,9 @@
         <ul class="nav-menu d-none d-lg-flex">
           <li><a href="index.html">Home</a></li>
           <li><a href="fleet.html">Our Fleet</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Sales &amp; Service</a></li>
-          <li><a href="blog.html">Blogs</a></li>
+          <li><a href="blog.html" class="active">Blogs</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
         <a href="contact.html" class="btn-sharp btn-yellow">GET A QUOTE</a>
@@ -115,62 +115,51 @@
   <!-- Hero -->
   <section class="page-hero">
     <div class="container text-center">
-      <h1 class="display-4 fw-bold text-white mb-2">About ELEVEX Rentals</h1>
-      <p class="lead text-warning fw-semibold">A Division of Palod Group — 4th Generation Industrial Heritage (80+ Years)</p>
+      <h1 class="display-4 fw-bold text-white mb-2">Industry Insights &amp; Safety Guides</h1>
+      <p class="lead text-warning fw-semibold">Articles on Work-at-Height Safety, Electric Machines &amp; Site Uptime</p>
     </div>
   </section>
 
-  <!-- Story & Heritage Section -->
-  <section class="py-5">
-    <div class="container py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <span class="text-warning fw-bold text-uppercase small">OUR HERITAGE</span>
-          <h2 class="fw-bold display-6 text-primary mb-3">8 Decades of Trust. Infinite New Heights.</h2>
-          <p class="text-secondary">
-            Elevex Rentals is the premier work-at-height and aerial equipment rental division of the <strong>Palod Group</strong>. Founded in the 1940s, the Palod Group is a fourth-generation family enterprise with over 80 years of industrial excellence and a group valuation exceeding ₹200 crore+ (USD 22.2M+).
-          </p>
-          <p class="text-secondary">
-            We operate India's largest fleet of zero-emission, 100% electric scissor lifts, boom lifts, and heavy telehandlers, servicing major infrastructure and industrial sites nationwide.
-          </p>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="assets/scissor-lift-main.png" alt="Elevex Heritage Machine" style="max-height: 400px; width: auto;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Expertise Section (Image 1 Content) -->
+  <!-- Blog Grid -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <div class="text-center mb-5">
-        <span class="text-warning fw-bold text-uppercase small">CORE PRINCIPLES</span>
-        <h2 class="fw-bold display-6 text-primary">Our Expertise</h2>
-      </div>
       <div class="row g-4">
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>Safety</h3>
-            <p>Safety is our core value and being aerial work platform specialists we prioritize the safety of our employees and customers. As a specialist like Elevex we go above and beyond to keep you safe.</p>
+        <!-- Article 1 -->
+        <div class="col-md-4">
+          <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?w=600&auto=format&fit=crop&q=80" alt="Electric Lifts" />
+            <div class="blog-body">
+              <span class="text-warning fw-bold small text-uppercase mb-2">15 MAY 2024</span>
+              <h3 class="fw-bold h5 text-primary mb-3">Why All-Electric Lifts Are Revolutionizing Work-at-Height Safety</h3>
+              <p class="text-muted small mb-4">Discover how battery-powered platforms eliminate toxic exhaust emissions and noise disruption indoors.</p>
+              <a href="#" class="btn-sharp btn-blue-outline mt-auto">READ ARTICLE</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>Sustainability</h3>
-            <p>At Elevex, we believe there is an increasingly important role for us to play in helping our customers reach net zero emissions and create a healthier planet. Elevex is committed to UN SDG goals.</p>
+
+        <!-- Article 2 -->
+        <div class="col-md-4">
+          <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="Safety Guidelines" />
+            <div class="blog-body">
+              <span class="text-warning fw-bold small text-uppercase mb-2">03 MAY 2024</span>
+              <h3 class="fw-bold h5 text-primary mb-3">8 Essential Safety Guidelines for Aerial Platform Operators</h3>
+              <p class="text-muted small mb-4">Critical pre-start inspections, harness protocols, and ground slope checks for aerial equipment.</p>
+              <a href="#" class="btn-sharp btn-blue-outline mt-auto">READ ARTICLE</a>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>The Elevex Way</h3>
-            <p>Our vision is to deliver the best customer experience in the industry. But we know that it takes more than good intentions to fulfill that promise. That's why we've implemented The Elevex Way.</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>Digital Solutions</h3>
-            <p>Elevex has developed various digital solutions in order to enhance efficiency and productivity. <strong>My Elevex</strong>, a digital platform that allows you to manage your rental journey effectively.</p>
+
+        <!-- Article 3 -->
+        <div class="col-md-4">
+          <div class="blog-card">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Choosing Lifts" />
+            <div class="blog-body">
+              <span class="text-warning fw-bold small text-uppercase mb-2">20 APR 2024</span>
+              <h3 class="fw-bold h5 text-primary mb-3">Scissor Lift vs. Boom Lift: How to Choose the Right Machine</h3>
+              <p class="text-muted small mb-4">A complete comparison guide to working heights, outreach, and floor load capacities.</p>
+              <a href="#" class="btn-sharp btn-blue-outline mt-auto">READ ARTICLE</a>
+            </div>
           </div>
         </div>
       </div>

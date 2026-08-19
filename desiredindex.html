@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>ELEVEX — Premium All-Electric Aerial Equipment & Work Platforms</title>
+  <meta name="description" content="Elevex: India's premier all-electric scissor lifts and boom lifts. Built for safety, performance, and a sustainable future." />
+  <meta name="theme-color" content="#063B66" />
+
+  <!-- Google Fonts: Space Grotesk, Manrope, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Third-Party CDNs: Bootstrap Icons & Swiper CSS/JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <style>
+    /* ==========================================================================
+       1. GLOBAL DESIGN SYSTEM & TOKENS
+       ========================================================================== */
+    :root {
+      --primary-navy: #063B66;
+      --deep-navy: #062B4F;
+      --electric-yellow: #F7C600;
+      --yellow-hover: #E5B700;
+      --white: #FFFFFF;
+      --soft-bg: #F7FAFC;
+      --light-border: #E7EDF3;
+      --dark-text: #102A43;
+      --muted-text: #486581;
+
+      --font-heading: 'Space Grotesk', 'Manrope', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+
+      --shadow-subtle: 0 10px 30px rgba(6, 43, 79, 0.05);
+      --shadow-hover: 0 18px 40px rgba(6, 43, 79, 0.12);
+
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: var(--font-body);
+      background-color: var(--white);
+      color: var(--dark-text);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      overflow-x: clip;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Container Utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Typography Utilities */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--primary-navy);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .eyebrow-label {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #D4A000;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .eyebrow-label .badge-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--electric-yellow);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: 38px;
+      color: var(--primary-navy);
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 28px;
+      }
+    }
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .section-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+
+    .link-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--primary-navy);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .link-cta i {
+      transition: transform var(--transition-fast);
+    }
+
+    .link-cta:hover {
+      color: #042440;
+    }
+
+    .link-cta:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary {
+      background-color: var(--electric-yellow);
+      color: var(--primary-navy);
+      box-shadow: 0 4px 15px rgba(247, 198, 0, 0.3);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--yellow-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(247, 198, 0, 0.45);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 10px rgba(247, 198, 0, 0.3);
+    }
+
+    .btn-secondary {
+      background-color: var(--white);
+      color: var(--primary-navy);
+      border-color: var(--primary-navy);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--electric-yellow);
+      background-color: #FFFDF0;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    .btn-secondary:active {
+      transform: translateY(0);
+    }
+
+    .btn i {
+      transition: transform var(--transition-fast);
+    }
+
+    .btn:hover i {
+      transform: translateX(4px);
+    }
+
+    /* ==========================================================================
+       2. SCROLL PROGRESS BAR & LOADING SCREEN
+       ========================================================================== */
+    .scroll-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--electric-yellow);
+      z-index: 10001;
+      transition: width 0.05s ease-out;
+      pointer-events: none;
+    }
+
+    #page-loader {
+      position: fixed;
+      inset: 0;
+      background: var(--white);
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    #page-loader.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none !important;
+      display: none !important;
+    }
+
+    .loader-logo {
+      font-family: var(--font-heading);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .loader-logo span {
+      color: var(--electric-yellow);
+    }
+
+    .loader-bar {
+      width: 140px;
+      height: 3px;
+      background: var(--light-border);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .loader-progress {
+      width: 0%;
+      height: 100%;
+      background: var(--electric-yellow);
+      animation: loadProgress 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    }
+
+    @keyframes loadProgress {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    /* Custom Cursor */
+    .custom-cursor-dot,
+    .custom-cursor-follower {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      border-radius: 50%;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease-out, opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+    }
+
+    .custom-cursor-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--primary-navy);
+    }
+
+    .custom-cursor-follower {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(247, 198, 0, 0.8);
+      background-color: rgba(247, 198, 0, 0.08);
+      transition: transform 0.25s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+    }
+
+    body.cursor-hover .custom-cursor-follower {
+      width: 48px;
+      height: 48px;
+      background-color: rgba(247, 198, 0, 0.2);
+      border-color: var(--electric-yellow);
+    }
+
+    @media (hover: none) or (prefers-reduced-motion: reduce) {
+      .custom-cursor-dot, .custom-cursor-follower { display: none !important; }
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION BAR
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: var(--white);
+      border-bottom: 1px solid var(--light-border);
+      transition: all var(--transition-smooth);
+    }
+
+    .site-header.scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 6px 25px rgba(6, 43, 79, 0.06);
+      border-bottom-color: rgba(231, 237, 243, 0.6);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      transition: height var(--transition-smooth);
+    }
+
+    .site-header.scrolled .nav-container {
+      height: 66px;
+    }
+
+    /* Logo */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    .brand-title {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+    }
+
+    .brand-title span {
+      color: var(--electric-yellow);
+      margin-left: 1px;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-heading);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--primary-navy);
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
+    /* Nav Links */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--primary-navy);
+      text-decoration: none;
+      position: relative;
+      padding: 6px 0;
+      transition: color var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link i {
+      font-size: 10px;
+      transition: transform var(--transition-fast);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background-color: var(--electric-yellow);
+      transition: width var(--transition-fast);
+      border-radius: 2px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary-navy);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-link:hover i {
+      transform: translateY(2px);
+    }
+
+    .nav-cta {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--primary-navy);
+      cursor: pointer;
+    }
+
+    @media (max-width: 992px) {
+      .nav-menu {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 320px;
+      height: 100vh;
+      background: var(--white);
+      box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+      z-index: 2000;
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transition: right var(--transition-smooth);
+    }
+
+    .mobile-drawer.open {
+      right: 0;
+    }
+
+    .mobile-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--light-border);
+      padding-bottom: 16px;
+    }
+
+    .mobile-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      list-style: none;
+    }
+
+    .mobile-nav-links a {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-navy);
+      text-decoration: none;
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding-top: 140px;
+      padding-bottom: 80px;
+      background-color: var(--white);
+      overflow: hidden;
+    }
+
+    /* Subtle architectural grid pattern */
+    .hero-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(6, 59, 102, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(6, 59, 102, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .hero-bg-radial {
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(247, 198, 0, 0.12) 0%, rgba(6, 59, 102, 0.03) 50%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-chevron-bg {
+      position: absolute;
+      right: -5%;
+      top: 15%;
+      font-size: 480px;
+      font-weight: 900;
+      color: rgba(247, 198, 0, 0.06);
+      line-height: 0.8;
+      user-select: none;
+      pointer-events: none;
+      font-family: var(--font-heading);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    }
+
+    .hero-content {
+      max-width: 620px;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 16px;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-title .text-yellow {
+      color: #D4A000;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 34px;
+      }
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--muted-text);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero Feature Badges */
+    .hero-badges {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      border-top: 1px solid var(--light-border);
+      padding-top: 28px;
+      flex-wrap: wrap;
+    }
+
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: transform var(--transition-fast);
+    }
+
+    .badge-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .badge-icon-wrap {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background-color: var(--soft-bg);
+      border: 1px solid var(--light-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-navy);
+      font-size: 16px;
+      transition: all var(--transition-fast);
+    }
+
+    .badge-item:hover .badge-icon-wrap {
+      background-color: var(--electric-yellow);
+      border-color: var(--electric-yellow);
+      transform: rotate(8deg);
+      box-shadow: 0 4px 12px rgba(247, 198, 0, 0.3);
+    }
+
+    .badge-text-title {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary-navy);
+    }
+
+    .badge-text-desc {
+      font-size: 11px;
+      color: var(--muted-text);
+    }
+
+    /* Hero Machine Visual */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-machine-img {
+      width: 100%;
+      max-width: 540px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 35px rgba(6, 43, 79, 0.15));
+      animation: subtleFloat 5s ease-in-out infinite alternate;
+      transform-origin: center bottom;
+    }
+
+    @keyframes subtleFloat {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    /* Decorative Floating Tag */
+    .hero-floating-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 10px;
+      background: var(--white);
+      border: 1px solid var(--light-border);
+      border-left: 4px solid var(--electric-yellow);
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tag-val {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary-navy);
+    }
+
+    .tag-lbl {
+      font-size: 11px;
+      color: var(--muted-text);
+      line-height: 1.2;
+    }
+
+    /* ==========================================================================
+       5. EQUIPMENT SECTION (Horizontal Carousel)
+       ========================================================================== */
+    .equipment-section {
+      padding: 100px 0;
+      background-color: var(--soft-bg);
+      position: relative;
+    }
+
+    .equipment-card {
+      background-color: var(--white);
+      border: 1px solid var(--light-border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .equipment-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: transparent;
+      transition: background-color var(--transition-fast);
+    }
+
+    .equipment-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #DDE5EE;
+    }
+
+    .equipment-card:hover::before {
+      background-color: var(--electric-yellow);
+    }
+
+    .equipment-img-wrap {
+      width: 100%;
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .equipment-img-wrap img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      transition: transform var(--transition-smooth);
+    }
+
+    .equipment-card:hover .equipment-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .equipment-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .equipment-desc {
+      font-size: 13px;
+      color: var(--muted-text);
+      margin-bottom: 24px;
+      line-height: 1.5;
+      flex-grow: 1;
+    }
+
+    .equipment-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-navy);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .equipment-link i {
+      transition: transform var(--transition-fast);
+    }
+
+    .equipment-card:hover .equipment-link {
+      color: #042440;
+    }
+
+    .equipment-card:hover .equipment-link i {
+      transform: translateX(5px);
+    }
+
+    /* Carousel Nav Arrows */
+    .carousel-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .carousel-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--light-border);
+      background: var(--white);
+      color: var(--primary-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all var(--transition-fast);
+    }
+
+    .carousel-btn:hover {
+      background: var(--electric-yellow);
+      border-color: var(--electric-yellow);
+      color: var(--primary-navy);
+      box-shadow: 0 4px 12px rgba(247, 198, 0, 0.3);
+    }
+
+    .swiper-pagination-bullet-active {
+      background: var(--electric-yellow) !important;
+      width: 24px !important;
+      border-radius: 4px !important;
+    }
+
+    /* ==========================================================================
+       6. WHY CHOOSE ELEVEX SECTION
+       ========================================================================== */
+    .why-section {
+      padding: 100px 0;
+      background-color: var(--white);
+      position: relative;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    .why-img-container {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid var(--light-border);
+    }
+
+    .why-img-container img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+
+    .why-img-container:hover img {
+      transform: scale(1.03);
+    }
+
+    .why-dots-overlay {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 64px;
+      height: 64px;
+      background-image: radial-gradient(var(--electric-yellow) 2px, transparent 2px);
+      background-size: 10px 10px;
+      opacity: 0.7;
+    }
+
+    .why-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .why-subtitle {
+      font-size: 15px;
+      color: var(--muted-text);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .benefits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      transition: all var(--transition-fast);
+    }
+
+    .benefit-item:hover {
+      background-color: var(--soft-bg);
+      border-color: var(--light-border);
+      transform: translateX(4px);
+    }
+
+    .benefit-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--soft-bg);
+      border: 1px solid var(--light-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-navy);
+      font-size: 16px;
+      flex-shrink: 0;
+      transition: all var(--transition-fast);
+    }
+
+    .benefit-item:hover .benefit-icon {
+      background-color: var(--electric-yellow);
+      border-color: var(--electric-yellow);
+      color: var(--primary-navy);
+    }
+
+    .benefit-title {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 4px;
+    }
+
+    .benefit-desc {
+      font-size: 13px;
+      color: var(--muted-text);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       7. INDUSTRY SOLUTIONS SECTION
+       ========================================================================== */
+    .solutions-section {
+      padding: 100px 0;
+      background-color: var(--soft-bg);
+    }
+
+    .industry-card {
+      position: relative;
+      height: 360px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+      color: var(--white);
+      text-decoration: none;
+      transition: all var(--transition-smooth);
+    }
+
+    .industry-card-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .industry-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(6, 43, 79, 0.95) 0%, rgba(6, 43, 79, 0.45) 60%, rgba(6, 43, 79, 0.1) 100%);
+      z-index: 2;
+      transition: opacity var(--transition-fast);
+    }
+
+    .industry-card-content {
+      position: relative;
+      z-index: 3;
+      transition: transform var(--transition-fast);
+    }
+
+    .industry-icon {
+      font-size: 24px;
+      color: var(--electric-yellow);
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .industry-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .industry-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 16px;
+      line-height: 1.45;
+    }
+
+    .industry-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--electric-yellow);
+    }
+
+    .industry-arrow i {
+      transition: transform var(--transition-fast);
+    }
+
+    .industry-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .industry-card:hover .industry-card-bg {
+      transform: scale(1.08);
+    }
+
+    .industry-card:hover .industry-card-content {
+      transform: translateY(-4px);
+    }
+
+    .industry-card:hover .industry-arrow i {
+      transform: translateX(6px);
+    }
+
+    /* Accent line on hover */
+    .industry-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background-color: var(--electric-yellow);
+      z-index: 4;
+      transition: width var(--transition-fast);
+    }
+
+    .industry-card:hover::after {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       8. HOW IT WORKS SECTION (Timeline)
+       ========================================================================== */
+    .how-section {
+      padding: 100px 0;
+      background-color: var(--white);
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      margin-top: 50px;
+    }
+
+    .timeline-line-bg {
+      position: absolute;
+      top: 26px;
+      left: 5%;
+      right: 5%;
+      height: 3px;
+      background: var(--light-border);
+      z-index: 1;
+    }
+
+    .timeline-line-progress {
+      position: absolute;
+      top: 26px;
+      left: 5%;
+      width: 0%;
+      height: 3px;
+      background: var(--electric-yellow);
+      z-index: 2;
+      transition: width 0.3s ease;
+    }
+
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      position: relative;
+      z-index: 3;
+    }
+
+    @media (max-width: 992px) {
+      .timeline-steps {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .timeline-line-bg, .timeline-line-progress {
+        display: none;
+      }
+    }
+
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .step-node {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background-color: var(--white);
+      border: 2px solid var(--light-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--primary-navy);
+      margin-bottom: 20px;
+      transition: all var(--transition-fast);
+      box-shadow: 0 4px 12px rgba(6, 43, 79, 0.05);
+    }
+
+    .step-item:hover .step-node,
+    .step-item.active .step-node {
+      background-color: var(--electric-yellow);
+      border-color: var(--electric-yellow);
+      color: var(--primary-navy);
+      transform: scale(1.12);
+      box-shadow: 0 6px 18px rgba(247, 198, 0, 0.4);
+    }
+
+    .step-number {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: #D4A000;
+      margin-bottom: 6px;
+    }
+
+    .step-title {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 8px;
+    }
+
+    .step-desc {
+      font-size: 12px;
+      color: var(--muted-text);
+      line-height: 1.45;
+      max-width: 180px;
+    }
+
+    /* ==========================================================================
+       9. TESTIMONIALS SECTION
+       ========================================================================== */
+    .testimonials-section {
+      padding: 100px 0;
+      background-color: var(--soft-bg);
+    }
+
+    .testimonial-card {
+      background-color: var(--white);
+      border: 1px solid var(--light-border);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #DDE5EE;
+    }
+
+    .stars-row {
+      color: var(--electric-yellow);
+      font-size: 14px;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 3px;
+    }
+
+    .testimonial-quote {
+      font-size: 14px;
+      color: var(--dark-text);
+      line-height: 1.6;
+      font-style: italic;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--light-border);
+      padding-top: 16px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--soft-bg);
+      border: 1px solid var(--light-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--primary-navy);
+      font-size: 14px;
+    }
+
+    .author-name {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary-navy);
+    }
+
+    .author-role {
+      font-size: 12px;
+      color: var(--muted-text);
+    }
+
+    /* ==========================================================================
+       10. INSIGHTS / ARTICLES SECTION
+       ========================================================================== */
+    .insights-section {
+      padding: 100px 0;
+      background-color: var(--white);
+    }
+
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    @media (max-width: 992px) {
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .article-card {
+      border: 1px solid var(--light-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background-color: var(--white);
+      transition: all var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .article-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #DDE5EE;
+    }
+
+    .article-img-wrap {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .article-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .article-card:hover .article-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .article-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .article-date {
+      font-size: 11px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: #D4A000;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .article-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--primary-navy);
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .article-link {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary-navy);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .article-link i {
+      transition: transform var(--transition-fast);
+    }
+
+    .article-card:hover .article-link i {
+      transform: translateX(5px);
+    }
+
+    /* ==========================================================================
+       11. FINAL CTA BANNER SECTION
+       ========================================================================== */
+    .cta-banner-section {
+      padding: 80px 0;
+      background-color: var(--white);
+    }
+
+    .cta-banner-card {
+      background: linear-gradient(135deg, var(--deep-navy) 0%, var(--primary-navy) 100%);
+      border-radius: var(--radius-lg);
+      padding: 64px;
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .cta-banner-card {
+        padding: 40px 24px;
+      }
+    }
+
+    .cta-bg-glow {
+      position: absolute;
+      top: -30%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(247, 198, 0, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-chevron-accent {
+      position: absolute;
+      right: 15%;
+      top: -10%;
+      font-size: 380px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.03);
+      font-family: var(--font-heading);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .cta-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 992px) {
+      .cta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .cta-title {
+      font-size: 36px;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .cta-subtitle {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 32px;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary-white {
+      background-color: transparent;
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-secondary-white:hover {
+      background-color: var(--white);
+      color: var(--primary-navy);
+      border-color: var(--white);
+    }
+
+    .cta-visual {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+
+    .cta-visual img {
+      max-width: 380px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+    }
+
+    /* ==========================================================================
+       12. FOOTER
+       ========================================================================== */
+    .site-footer {
+      background-color: var(--deep-navy);
+      color: rgba(255, 255, 255, 0.75);
+      padding-top: 80px;
+      padding-bottom: 40px;
+      font-size: 13px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-top-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 992px) {
+      .footer-top-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer-top-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-brand-desc {
+      margin-top: 16px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all var(--transition-fast);
+    }
+
+    .social-btn:hover {
+      background: var(--electric-yellow);
+      color: var(--primary-navy);
+      transform: translateY(-2px);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      display: inline-block;
+    }
+
+    .footer-links a:hover {
+      color: var(--electric-yellow);
+      transform: translateX(4px);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .footer-contact-item i {
+      color: var(--electric-yellow);
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-legal a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+    }
+
+    .footer-legal a:hover {
+      color: var(--white);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Scroll Progress Line -->
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+  <!-- 3. NAVIGATION BAR -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-title">ELEVEX<span>.</span></div>
+        <div class="brand-subtitle">ELECTRIC. ELEVATED.</div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#equipment" class="nav-link">Equipment <i class="bi bi-chevron-down"></i></a></li>
+          <li><a href="#solutions" class="nav-link">Solutions <i class="bi bi-chevron-down"></i></a></li>
+          <li><a href="#why-us" class="nav-link">About Us</a></li>
+          <li><a href="#service" class="nav-link">Service</a></li>
+          <li><a href="#resources" class="nav-link">Resources <i class="bi bi-chevron-down"></i></a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <a href="#contact" class="btn btn-primary nav-cta">REQUEST QUOTE <i class="bi bi-arrow-right"></i></a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="bi bi-list"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-title">ELEVEX<span>.</span></div>
+      <button style="background:none; border:none; font-size:24px; color:var(--primary-navy);" id="closeMobileBtn"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#equipment">Equipment</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#why-us">About Us</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary" style="margin-top:auto;">REQUEST QUOTE <i class="bi bi-arrow-right"></i></a>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- 4. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-bg-radial"></div>
+      <div class="hero-chevron-bg">&gt;</div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow-label">
+            <span class="badge-dot"></span> ALL-ELECTRIC. ZERO COMPROMISE.
+          </div>
+          <h1 class="hero-title">
+            RAISING POSSIBILITIES.
+            <span class="text-yellow">ELEVATING TOMORROW.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Premium all-electric scissor lifts and boom lifts built for safety, performance and a cleaner future.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#equipment" class="btn btn-primary">EXPLORE EQUIPMENT <i class="bi bi-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-secondary">REQUEST A QUOTE <i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <!-- Feature Badges -->
+          <div class="hero-badges">
+            <div class="badge-item">
+              <div class="badge-icon-wrap"><i class="bi bi-lightning-charge-fill"></i></div>
+              <div>
+                <div class="badge-text-title">100% Electric</div>
+                <div class="badge-text-desc">Zero Emissions</div>
+              </div>
+            </div>
+
+            <div class="badge-item">
+              <div class="badge-icon-wrap"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <div class="badge-text-title">Built for Safety</div>
+                <div class="badge-text-desc">Reliable at Every Height</div>
+              </div>
+            </div>
+
+            <div class="badge-item">
+              <div class="badge-icon-wrap"><i class="bi bi-leaf-fill"></i></div>
+              <div>
+                <div class="badge-text-title">Sustainable Choice</div>
+                <div class="badge-text-desc">For a Cleaner Tomorrow</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/scissor-lift-clean.png" onerror="this.onerror=null; this.src='assets/cutouts/scissor-lift-hero-clean.png';" alt="Elevex All-Electric Scissor Lift" class="hero-machine-img" />
+          <div class="hero-floating-tag">
+            <div class="tag-val">0%</div>
+            <div class="tag-lbl">Carbon Emissions<br><strong>Full Performance</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EQUIPMENT SECTION -->
+    <section class="equipment-section" id="equipment">
+      <div class="container">
+        <div class="eyebrow-label">OUR EQUIPMENT</div>
+        <div class="section-header-row">
+          <h2 class="section-title">Electric Lifts for Every Need</h2>
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="#all-equipment" class="link-cta">VIEW ALL EQUIPMENT <i class="bi bi-arrow-right"></i></a>
+            <div class="carousel-controls">
+              <button class="carousel-btn eq-prev"><i class="bi bi-arrow-left"></i></button>
+              <button class="carousel-btn eq-next"><i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper swiper-equipment">
+          <div class="swiper-wrapper">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div class="equipment-card">
+                <div class="equipment-img-wrap">
+                  <img src="assets/cutouts/scissor-lift-main.png" alt="Scissor Lift" />
+                </div>
+                <h3 class="equipment-title">Scissor Lifts</h3>
+                <p class="equipment-desc">Ideal for indoor & outdoor applications with stable elevation.</p>
+                <a href="#" class="equipment-link">EXPLORE <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="swiper-slide">
+              <div class="equipment-card">
+                <div class="equipment-img-wrap">
+                  <img src="assets/cutouts/boom-lift-main.png" alt="Articulating Boom Lift" />
+                </div>
+                <h3 class="equipment-title">Articulating Boom Lifts</h3>
+                <p class="equipment-desc">Navigate over obstacles and reach more with flexibility.</p>
+                <a href="#" class="equipment-link">EXPLORE <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div class="equipment-card">
+                <div class="equipment-img-wrap">
+                  <img src="assets/cutouts/boom-lift-main.png" alt="Telescopic Boom Lift" />
+                </div>
+                <h3 class="equipment-title">Telescopic Boom Lifts</h3>
+                <p class="equipment-desc">Maximum outreach and height for the toughest jobs.</p>
+                <a href="#" class="equipment-link">EXPLORE <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+              <div class="equipment-card">
+                <div class="equipment-img-wrap">
+                  <img src="assets/cutouts/terrain-lift-main.png" alt="Vertical Mast Lift" />
+                </div>
+                <h3 class="equipment-title">Vertical Mast Lifts</h3>
+                <p class="equipment-desc">Compact, lightweight and perfect for tight spaces.</p>
+                <a href="#" class="equipment-link">EXPLORE <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination eq-pagination" style="margin-top: 30px; position: static;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. WHY CHOOSE ELEVEX SECTION -->
+    <section class="why-section" id="why-us">
+      <div class="container why-grid">
+        <div class="why-img-container">
+          <img src="assets/terrain-lift-main.png" alt="Elevex Electric Boom Lift in Action" />
+          <div class="why-dots-overlay"></div>
+        </div>
+
+        <div class="why-content">
+          <div class="eyebrow-label">WHY CHOOSE ELEVEX</div>
+          <h2 class="section-title">Performance. Safety. Sustainability.</h2>
+          <p class="why-subtitle">
+            At Elevex, we combine advanced battery technology with smart engineering to deliver equipment that performs better, lasts longer and protects what matters most.
+          </p>
+
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+              <div>
+                <div class="benefit-title">Zero Emissions</div>
+                <div class="benefit-desc">All-electric machinery for a cleaner and healthier work environment.</div>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <div class="benefit-title">Safety First</div>
+                <div class="benefit-desc">Built with advanced safety features to protect operators and sites.</div>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <div>
+                <div class="benefit-title">Lower Operating Cost</div>
+                <div class="benefit-desc">Reduced maintenance and energy cost for higher ROI.</div>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon"><i class="bi bi-leaf-fill"></i></div>
+              <div>
+                <div class="benefit-title">Sustainable Future</div>
+                <div class="benefit-desc">Innovating today for a better tomorrow.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a href="#about" class="btn btn-primary">LEARN MORE ABOUT US <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. INDUSTRY SOLUTIONS SECTION -->
+    <section class="solutions-section" id="solutions">
+      <div class="container">
+        <div class="eyebrow-label">SOLUTIONS FOR INDUSTRIES</div>
+        <div class="section-header-row">
+          <h2 class="section-title">Built for Every Industry</h2>
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <a href="#all-solutions" class="link-cta">EXPLORE SOLUTIONS <i class="bi bi-arrow-right"></i></a>
+            <div class="carousel-controls">
+              <button class="carousel-btn ind-prev"><i class="bi bi-arrow-left"></i></button>
+              <button class="carousel-btn ind-next"><i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper swiper-solutions">
+          <div class="swiper-wrapper">
+            <!-- Card 1: Construction -->
+            <div class="swiper-slide">
+              <a href="#" class="industry-card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80" alt="Construction Industry" class="industry-card-bg" />
+                <div class="industry-card-overlay"></div>
+                <div class="industry-card-content">
+                  <i class="bi bi-building industry-icon"></i>
+                  <h3 class="industry-title">Construction</h3>
+                  <p class="industry-desc">Safe and efficient access for demanding construction environments.</p>
+                  <div class="industry-arrow">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 2: Warehousing -->
+            <div class="swiper-slide">
+              <a href="#" class="industry-card">
+                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Warehousing Industry" class="industry-card-bg" />
+                <div class="industry-card-overlay"></div>
+                <div class="industry-card-content">
+                  <i class="bi bi-box-seam industry-icon"></i>
+                  <h3 class="industry-title">Warehousing</h3>
+                  <p class="industry-desc">Improve warehouse operations with easy vertical access.</p>
+                  <div class="industry-arrow">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 3: Manufacturing -->
+            <div class="swiper-slide">
+              <a href="#" class="industry-card">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Manufacturing Industry" class="industry-card-bg" />
+                <div class="industry-card-overlay"></div>
+                <div class="industry-card-content">
+                  <i class="bi bi-cpu industry-icon"></i>
+                  <h3 class="industry-title">Manufacturing</h3>
+                  <p class="industry-desc">Boost productivity with reliable access solutions.</p>
+                  <div class="industry-arrow">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 4: Maintenance -->
+            <div class="swiper-slide">
+              <a href="#" class="industry-card">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Maintenance Industry" class="industry-card-bg" />
+                <div class="industry-card-overlay"></div>
+                <div class="industry-card-content">
+                  <i class="bi bi-tools industry-icon"></i>
+                  <h3 class="industry-title">Maintenance</h3>
+                  <p class="industry-desc">Reach high and confined spaces with confidence.</p>
+                  <div class="industry-arrow">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 5: Facilities -->
+            <div class="swiper-slide">
+              <a href="#" class="industry-card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Facilities Industry" class="industry-card-bg" />
+                <div class="industry-card-overlay"></div>
+                <div class="industry-card-content">
+                  <i class="bi bi-buildings industry-icon"></i>
+                  <h3 class="industry-title">Facilities</h3>
+                  <p class="industry-desc">Smart solutions for building and facility maintenance.</p>
+                  <div class="industry-arrow">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 6: Events -->
+            <div class="swiper-slide">
+              <a href="#" class="industry-card">
+                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" alt="Events Industry" class="industry-card-bg" />
+                <div class="industry-card-overlay"></div>
+                <div class="industry-card-content">
+                  <i class="bi bi-music-note-beamed industry-icon"></i>
+                  <h3 class="industry-title">Events</h3>
+                  <p class="industry-desc">Silent for stage setup, lighting and event installations.</p>
+                  <div class="industry-arrow">EXPLORE <i class="bi bi-arrow-right"></i></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination ind-pagination" style="margin-top: 30px; position: static;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. HOW IT WORKS SECTION -->
+    <section class="how-section" id="service">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto 50px;">
+          <div class="eyebrow-label" style="justify-content: center;">HOW IT WORKS</div>
+          <h2 class="section-title">Simple Steps. Elevated Results.</h2>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line-bg"></div>
+          <div class="timeline-line-progress" id="timelineProgress"></div>
+
+          <div class="timeline-steps">
+            <!-- Step 1 -->
+            <div class="step-item active">
+              <div class="step-node"><i class="bi bi-truck-front-fill"></i></div>
+              <div class="step-number">01</div>
+              <h3 class="step-title">Choose Equipment</h3>
+              <p class="step-desc">Select the right lift for your job.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-item">
+              <div class="step-node"><i class="bi bi-file-earmark-text-fill"></i></div>
+              <div class="step-number">02</div>
+              <h3 class="step-title">Get a Quote</h3>
+              <p class="step-desc">Quick and transparent pricing.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-item">
+              <div class="step-node"><i class="bi bi-box-seam-fill"></i></div>
+              <div class="step-number">03</div>
+              <h3 class="step-title">We Deliver</h3>
+              <p class="step-desc">On-time delivery, anywhere you need.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-item">
+              <div class="step-node"><i class="bi bi-people-fill"></i></div>
+              <div class="step-number">04</div>
+              <h3 class="step-title">Get the Job Done</h3>
+              <p class="step-desc">Safe, efficient and hassle free.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-item">
+              <div class="step-node"><i class="bi bi-headset"></i></div>
+              <div class="step-number">05</div>
+              <h3 class="step-title">Ongoing Support</h3>
+              <p class="step-desc">Service and support you can rely on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. TESTIMONIAL SECTION -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="eyebrow-label">WHAT OUR CUSTOMERS SAY</div>
+        <div class="section-header-row">
+          <h2 class="section-title">Trusted by Businesses Across India</h2>
+          <a href="#reviews" class="link-cta">VIEW ALL REVIEWS <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="swiper swiper-testimonials">
+          <div class="swiper-wrapper">
+            <!-- Review 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars-row">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">"Elevex lifts are reliable, efficient and perfect for our high-reach operations."</p>
+                <div class="author-info">
+                  <div class="author-avatar">RR</div>
+                  <div>
+                    <div class="author-name">Rajesh R.</div>
+                    <div class="author-role">Project Manager, L&amp;T</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars-row">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">"The all-electric performance is impressive. Lower running cost and zero emissions – the future is here!"</p>
+                <div class="author-info">
+                  <div class="author-avatar">NS</div>
+                  <div>
+                    <div class="author-name">Neha Sharma</div>
+                    <div class="author-role">Operations Head, WareCorp</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="stars-row">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p class="testimonial-quote">"Excellent machines and even better support. Elevex is our go-to partner."</p>
+                <div class="author-info">
+                  <div class="author-avatar">AV</div>
+                  <div>
+                    <div class="author-name">Amit Verma</div>
+                    <div class="author-role">Facilities Manager, Infospace</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination test-pagination" style="margin-top: 30px; position: static;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. INSIGHTS / ARTICLES SECTION -->
+    <section class="insights-section" id="resources">
+      <div class="container">
+        <div class="eyebrow-label">INSIGHTS &amp; UPDATES</div>
+        <div class="section-header-row">
+          <h2 class="section-title">Latest from Elevex</h2>
+          <a href="#articles" class="link-cta">VIEW ALL ARTICLES <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <div class="insights-grid">
+          <!-- Article 1 -->
+          <a href="#" class="article-card">
+            <div class="article-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Article Image 1" />
+            </div>
+            <div class="article-body">
+              <div class="article-date">15 May 2024</div>
+              <h3 class="article-title">Why All-Electric Lifts Are the Future of Work at Heights</h3>
+              <div class="article-link">READ MORE <i class="bi bi-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="#" class="article-card">
+            <div class="article-img-wrap">
+              <img src="assets/terrain-lift-main.png" alt="Article Image 2" />
+            </div>
+            <div class="article-body">
+              <div class="article-date">03 May 2024</div>
+              <h3 class="article-title">5 Safety Tips for Operating Aerial Work Platforms</h3>
+              <div class="article-link">READ MORE <i class="bi bi-arrow-right"></i></div>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="#" class="article-card">
+            <div class="article-img-wrap">
+              <img src="assets/cutouts/scissor-lift-main.png" style="background:#F7FAFC; object-fit:contain; padding:20px;" alt="Article Image 3" />
+            </div>
+            <div class="article-body">
+              <div class="article-date">20 Apr 2024</div>
+              <h3 class="article-title">How to Choose the Right Lift for Your Project</h3>
+              <div class="article-link">READ MORE <i class="bi bi-arrow-right"></i></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. FINAL CTA BANNER SECTION -->
+    <section class="cta-banner-section" id="contact">
+      <div class="container">
+        <div class="cta-banner-card">
+          <div class="cta-bg-glow"></div>
+          <div class="cta-chevron-accent">&gt;</div>
+
+          <div class="cta-grid">
+            <div>
+              <h2 class="cta-title">Ready to Elevate Your Business?</h2>
+              <p class="cta-subtitle">
+                Partner with Elevex for reliable, all-electric access solutions that take your performance to new heights.
+              </p>
+              <div class="cta-buttons">
+                <a href="#quote-form" class="btn btn-primary">GET A QUOTE <i class="bi bi-arrow-right"></i></a>
+                <a href="#contact-experts" class="btn btn-secondary-white">TALK TO OUR EXPERTS <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="cta-visual">
+              <img src="assets/cutouts/boom-lift-main.png" alt="Elevex Electric Boom Lift" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 16. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Column -->
+        <div>
+          <a href="#" class="brand-logo" style="margin-bottom: 8px;">
+            <div class="brand-title" style="color: var(--white);">ELEVEX<span style="color: var(--electric-yellow);">.</span></div>
+            <div class="brand-subtitle" style="color: rgba(255,255,255,0.7);">ELECTRIC. ELEVATED.</div>
+          </a>
+          <p class="footer-brand-desc">
+            All-electric aerial work platforms designed to deliver performance with responsibility.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 1: COMPANY -->
+        <div>
+          <h4 class="footer-col-title">COMPANY</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Fleet</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">News &amp; Updates</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: EQUIPMENT -->
+        <div>
+          <h4 class="footer-col-title">EQUIPMENT</h4>
+          <ul class="footer-links">
+            <li><a href="#">Scissor Lifts</a></li>
+            <li><a href="#">Articulating Boom Lifts</a></li>
+            <li><a href="#">Telescopic Boom Lifts</a></li>
+            <li><a href="#">Vertical Mast Lifts</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: SOLUTIONS -->
+        <div>
+          <h4 class="footer-col-title">SOLUTIONS</h4>
+          <ul class="footer-links">
+            <li><a href="#">Construction</a></li>
+            <li><a href="#">Warehousing</a></li>
+            <li><a href="#">Manufacturing</a></li>
+            <li><a href="#">Maintenance</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Logistics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: SERVICE & CONTACT -->
+        <div>
+          <h4 class="footer-col-title">CONTACT US</h4>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone"></i>
+            <span>+91 12345 67890</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope"></i>
+            <span>info@elevex.co.in</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt"></i>
+            <span>Mumbai, Maharashtra, India</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2024 Elevex. All Rights Reserved.</div>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Smooth Navigation Anchor Clicks
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const href = this.getAttribute('href');
+          if (href && href !== '#') {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              const headerHeight = document.getElementById('siteHeader')?.offsetHeight || 70;
+              const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+              // Close mobile drawer if open
+              const mobileDrawer = document.getElementById('mobileDrawer');
+              if (mobileDrawer) mobileDrawer.classList.remove('open');
+            }
+          }
+        });
+      });
+
+      // 2. Scroll Progress Indicator & Header Scroll Effect
+      const scrollProgress = document.getElementById('scrollProgress');
+      const siteHeader = document.getElementById('siteHeader');
+      const timelineProgress = document.getElementById('timelineProgress');
+
+      window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        
+        if (scrollProgress) scrollProgress.style.width = progress + '%';
+
+        if (siteHeader) {
+          if (scrollTop > 30) {
+            siteHeader.classList.add('scrolled');
+          } else {
+            siteHeader.classList.remove('scrolled');
+          }
+        }
+
+        // How it works timeline progress bar animation on scroll
+        const howSection = document.getElementById('service');
+        if (howSection && timelineProgress) {
+          const rect = howSection.getBoundingClientRect();
+          const winH = window.innerHeight;
+          if (rect.top < winH && rect.bottom > 0) {
+            const secProgress = Math.max(0, Math.min(100, ((winH - rect.top) / (winH + rect.height)) * 100));
+            timelineProgress.style.width = secProgress * 0.9 + '%';
+          }
+        }
+      });
+
+      // 3. Mobile Drawer Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const closeMobileBtn = document.getElementById('closeMobileBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+
+      if (mobileMenuBtn && mobileDrawer) {
+        mobileMenuBtn.addEventListener('click', () => mobileDrawer.classList.add('open'));
+      }
+      if (closeMobileBtn && mobileDrawer) {
+        closeMobileBtn.addEventListener('click', () => mobileDrawer.classList.remove('open'));
+      }
+
+      // 6. Swiper Carousels Initialization
+      // Equipment Carousel
+      if (typeof Swiper !== 'undefined') {
+        const swiperEquipment = new Swiper('.swiper-equipment', {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          pagination: {
+            el: '.eq-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.eq-next',
+            prevEl: '.eq-prev',
+          },
+          breakpoints: {
+            640: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 }
+          }
+        });
+
+        // Industry Solutions Carousel
+        const swiperSolutions = new Swiper('.swiper-solutions', {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          pagination: {
+            el: '.ind-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.ind-next',
+            prevEl: '.ind-prev',
+          },
+          breakpoints: {
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 }
+          }
+        });
+
+        // Testimonials Carousel
+        const swiperTestimonials = new Swiper('.swiper-testimonials', {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          loop: true,
+          autoplay: {
+            delay: 5500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          pagination: {
+            el: '.test-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

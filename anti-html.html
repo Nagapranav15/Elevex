@@ -1,1168 +1,1428 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#080B11" />
-  <title>ELEVEX Rentals — Built To Lift. Born To Lead. | Pan-India Heavy Crane Rental</title>
-  <meta name="description"
-    content="ELEVEX Rentals: India's premier heavy crane & aerial work platform rental company. 15T to 500T Mobile Cranes, Crawler Cranes, Boom Lifts & Heavy Equipment. Pan-India 48h Delivery." />
-  <meta name="keywords"
-    content="Crane Rental, Mobile Crane Rental, Crawler Crane Rental, Hydra Crane Rental, Boom Lift Rental, Heavy Equipment Rental, Industrial Crane Rental, Crane Rental Hyderabad, Crane Rental Chennai, Crane Rental Bangalore, Crane Rental Vijayawada" />
-  <link rel="canonical" href="https://elevex.co.in/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://elevex.co.in/" />
-  <meta property="og:title" content="ELEVEX Rentals — Built To Lift. Born To Lead." />
-  <meta property="og:description"
-    content="World-class crane rental platform. Mobile Cranes, Crawler Cranes, Hydra Cranes & Articulating Boom Lifts." />
-  <meta property="og:image" content="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23080B11'/%3E%3Cpath d='M25 75 L50 25 L75 75 Z' fill='none' stroke='%23F59E4B' stroke-width='8'/%3E%3C/svg%3E" />
-
-  <!-- Google Fonts: Space Grotesk, Manrope, Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap"
-    rel="stylesheet" />
-
-  <!-- Third-Party CDNs -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-  <!-- CDNs: Lenis, GSAP, Swiper, AOS -->
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "ELEVEX Rentals",
-    "url": "https://elevex.co.in/",
-    "logo": "https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png",
-    "description": "World-class crane & heavy equipment rental company in India.",
-    "telephone": "+917028096111"
-  }
-  </script>
-
-  <style>
-    /* ==========================================================================
-       PRO-LEVEL UI REPLICA DESIGN SYSTEM
-       ========================================================================== */
-    :root {
-      --bg-dark: #080B11;
-      --bg-card: rgba(15, 23, 38, 0.75);
-      --bg-card-hover: rgba(22, 34, 56, 0.90);
-      
-      --accent-orange: #FF5A1F;
-      --accent-amber: #F59E4B;
-      --accent-blue: #2867AB;
-      --accent-cyan: #00D2FF;
-      --text-muted: #8E9BAE;
-
-      --font-display: 'Space Grotesk', 'Manrope', sans-serif;
-      --font-body: 'Inter', sans-serif;
-
-      --radius-sm: 10px;
-      --radius-md: 18px;
-      --radius-lg: 28px;
-      --radius-pill: 999px;
-
-      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      width: 100%;
-      background: var(--bg-dark);
-    }
-
-    body {
-      font-family: var(--font-body);
-      color: #ffffff;
-      background-color: var(--bg-dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-      width: 100%;
-      position: relative;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Custom Mouse Spotlight Glow */
-    .ex-spotlight {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 550px;
-      height: 550px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(40, 103, 171, 0.16) 0%, rgba(245, 158, 75, 0.08) 45%, transparent 70%);
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      transition: transform 0.05s ease-out;
-    }
-
-    #elevex-replica {
-      position: relative;
-      width: 100%;
-      overflow-x: clip;
-    }
-
-    /* Progress Bar */
-    .ex-progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-blue), var(--accent-amber), var(--accent-orange));
-      z-index: 10000;
-      width: 0%;
-    }
-
-    /* Left Vertical Index Track */
-    .ex-left-track {
-      position: fixed;
-      left: 28px;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 900;
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    @media (max-width: 1200px) {
-      .ex-left-track { display: none; }
-    }
-
-    .ex-track-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--font-display);
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .ex-track-item::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .ex-track-item.active {
-      color: #ffffff;
-    }
-
-    .ex-track-item.active::before {
-      background: var(--accent-orange);
-      box-shadow: 0 0 12px var(--accent-orange);
-      transform: scale(1.4);
-    }
-
-    .ex-scroll-explore {
-      position: fixed;
-      left: 28px;
-      bottom: 40px;
-      z-index: 900;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-family: var(--font-display);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      color: var(--text-muted);
-      text-transform: uppercase;
-    }
-
-    .ex-scroll-explore::after {
-      content: "";
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      border: 2px solid var(--accent-amber);
-      display: block;
-    }
-
-    /* Header Nav */
-    .ex-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      padding: 24px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: all 0.4s var(--ease-out);
-    }
-
-    @media (max-width: 991px) {
-      .ex-header { padding: 18px 20px; }
-    }
-
-    .ex-header.scrolled {
-      padding: 14px 48px;
-      background: rgba(8, 11, 17, 0.92);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .ex-logo-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .ex-logo-brand img {
-      height: 38px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .ex-nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .ex-nav-link {
-      font-family: var(--font-display);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: rgba(255, 255, 255, 0.75);
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: all 0.25s ease;
-    }
-
-    .ex-nav-link:hover, .ex-nav-link.active {
-      color: #ffffff;
-    }
-
-    .ex-nav-link.active::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: var(--accent-orange);
-      margin-top: 4px;
-    }
-
-    .ex-header-right {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .ex-btn-quote {
-      background: linear-gradient(135deg, rgba(255, 90, 31, 0.15), rgba(245, 158, 75, 0.15));
-      border: 1px solid rgba(255, 90, 31, 0.6);
-      color: #ffffff;
-      font-family: var(--font-display);
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 12px 24px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      transition: all 0.35s var(--ease-out);
-    }
-
-    .ex-btn-quote:hover {
-      background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
-      color: #ffffff;
-      box-shadow: 0 0 25px rgba(255, 90, 31, 0.5);
-      transform: translateY(-2px);
-    }
-
-    .ex-icon-circle {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      display: grid;
-      place-items: center;
-      color: #ffffff;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .ex-icon-circle:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* ══════════════════════════ HERO SECTION ══════════════════════════ */
-    .ex-hero-replica {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-top: 110px;
-      padding-bottom: 30px;
-      padding-left: clamp(20px, 6vw, 100px);
-      padding-right: clamp(20px, 4vw, 60px);
-      background: var(--bg-dark);
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .ex-hero-crane-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .ex-hero-crane-bg img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 65% 35%;
-      filter: saturate(0.8) contrast(1.15) brightness(0.45);
-    }
-
-    .ex-hero-crane-bg::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: 
-        radial-gradient(circle at 75% 35%, rgba(40, 103, 171, 0.18), transparent 60%),
-        linear-gradient(90deg, var(--bg-dark) 10%, rgba(8, 11, 17, 0.85) 45%, rgba(8, 11, 17, 0.4) 75%, var(--bg-dark) 98%),
-        linear-gradient(180deg, var(--bg-dark) 0%, transparent 25%, transparent 70%, var(--bg-dark) 98%);
-    }
-
-    .ex-eyebrow-blue {
-      font-family: var(--font-display);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #00D2FF;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .ex-eyebrow-blue::before {
-      content: "";
-      width: 20px;
-      height: 2px;
-      background: #00D2FF;
-    }
-
-    .ex-hero-title-replica {
-      font-family: var(--font-display);
-      font-size: clamp(48px, 6.5vw, 96px);
-      font-weight: 800;
-      line-height: 0.95;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 28px;
-    }
-
-    .ex-hero-title-replica .txt-orange { color: var(--accent-amber); }
-    .ex-hero-title-replica .txt-blue { color: var(--accent-blue); }
-
-    .ex-hero-desc-replica {
-      font-size: clamp(15px, 1.1vw, 18px);
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-bottom: 36px;
-    }
-
-    .ex-btn-explore {
-      background: linear-gradient(135deg, var(--accent-orange), var(--accent-amber));
-      color: #ffffff;
-      font-family: var(--font-display);
-      font-size: 12.5px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 16px 36px;
-      border-radius: var(--radius-pill);
-      border: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 30px rgba(255, 90, 31, 0.4);
-      text-decoration: none;
-      transition: all 0.35s var(--ease-out);
-    }
-
-    .ex-btn-explore:hover {
-      color: #ffffff;
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(255, 90, 31, 0.6);
-    }
-
-    .ex-btn-showreel {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #ffffff;
-      font-family: var(--font-display);
-      font-size: 12.5px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 16px 32px;
-      border-radius: var(--radius-pill);
-      backdrop-filter: blur(12px);
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      transition: all 0.35s var(--ease-out);
-    }
-
-    .ex-hud-ring {
-      position: absolute;
-      top: 25%;
-      right: 32%;
-      z-index: 5;
-      pointer-events: none;
-    }
-
-    @media (max-width: 1200px) { .ex-hud-ring { display: none; } }
-
-    .ex-hud-tag {
-      background: rgba(15, 23, 38, 0.85);
-      border: 1px solid rgba(0, 210, 255, 0.4);
-      backdrop-filter: blur(16px);
-      padding: 12px 20px;
-      border-radius: var(--radius-md);
-      color: #ffffff;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    }
-
-    .ex-hud-tag small {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      color: var(--accent-cyan);
-      text-transform: uppercase;
-    }
-
-    .ex-hud-tag b {
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.1;
-    }
-
-    .ex-right-features {
-      position: absolute;
-      right: 48px;
-      top: 25%;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    @media (max-width: 1200px) { .ex-right-features { display: none; } }
-
-    .ex-feature-pill {
-      background: rgba(15, 23, 38, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(14px);
-      padding: 14px 22px;
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      transition: all 0.3s ease;
-    }
-
-    .ex-feature-pill:hover {
-      background: rgba(22, 34, 56, 0.9);
-      border-color: var(--accent-amber);
-      transform: translateX(-6px);
-    }
-
-    .ex-feature-pill i { font-size: 20px; color: var(--accent-amber); }
-    .ex-feature-pill b { display: block; font-family: var(--font-display); font-size: 14px; font-weight: 800; color: #ffffff; line-height: 1.1; }
-    .ex-feature-pill small { font-size: 10.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-
-    .ex-promise-badge {
-      position: absolute;
-      right: 48px;
-      bottom: 110px;
-      z-index: 10;
-      background: rgba(15, 23, 38, 0.85);
-      border: 1px solid rgba(255, 90, 31, 0.4);
-      backdrop-filter: blur(16px);
-      padding: 18px 24px;
-      border-radius: var(--radius-md);
-      max-width: 260px;
-      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6);
-    }
-
-    @media (max-width: 1200px) { .ex-promise-badge { display: none; } }
-
-    .ex-promise-badge small { font-family: var(--font-display); font-size: 10px; font-weight: 800; letter-spacing: 0.15em; color: var(--accent-orange); text-transform: uppercase; }
-    .ex-promise-badge h4 { font-family: var(--font-display); font-size: 15px; font-weight: 800; color: #ffffff; margin: 6px 0 0; line-height: 1.25; }
-
-    /* Brands Marquee */
-    .ex-brands-strip {
-      background: rgba(15, 23, 38, 0.6);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 18px 0;
-      margin-top: 40px;
-    }
-
-    .ex-brands-lbl { font-family: var(--font-display); font-size: 11px; font-weight: 800; letter-spacing: 0.18em; color: var(--text-muted); text-transform: uppercase; }
-    .ex-brand-name { font-family: var(--font-display); font-size: 18px; font-weight: 800; letter-spacing: 0.08em; color: rgba(255, 255, 255, 0.7); text-transform: uppercase; }
-
-    /* ══════════════════════════ WHAT WE OFFER ══════════════════════════ */
-    .ex-sec-offer { padding: 90px 0; position: relative; }
-
-    .ex-offer-card {
-      position: relative;
-      border-radius: var(--radius-lg);
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      overflow: hidden;
-      height: 380px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 28px;
-      transition: all 0.45s var(--ease-out);
-      text-decoration: none;
-    }
-
-    .ex-offer-card img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.55) contrast(1.1);
-      transition: transform 0.6s var(--ease-out), filter 0.6s var(--ease-out);
-    }
-
-    .ex-offer-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7); }
-    .ex-offer-card:hover img { transform: scale(1.08); filter: brightness(0.75); }
-
-    .ex-offer-card--blue { border-color: rgba(40, 103, 171, 0.5); }
-    .ex-offer-card--blue:hover { border-color: var(--accent-blue); box-shadow: 0 0 30px rgba(40, 103, 171, 0.4); }
-
-    .ex-offer-card--orange { border-color: rgba(255, 90, 31, 0.5); }
-    .ex-offer-card--orange:hover { border-color: var(--accent-orange); box-shadow: 0 0 30px rgba(255, 90, 31, 0.4); }
-
-    .ex-offer-card--amber { border-color: rgba(245, 158, 75, 0.5); }
-    .ex-offer-card--amber:hover { border-color: var(--accent-amber); box-shadow: 0 0 30px rgba(245, 158, 75, 0.4); }
-
-    .ex-offer-card-body { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; }
-    .ex-offer-card-body h3 { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #ffffff; margin: 0; line-height: 1.2; }
-
-    .ex-arrow-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      display: grid;
-      place-items: center;
-      color: #ffffff;
-      transition: all 0.3s ease;
-    }
-
-    .ex-offer-card:hover .ex-arrow-btn { background: #ffffff; color: var(--bg-dark); transform: translateX(4px); }
-
-    .ex-dock-bar {
-      margin-top: 60px;
-      background: rgba(15, 23, 38, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(20px);
-      border-radius: var(--radius-lg);
-      padding: 24px 36px;
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 20px;
-    }
-
-    @media (max-width: 991px) { .ex-dock-bar { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 24px; } }
-
-    .ex-dock-item { display: flex; align-items: center; gap: 14px; }
-    .ex-dock-item i { font-size: 26px; color: var(--accent-amber); }
-    .ex-dock-item b { display: block; font-family: var(--font-display); font-size: 20px; font-weight: 800; color: #ffffff; line-height: 1.1; }
-    .ex-dock-item small { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-
-    /* ══════════════════════════ 4-PILLAR WHY ELEVEX ══════════════════════════ */
-    .ex-pillar-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    @media (max-width: 768px) { .ex-pillar-grid { grid-template-columns: 1fr; } }
-
-    .ex-pillar-box {
-      background: rgba(15, 23, 38, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-md);
-      padding: 36px;
-      backdrop-filter: blur(20px);
-      transition: all 0.4s var(--ease-out);
-    }
-
-    .ex-pillar-box:hover {
-      border-color: var(--accent-amber);
-      transform: translateY(-6px);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    }
-
-    /* ══════════════════════════ CALCULATOR ══════════════════════════ */
-    .ex-calc-box {
-      background: linear-gradient(145deg, rgba(15, 23, 38, 0.95), rgba(8, 11, 17, 0.98));
-      border: 1px solid rgba(255, 90, 31, 0.35);
-      border-radius: var(--radius-lg);
-      padding: 48px;
-      backdrop-filter: blur(20px);
-    }
-
-    /* Floating WhatsApp */
-    .ex-floating-wa {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: #25D366;
-      color: #ffffff;
-      display: grid;
-      place-items: center;
-      font-size: 28px;
-      z-index: 9999;
-      text-decoration: none;
-      box-shadow: 0 10px 24px rgba(37,211,102,0.4);
-      transition: all 0.3s ease;
-    }
-
-    .ex-floating-wa:hover { transform: scale(1.1) rotate(12deg); color: #ffffff; }
-
-    /* Footer Logo */
-    .ex-footer-logo-wrap { text-align: center; padding: 40px 0 20px; }
-    .ex-footer-logo-img { max-width: clamp(240px, 35vw, 500px); height: auto; object-fit: contain; filter: drop-shadow(0 12px 36px rgba(0,0,0,0.7)); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ELEVEX — All-Electric Aerial Work Platform Rentals | India</title>
+<meta name="description" content="ELEVEX rents India's all-electric aerial work platforms — scissor lifts, boom lifts and rough-terrain lifts. Zero emissions, 62dB, pan-India delivery in 48 hours.">
+<meta name="theme-color" content="#080A0D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter+Tight:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════
+   ELEVEX — ALTITUDE SYSTEM
+   The six logo colours are elevation bands: marine at ground,
+   hi-vis amber at max reach. Everything ascends.
+   ═══════════════════════════════════════════════════════════ */
+
+:root{
+  /* ── Elevation bands (from the ELEVEX wordmark, left→right) ── */
+  --elev-00:#095577;   /* L  · marine      · ground */
+  --elev-01:#2867AB;   /* E  · cobalt      · 4m     */
+  --elev-02:#524E5D;   /* E  · slate       · 9m     */
+  --elev-03:#6F5150;   /* V  · clay        · 13m    */
+  --elev-04:#AC4625;   /* E  · terracotta  · 18m    */
+  --elev-05:#F59E4B;   /* X  · hi-vis      · 22m    */
+
+  --plate:#343434;     /* RENTALS */
+  --rule:#717171;      /* border  */
+
+  --void:#080A0D;
+  --strata:#0E1319;
+  --strata-2:#141A21;
+
+  --ink:#EEF1F5;
+  --ink-2:#A7AFB9;
+  --ink-3:#6E7681;
+
+  --band:var(--elev-00);
+  --band-lit:color-mix(in srgb, var(--band) 58%, #EEF1F5);
+  --accent:#095577;
+
+  --hair:rgba(113,113,113,.24);
+  --hair-2:rgba(113,113,113,.14);
+
+  --display:'Archivo',system-ui,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+  --body:'Inter Tight',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+
+  --rail:56px;
+  --gutter:clamp(20px,4.5vw,72px);
+  --maxw:1440px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--void);color:var(--ink);
+  font-family:var(--body);font-weight:400;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body.lock{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:var(--elev-05);color:#0A0A0A}
+:focus-visible{outline:2px solid var(--elev-05);outline-offset:3px;border-radius:2px}
+
+/* ── Type roles ───────────────────────────────────────────── */
+.dsp{
+  font-family:var(--display);font-weight:700;
+  font-variation-settings:'wdth' 118,'wght' 700;
+  letter-spacing:-.035em;line-height:.94;text-transform:none;
+}
+.mono{font-family:var(--mono);font-weight:400;letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.ital{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;font-variation-settings:normal}
+
+/* ── Elevation eyebrow: every section states its altitude ─── */
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.eyebrow .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);color:var(--band-lit)}
+.eyebrow .ln{height:1px;flex:1;max-width:80px;background:linear-gradient(90deg,var(--band),transparent)}
+.eyebrow .alt{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--ink-3)}
+
+/* ═══ PRELOADER ═══════════════════════════════════════════ */
+#boot{
+  position:fixed;inset:0;z-index:9999;background:var(--void);
+  display:grid;place-items:center;gap:0;
+  transition:opacity .7s var(--ease),visibility .7s;
+}
+#boot.done{opacity:0;visibility:hidden}
+.boot-in{display:flex;flex-direction:column;align-items:center;gap:26px}
+.boot-word{display:flex;gap:clamp(6px,1.6vw,14px)}
+.boot-l{
+  width:clamp(20px,4.6vw,42px);display:flex;flex-direction:column;gap:5px;
+  opacity:0;transform:translateY(16px);
+  animation:bootRise .62s var(--ease) forwards;
+}
+.boot-l i{display:block;height:clamp(5px,1.1vw,9px);background:currentColor;border-radius:1px}
+.boot-l:nth-child(1){color:var(--elev-01);animation-delay:.05s}
+.boot-l:nth-child(2){color:var(--elev-00);animation-delay:.13s}
+.boot-l:nth-child(3){color:var(--elev-02);animation-delay:.21s}
+.boot-l:nth-child(4){color:var(--elev-03);animation-delay:.29s}
+.boot-l:nth-child(5){color:var(--elev-04);animation-delay:.37s}
+.boot-l:nth-child(6){color:var(--elev-05);animation-delay:.45s}
+.boot-l.v i:nth-child(2){width:62%;margin-inline:auto}
+.boot-l.v i:nth-child(3){width:26%;margin-inline:auto}
+.boot-l.x i:nth-child(1){transform:skewX(26deg)}
+.boot-l.x i:nth-child(3){transform:skewX(-26deg)}
+@keyframes bootRise{to{opacity:1;transform:translateY(0)}}
+.boot-bar{width:min(240px,52vw);height:1px;background:var(--hair-2);position:relative;overflow:hidden}
+.boot-bar::after{
+  content:'';position:absolute;inset:0;transform-origin:left;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--elev-00),var(--elev-05));
+  animation:bootFill 1.15s var(--ease) .2s forwards;
+}
+@keyframes bootFill{to{transform:scaleX(1)}}
+.boot-txt{font-family:var(--mono);font-size:10px;letter-spacing:.28em;color:var(--ink-3);text-transform:uppercase}
+
+/* ═══ ALTITUDE RAIL — the signature ═══════════════════════ */
+.rail{
+  position:fixed;left:0;top:0;bottom:0;width:var(--rail);z-index:70;
+  border-right:1px solid var(--hair-2);
+  background:linear-gradient(180deg,rgba(8,10,13,.9),rgba(8,10,13,.6));
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:flex;flex-direction:column;align-items:center;
+  padding:22px 0;pointer-events:none;
+}
+.rail-cap{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--ink-3);writing-mode:vertical-rl}
+.rail-track{flex:1;width:100%;position:relative;margin:18px 0}
+.rail-ticks{position:absolute;inset:0;right:auto;left:50%;transform:translateX(-50%);width:22px}
+.rail-ticks span{position:absolute;right:0;height:1px;background:var(--hair);width:7px}
+.rail-ticks span.maj{width:15px;background:var(--hair)}
+.rail-line{
+  position:absolute;left:50%;top:0;width:1px;transform:translateX(-50%);
+  background:linear-gradient(180deg,var(--elev-00),var(--elev-01),var(--elev-02),var(--elev-03),var(--elev-04),var(--elev-05));
+  height:0;transition:height .1s linear;opacity:.85;
+}
+.rail-dot{
+  position:absolute;left:50%;top:0;width:9px;height:9px;margin-left:-4.5px;margin-top:-4.5px;
+  border-radius:50%;background:var(--accent);
+  box-shadow:0 0 0 3px rgba(8,10,13,1),0 0 18px 2px var(--accent);
+  transition:top .1s linear,background .3s linear,box-shadow .3s linear;
+}
+.rail-read{
+  font-family:var(--mono);font-size:11px;font-weight:500;color:var(--accent);
+  letter-spacing:.04em;transition:color .3s linear;
+}
+.rail-read small{display:block;font-size:8px;color:var(--ink-3);letter-spacing:.18em;margin-top:3px;text-align:center}
+
+/* ═══ NAV ═════════════════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:var(--rail);right:0;z-index:80;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:20px;padding:16px var(--gutter);
+  transition:background .45s var(--ease),border-color .45s,padding .45s var(--ease);
+  border-bottom:1px solid transparent;
+}
+.nav.stuck{
+  background:rgba(8,10,13,.82);backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border-bottom-color:var(--hair-2);padding-block:11px;
+}
+.nav-logo img{height:30px;width:auto;transition:height .45s var(--ease)}
+.nav.stuck .nav-logo img{height:25px}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{
+  font-size:13.5px;font-weight:450;color:var(--ink-2);letter-spacing:.005em;
+  position:relative;padding:5px 0;transition:color .3s;
+}
+.nav-links a::after{
+  content:'';position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--elev-05);transform:scaleX(0);transform-origin:right;
+  transition:transform .4s var(--ease);
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-tel{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--ink-2);transition:color .3s}
+.nav-tel:hover{color:var(--elev-05)}
+
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  padding:13px 22px;border:1px solid var(--hair);border-radius:2px;
+  background:transparent;color:var(--ink);cursor:pointer;white-space:nowrap;
+  position:relative;overflow:hidden;transition:color .4s var(--ease),border-color .4s;
+}
+.btn::before{
+  content:'';position:absolute;inset:0;background:var(--elev-05);
+  transform:translateY(101%);transition:transform .48s var(--ease);z-index:0;
+}
+.btn>*{position:relative;z-index:1}
+.btn:hover{color:#0A0A0A;border-color:var(--elev-05)}
+.btn:hover::before{transform:translateY(0)}
+.btn-fill{background:var(--elev-05);color:#0A0A0A;border-color:var(--elev-05);font-weight:500}
+.btn-fill::before{background:#fff}
+.btn-fill:hover{color:#0A0A0A;border-color:#fff}
+.btn .ar{transition:transform .4s var(--ease)}
+.btn:hover .ar{transform:translateX(4px)}
+
+.burger{display:none;width:40px;height:40px;border:1px solid var(--hair);background:none;border-radius:2px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:11px;width:18px;height:1.5px;background:var(--ink);transition:.4s var(--ease)}
+.burger i:nth-child(1){top:15px}
+.burger i:nth-child(2){top:20px;width:12px}
+.burger i:nth-child(3){top:25px}
+.burger.on i:nth-child(1){top:20px;transform:rotate(45deg)}
+.burger.on i:nth-child(2){opacity:0}
+.burger.on i:nth-child(3){top:20px;transform:rotate(-45deg)}
+
+/* Mobile drawer */
+.drawer{
+  position:fixed;inset:0;z-index:75;background:var(--void);
+  transform:translateY(-100%);transition:transform .7s var(--ease);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:100px var(--gutter) 40px;
+}
+.drawer.on{transform:translateY(0)}
+.drawer a.dl{
+  display:flex;align-items:baseline;gap:16px;padding:15px 0;
+  border-bottom:1px solid var(--hair-2);font-family:var(--display);
+  font-variation-settings:'wdth' 112,'wght' 600;font-size:clamp(26px,7vw,40px);
+  letter-spacing:-.03em;opacity:0;transform:translateY(20px);
+}
+.drawer.on a.dl{animation:dIn .6s var(--ease) forwards}
+.drawer.on a.dl:nth-child(1){animation-delay:.14s}
+.drawer.on a.dl:nth-child(2){animation-delay:.2s}
+.drawer.on a.dl:nth-child(3){animation-delay:.26s}
+.drawer.on a.dl:nth-child(4){animation-delay:.32s}
+.drawer.on a.dl:nth-child(5){animation-delay:.38s}
+@keyframes dIn{to{opacity:1;transform:translateY(0)}}
+.drawer a.dl em{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--elev-05);letter-spacing:.1em}
+.drawer-foot{margin-top:34px;display:flex;flex-direction:column;gap:8px}
+.drawer-foot a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink-2)}
+
+/* ═══ SHELL ═══════════════════════════════════════════════ */
+.shell{margin-left:var(--rail)}
+section{position:relative;padding-block:clamp(72px,9vw,132px)}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gutter)}
+.sec-hr{height:1px;background:var(--hair-2);max-width:var(--maxw);margin-inline:auto}
+
+.h2{font-size:clamp(30px,4.6vw,60px);max-width:16ch}
+.lead{color:var(--ink-2);font-size:clamp(14.5px,1.35vw,17px);line-height:1.65;max-width:52ch;font-weight:350}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv[data-d="1"]{transition-delay:.08s}
+.rv[data-d="2"]{transition-delay:.16s}
+.rv[data-d="3"]{transition-delay:.24s}
+.rv[data-d="4"]{transition-delay:.32s}
+.rv[data-d="5"]{transition-delay:.4s}
+
+/* ═══ HERO ════════════════════════════════════════════════ */
+#home{--band:var(--elev-00);--band-lit:color-mix(in srgb, var(--elev-00) 58%, #EEF1F5);padding-top:clamp(112px,15vh,168px);padding-bottom:0;overflow:hidden}
+.hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-grid{
+  position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(var(--hair-2) 1px,transparent 1px),linear-gradient(90deg,var(--hair-2) 1px,transparent 1px);
+  background-size:74px 74px;
+  mask-image:radial-gradient(115% 80% at 65% 30%,#000 0%,transparent 72%);
+  -webkit-mask-image:radial-gradient(115% 80% at 65% 30%,#000 0%,transparent 72%);
+}
+.hero-glow{
+  position:absolute;width:min(920px,90vw);aspect-ratio:1;right:-8%;top:-22%;
+  background:radial-gradient(circle,rgba(9,85,119,.34),transparent 62%);
+  filter:blur(30px);animation:drift 16s ease-in-out infinite alternate;
+}
+.hero-glow.b{
+  right:auto;left:34%;top:36%;width:min(620px,70vw);
+  background:radial-gradient(circle,rgba(245,158,75,.13),transparent 64%);
+  animation-duration:21s;
+}
+@keyframes drift{to{transform:translate3d(-4%,5%,0) scale(1.09)}}
+
+.hero-in{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(24px,4vw,60px);align-items:center}
+.hero-h1{font-size:clamp(46px,8.3vw,124px);letter-spacing:-.045em;margin:6px 0 26px}
+.hero-h1 .ital{font-size:1.03em;color:var(--elev-05);padding-right:.06em}
+.hero-h1 .msk{display:block;overflow:hidden;padding-bottom:.06em}
+.hero-h1 .msk>span{display:block;transform:translateY(105%);animation:hRise 1.05s var(--ease) forwards}
+.hero-h1 .msk:nth-child(1)>span{animation-delay:.05s}
+.hero-h1 .msk:nth-child(2)>span{animation-delay:.16s}
+@keyframes hRise{to{transform:translateY(0)}}
+.hero-sub{max-width:44ch;margin-bottom:34px}
+.hero-sub b{color:var(--ink);font-weight:500}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:44px}
+
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.pill{
+  font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;
+  padding:6px 11px;border:1px solid var(--hair-2);border-radius:100px;color:var(--ink-3);
+  display:flex;align-items:center;gap:7px;transition:.35s var(--ease);
+}
+.pill:hover{border-color:var(--band);color:var(--ink-2)}
+.pill i{width:4px;height:4px;border-radius:50%;background:var(--elev-05);display:block}
+
+/* Hero stage: blueprint elevation drawing + machine */
+.stage{position:relative;aspect-ratio:1/1.06;display:grid;place-items:center}
+.stage svg.bp{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bp .drw{stroke:var(--hair);stroke-width:1;fill:none;vector-effect:non-scaling-stroke}
+.bp .drw.acc{stroke:var(--elev-05);opacity:.85}
+.bp .drw.dim{stroke:rgba(113,113,113,.4);stroke-dasharray:3 4}
+.bp text{font-family:var(--mono);font-size:9px;letter-spacing:.14em;fill:var(--ink-3)}
+.bp text.hi{fill:var(--elev-05)}
+.bp .draw{stroke-dasharray:var(--len,600);stroke-dashoffset:var(--len,600);animation:dash 1.9s var(--ease) .55s forwards}
+@keyframes dash{to{stroke-dashoffset:0}}
+.stage-img{
+  position:relative;z-index:2;width:84%;
+  filter:drop-shadow(0 40px 70px rgba(0,0,0,.72));
+  animation:float 7.5s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+.stage-label{
+  position:absolute;z-index:3;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-2);background:rgba(8,10,13,.78);
+  border:1px solid var(--hair-2);border-radius:2px;padding:6px 10px;backdrop-filter:blur(6px);
+  display:flex;align-items:center;gap:8px;white-space:nowrap;
+}
+.stage-label b{color:var(--elev-05);font-weight:500}
+.sl-1{top:36%;right:-3%}
+.sl-2{bottom:23%;left:-3%}
+
+/* Spec ticker under hero */
+.ticker{border-top:1px solid var(--hair-2);border-bottom:1px solid var(--hair-2);margin-top:clamp(40px,5vw,72px);overflow:hidden;position:relative}
+.ticker::before,.ticker::after{content:'';position:absolute;top:0;bottom:0;width:90px;z-index:2;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,var(--void),transparent)}
+.ticker::after{right:0;background:linear-gradient(270deg,var(--void),transparent)}
+.tick-run{display:flex;gap:0;width:max-content;animation:run 42s linear infinite}
+.ticker:hover .tick-run{animation-play-state:paused}
+@keyframes run{to{transform:translateX(-50%)}}
+.tick-i{
+  display:flex;align-items:baseline;gap:12px;padding:16px 34px;border-right:1px solid var(--hair-2);
+  font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);
+}
+.tick-i b{font-family:var(--display);font-variation-settings:'wdth' 112,'wght' 600;font-size:16px;letter-spacing:-.02em;color:var(--ink)}
+.tick-i em{font-style:normal;color:var(--elev-05)}
+
+/* ═══ METRICS ═════════════════════════════════════════════ */
+#metrics{--band:var(--elev-01);--band-lit:color-mix(in srgb, var(--elev-01) 58%, #EEF1F5);padding-block:clamp(56px,6vw,84px)}
+.met-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.met{padding:8px 26px;border-left:1px solid var(--hair-2);position:relative}
+.met:first-child{border-left:0;padding-left:0}
+.met::before{content:'';position:absolute;left:-1px;top:0;width:1px;height:26px;background:var(--band)}
+.met:first-child::before{display:none}
+.met .n{font-family:var(--display);font-variation-settings:'wdth' 118,'wght' 700;font-size:clamp(34px,4.6vw,62px);letter-spacing:-.045em;line-height:1;display:flex;align-items:baseline;gap:2px}
+.met .n sup{font-size:.42em;font-variation-settings:'wdth' 100,'wght' 500;color:var(--band-lit);top:-.1em;position:relative}
+.met .l{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-top:10px}
+
+/* ═══ TRUST MARQUEE ═══════════════════════════════════════ */
+.trust{padding-block:34px;overflow:hidden;position:relative;border-top:1px solid var(--hair-2);border-bottom:1px solid var(--hair-2)}
+.trust-lab{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);text-align:center;margin-bottom:22px}
+.mq{display:flex;width:max-content;animation:run 38s linear infinite}
+.mq span{
+  font-family:var(--display);font-variation-settings:'wdth' 108,'wght' 600;
+  font-size:clamp(17px,2.1vw,26px);letter-spacing:.02em;text-transform:uppercase;
+  color:var(--ink-3);padding:0 clamp(22px,3.4vw,48px);white-space:nowrap;
+  opacity:.5;transition:opacity .35s,color .35s;
+}
+.mq span:hover{opacity:1;color:var(--ink)}
+
+/* ═══ FLEET ═══════════════════════════════════════════════ */
+#fleet{--band:var(--elev-01);--band-lit:color-mix(in srgb, var(--elev-01) 58%, #EEF1F5)}
+.fleet-top{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(34px,4vw,58px)}
+.fleet-grid{display:grid;grid-template-columns:.86fr 1.14fr;gap:clamp(24px,3.4vw,56px);align-items:start}
+
+.cat{
+  display:grid;grid-template-columns:38px 1fr;gap:16px;align-items:start;
+  padding:20px 16px 20px 0;border-top:1px solid var(--hair-2);
+  cursor:pointer;position:relative;transition:.45s var(--ease);
+}
+.cat:last-child{border-bottom:1px solid var(--hair-2)}
+.cat::after{content:'';position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--band);transition:width .6s var(--ease)}
+.cat.on::after,.cat:hover::after{width:100%}
+.cat .idx{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);padding-top:5px;letter-spacing:.1em;transition:color .4s}
+.cat .ttl{font-family:var(--display);font-variation-settings:'wdth' 112,'wght' 600;font-size:clamp(18px,2.1vw,25px);letter-spacing:-.028em;color:var(--ink-2);transition:color .4s}
+.cat .dsc{font-size:13.5px;color:var(--ink-3);margin-top:7px;max-width:38ch;line-height:1.55;
+  max-height:0;opacity:0;overflow:hidden;transition:max-height .55s var(--ease),opacity .45s,margin .5s}
+.cat.on .ttl{color:var(--ink)}
+.cat.on .idx{color:var(--ink-2);color:var(--band-lit)}
+.cat.on .dsc{max-height:80px;opacity:1;margin-top:9px}
+.cat:hover .ttl{color:var(--ink)}
+
+.viewer{
+  position:relative;border:1px solid var(--hair-2);border-radius:3px;
+  background:linear-gradient(165deg,var(--strata),rgba(8,10,13,.4));
+  padding:clamp(18px,2.4vw,32px);overflow:hidden;
+}
+.viewer::before{
+  content:'';position:absolute;inset:0;opacity:.5;pointer-events:none;
+  background-image:linear-gradient(var(--hair-2) 1px,transparent 1px),linear-gradient(90deg,var(--hair-2) 1px,transparent 1px);
+  background-size:38px 38px;
+  mask-image:radial-gradient(80% 70% at 50% 40%,#000,transparent 78%);
+  -webkit-mask-image:radial-gradient(80% 70% at 50% 40%,#000,transparent 78%);
+}
+.corner{position:absolute;width:14px;height:14px;border:1px solid var(--band);opacity:.6}
+.corner.tl{top:10px;left:10px;border-right:0;border-bottom:0}
+.corner.tr{top:10px;right:10px;border-left:0;border-bottom:0}
+.corner.bl{bottom:10px;left:10px;border-right:0;border-top:0}
+.corner.br{bottom:10px;right:10px;border-left:0;border-top:0}
+
+.v-tag{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:3;
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.v-stage{position:relative;aspect-ratio:16/11;display:grid;place-items:center;z-index:2}
+.v-layer{position:absolute;inset:0;display:grid;place-items:center;transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.v-layer img{max-height:100%;width:auto;object-fit:contain}
+.v-out{opacity:.32;transform:scale(1.03)}
+.v-sol img{filter:drop-shadow(0 30px 50px rgba(0,0,0,.6))}
+.viewer.swap .v-sol{opacity:0;transform:scale(.965)}
+.viewer.swap .v-out{opacity:.85;transform:scale(1)}
+
+.v-specs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hair-2);position:relative;z-index:2;margin-top:14px}
+.v-specs>div{padding:16px 8px 4px;border-left:1px solid var(--hair-2);text-align:left}
+.v-specs>div:first-child{border-left:0;padding-left:0}
+.v-specs .sv{font-family:var(--display);font-variation-settings:'wdth' 114,'wght' 650;font-size:clamp(18px,2.3vw,28px);letter-spacing:-.035em;line-height:1;transition:.4s}
+.v-specs .sl{font-family:var(--mono);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+
+/* ═══ ADVANTAGE ═══════════════════════════════════════════ */
+#why{--band:var(--elev-02);--band-lit:color-mix(in srgb, var(--elev-02) 58%, #EEF1F5)}
+.adv-head{margin-bottom:clamp(40px,5vw,70px)}
+.adv{
+  display:grid;grid-template-columns:56px 1fr .78fr;gap:clamp(18px,3vw,48px);
+  padding-block:clamp(30px,3.6vw,48px);border-top:1px solid var(--hair-2);align-items:start;
+}
+.adv:last-of-type{border-bottom:1px solid var(--hair-2)}
+.adv-n{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--ink-3);padding-top:6px}
+.adv-n b{display:block;color:var(--ink-3);color:var(--band-lit);font-weight:400;font-size:10px;margin-top:9px;letter-spacing:.14em}
+.adv h3{font-family:var(--display);font-variation-settings:'wdth' 114,'wght' 650;font-size:clamp(21px,2.7vw,34px);letter-spacing:-.032em;line-height:1.1;max-width:17ch}
+.adv p{color:var(--ink-2);font-size:14.5px;line-height:1.62;margin-top:14px;max-width:46ch;font-weight:350}
+.adv-vis{border:1px solid var(--hair-2);border-radius:3px;padding:18px;background:rgba(14,19,25,.5)}
+.adv-vis .vt{font-family:var(--display);font-variation-settings:'wdth' 116,'wght' 700;font-size:clamp(24px,3vw,38px);letter-spacing:-.04em;line-height:1;color:var(--ink);color:var(--band-lit)}
+.adv-vis .vc{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin-top:9px}
+.bar-row{display:flex;align-items:center;gap:10px;margin-top:13px;font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.bar{flex:1;height:5px;background:rgba(113,113,113,.16);border-radius:100px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:100px;transition:width 1.5s var(--ease)}
+.bar i.bad{background:var(--elev-04)}
+.bar i.good{background:var(--elev-05)}
+.in .bar i.bad{width:100%}
+.in .bar i.good{width:6%}
+.adv-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.adv-tags span{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--hair-2);padding:5px 9px;border-radius:2px}
+
+/* ═══ PROCESS ═════════════════════════════════════════════ */
+#process{--band:var(--elev-03);--band-lit:color-mix(in srgb, var(--elev-03) 58%, #EEF1F5)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:clamp(40px,5vw,64px);position:relative}
+.proc-line{position:absolute;left:0;right:0;top:34px;height:1px;background:var(--hair-2)}
+.proc-line i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--elev-02),var(--elev-05));transition:width 2.2s var(--ease)}
+.proc-grid.in .proc-line i{width:100%}
+.step{padding:0 clamp(14px,2vw,30px) 0 0;position:relative}
+.step .dot{width:11px;height:11px;border-radius:50%;background:var(--void);border:1px solid var(--band);position:relative;top:29px;z-index:2}
+.step .dot::after{content:'';position:absolute;inset:2px;border-radius:50%;background:var(--band);opacity:0;transition:opacity .5s}
+.proc-grid.in .step .dot::after{opacity:1}
+.step .sn{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-3);margin-top:38px}
+.step h4{font-family:var(--display);font-variation-settings:'wdth' 112,'wght' 620;font-size:clamp(17px,1.9vw,23px);letter-spacing:-.028em;margin-top:14px}
+.step p{color:var(--ink-2);font-size:13.5px;line-height:1.6;margin-top:11px;max-width:30ch;font-weight:350}
+.step .sla{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--elev-05)}
+.step .sla::before{content:'';width:12px;height:1px;background:var(--elev-05)}
+
+/* ═══ INDUSTRIES ══════════════════════════════════════════ */
+#industries{--band:var(--elev-04);--band-lit:color-mix(in srgb, var(--elev-04) 58%, #EEF1F5);overflow:hidden}
+.ind-scroll{display:flex;gap:16px;overflow-x:auto;padding-bottom:14px;margin-top:clamp(34px,4vw,52px);
+  scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--hair) transparent}
+.ind-scroll::-webkit-scrollbar{height:2px}
+.ind-scroll::-webkit-scrollbar-thumb{background:var(--hair)}
+.ind{
+  flex:0 0 clamp(232px,26vw,304px);scroll-snap-align:start;
+  border:1px solid var(--hair-2);border-radius:3px;padding:22px 20px 26px;
+  background:linear-gradient(175deg,var(--strata),rgba(8,10,13,.2));
+  position:relative;overflow:hidden;transition:.5s var(--ease);
+}
+.ind::before{content:'';position:absolute;left:0;top:0;height:2px;width:0;background:var(--band);transition:width .6s var(--ease)}
+.ind:hover{border-color:var(--hair);transform:translateY(-4px)}
+.ind:hover::before{width:100%}
+.ind .in-n{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-2);color:var(--band-lit)}
+.ind h4{font-family:var(--display);font-variation-settings:'wdth' 112,'wght' 620;font-size:19px;letter-spacing:-.026em;margin:36px 0 10px}
+.ind p{font-size:13px;color:var(--ink-3);line-height:1.58;font-weight:350}
+.ind .ico{position:absolute;top:18px;right:18px;opacity:.5}
+
+/* ═══ PROOF ═══════════════════════════════════════════════ */
+#proof{--band:var(--elev-04);--band-lit:color-mix(in srgb, var(--elev-04) 58%, #EEF1F5);background:linear-gradient(180deg,transparent,rgba(52,52,52,.16),transparent)}
+.proof-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,4vw,64px);align-items:center}
+.quote-mark{font-family:var(--serif);font-size:96px;line-height:.6;color:var(--band-lit);opacity:.5}
+.proof-q{font-family:var(--display);font-variation-settings:'wdth' 108,'wght' 500;
+  font-size:clamp(20px,2.7vw,33px);letter-spacing:-.028em;line-height:1.3;margin-top:18px;max-width:22ch}
+.proof-q em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--elev-05);font-variation-settings:normal}
+.proof-by{display:flex;align-items:center;gap:14px;margin-top:30px}
+.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--elev-03),var(--elev-04));
+  font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#fff}
+.proof-by b{display:block;font-weight:500;font-size:14.5px}
+.proof-by span{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.proof-img{position:relative;border-radius:3px;overflow:hidden;border:1px solid var(--hair-2)}
+.proof-img img{width:100%;aspect-ratio:4/3.2;object-fit:cover;filter:grayscale(.5) contrast(1.06) brightness(.78);transition:1s var(--ease)}
+.proof-img:hover img{filter:grayscale(0) contrast(1.06) brightness(.9);transform:scale(1.03)}
+.proof-img::after{content:'';position:absolute;inset:0;background:linear-gradient(200deg,transparent 40%,rgba(8,10,13,.85))}
+.proof-cap{position:absolute;left:18px;bottom:16px;z-index:2;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+
+/* ═══ FAQ ═════════════════════════════════════════════════ */
+#faq{--band:var(--elev-05);--band-lit:color-mix(in srgb, var(--elev-05) 58%, #EEF1F5)}
+.faq-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(28px,4vw,68px);align-items:start}
+.faq-side{position:sticky;top:110px}
+.faq-card{border:1px solid var(--hair-2);border-radius:3px;padding:24px;margin-top:26px;background:var(--strata)}
+.faq-card h4{font-family:var(--display);font-variation-settings:'wdth' 112,'wght' 620;font-size:19px;letter-spacing:-.026em;margin-bottom:11px}
+.faq-card p{font-size:13.5px;color:var(--ink-2);line-height:1.6;margin-bottom:18px;font-weight:350}
+
+.q{border-top:1px solid var(--hair-2)}
+.q:last-child{border-bottom:1px solid var(--hair-2)}
+.q button{
+  width:100%;background:none;border:0;text-align:left;cursor:pointer;
+  display:grid;grid-template-columns:38px 1fr 26px;gap:14px;align-items:center;
+  padding:22px 0;transition:.4s;
+}
+.q .qi{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.1em;transition:color .4s}
+.q .qt{font-family:var(--display);font-variation-settings:'wdth' 108,'wght' 550;font-size:clamp(15px,1.6vw,19px);letter-spacing:-.02em;color:var(--ink-2);transition:color .4s;line-height:1.3}
+.q .qp{position:relative;width:13px;height:13px;justify-self:end}
+.q .qp::before,.q .qp::after{content:'';position:absolute;background:var(--ink-3);transition:.45s var(--ease)}
+.q .qp::before{left:0;top:6px;width:13px;height:1px}
+.q .qp::after{left:6px;top:0;width:1px;height:13px}
+.q.on .qp::after{transform:rotate(90deg);opacity:0}
+.q.on .qp::before{background:var(--elev-05)}
+.q.on .qt{color:var(--ink)}
+.q.on .qi{color:var(--elev-05)}
+.q:hover .qt{color:var(--ink)}
+.q .qa{max-height:0;overflow:hidden;transition:max-height .6s var(--ease)}
+.q .qa p{color:var(--ink-2);font-size:14px;line-height:1.68;padding:0 46px 26px 52px;max-width:66ch;font-weight:350}
+
+/* ═══ QUOTE ═══════════════════════════════════════════════ */
+#quote{--band:var(--elev-05);--band-lit:color-mix(in srgb, var(--elev-05) 58%, #EEF1F5);position:relative;overflow:hidden}
+.q-glow{position:absolute;right:-14%;top:-10%;width:min(760px,80vw);aspect-ratio:1;
+  background:radial-gradient(circle,rgba(245,158,75,.13),transparent 64%);filter:blur(20px);pointer-events:none}
+.q-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:clamp(30px,4.4vw,72px);align-items:start;position:relative;z-index:2}
+.q-h2{font-size:clamp(30px,4.8vw,62px);max-width:13ch}
+.q-h2 .ital{color:var(--elev-05)}
+.q-list{list-style:none;margin-top:30px}
+.q-list li{display:flex;gap:13px;padding:13px 0;border-top:1px solid var(--hair-2);font-size:14px;color:var(--ink-2);font-weight:350}
+.q-list li svg{flex:none;margin-top:3px}
+.q-contact{display:flex;flex-direction:column;gap:9px;margin-top:30px}
+.q-contact a{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;color:var(--ink-2);display:flex;align-items:center;gap:10px;transition:color .3s}
+.q-contact a:hover{color:var(--elev-05)}
+
+.form{border:1px solid var(--hair-2);border-radius:3px;padding:clamp(20px,2.6vw,34px);background:linear-gradient(170deg,var(--strata),rgba(8,10,13,.5))}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{position:relative;margin-bottom:14px}
+.fld label{position:absolute;left:13px;top:14px;font-family:var(--mono);font-size:10px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);pointer-events:none;transition:.35s var(--ease)}
+.fld input,.fld select,.fld textarea{
+  width:100%;background:rgba(8,10,13,.5);border:1px solid var(--hair-2);border-radius:2px;
+  padding:19px 13px 9px;font-size:14.5px;color:var(--ink);transition:border-color .35s;
+}
+.fld textarea{resize:vertical;min-height:82px;padding-top:22px}
+.fld select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236E7681' fill='none' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 13px center}
+.fld select option{background:#0E1319}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--elev-05);outline:none}
+.fld input:focus+label,.fld input:not(:placeholder-shown)+label,
+.fld textarea:focus+label,.fld textarea:not(:placeholder-shown)+label,
+.fld select:focus+label,.fld select.has+label{top:7px;font-size:8.5px;letter-spacing:.16em;color:var(--elev-05)}
+.f-note{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:14px;line-height:1.7}
+.f-sub{width:100%;justify-content:center;margin-top:8px}
+.f-ok{display:none;text-align:center;padding:34px 10px}
+.f-ok.on{display:block;animation:dIn .6s var(--ease)}
+.f-ok h4{font-family:var(--display);font-variation-settings:'wdth' 114,'wght' 650;font-size:24px;letter-spacing:-.03em;margin:16px 0 9px}
+.f-ok p{color:var(--ink-2);font-size:14px;max-width:36ch;margin-inline:auto;font-weight:350}
+.form.sent .f-body{display:none}
+
+/* ═══ FOOTER ══════════════════════════════════════════════ */
+.foot{border-top:1px solid var(--hair-2);background:linear-gradient(180deg,transparent,rgba(52,52,52,.2));padding-top:clamp(50px,6vw,80px)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:clamp(24px,3vw,50px);padding-bottom:clamp(40px,5vw,64px)}
+.foot-logo img{height:32px;margin-bottom:20px}
+.foot p.fd{font-size:13.5px;color:var(--ink-3);line-height:1.6;max-width:32ch;font-weight:350}
+.foot h5{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);margin-bottom:18px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.foot ul a{font-size:13.5px;color:var(--ink-3);transition:color .3s;font-weight:350}
+.foot ul a:hover{color:var(--elev-05)}
+.socials{display:flex;gap:9px;margin-top:22px}
+.socials a{width:34px;height:34px;border:1px solid var(--hair-2);border-radius:2px;display:grid;place-items:center;transition:.35s var(--ease)}
+.socials a:hover{border-color:var(--elev-05);background:rgba(245,158,75,.08)}
+.foot-word{overflow:hidden;border-top:1px solid var(--hair-2);padding-top:22px}
+.foot-word .fw{display:flex;justify-content:space-between;font-family:var(--display);
+  font-variation-settings:'wdth' 125,'wght' 700;font-size:clamp(46px,13vw,190px);
+  letter-spacing:-.05em;line-height:.86;user-select:none}
+.foot-word .fw span:nth-child(1){color:var(--elev-01)}
+.foot-word .fw span:nth-child(2){color:var(--elev-00)}
+.foot-word .fw span:nth-child(3){color:var(--elev-02)}
+.foot-word .fw span:nth-child(4){color:var(--elev-03)}
+.foot-word .fw span:nth-child(5){color:var(--elev-04)}
+.foot-word .fw span:nth-child(6){color:var(--elev-05)}
+.foot-word .fw span{opacity:.28;transition:opacity .5s var(--ease)}
+.foot-word:hover .fw span{opacity:.9}
+.foot-base{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;
+  padding:22px 0 26px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase}
+.foot-base .dsk{display:flex;align-items:center;gap:8px}
+.foot-base .dsk i{width:5px;height:5px;border-radius:50%;background:var(--elev-05);animation:blip 2.4s ease-in-out infinite}
+@keyframes blip{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* WhatsApp float */
+.wa{position:fixed;right:20px;bottom:20px;z-index:85;display:flex;align-items:center;gap:10px;
+  background:var(--elev-05);color:#0A0A0A;border-radius:100px;padding:12px 18px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:500;
+  box-shadow:0 12px 34px rgba(0,0,0,.5);transition:.4s var(--ease);opacity:0;transform:translateY(14px);pointer-events:none}
+.wa.on{opacity:1;transform:none;pointer-events:auto}
+.wa:hover{background:#fff;transform:translateY(-2px)}
+
+/* ═══ RESPONSIVE ══════════════════════════════════════════ */
+@media(max-width:1080px){
+  .hero-in{grid-template-columns:1fr;gap:34px}
+  .stage{max-width:520px;margin-inline:auto;width:100%}
+  .fleet-grid,.proof-grid,.q-grid,.faq-grid{grid-template-columns:1fr}
+  .faq-side{position:static}
+  .adv{grid-template-columns:44px 1fr;gap:16px}
+  .adv-vis{grid-column:1/-1;margin-top:6px}
+  .proc-grid{grid-template-columns:1fr 1fr;gap:28px 0}
+  .proc-line{display:none}
+  .step .dot{top:0}
+  .step .sn{margin-top:14px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+  :root{--rail:0px}
+  .rail{display:none}
+  .nav-links,.nav-tel{display:none}
+  .burger{display:block}
+  .met-grid{grid-template-columns:1fr 1fr;gap:26px 0}
+  .met{padding-inline:20px}
+  .met:nth-child(odd){border-left:0;padding-left:0}
+  .met:nth-child(odd)::before{display:none}
+  .v-specs{grid-template-columns:1fr 1fr}
+  .v-specs>div:nth-child(odd){border-left:0;padding-left:0}
+  .f-row{grid-template-columns:1fr}
+  body .top-prog{display:block}
+  .nav .btn{padding:11px 15px;font-size:10px;letter-spacing:.11em}
+  .eyebrow{gap:10px}
+  .eyebrow .ln{max-width:44px}
+}
+@media(max-width:560px){
+  .proc-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:32px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center}
+  .sl-1{display:none}
+  .sl-2{bottom:14%;left:0}
+  .eyebrow .alt{display:none}
+  .stage-label{font-size:8.5px;padding:5px 8px}
+  .wa span{display:none}
+  .wa{padding:14px;border-radius:50%}
+}
+
+/* Mobile scroll progress (replaces rail) */
+.top-prog{display:none;position:fixed;top:0;left:0;right:0;height:2px;z-index:90;background:transparent}
+.top-prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--elev-00),var(--elev-01),var(--elev-03),var(--elev-05))}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .hero-h1 .msk>span{transform:none}
+  .bp .draw{stroke-dashoffset:0}
+}
+</style>
 </head>
-
 <body>
 
-  <!-- Reading Progress Bar -->
-  <div class="ex-progress-bar" id="exProgress"></div>
-
-  <!-- Mouse Follower Spotlight -->
-  <div class="ex-spotlight" id="exSpotlight"></div>
-
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/917028096111" class="ex-floating-wa" target="_blank" rel="noopener" aria-label="Contact on WhatsApp">
-    <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <div id="elevex-replica">
-
-    <!-- Left Vertical Index Track -->
-    <div class="ex-left-track">
-      <a href="#intro" class="ex-track-item active">01 INTRO</a>
-      <a href="#services" class="ex-track-item">02 SERVICES</a>
-      <a href="#fleet" class="ex-track-item">03 FLEET</a>
-      <a href="#why" class="ex-track-item">04 WHY ELEVEX</a>
-      <a href="#calculator" class="ex-track-item">05 CALCULATOR</a>
-      <a href="#contact" class="ex-track-item">06 CONTACT</a>
+<!-- ═══ PRELOADER ═══════════════════════════════════════ -->
+<div id="boot">
+  <div class="boot-in">
+    <div class="boot-word">
+      <div class="boot-l"><i></i><i></i><i></i></div>
+      <div class="boot-l"><i></i><i></i><i></i></div>
+      <div class="boot-l"><i></i><i></i><i></i></div>
+      <div class="boot-l v"><i></i><i></i><i></i></div>
+      <div class="boot-l"><i></i><i></i><i></i></div>
+      <div class="boot-l x"><i></i><i></i><i></i></div>
     </div>
+    <div class="boot-bar"></div>
+    <div class="boot-txt">Raising platform</div>
+  </div>
+</div>
 
-    <!-- Scroll Explore Vertical Tag -->
-    <div class="ex-scroll-explore">SCROLL TO EXPLORE</div>
+<div class="top-prog"><i id="topProg"></i></div>
 
-    <!-- ══════════════════════════ HEADER NAVIGATION ══════════════════════════ -->
-    <header class="ex-header" id="exHeader">
-      <a href="#intro" class="ex-logo-brand">
-        <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals Logo" />
-      </a>
+<!-- ═══ ALTITUDE RAIL ═══════════════════════════════════ -->
+<aside class="rail" aria-hidden="true">
+  <div class="rail-cap">ELEVATION</div>
+  <div class="rail-track">
+    <div class="rail-ticks" id="railTicks"></div>
+    <div class="rail-line" id="railLine"></div>
+    <div class="rail-dot" id="railDot"></div>
+  </div>
+  <div class="rail-read"><span id="railRead">0.0</span>m<small>REACH</small></div>
+</aside>
 
-      <nav class="ex-nav-menu d-none d-lg:flex">
-        <a href="#intro" class="ex-nav-link active">HOME</a>
-        <a href="#services" class="ex-nav-link">SERVICES <i class="bi bi-chevron-down ms-1 small"></i></a>
-        <a href="#fleet" class="ex-nav-link">FLEET</a>
-        <a href="#why" class="ex-nav-link">WHY ELEVEX</a>
-        <a href="#calculator" class="ex-nav-link">CALCULATOR</a>
-        <a href="#locations" class="ex-nav-link">LOCATIONS</a>
-        <a href="#contact" class="ex-nav-link">CONTACT</a>
-      </nav>
+<!-- ═══ NAV ═════════════════════════════════════════════ -->
+<header class="nav" id="nav">
+  <a href="#home" class="nav-logo" aria-label="ELEVEX Rentals — home">
+    <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals">
+  </a>
+  <nav class="nav-links">
+    <a href="#fleet">Fleet</a>
+    <a href="#why">Why electric</a>
+    <a href="#process">How it works</a>
+    <a href="#industries">Industries</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-tel" href="tel:+917028096111">+91 70280 96111</a>
+    <a href="#quote" class="btn btn-fill"><span>Get a quote</span></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  </div>
+</header>
 
-      <div class="ex-header-right">
-        <div class="ex-icon-circle"><i class="bi bi-moon-stars-fill"></i></div>
-        <a href="#contact" class="ex-btn-quote">REQUEST A QUOTE <i class="bi bi-arrow-right"></i></a>
-        <div class="ex-icon-circle d-lg-none"><i class="bi bi-list fs-4"></i></div>
-      </div>
-    </header>
+<div class="drawer" id="drawer">
+  <a class="dl" href="#fleet"><em>01</em>Fleet</a>
+  <a class="dl" href="#why"><em>02</em>Why electric</a>
+  <a class="dl" href="#process"><em>03</em>How it works</a>
+  <a class="dl" href="#industries"><em>04</em>Industries</a>
+  <a class="dl" href="#quote"><em>05</em>Get a quote</a>
+  <div class="drawer-foot">
+    <a href="tel:+917028096111">+91 70280 96111</a>
+    <a href="mailto:hello@elevex.co.in">hello@elevex.co.in</a>
+    <a href="#">Rental desk · Mon–Sat, 8am–8pm IST</a>
+  </div>
+</div>
 
-    <!-- ══════════════════════════ 01: HERO SECTION ══════════════════════════ -->
-    <section class="ex-hero-replica" id="intro">
-      <div class="ex-hero-crane-bg">
-        <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="ELEVEX Heavy Crane Rig" />
-      </div>
+<main class="shell">
 
-      <div class="ex-hud-ring">
-        <div class="ex-hud-tag">
-          <small>LIFTING HEIGHT</small>
-          <b>78.4M</b>
-          <span class="d-block text-warning font-monospace small">AND BEYOND</span>
-        </div>
-      </div>
-
-      <div class="ex-right-features">
-        <div class="ex-feature-pill"><i class="bi bi-clock-history"></i><div><b>24/7</b><small>SUPPORT</small></div></div>
-        <div class="ex-feature-pill"><i class="bi bi-truck-flatbed"></i><div><b>250+</b><small>CRANES</small></div></div>
-        <div class="ex-feature-pill"><i class="bi bi-patch-check"></i><div><b>25+</b><small>YEARS</small></div></div>
-        <div class="ex-feature-pill"><i class="bi bi-geo-alt"></i><div><b>PAN INDIA</b><small>SERVICE</small></div></div>
-      </div>
-
-      <div class="ex-promise-badge">
-        <small>OUR PROMISE</small>
-        <h4>SAFETY. PRECISION. PERFORMANCE.</h4>
-      </div>
-
-      <div class="position-relative z-2 my-auto" style="max-width:680px;" data-aos="fade-right">
-        <div class="ex-eyebrow-blue">LIFTING INDIA TO NEW HEIGHTS</div>
-        
-        <h1 class="ex-hero-title-replica">
-          BUILT<br />
-          TO <span class="txt-orange">LIFT.</span><br />
-          BORN TO <span class="txt-blue">LEAD.</span>
-        </h1>
-
-        <p class="ex-hero-desc-replica">
-          ELEVEX Rentals provides world-class cranes &amp; lifting solutions with safety, reliability &amp; precision at the core.
-        </p>
-
-        <div class="d-flex flex-wrap align-items-center gap-3">
-          <a href="#fleet" class="ex-btn-explore">
-            EXPLORE OUR FLEET <i class="bi bi-arrow-right"></i>
-          </a>
-          <a href="#calculator" class="ex-btn-showreel">
-            <i class="bi bi-calculator-fill fs-5 me-1 text-warning"></i> RENTAL ESTIMATOR
-          </a>
-        </div>
-      </div>
-
-      <!-- Brands Strip -->
-      <div class="ex-brands-strip position-relative z-2">
-        <div class="container-fluid px-lg-5">
-          <div class="row align-items-center g-3">
-            <div class="col-lg-3"><span class="ex-brands-lbl">TRUSTED BY INDIA'S LEADING INDUSTRIES</span></div>
-            <div class="col-lg-9">
-              <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
-                <span class="ex-brand-name">adani</span>
-                <span class="ex-brand-name">LARSEN &amp; TOUBRO</span>
-                <span class="ex-brand-name">TATA</span>
-                <span class="ex-brand-name">JINDAL STEEL &amp; POWER</span>
-                <span class="ex-brand-name">meil</span>
-                <span class="ex-brand-name">AFCONS</span>
-                <span class="ex-brand-name">GMR</span>
-                <span class="ex-brand-name">RAMKY</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ 02: WHAT WE OFFER ══════════════════════════ -->
-    <section class="ex-sec-offer" id="services">
-      <div class="container-fluid px-lg-5">
-        <div class="row g-4 align-items-center mb-5">
-          <div class="col-lg-3" data-aos="fade-right">
-            <div class="ex-eyebrow-blue" style="color:var(--accent-orange);">WHAT WE OFFER</div>
-            <h2 class="ex-hero-title-replica fs-2 mb-3">
-              COMPLETE LIFTING<br />
-              <span class="txt-blue">SOLUTIONS</span><br />
-              FOR EVERY CHALLENGE
-            </h2>
-            <p class="ex-hero-desc-replica small mb-4">
-              From heavy lifting to complex projects, we deliver safe, efficient &amp; cost-effective crane rental solutions.
-            </p>
-            <a href="#contact" class="ex-btn-quote" style="border-color:rgba(255,255,255,0.2);">VIEW ALL SERVICES <i class="bi bi-arrow-right"></i></a>
-          </div>
-
-          <div class="col-lg-9">
-            <div class="row g-4">
-              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="100">
-                <a href="#contact" class="ex-offer-card ex-offer-card--blue">
-                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png" alt="Mobile Crane Rental" />
-                  <div class="ex-offer-card-body">
-                    <h3>MOBILE CRANE<br />RENTAL</h3>
-                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="200">
-                <a href="#contact" class="ex-offer-card ex-offer-card--orange">
-                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png" alt="Crawler Crane Rental" />
-                  <div class="ex-offer-card-body">
-                    <h3>CRAWLER CRANE<br />RENTAL</h3>
-                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="300">
-                <a href="#contact" class="ex-offer-card ex-offer-card--amber">
-                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="Hydra Crane Rental" />
-                  <div class="ex-offer-card-body">
-                    <h3>HYDRA CRANE<br />RENTAL</h3>
-                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="400">
-                <a href="#contact" class="ex-offer-card ex-offer-card--blue">
-                  <img src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png" alt="Boom Lift Rental" />
-                  <div class="ex-offer-card-body">
-                    <h3>BOOM LIFT<br />RENTAL</h3>
-                    <div class="ex-arrow-btn"><i class="bi bi-arrow-right"></i></div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="ex-dock-bar" data-aos="zoom-in">
-          <div class="ex-dock-item"><i class="bi bi-truck-flatbed"></i><div><b>250+</b><small>CRANES IN FLEET</small></div></div>
-          <div class="ex-dock-item"><i class="bi bi-patch-check-fill"></i><div><b>25+</b><small>YEARS EXPERIENCE</small></div></div>
-          <div class="ex-dock-item"><i class="bi bi-people-fill"></i><div><b>500+</b><small>SKILLED PROFESSIONALS</small></div></div>
-          <div class="ex-dock-item"><i class="bi bi-building-check"></i><div><b>10K+</b><small>PROJECTS COMPLETED</small></div></div>
-          <div class="ex-dock-item"><i class="bi bi-headset"></i><div><b>24/7</b><small>SUPPORT AVAILABLE</small></div></div>
-          <div class="ex-dock-item"><i class="bi bi-shield-check"></i><div><b>100%</b><small>SAFETY RECORD</small></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ 03: FLEET SHOWCASE ══════════════════════════ -->
-    <section class="py-5" id="fleet">
-      <div class="container-fluid px-lg-5 py-4">
-        <div class="row align-items-end mb-5">
-          <div class="col-lg-7" data-aos="fade-right">
-            <div class="ex-eyebrow-blue">HIGH-TONNAGE RIGS</div>
-            <h2 class="ex-hero-title-replica fs-1 mb-2">
-              OUR HEAVY <span class="txt-orange">FLEET</span> SHOWCASE
-            </h2>
-          </div>
-          <div class="col-lg-5 text-lg-end" data-aos="fade-left">
-            <p class="ex-hero-desc-replica small mb-0">100% Direct Company Ownership. Certified for safety with 42-point PDI sheet.</p>
-          </div>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.8); border:1px solid rgba(255,255,255,0.12);">
-              <img src="https://elevex.co.in/wp-content/uploads/2026/08/terrain-lift-main.png" alt="500T All Terrain Crane" class="img-fluid mb-4" style="height:220px; object-fit:contain;" />
-              <span class="badge bg-primary mb-2">MOBILE CRANE</span>
-              <h3 class="h4 fw-bold text-white mb-2">500-Ton All-Terrain Crane</h3>
-              <p class="text-white-50 small mb-4">7-Section Telescopic Main Boom up to 84m, 12x8x12 drive axle, IP67 telemetry.</p>
-              <a href="#contact" class="btn-elevex-explore w-100 justify-content-center">Request Unit Specs <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.8); border:1px solid rgba(255,255,255,0.12);">
-              <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png" alt="300T Crawler Crane" class="img-fluid mb-4" style="height:220px; object-fit:contain;" />
-              <span class="badge bg-warning text-dark mb-2">CRAWLER CRANE</span>
-              <h3 class="h4 fw-bold text-white mb-2">300-Ton Lattice Crawler Crane</h3>
-              <p class="text-white-50 small mb-4">Heavy track traction for soft ground, pre-cast metro girders &amp; refinery expansion.</p>
-              <a href="#contact" class="btn-elevex-explore w-100 justify-content-center">Request Unit Specs <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.8); border:1px solid rgba(255,255,255,0.12);">
-              <img src="https://elevex.co.in/wp-content/uploads/2026/08/boom-lift-main.png" alt="22m Boom Lift" class="img-fluid mb-4" style="height:220px; object-fit:contain;" />
-              <span class="badge bg-success mb-2">ELECTRIC BOOM LIFT</span>
-              <h3 class="h4 fw-bold text-white mb-2">22m Electric Articulating Boom</h3>
-              <p class="text-white-50 small mb-4">Up-and-over reach for cleanroom indoor facilities, data centers &amp; airport work.</p>
-              <a href="#contact" class="btn-elevex-explore w-100 justify-content-center">Request Unit Specs <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ 04: WHY ELEVEX (4 PILLARS) ══════════════════════════ -->
-    <section class="py-5" id="why" style="background:rgba(6,10,16,0.95);">
-      <div class="container-fluid px-lg-5 py-4">
-        <div class="text-center max-w-700 mx-auto mb-5" data-aos="fade-up">
-          <div class="ex-eyebrow-blue justify-content-center">THE ELEVEX ADVANTAGE</div>
-          <h2 class="ex-hero-title-replica fs-1 mb-2">
-            ENGINEERED FOR ZERO DOWNTIME
-          </h2>
-          <p class="ex-hero-desc-replica small mx-auto">100% Direct Company Ownership • Zero Sub-renting • 24/7 Field Cover</p>
-        </div>
-
-        <div class="ex-pillar-grid">
-          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="100">
-            <span class="badge bg-warning text-dark font-monospace mb-3">PILLAR 01</span>
-            <h3 class="h4 fw-bold text-white mb-2">100% Direct Ownership</h3>
-            <p class="text-white-50 mb-0">We own every machine we rent. No third-party sub-renting markups, direct factory maintenance.</p>
-          </div>
-
-          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="200">
-            <span class="badge bg-primary font-monospace mb-3">PILLAR 02</span>
-            <h3 class="h4 fw-bold text-white mb-2">48h Pan-India Dispatch</h3>
-            <p class="text-white-50 mb-0">7 strategic regional hubs guarantee on-site flatbed arrival within 48 hours anywhere in India.</p>
-          </div>
-
-          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="300">
-            <span class="badge bg-info text-dark font-monospace mb-3">PILLAR 03</span>
-            <h3 class="h4 fw-bold text-white mb-2">IPAF Certified Crews</h3>
-            <p class="text-white-50 mb-0">Every crane is dispatched with certified operators and heavy rigging specialists trained in 3D lift planning.</p>
-          </div>
-
-          <div class="ex-pillar-box" data-aos="fade-up" data-aos-delay="400">
-            <span class="badge bg-danger font-monospace mb-3">PILLAR 04</span>
-            <h3 class="h4 fw-bold text-white mb-2">Zero Downtime Swap</h3>
-            <p class="text-white-50 mb-0">4-hour metro technician response with instant replacement unit warranty if site faults occur.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ 05: CALCULATOR ══════════════════════════ -->
-    <section class="py-5" id="calculator">
-      <div class="container-fluid px-lg-5 py-4">
-        <div class="ex-calc-box" data-aos="zoom-in">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-              <span class="badge bg-warning text-dark font-monospace fw-bold mb-3 px-3 py-2">INSTANT ESTIMATOR</span>
-              <h2 class="ex-hero-title-replica fs-2 mb-3">Calculate Rental Rate Estimate</h2>
-              <p class="text-white-50 mb-4">Select load capacity and duration for a transparent, instant rate estimate.</p>
-
-              <div class="mb-4">
-                <label class="form-label text-white fw-bold d-flex justify-content-between">
-                  <span>Required Tonnage:</span>
-                  <span class="text-warning font-monospace fs-5" id="exCalcCapLabel">100 Tons</span>
-                </label>
-                <input type="range" class="form-range" id="exCalcCapSlider" min="20" max="500" step="10" value="100" />
-              </div>
-
-              <div class="mb-4">
-                <label class="form-label text-white fw-bold d-flex justify-content-between">
-                  <span>Rental Duration:</span>
-                  <span class="text-warning font-monospace fs-5" id="exCalcDurLabel">7 Days</span>
-                </label>
-                <input type="range" class="form-range" id="exCalcDurSlider" min="1" max="30" step="1" value="7" />
-              </div>
-            </div>
-
-            <div class="col-lg-6 text-center text-lg-end">
-              <div class="p-4 p-md-5 rounded-4" style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12);">
-                <small class="text-white-50 d-block mb-1">Estimated Rental Slab</small>
-                <div class="display-3 text-warning font-monospace fw-bold mb-3" id="exCalcResult">₹ 1,75,000*</div>
-                <p class="text-white-50 small mb-4">*Includes 42-point PDI, certified operator, insurance &amp; transport estimate.</p>
-                <a href="#contact" class="ex-btn-explore w-100 justify-content-center">Lock In Rate Estimate <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════ 06: CONTACT DESK ══════════════════════════ -->
-    <section class="py-5" id="contact" style="background:rgba(4,6,10,0.98);">
-      <div class="container-fluid px-lg-5 py-4">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class="ex-eyebrow-blue">GET A QUOTE</div>
-            <h2 class="ex-hero-title-replica fs-1 mb-3">
-              TELL US THE HEIGHT.<br />
-              <span class="txt-orange">WE'LL DO THE REST.</span>
-            </h2>
-            <p class="ex-hero-desc-replica mb-4">No obligation, no dealer middlemen. Fixed upfront pricing covering machine, transport, and certified operator.</p>
-
-            <div class="p-4 rounded-4 mb-3" style="background:rgba(15,23,38,0.7); border:1px solid rgba(255,255,255,0.12);">
-              <small class="text-white-50 d-block">24x7 Rental Hotline</small>
-              <a href="tel:+917028096111" class="h3 text-warning fw-bold text-decoration-none font-monospace">+91 70280 96111</a>
-            </div>
-
-            <div class="p-4 rounded-4" style="background:rgba(15,23,38,0.7); border:1px solid rgba(255,255,255,0.12);">
-              <small class="text-white-50 d-block">Email Rental Desk</small>
-              <a href="mailto:hello@elevex.co.in" class="h4 text-white fw-bold text-decoration-none">hello@elevex.co.in</a>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="p-4 p-md-5 rounded-4" style="background:rgba(15,23,38,0.92); border:1px solid rgba(255,90,31,0.4);">
-              <h3 class="h4 fw-bold text-white mb-4">Request Custom Quote</h3>
-              <form id="exContactForm" onsubmit="event.preventDefault(); alert('Thank you! Your quote request has been received. An ELEVEX engineer will call you shortly.');">
-                <div class="mb-3">
-                  <input type="text" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Full Name *" required />
-                </div>
-                <div class="row g-3 mb-3">
-                  <div class="col-md-6">
-                    <input type="tel" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="Phone Number *" required />
-                  </div>
-                  <div class="col-md-6">
-                    <input type="text" class="form-control form-control-lg bg-dark text-white border-secondary" placeholder="City / Site Location *" required />
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <select class="form-select form-select-lg bg-dark text-white border-secondary">
-                    <option selected>Required Tonnage / Machine...</option>
-                    <option value="mobile-50t">Mobile Crane (50T - 100T)</option>
-                    <option value="mobile-220t">Mobile Crane (220T - 500T)</option>
-                    <option value="crawler-300t">Crawler Crane (100T - 800T)</option>
-                    <option value="boom-lift">Articulating / Telescopic Boom Lift</option>
-                  </select>
-                </div>
-                <button type="submit" class="ex-btn-explore w-100 justify-content-center py-3">Submit Request <i class="bi bi-send-fill ms-2"></i></button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER LOGO GRAPHIC -->
-    <footer class="py-5" style="background:#02121C; border-top:1px solid rgba(255,255,255,0.08);">
-      <div class="container text-center">
-        <div class="ex-footer-logo-wrap">
-          <img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals" class="ex-footer-logo-img" />
-        </div>
-        <p class="small text-white-50 mt-3">&copy; 2026 ELEVEX Access Solutions Pvt. Ltd. All rights reserved.</p>
-      </div>
-    </footer>
-
+<!-- ═══ HERO ════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow b"></div>
   </div>
 
-  <!-- JavaScript -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // 1. Spotlight Mouse Follower
-      const spotlight = document.getElementById('exSpotlight');
-      window.addEventListener('mousemove', function (e) {
-        if (spotlight) {
-          spotlight.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-        }
-      });
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <div class="eyebrow">
+        <span class="tag">Elev. 00.0 m — ground</span>
+        <span class="ln"></span>
+        <span class="alt">EST. 2019 · PAN-INDIA</span>
+      </div>
 
-      // 2. Scroll Progress & Header
-      const header = document.getElementById('exHeader');
-      const progress = document.getElementById('exProgress');
-      const trackItems = document.querySelectorAll('.ex-track-item');
-      const sections = document.querySelectorAll('section[id]');
+      <h1 class="dsp hero-h1">
+        <span class="msk"><span>The quiet</span></span>
+        <span class="msk"><span>way <span class="ital">up.</span></span></span>
+      </h1>
 
-      window.addEventListener('scroll', function () {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        if (progress) progress.style.width = (winScroll / height) * 100 + "%";
+      <p class="lead hero-sub">
+        All-electric scissor, boom and rough-terrain platforms.
+        <b>No fumes, no fuel permits, no 3 a.m. noise complaints.</b>
+        On your site within 48 hours, anywhere in India.
+      </p>
 
-        if (header) {
-          if (winScroll > 50) header.classList.add('scrolled');
-          else header.classList.remove('scrolled');
-        }
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-fill"><span>Get a fixed quote</span><span class="ar">→</span></a>
+        <a href="#fleet" class="btn"><span>Explore the fleet</span></a>
+      </div>
 
-        // Active Track Update
-        let currentSec = "";
-        sections.forEach(sec => {
-          const top = sec.offsetTop - 200;
-          if (winScroll >= top) currentSec = sec.getAttribute('id');
-        });
+      <div class="hero-pills">
+        <span class="pill"><i></i>Scissor · 14 m</span>
+        <span class="pill"><i></i>Boom · 22 m</span>
+        <span class="pill"><i></i>Terrain · 4WD</span>
+        <span class="pill"><i></i>Mast · single-person</span>
+      </div>
+    </div>
 
-        trackItems.forEach(item => {
-          item.classList.remove('active');
-          if (item.getAttribute('href') === '#' + currentSec) {
-            item.classList.add('active');
-          }
-        });
-      });
+    <div class="stage">
+      <!-- Engraved elevation drawing -->
+      <svg class="bp" viewBox="0 0 520 560" fill="none" aria-hidden="true">
+        <!-- vertical dimension axis -->
+        <line class="drw dim draw" style="--len:460" x1="44" y1="66" x2="44" y2="506"/>
+        <path class="drw acc draw" style="--len:20" d="M38 72l6-8 6 8"/>
+        <g>
+          <line class="drw" x1="38" y1="506" x2="50" y2="506"/><text x="58" y="509">0 m</text>
+          <line class="drw" x1="38" y1="396" x2="50" y2="396"/><text x="58" y="399">4 m</text>
+          <line class="drw" x1="38" y1="286" x2="50" y2="286"/><text x="58" y="289">8 m</text>
+          <line class="drw" x1="38" y1="176" x2="50" y2="176"/><text x="58" y="179">12 m</text>
+          <line class="drw acc" x1="34" y1="110" x2="52" y2="110"/><text class="hi" x="58" y="113">14 m · MAX</text>
+        </g>
+        <!-- ground line -->
+        <line class="drw draw" style="--len:480" x1="30" y1="506" x2="500" y2="506"/>
+        <g stroke="rgba(113,113,113,.3)" stroke-width="1">
+          <line x1="60" y1="506" x2="48" y2="518"/><line x1="100" y1="506" x2="88" y2="518"/>
+          <line x1="140" y1="506" x2="128" y2="518"/><line x1="180" y1="506" x2="168" y2="518"/>
+          <line x1="220" y1="506" x2="208" y2="518"/><line x1="260" y1="506" x2="248" y2="518"/>
+          <line x1="300" y1="506" x2="288" y2="518"/><line x1="340" y1="506" x2="328" y2="518"/>
+          <line x1="380" y1="506" x2="368" y2="518"/><line x1="420" y1="506" x2="408" y2="518"/>
+          <line x1="460" y1="506" x2="448" y2="518"/>
+        </g>
+        <!-- basket grid mark — echoes the X in the wordmark -->
+        <g class="drw acc draw" style="--len:200">
+          <rect x="386" y="52" width="98" height="54" rx="2"/>
+          <line x1="386" y1="79" x2="484" y2="79"/>
+          <line x1="419" y1="52" x2="419" y2="106"/>
+          <line x1="451" y1="52" x2="451" y2="106"/>
+        </g>
+        <line class="drw acc draw" style="--len:120" x1="386" y1="106" x2="330" y2="170"/>
+        <!-- radius arc -->
+        <path class="drw dim draw" style="--len:300" d="M330 470a170 170 0 0 1 154-104"/>
+        <text x="352" y="446" class="hi">REACH ENVELOPE</text>
+      </svg>
 
-      // 3. Lenis Smooth Scroll
-      if (typeof Lenis !== 'undefined') {
-        try {
-          const lenis = new Lenis({ duration: 1.1, smoothTouch: false });
-          function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-          requestAnimationFrame(raf);
-        } catch (e) {}
-      }
+      <img class="stage-img" src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png" alt="ELEVEX all-electric scissor lift" fetchpriority="high">
 
-      // 4. AOS Init
-      if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 800, once: true });
-      }
+      <span class="stage-label sl-1">MODEL <b>EX-S14E</b> · 100% ELECTRIC</span>
+      <span class="stage-label sl-2">NOISE <b>62 dB</b> · EMISSIONS <b>0</b></span>
+    </div>
+  </div>
 
-      // 5. Rental Calculator
-      const capSlider = document.getElementById('exCalcCapSlider');
-      const capLabel = document.getElementById('exCalcCapLabel');
-      const durSlider = document.getElementById('exCalcDurSlider');
-      const durLabel = document.getElementById('exCalcDurLabel');
-      const calcResult = document.getElementById('exCalcResult');
+  <div class="ticker">
+    <div class="tick-run" id="tickRun">
+      <span class="tick-i"><b>68</b> machines in fleet</span>
+      <span class="tick-i"><b>25</b> cities served</span>
+      <span class="tick-i"><b>7</b> owned hubs</span>
+      <span class="tick-i"><b>48h</b> to site</span>
+      <span class="tick-i"><b>42-pt</b> PDI sheet</span>
+      <span class="tick-i"><b>62dB</b> whisper drive</span>
+      <span class="tick-i"><em>0</em> tailpipe emissions</span>
+      <span class="tick-i"><b>24/7</b> breakdown cover</span>
+    </div>
+  </div>
+</section>
 
-      function updateCalculator() {
-        if (!capSlider || !durSlider || !calcResult) return;
-        const cap = parseInt(capSlider.value);
-        const dur = parseInt(durSlider.value);
+<!-- ═══ METRICS ═════════════════════════════════════════ -->
+<section id="metrics">
+  <div class="wrap">
+    <div class="met-grid">
+      <div class="met rv"><div class="n"><span class="cnt" data-to="68">0</span></div><div class="l">Machines in fleet</div></div>
+      <div class="met rv" data-d="1"><div class="n"><span class="cnt" data-to="25">0</span><sup>+</sup></div><div class="l">Cities pan-India</div></div>
+      <div class="met rv" data-d="2"><div class="n"><span class="cnt" data-to="48">0</span><sup>h</sup></div><div class="l">To site, typical</div></div>
+      <div class="met rv" data-d="3"><div class="n">0</div><div class="l">Tailpipe emissions</div></div>
+    </div>
+  </div>
+</section>
 
-        if (capLabel) capLabel.textContent = cap + " Tons";
-        if (durLabel) durLabel.textContent = dur + (dur === 1 ? " Day" : " Days");
+<div class="trust">
+  <div class="trust-lab">Trusted on site by India's builders &amp; operators</div>
+  <div class="mq" id="mq">
+    <span>Adani</span><span>Tata Motors</span><span>Larsen &amp; Toubro</span><span>Godrej</span><span>Mahindra</span>
+    <span>Bosch</span><span>DHL</span><span>Reliance</span><span>Vedanta</span><span>JSW</span><span>XCMG</span>
+  </div>
+</div>
 
-        const dayRate = 18000 + (cap * 220);
-        const totalEst = Math.round(dayRate * dur * (dur > 7 ? 0.85 : 0.95));
+<!-- ═══ FLEET ═══════════════════════════════════════════ -->
+<section id="fleet">
+  <div class="wrap">
+    <div class="fleet-top">
+      <div class="rv">
+        <div class="eyebrow"><span class="tag">The fleet</span><span class="ln"></span><span class="alt">ELEV. 06.0 M</span></div>
+        <h2 class="dsp h2">Right machine.<br>Right height.</h2>
+      </div>
+      <p class="lead rv" data-d="1" style="max-width:38ch">
+        Every unit is battery-electric, pre-delivery inspected on a 42-point sheet and dispatched
+        at 100% charge. Pick a category to read its specs.
+      </p>
+    </div>
 
-        calcResult.textContent = "₹ " + totalEst.toLocaleString('en-IN') + "*";
-      }
+    <div class="fleet-grid">
+      <div class="cats rv">
+        <div class="cat on" data-cat="0">
+          <span class="idx">01</span>
+          <div>
+            <div class="ttl">Scissor lifts</div>
+            <p class="dsc">Straight-up vertical reach for indoor fit-outs, MEP first-fix and racking work.</p>
+          </div>
+        </div>
+        <div class="cat" data-cat="1">
+          <span class="idx">02</span>
+          <div>
+            <div class="ttl">Articulating boom lifts</div>
+            <p class="dsc">Up-and-over access where the obstacle sits between you and the work.</p>
+          </div>
+        </div>
+        <div class="cat" data-cat="2">
+          <span class="idx">03</span>
+          <div>
+            <div class="ttl">Rough-terrain lifts</div>
+            <p class="dsc">Four-wheel drive and oscillating axles for ground that isn't finished yet.</p>
+          </div>
+        </div>
+        <div class="cat" data-cat="3">
+          <span class="idx">04</span>
+          <div>
+            <div class="ttl">Low-level &amp; mast lifts</div>
+            <p class="dsc">Single-person push-around units that fit through a standard doorway.</p>
+          </div>
+        </div>
+      </div>
 
-      if (capSlider && durSlider) {
-        capSlider.addEventListener('input', updateCalculator);
-        durSlider.addEventListener('input', updateCalculator);
-        updateCalculator();
-      }
+      <div class="viewer rv" data-d="1" id="viewer">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <div class="v-tag" id="vTag">EX-S14E · ELECTRIC · INDOOR RATED</div>
+        <div class="v-stage">
+          <div class="v-layer v-out"><img id="vOut" src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-outline-1.png" alt=""></div>
+          <div class="v-layer v-sol"><img id="vSol" src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-main-1.png" alt="ELEVEX electric scissor lift"></div>
+        </div>
+        <div class="v-specs" id="vSpecs">
+          <div><div class="sv">14 m</div><div class="sl">Working height</div></div>
+          <div><div class="sv">450 kg</div><div class="sl">Platform capacity</div></div>
+          <div><div class="sv">8 hr</div><div class="sl">Runtime / charge</div></div>
+          <div><div class="sv">62 dB</div><div class="sl">Noise level</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-hr"></div>
+
+<!-- ═══ ADVANTAGE ═══════════════════════════════════════ -->
+<section id="why">
+  <div class="wrap">
+    <div class="adv-head rv">
+      <div class="eyebrow"><span class="tag">The ELEVEX advantage</span><span class="ln"></span><span class="alt">ELEV. 10.0 M</span></div>
+      <h2 class="dsp h2">Electric isn't only cleaner. It's <span class="ital">faster on site.</span></h2>
+      <p class="lead" style="margin-top:20px">
+        No ventilation ducts, no noise permits, no diesel spill paperwork and no dealer in the middle.
+        Full duty-cycle aerial access, charged from any standard socket.
+      </p>
+    </div>
+
+    <div class="adv rv">
+      <div class="adv-n">01<b>100% ELECTRIC</b></div>
+      <div>
+        <h3 class="dsp">Zero fumes. Cleanroom and indoor certified.</h3>
+        <p>Work inside running pharma plants, food processing lines, data centres and airport terminals
+           without waiting on an exhaust ventilation assessment.</p>
+      </div>
+      <div class="adv-vis">
+        <div class="vt">0 kg</div>
+        <div class="vc">CO₂ per shift · ELEVEX EV</div>
+        <div class="bar-row"><span>Diesel</span><span class="bar"><i class="bad"></i></span><span>58 kg</span></div>
+        <div class="bar-row"><span>ELEVEX</span><span class="bar"><i class="good"></i></span><span>0 kg</span></div>
+      </div>
+    </div>
+
+    <div class="adv rv">
+      <div class="adv-n">02<b>62 dB DRIVE</b></div>
+      <div>
+        <h3 class="dsp">Quiet enough to work while the building sleeps.</h3>
+        <p>Passes 24/7 acoustic limits in metro zones, so hospital, hotel and retail fit-outs run
+           overnight without a separate noise permit.</p>
+      </div>
+      <div class="adv-vis">
+        <div class="vt">62 dB</div>
+        <div class="vc">Whisper drive · diesel runs 96 dB</div>
+        <div class="adv-tags"><span>Non-marking tyres</span><span>Overnight shifts</span><span>Metro-zone cleared</span></div>
+      </div>
+    </div>
+
+    <div class="adv rv">
+      <div class="adv-n">03<b>48h PAN-INDIA</b></div>
+      <div>
+        <h3 class="dsp">On site in 48 hours from seven owned hubs.</h3>
+        <p>Company flatbeds and our own transport crews serve 25+ industrial cities including Mumbai,
+           Pune, Delhi NCR, Bengaluru, Chennai and Hyderabad.</p>
+      </div>
+      <div class="adv-vis">
+        <div class="vt">48 hrs</div>
+        <div class="vc">Guaranteed, from signed quote</div>
+        <div class="adv-tags"><span>Arrives 100% charged</span><span>42-point PDI sheet</span></div>
+      </div>
+    </div>
+
+    <div class="adv rv">
+      <div class="adv-n">04<b>OWNED FLEET</b></div>
+      <div>
+        <h3 class="dsp">We own every machine we rent. No sub-renting.</h3>
+        <p>Direct factory maintenance, four-hour breakdown response in metros and a swap-unit
+           guarantee — you're never billed for our downtime.</p>
+      </div>
+      <div class="adv-vis">
+        <div class="vt">24/7</div>
+        <div class="vc">Support desk · 4-hr metro response</div>
+        <div class="adv-tags"><span>No middlemen</span><span>Direct field service</span><span>Swap guarantee</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═════════════════════════════════════════ -->
+<section id="process">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow"><span class="tag">How it works</span><span class="ln"></span><span class="alt">ELEV. 14.0 M</span></div>
+      <h2 class="dsp h2">Four steps from enquiry to elevation.</h2>
+    </div>
+
+    <div class="proc-grid" id="procGrid">
+      <div class="proc-line"><i></i></div>
+      <div class="step rv"><span class="dot"></span>
+        <div class="sn">STEP 01</div>
+        <h4 class="dsp">Spec the job</h4>
+        <p>Tell us the working height, the surface and how many people need to be up there. We shortlist two machines — never more.</p>
+        <span class="sla">Same-day response</span>
+      </div>
+      <div class="step rv" data-d="1"><span class="dot"></span>
+        <div class="sn">STEP 02</div>
+        <h4 class="dsp">Fixed quote</h4>
+        <p>Rental, transport both ways and an operator if you want one. One number, no line-item surprises at invoice time.</p>
+        <span class="sla">Inside 4 hours</span>
+      </div>
+      <div class="step rv" data-d="2"><span class="dot"></span>
+        <div class="sn">STEP 03</div>
+        <h4 class="dsp">Delivered charged</h4>
+        <p>Our own flatbeds, our own crew. The machine lands at 100% with its inspection sheet, ready to work the same shift.</p>
+        <span class="sla">48 hours pan-India</span>
+      </div>
+      <div class="step rv" data-d="3"><span class="dot"></span>
+        <div class="sn">STEP 04</div>
+        <h4 class="dsp">Covered till pickup</h4>
+        <p>Extend, swap or return with a single message. Breakdown support runs the whole rental, not just the first week.</p>
+        <span class="sla">Full-term cover</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INDUSTRIES ══════════════════════════════════════ -->
+<section id="industries">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow"><span class="tag">Where we work</span><span class="ln"></span><span class="alt">ELEV. 17.0 M</span></div>
+      <h2 class="dsp h2">Six sectors. Six machine specs.</h2>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ind-scroll">
+      <a class="ind rv" href="#quote">
+        <span class="in-n">01</span>
+        <svg class="ico" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 18h16M4 18V8l6-5 6 5v10M8 18v-5h4v5"/></svg>
+        <h4 class="dsp">Construction</h4>
+        <p>Facade work, MEP first-fix and structural steel — on decks that can't take a diesel machine's fumes.</p>
+      </a>
+      <a class="ind rv" data-d="1" href="#quote">
+        <span class="in-n">02</span>
+        <svg class="ico" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="6" width="16" height="12"/><path d="M2 10h16M7 6v12M13 6v12"/></svg>
+        <h4 class="dsp">Warehousing</h4>
+        <p>Racking installs and sprinkler maintenance inside sealed buildings — no ventilation plan required.</p>
+      </a>
+      <a class="ind rv" data-d="2" href="#quote">
+        <span class="in-n">03</span>
+        <svg class="ico" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 18h16V9l-5 3V9l-5 3V4H2z"/></svg>
+        <h4 class="dsp">Manufacturing</h4>
+        <p>Overhead conveyor and crane-rail servicing during running shifts, without shutting the line down.</p>
+      </a>
+      <a class="ind rv" data-d="3" href="#quote">
+        <span class="in-n">04</span>
+        <svg class="ico" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 14h16M4 14V6m12 8V6M4 6h12M7 14v-4h6v4"/></svg>
+        <h4 class="dsp">Infrastructure</h4>
+        <p>Metro depots, airport terminals and bridge soffits — rough-terrain units where the ground isn't finished.</p>
+      </a>
+      <a class="ind rv" data-d="4" href="#quote">
+        <span class="in-n">05</span>
+        <svg class="ico" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 7h14l-1 11H4zM7 7V4h6v3"/></svg>
+        <h4 class="dsp">Retail &amp; malls</h4>
+        <p>Non-marking tyres and a whisper-quiet drive, so signage and lighting work happens in trading hours.</p>
+      </a>
+      <a class="ind rv" data-d="5" href="#quote">
+        <span class="in-n">06</span>
+        <svg class="ico" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M11 2L4 12h5l-1 6 7-10h-5z"/></svg>
+        <h4 class="dsp">Utilities &amp; events</h4>
+        <p>Insulated platforms for line work, and silent units for stage rigging and broadcast builds.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROOF ═══════════════════════════════════════════ -->
+<section id="proof">
+  <div class="wrap proof-grid">
+    <div class="rv">
+      <div class="eyebrow"><span class="tag">Client desk</span><span class="ln"></span><span class="alt">ELEV. 19.0 M</span></div>
+      <div class="quote-mark">&ldquo;</div>
+      <blockquote class="proof-q dsp">
+        The machines turned up charged, the PDI sheet was in the operator's hand, and we were working
+        the same afternoon. <em>That's not normal in this industry.</em>
+      </blockquote>
+      <div class="proof-by">
+        <span class="avatar">RK</span>
+        <div><b>Rahul Kulkarni</b><span>Project Manager · L&amp;T Construction</span></div>
+      </div>
+      <p class="lead" style="margin-top:28px;font-size:14px">
+        Over 500 projects delivered since 2019 — from data-centre fit-outs to metro depots.
+      </p>
+    </div>
+    <div class="proof-img rv" data-d="1">
+      <img src="https://elevex.co.in/wp-content/uploads/2026/08/scissor-lift-hero-1.jpg" alt="ELEVEX scissor lift on site" loading="lazy">
+      <span class="proof-cap">Site handover · 42-point PDI complete</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side rv">
+      <div class="eyebrow"><span class="tag">Support desk</span><span class="ln"></span><span class="alt">ELEV. 21.0 M</span></div>
+      <h2 class="dsp h2" style="font-size:clamp(28px,3.6vw,44px)">Questions, answered.</h2>
+      <div class="faq-card">
+        <h4 class="dsp">Still not sure which lift?</h4>
+        <p>Send a photo of the work area. We'll come back with a machine, a height and a price — usually inside the hour.</p>
+        <a class="btn" href="https://wa.me/917028096111" target="_blank" rel="noopener"><span>WhatsApp us</span><span class="ar">→</span></a>
+      </div>
+    </div>
+
+    <div class="qs">
+      <div class="q rv"><button type="button" aria-expanded="false">
+        <span class="qi">01</span><span class="qt">Is the entire fleet really zero-emission?</span><span class="qp"></span></button>
+        <div class="qa"><p>Yes. Every machine we rent is battery-electric — there is no diesel or LPG unit in the fleet. No tailpipe emissions, no fuel stored on your site, and no ventilation assessment needed for indoor work.</p></div>
+      </div>
+      <div class="q rv"><button type="button" aria-expanded="false">
+        <span class="qi">02</span><span class="qt">How long does a charge last on a working shift?</span><span class="qp"></span></button>
+        <div class="qa"><p>A full charge covers a standard eight-hour shift of mixed drive-and-lift duty. Machines arrive at 100%, and recharging needs nothing more exotic than a 15A socket — about six hours from empty, so an overnight top-up covers a multi-week hire.</p></div>
+      </div>
+      <div class="q rv"><button type="button" aria-expanded="false">
+        <span class="qi">03</span><span class="qt">Do you supply certified operators?</span><span class="qp"></span></button>
+        <div class="qa"><p>We do. IPAF-trained operators can be added to any rental, and we run a free familiarisation session for your own crew at handover. Operator cost is quoted upfront in the same fixed number as the machine and transport.</p></div>
+      </div>
+      <div class="q rv"><button type="button" aria-expanded="false">
+        <span class="qi">04</span><span class="qt">Which cities do you deliver to?</span><span class="qp"></span></button>
+        <div class="qa"><p>Seven owned hubs serve 25 industrial cities including Mumbai, Pune, Delhi NCR, Ahmedabad, Bengaluru, Chennai, Hyderabad and Kolkata. Sites outside that radius are quoted case by case — we have delivered as far as Guwahati and Kochi.</p></div>
+      </div>
+      <div class="q rv"><button type="button" aria-expanded="false">
+        <span class="qi">05</span><span class="qt">What happens if a machine fails on site?</span><span class="qp"></span></button>
+        <div class="qa"><p>Call the 24/7 line. Metro response is under four hours; if the fault can't be closed on site we dispatch a replacement unit and you are not billed for the downtime. Breakdown cover runs the entire rental term.</p></div>
+      </div>
+      <div class="q rv"><button type="button" aria-expanded="false">
+        <span class="qi">06</span><span class="qt">What are the minimum and maximum rental terms?</span><span class="qp"></span></button>
+        <div class="qa"><p>One day is the minimum. Beyond that, weekly and monthly slabs bring the daily rate down significantly, and contracts over six months are priced individually with a dedicated machine allocated to your site.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE ═══════════════════════════════════════════ -->
+<section id="quote">
+  <div class="q-glow"></div>
+  <div class="wrap q-grid">
+    <div class="rv">
+      <div class="eyebrow"><span class="tag">Get a quote</span><span class="ln"></span><span class="alt">ELEV. 22.0 M — MAX REACH</span></div>
+      <h2 class="dsp q-h2">Tell us the height. <span class="ital">We'll do the rest.</span></h2>
+      <ul class="q-list">
+        <li><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#F59E4B" stroke-width="1.4"><path d="M1 6.5l4 4 7-8"/></svg>Fixed price — machine, transport both ways, operator optional</li>
+        <li><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#F59E4B" stroke-width="1.4"><path d="M1 6.5l4 4 7-8"/></svg>A reply inside four working hours</li>
+        <li><svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="#F59E4B" stroke-width="1.4"><path d="M1 6.5l4 4 7-8"/></svg>No obligation, and no dealer in the middle</li>
+      </ul>
+      <div class="q-contact">
+        <a href="tel:+917028096111">📞 +91 70280 96111</a>
+        <a href="mailto:hello@elevex.co.in">✉ hello@elevex.co.in</a>
+        <a href="https://wa.me/917028096111" target="_blank" rel="noopener">💬 WhatsApp the rental desk</a>
+      </div>
+    </div>
+
+    <div class="form rv" data-d="1" id="form">
+      <div class="f-body">
+        <div class="f-row">
+          <div class="fld"><input id="fName" type="text" placeholder=" " required><label for="fName">Full name</label></div>
+          <div class="fld"><input id="fPhone" type="tel" placeholder=" " required><label for="fPhone">Phone number</label></div>
+        </div>
+        <div class="fld"><input id="fMail" type="email" placeholder=" "><label for="fMail">Work email</label></div>
+        <div class="f-row">
+          <div class="fld">
+            <select id="fEquip">
+              <option value="Scissor lift">Scissor lift</option>
+              <option value="Articulating boom lift">Articulating boom lift</option>
+              <option value="Rough-terrain lift">Rough-terrain lift</option>
+              <option value="Low-level / mast lift">Low-level / mast lift</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select><label for="fEquip">Equipment</label>
+          </div>
+          <div class="fld">
+            <select id="fCity">
+              <option>Mumbai</option><option>Pune</option><option>Delhi NCR</option><option>Ahmedabad</option>
+              <option>Bengaluru</option><option>Chennai</option><option>Hyderabad</option><option>Kolkata</option><option>Other</option>
+            </select><label for="fCity">Site city</label>
+          </div>
+        </div>
+        <div class="fld"><textarea id="fMsg" placeholder=" "></textarea><label for="fMsg">Working height &amp; duration</label></div>
+        <button class="btn btn-fill f-sub" id="fSend" type="button"><span>Request quote</span><span class="ar">→</span></button>
+        <p class="f-note">We reply within four working hours · your details are never shared</p>
+      </div>
+      <div class="f-ok" id="fOk">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#F59E4B" stroke-width="1.2" style="margin:0 auto"><circle cx="20" cy="20" r="18"/><path d="M12 20.5l5.5 5.5L28 15"/></svg>
+        <h4 class="dsp">Request sent up.</h4>
+        <p>Your enquiry is with the rental desk. We'll call you on the number you gave us, usually well inside four hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="https://elevex.co.in/wp-content/uploads/2026/08/logo-elevex-white-1.png" alt="ELEVEX Rentals"></div>
+        <p class="fd">India's all-electric aerial work platform rental company. We own every machine we rent, and we deliver it ourselves.</p>
+        <div class="socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M3 5H1v8h2V5zM2 1a1.2 1.2 0 100 2.4A1.2 1.2 0 002 1zM13 8.2c0-2-1-3.4-2.9-3.4-1 0-1.7.5-2 1V5H6v8h2.1V8.7c0-.9.2-1.8 1.3-1.8s1.1 1 1.1 1.9V13H13V8.2z"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="1" width="12" height="12" rx="3.5"/><circle cx="7" cy="7" r="2.8"/><circle cx="10.6" cy="3.4" r=".7" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"><path d="M13.5 4.5a1.7 1.7 0 00-1.2-1.2C11.2 3 7 3 7 3s-4.2 0-5.3.3A1.7 1.7 0 00.5 4.5C.2 5.6.2 7 .2 7s0 1.4.3 2.5a1.7 1.7 0 001.2 1.2c1.1.3 5.3.3 5.3.3s4.2 0 5.3-.3a1.7 1.7 0 001.2-1.2c.3-1.1.3-2.5.3-2.5s0-1.4-.3-2.5zM5.6 9.1V4.9L9.2 7 5.6 9.1z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#home">Home</a></li><li><a href="#why">Why ELEVEX</a></li>
+          <li><a href="#process">How it works</a></li><li><a href="#industries">Industries</a></li>
+          <li><a href="#proof">Client reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Equipment</h5>
+        <ul>
+          <li><a href="#fleet">Scissor lifts</a></li><li><a href="#fleet">Boom lifts</a></li>
+          <li><a href="#fleet">Rough-terrain lifts</a></li><li><a href="#fleet">Mast &amp; low-level lifts</a></li>
+          <li><a href="#fleet">Full fleet</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="tel:+917028096111">+91 70280 96111</a></li>
+          <li><a href="mailto:hello@elevex.co.in">hello@elevex.co.in</a></li>
+          <li><a href="https://wa.me/917028096111" target="_blank" rel="noopener">WhatsApp the rental desk</a></li>
+          <li><a href="#quote">7 hubs · 25 cities · pan-India</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-word">
+      <div class="fw dsp"><span>E</span><span>L</span><span>E</span><span>V</span><span>E</span><span>X</span></div>
+    </div>
+
+    <div class="foot-base">
+      <span>© 2026 ELEVEX Access Solutions Pvt. Ltd.</span>
+      <span class="dsk"><i></i>Rental desk <span id="clock">--:--</span> IST</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </div>
+</footer>
+</main>
+
+<a class="wa" id="wa" href="https://wa.me/917028096111" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a8 8 0 00-6.9 12l-1 3.7 3.8-1A8 8 0 108 0zm4.6 11.3c-.2.6-1.1 1.1-1.6 1.1-.4 0-.9.2-3-.7-2.5-1.1-4.1-3.7-4.2-3.9-.1-.2-1-1.3-1-2.5s.6-1.8.8-2c.2-.3.5-.3.6-.3h.5c.2 0 .4-.1.6.4l.8 1.9c.1.1.1.3 0 .5l-.3.4-.3.3c-.1.1-.2.2 0 .5.2.3.7 1.2 1.6 1.9 1 .7 1.3.9 1.6 1 .2.1.4.1.5-.1l.6-.7c.2-.2.3-.2.5-.1l1.7.8c.3.1.4.2.5.3v1.2z"/></svg>
+  <span>Chat with us</span>
+</a>
+
+<script>
+(function(){
+'use strict';
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $  = (s,c)=> (c||document).querySelector(s);
+const $$ = (s,c)=> Array.from((c||document).querySelectorAll(s));
+
+/* ── Preloader ─────────────────────────────────────────── */
+window.addEventListener('load',()=>{
+  setTimeout(()=> $('#boot').classList.add('done'), RM?100:1450);
+});
+setTimeout(()=> $('#boot').classList.add('done'), 3800); // safety net
+
+/* ── Altitude rail: ticks + colour lerp through the 6 bands ── */
+const BANDS = ['#095577','#2867AB','#524E5D','#6F5150','#AC4625','#F59E4B'];
+const hex2rgb = h => [parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+const RGB = BANDS.map(hex2rgb);
+function bandAt(t){
+  const p = Math.min(Math.max(t,0),1) * (RGB.length-1);
+  const i = Math.min(Math.floor(p), RGB.length-2), f = p-i;
+  const c = RGB[i].map((v,k)=> Math.round(v + (RGB[i+1][k]-v)*f));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+(function buildTicks(){
+  const t = $('#railTicks'); if(!t) return;
+  let h='';
+  for(let i=0;i<=40;i++) h += `<span class="${i%5===0?'maj':''}" style="top:${i*2.5}%"></span>`;
+  t.innerHTML = h;
+})();
+
+const railLine=$('#railLine'), railDot=$('#railDot'), railRead=$('#railRead'),
+      topProg=$('#topProg'), nav=$('#nav'), wa=$('#wa'), root=document.documentElement;
+let ticking=false;
+function onScroll(){
+  const y = window.scrollY;
+  const max = document.body.scrollHeight - innerHeight;
+  const t = max>0 ? y/max : 0;
+  const col = bandAt(t);
+  root.style.setProperty('--accent', col);
+  if(railLine){ railLine.style.height = (t*100)+'%'; }
+  if(railDot){ railDot.style.top = (t*100)+'%'; }
+  if(railRead){ railRead.textContent = (t*22).toFixed(1); }
+  if(topProg) topProg.style.width = (t*100)+'%';
+  nav.classList.toggle('stuck', y>40);
+  wa.classList.toggle('on', y>560);
+  ticking=false;
+}
+addEventListener('scroll',()=>{ if(!ticking){ requestAnimationFrame(onScroll); ticking=true; } },{passive:true});
+onScroll();
+
+/* ── Mobile drawer ─────────────────────────────────────── */
+const burger=$('#burger'), drawer=$('#drawer');
+burger.addEventListener('click',()=>{
+  const on = drawer.classList.toggle('on');
+  burger.classList.toggle('on',on);
+  burger.setAttribute('aria-expanded',on);
+  document.body.classList.toggle('lock',on);
+});
+$$('#drawer a').forEach(a=> a.addEventListener('click',()=>{
+  drawer.classList.remove('on'); burger.classList.remove('on');
+  burger.setAttribute('aria-expanded','false'); document.body.classList.remove('lock');
+}));
+
+/* ── Scroll reveal ─────────────────────────────────────── */
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.14, rootMargin:'0px 0px -8% 0px'});
+$$('.rv').forEach(el=> io.observe(el));
+const pg = $('#procGrid');
+if(pg) new IntersectionObserver((es,o)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target); } });
+},{threshold:.25}).observe(pg);
+
+/* ── Count-up metrics ──────────────────────────────────── */
+const cio = new IntersectionObserver((es)=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el=e.target, to=+el.dataset.to, dur=1500, t0=performance.now();
+    if(RM){ el.textContent=to; cio.unobserve(el); return; }
+    (function step(now){
+      const p = Math.min((now-t0)/dur,1);
+      el.textContent = Math.round(to * (1-Math.pow(1-p,3)));
+      if(p<1) requestAnimationFrame(step);
+    })(t0);
+    cio.unobserve(el);
+  });
+},{threshold:.5});
+$$('.cnt').forEach(el=> cio.observe(el));
+
+/* ── Fleet viewer ──────────────────────────────────────── */
+const U='https://elevex.co.in/wp-content/uploads/2026/08/';
+const FLEET=[
+  {tag:'EX-S14E · ELECTRIC · INDOOR RATED', alt:'ELEVEX electric scissor lift',
+   sol:U+'scissor-lift-main-1.png', out:U+'scissor-lift-outline-1.png',
+   specs:[['14 m','Working height'],['450 kg','Platform capacity'],['8 hr','Runtime / charge'],['62 dB','Noise level']]},
+  {tag:'EX-B22A · ARTICULATING · UP-AND-OVER', alt:'ELEVEX articulating boom lift',
+   sol:U+'boom-lift-main.png', out:U+'boom-lift-outline-1.png',
+   specs:[['22 m','Working height'],['230 kg','Platform capacity'],['12.4 m','Up-and-over reach'],['360°','Turret rotation']]},
+  {tag:'EX-T18RT · 4WD · OSCILLATING AXLE', alt:'ELEVEX rough-terrain lift',
+   sol:U+'terrain-lift-main.png', out:U+'boom-lift-outline-1.png',
+   specs:[['18 m','Working height'],['680 kg','Platform capacity'],['4WD','Drive system'],['45%','Gradeability']]},
+  {tag:'EX-M08L · SINGLE-PERSON · DOORWAY FIT', alt:'ELEVEX mast lift',
+   sol:U+'scissor-lift-main.png', out:U+'scissor-lift-outline-1.png',
+   specs:[['8 m','Working height'],['200 kg','Platform capacity'],['760 mm','Stowed width'],['410 kg','Machine weight']]}
+];
+const viewer=$('#viewer'), vSol=$('#vSol'), vOut=$('#vOut'), vTag=$('#vTag'), vSpecs=$('#vSpecs');
+let curCat=0;
+function setCat(i){
+  if(i===curCat) return;
+  curCat=i;
+  const d=FLEET[i];
+  $$('.cat').forEach((c,k)=> c.classList.toggle('on',k===i));
+  viewer.classList.add('swap');                       // fade to blueprint
+  vOut.src=d.out;
+  setTimeout(()=>{
+    vSol.src=d.sol; vSol.alt=d.alt; vTag.textContent=d.tag;
+    $$('#vSpecs > div').forEach((cell,k)=>{
+      cell.querySelector('.sv').textContent=d.specs[k][0];
+      cell.querySelector('.sl').textContent=d.specs[k][1];
     });
-  </script>
-</body>
+    viewer.classList.remove('swap');                  // resolve to machine
+  }, RM?0:340);
+}
+$$('.cat').forEach(c=>{
+  c.addEventListener('click',()=> setCat(+c.dataset.cat));
+  c.setAttribute('tabindex','0'); c.setAttribute('role','button');
+  c.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); setCat(+c.dataset.cat);} });
+});
+FLEET.forEach(d=>{ [d.sol,d.out].forEach(s=>{ const i=new Image(); i.src=s; }); });
 
+/* ── FAQ accordion ─────────────────────────────────────── */
+$$('.q button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const q=btn.parentElement, panel=q.querySelector('.qa'), open=q.classList.contains('on');
+    $$('.q').forEach(o=>{ o.classList.remove('on'); o.querySelector('.qa').style.maxHeight=null;
+                          o.querySelector('button').setAttribute('aria-expanded','false'); });
+    if(!open){ q.classList.add('on'); panel.style.maxHeight=panel.scrollHeight+'px';
+               btn.setAttribute('aria-expanded','true'); }
+  });
+});
+
+/* ── Marquee + ticker: duplicate for seamless loop ─────── */
+['#mq','#tickRun'].forEach(sel=>{ const el=$(sel); if(el) el.innerHTML += el.innerHTML; });
+
+/* ── Quote form → rental desk on WhatsApp ──────────────── */
+const form=$('#form');
+$$('#form select').forEach(s=> s.classList.add('has'));
+$('#fSend').addEventListener('click',()=>{
+  const name=$('#fName').value.trim(), phone=$('#fPhone').value.trim();
+  let bad=false;
+  [[$('#fName'),name],[$('#fPhone'),phone]].forEach(([el,v])=>{
+    el.style.borderColor = v ? '' : '#AC4625'; if(!v) bad=true;
+  });
+  if(bad){ $('#fName').focus(); return; }
+  const msg = `New quote request — ELEVEX\n\nName: ${name}\nPhone: ${phone}\nEmail: ${$('#fMail').value.trim()||'—'}\nEquipment: ${$('#fEquip').value}\nSite city: ${$('#fCity').value}\nHeight & duration: ${$('#fMsg').value.trim()||'—'}`;
+  window.open('https://wa.me/917028096111?text='+encodeURIComponent(msg),'_blank','noopener');
+  form.classList.add('sent'); $('#fOk').classList.add('on');
+});
+
+/* ── Rental desk clock (IST) ───────────────────────────── */
+(function clock(){
+  const el=$('#clock'); if(!el) return;
+  const tick=()=>{ el.textContent = new Date().toLocaleTimeString('en-IN',
+    {timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false}); };
+  tick(); setInterval(tick,30000);
+})();
+
+/* ── Anchor offset for the fixed nav ───────────────────── */
+$$('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href'); if(id==='#'||id.length<2) return;
+    const t=document.querySelector(id); if(!t) return;
+    e.preventDefault();
+    window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-72, behavior:RM?'auto':'smooth'});
+  });
+});
+})();
+</script>
+</body>
 </html>

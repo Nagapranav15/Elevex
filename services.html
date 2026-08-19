@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>About Us — ELEVEX Rentals | Palod Group 80+ Years Heritage</title>
-  <meta name="description" content="Learn about ELEVEX Rentals and the Palod Group's 80+ years of industrial heritage, core expertise, and zero-emission vision." />
+  <title>Sales &amp; Service — ELEVEX Rentals | Palod Group</title>
+  <meta name="description" content="Explore ELEVEX's Equipment Rental, Fleet Sales, and 24/7 OEM Maintenance & Spare Parts services." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,16 +65,18 @@
       padding: 70px 0;
     }
 
-    .expertise-card {
-      background-color: #FFFFFF;
-      border: 1px solid #E2E8F0;
-      border-top: 4px solid var(--brand-blue);
-      padding: 36px 30px;
+    .pillar-box {
+      background: linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-blue-dark) 100%);
+      color: #FFFFFF;
+      padding: 40px;
       height: 100%;
-      box-shadow: 0 10px 30px rgba(6, 43, 79, 0.05);
+      position: relative;
     }
-    .expertise-card h3 { font-size: 22px; font-weight: 800; color: var(--brand-blue); margin-bottom: 14px; }
-    .expertise-card p { font-size: 14px; color: #475569; line-height: 1.65; }
+    .pillar-box h3 { color: var(--brand-yellow); font-size: 24px; font-weight: 800; margin-bottom: 16px; }
+    .pillar-box p { color: #CBD5E1; font-size: 14px; margin-bottom: 24px; }
+    .pillar-box ul { list-style: none; padding: 0; }
+    .pillar-box ul li { color: #FFFFFF; font-size: 14px; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .pillar-box ul li i { color: var(--brand-yellow); }
 
     .footer-elaborate {
       background-color: #031427;
@@ -102,8 +104,8 @@
         <ul class="nav-menu d-none d-lg-flex">
           <li><a href="index.html">Home</a></li>
           <li><a href="fleet.html">Our Fleet</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
-          <li><a href="services.html">Sales &amp; Service</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Sales &amp; Service</a></li>
           <li><a href="blog.html">Blogs</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
@@ -115,62 +117,54 @@
   <!-- Hero -->
   <section class="page-hero">
     <div class="container text-center">
-      <h1 class="display-4 fw-bold text-white mb-2">About ELEVEX Rentals</h1>
-      <p class="lead text-warning fw-semibold">A Division of Palod Group — 4th Generation Industrial Heritage (80+ Years)</p>
+      <h1 class="display-4 fw-bold text-white mb-2">Sales, Rental &amp; Services</h1>
+      <p class="lead text-warning fw-semibold">Single-Source Partner for Aerial Work Platforms &amp; Heavy Cranes</p>
     </div>
   </section>
 
-  <!-- Story & Heritage Section -->
-  <section class="py-5">
-    <div class="container py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <span class="text-warning fw-bold text-uppercase small">OUR HERITAGE</span>
-          <h2 class="fw-bold display-6 text-primary mb-3">8 Decades of Trust. Infinite New Heights.</h2>
-          <p class="text-secondary">
-            Elevex Rentals is the premier work-at-height and aerial equipment rental division of the <strong>Palod Group</strong>. Founded in the 1940s, the Palod Group is a fourth-generation family enterprise with over 80 years of industrial excellence and a group valuation exceeding ₹200 crore+ (USD 22.2M+).
-          </p>
-          <p class="text-secondary">
-            We operate India's largest fleet of zero-emission, 100% electric scissor lifts, boom lifts, and heavy telehandlers, servicing major infrastructure and industrial sites nationwide.
-          </p>
-        </div>
-        <div class="col-lg-6 text-center">
-          <img src="assets/scissor-lift-main.png" alt="Elevex Heritage Machine" style="max-height: 400px; width: auto;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Expertise Section (Image 1 Content) -->
+  <!-- Pillars Section -->
   <section class="py-5 bg-light">
     <div class="container py-4">
-      <div class="text-center mb-5">
-        <span class="text-warning fw-bold text-uppercase small">CORE PRINCIPLES</span>
-        <h2 class="fw-bold display-6 text-primary">Our Expertise</h2>
-      </div>
       <div class="row g-4">
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>Safety</h3>
-            <p>Safety is our core value and being aerial work platform specialists we prioritize the safety of our employees and customers. As a specialist like Elevex we go above and beyond to keep you safe.</p>
+        <!-- Rental -->
+        <div class="col-lg-4">
+          <div class="pillar-box">
+            <h3>01. Equipment Rental</h3>
+            <p>Short-term and long-term rental solutions with 100% electric scissor lifts, boom lifts, and cranes.</p>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Pan-India site delivery &amp; quick setup</li>
+              <li><i class="bi bi-check-circle-fill"></i> Certified operator options available</li>
+              <li><i class="bi bi-check-circle-fill"></i> Flexible daily/monthly billing plans</li>
+              <li><i class="bi bi-check-circle-fill"></i> Zero-emission indoor electric platforms</li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>Sustainability</h3>
-            <p>At Elevex, we believe there is an increasingly important role for us to play in helping our customers reach net zero emissions and create a healthier planet. Elevex is committed to UN SDG goals.</p>
+
+        <!-- Sales -->
+        <div class="col-lg-4">
+          <div class="pillar-box">
+            <h3>02. Equipment Sales</h3>
+            <p>Authorized partner for global manufacturers including XCMG in Western India.</p>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> Brand-new &amp; certified pre-owned lifts</li>
+              <li><i class="bi bi-check-circle-fill"></i> Complete OEM warranty &amp; financing</li>
+              <li><i class="bi bi-check-circle-fill"></i> Custom fleet procurement for projects</li>
+              <li><i class="bi bi-check-circle-fill"></i> Full operator handover &amp; orientation</li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>The Elevex Way</h3>
-            <p>Our vision is to deliver the best customer experience in the industry. But we know that it takes more than good intentions to fulfill that promise. That's why we've implemented The Elevex Way.</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="expertise-card">
-            <h3>Digital Solutions</h3>
-            <p>Elevex has developed various digital solutions in order to enhance efficiency and productivity. <strong>My Elevex</strong>, a digital platform that allows you to manage your rental journey effectively.</p>
+
+        <!-- Services -->
+        <div class="col-lg-4">
+          <div class="pillar-box">
+            <h3>03. Maintenance &amp; Parts</h3>
+            <p>Comprehensive technical service support, scheduled health audits, and genuine spare parts.</p>
+            <ul>
+              <li><i class="bi bi-check-circle-fill"></i> 24/7 emergency site repair response</li>
+              <li><i class="bi bi-check-circle-fill"></i> Preventive health &amp; safety audits</li>
+              <li><i class="bi bi-check-circle-fill"></i> Genuine OEM spare parts inventory</li>
+              <li><i class="bi bi-check-circle-fill"></i> Certified operator training modules</li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>ELEVEX Rentals — All-Electric Aerial Work Platforms</title>
+  <meta name="description" content="Next-generation electric aerial work platforms designed for unmatched performance, safety and sustainability." />
+
+  <!-- Google Fonts: Inter, Space Grotesk, Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM & COLOR PALETTE (EXACT IMAGE REPLICA)
+       ========================================================================== */
+    :root {
+      --bg-page: #F5F7FA;
+      --bg-white: #FFFFFF;
+      --navy-dark: #0A192F;
+      --navy-card: #081B33;
+      --navy-darker: #040D1A;
+      --teal-accent: #00A389;
+      --teal-light: #E6F6F3;
+      --orange-red: #D94625;
+      --amber-yellow: #F59E0B;
+      --blue-primary: #0F52BA;
+      --blue-hover: #0C4399;
+      --dark-green-card: #032E27;
+      
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+
+      --font-heading: 'Space Grotesk', 'Manrope', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --radius-pill: 999px;
+
+      --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.04);
+      --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--navy-dark);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .eyebrow-label {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-accent);
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+
+    /* Custom Container */
+    .custom-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Buttons */
+    .btn-blue {
+      background-color: var(--blue-primary);
+      color: #ffffff !important;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 12px 26px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(15, 82, 186, 0.25);
+    }
+    .btn-blue:hover {
+      background-color: var(--blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 82, 186, 0.35);
+    }
+
+    .btn-outline-custom {
+      background-color: transparent;
+      color: var(--navy-dark) !important;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 12px 26px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid #CBD5E1;
+      transition: all 0.25s ease;
+    }
+    .btn-outline-custom:hover {
+      border-color: var(--navy-dark);
+      background-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-center {
+      background-color: #ffffff;
+      color: var(--navy-dark) !important;
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      display: inline-block;
+      border: 1.5px solid #D1D5DB;
+      transition: all 0.25s ease;
+    }
+    .btn-outline-center:hover {
+      border-color: var(--blue-primary);
+      color: var(--blue-primary) !important;
+      box-shadow: var(--shadow-subtle);
+    }
+
+    /* ==========================================================================
+       1. HEADER / NAVBAR
+       ========================================================================== */
+    .navbar-elevex {
+      background-color: #ffffff;
+      padding: 18px 0;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .brand-logo .logo-main {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--navy-dark);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .brand-logo .logo-main span {
+      color: var(--amber-yellow);
+    }
+    .brand-logo .logo-sub {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--text-muted);
+      border-left: 2px solid #CBD5E1;
+      padding-left: 8px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      margin: 0;
+    }
+    .nav-links a {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--navy-dark);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: var(--blue-primary);
+    }
+
+    .btn-quote-header {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--navy-dark);
+      border: 1.5px solid #CBD5E1;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-quote-header:hover {
+      background-color: var(--navy-dark);
+      color: #ffffff;
+      border-color: var(--navy-dark);
+    }
+
+    /* ==========================================================================
+       2. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%);
+      padding: 60px 0 40px;
+      overflow: hidden;
+    }
+
+    .hero-bg-building {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      background-image: url('https://images.unsplash.com/photo-1554469384-e58fac16e23a?w=1400&auto=format&fit=crop&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.25;
+      mask-image: linear-gradient(to right, transparent 0%, black 40%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%);
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: 46px;
+      line-height: 1.08;
+      font-weight: 900;
+      color: var(--navy-dark);
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+    .hero-title .text-red {
+      color: var(--orange-red);
+    }
+    .hero-title .text-amber {
+      color: var(--amber-yellow);
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .hero-metrics-row {
+      display: flex;
+      gap: 24px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid #E2E8F0;
+    }
+    .metric-item strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy-dark);
+    }
+    .metric-item span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Right Hero Visual */
+    .hero-visual-wrapper {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero-lift-img {
+      max-width: 110%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+      position: relative;
+      z-index: 2;
+      transform: translateY(-20px) scale(1.05);
+    }
+
+    /* Next Gen Fleet Badge */
+    .next-gen-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--navy-card);
+      color: #ffffff;
+      padding: 16px 22px;
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 36px rgba(10, 25, 47, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 10;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .next-gen-badge .icon-box {
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber-yellow);
+      font-size: 18px;
+    }
+    .next-gen-badge .badge-tag {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      display: block;
+    }
+    .next-gen-badge .badge-title {
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    /* ==========================================================================
+       3. OUR EQUIPMENT RANGE
+       ========================================================================== */
+    .equipment-section {
+      padding: 70px 0;
+      background-color: #F8FAFC;
+    }
+
+    .equipment-card {
+      background-color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      border: 1px solid #E2E8F0;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .equipment-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: #CBD5E1;
+    }
+    .equipment-card .img-container {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .equipment-card .img-container img {
+      max-height: 140px;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .equipment-card .card-title {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--navy-dark);
+      margin-bottom: 8px;
+    }
+    .equipment-card .card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+    .equipment-card .card-link {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--blue-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .equipment-card .card-link:hover {
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       4. SOLUTIONS FOR EVERY INDUSTRY
+       ========================================================================== */
+    .solutions-section {
+      padding: 70px 0;
+      background-color: #ffffff;
+    }
+
+    .industry-card {
+      position: relative;
+      height: 180px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+    .industry-card:hover {
+      transform: translateY(-4px);
+    }
+    .industry-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .industry-card:hover img {
+      transform: scale(1.08);
+    }
+    .industry-card .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 25, 47, 0.2) 0%, rgba(10, 25, 47, 0.85) 100%);
+    }
+    .industry-card .card-title-wrap {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .industry-card .card-title-wrap span {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+    .industry-card .card-title-wrap i {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+    }
+
+    /* ==========================================================================
+       5. FEATURE BANNER (SUSTAINABLE. SMART. SUPERIOR.)
+       ========================================================================== */
+    .feature-banner-section {
+      padding: 40px 0;
+    }
+
+    .feature-banner-card {
+      background-color: var(--dark-green-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      color: #ffffff;
+    }
+    .feature-banner-img {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      object-fit: cover;
+    }
+    .feature-banner-content {
+      padding: 48px;
+    }
+    .feature-banner-content .eyebrow {
+      color: #2DD4BF;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .feature-banner-content h2 {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .feature-banner-content p {
+      color: #94A3B8;
+      font-size: 14px;
+      max-width: 520px;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .feature-banner-cols {
+      display: flex;
+      gap: 28px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+    }
+    .feature-col strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .feature-col span {
+      font-size: 12px;
+      color: #94A3B8;
+      line-height: 1.4;
+      display: block;
+    }
+
+    /* ==========================================================================
+       6. HOW IT WORKS
+       ========================================================================== */
+    .how-it-works-section {
+      padding: 70px 0;
+      background-color: #F8FAFC;
+    }
+
+    .timeline-wrapper {
+      position: relative;
+      margin-top: 48px;
+    }
+    .timeline-line {
+      position: absolute;
+      top: 24px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background-color: #CBD5E1;
+      z-index: 1;
+    }
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .timeline-number {
+      width: 48px;
+      height: 48px;
+      background-color: #ffffff;
+      border: 2px solid var(--navy-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-family: var(--font-heading);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy-dark);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .timeline-step h5 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 6px;
+    }
+    .timeline-step p {
+      font-size: 12px;
+      color: var(--text-muted);
+      max-width: 180px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       7. 2-COLUMN HIGHLIGHT CARDS
+       ========================================================================== */
+    .highlight-cards-section {
+      padding: 50px 0;
+    }
+
+    .card-light-box {
+      background-color: #ffffff;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-dark-box {
+      background: linear-gradient(135deg, #0A192F 0%, #071324 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      height: 100%;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #E2E8F0;
+    }
+    .stat-box strong {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--navy-dark);
+      display: block;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-box span {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .tech-card-graphic {
+      margin-top: 20px;
+      align-self: flex-end;
+      max-width: 80%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    .tech-card-graphic img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ==========================================================================
+       8. TESTIMONIALS & LATEST INSIGHTS
+       ========================================================================== */
+    .testimonials-insights-section {
+      padding: 50px 0;
+      background-color: #F8FAFC;
+    }
+
+    .testimonial-card {
+      background-color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid #E2E8F0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .quote-icon {
+      font-size: 32px;
+      color: var(--navy-dark);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .quote-text {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy-dark);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .author-info strong {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy-dark);
+      display: block;
+    }
+    .author-info span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 6px;
+      margin-top: 24px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #CBD5E1;
+    }
+    .dot.active {
+      background-color: var(--navy-dark);
+      width: 18px;
+      border-radius: 4px;
+    }
+
+    .insight-card {
+      background-color: #ffffff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .insight-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .insight-card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+    .insight-card .card-body-custom {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .insight-card .date {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .insight-card h6 {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy-dark);
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .insight-card .read-more {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--blue-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ==========================================================================
+       9. READY TO ELEVATE YOUR BUSINESS (CTA BANNER)
+       ========================================================================== */
+    .cta-banner-section {
+      padding: 40px 0;
+    }
+
+    .cta-banner-card {
+      background: linear-gradient(135deg, #051A33 0%, #031024 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner-card h2 {
+      color: #ffffff;
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .cta-banner-card p {
+      color: #94A3B8;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .cta-lift-bg {
+      position: absolute;
+      right: -20px;
+      bottom: -40px;
+      width: 450px;
+      height: 100%;
+      pointer-events: none;
+    }
+    .cta-lift-bg img {
+      width: 100%;
+      height: 120%;
+      object-fit: contain;
+      object-position: bottom right;
+    }
+
+    .btn-dark-outline {
+      background-color: transparent;
+      color: #ffffff !important;
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 12px 24px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .btn-dark-outline:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+
+    /* ==========================================================================
+       10. FOOTER
+       ========================================================================== */
+    .footer-elevex {
+      background-color: var(--navy-darker);
+      padding: 30px 0;
+      color: #ffffff;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .footer-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+    }
+    .footer-links a {
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #94A3B8;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       1. HEADER / NAVBAR
+       ========================================================================== -->
+  <header class="navbar-elevex">
+    <div class="custom-container">
+      <div class="d-flex align-items-center justify-content-between">
+        <!-- Logo -->
+        <a href="#" class="brand-logo">
+          <div class="logo-main">ELEVEX</div>
+          <div class="logo-sub">RENTALS</div>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links d-none d-lg-flex">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">EQUIPMENT</a></li>
+          <li><a href="#">SOLUTIONS</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">RESOURCES</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+
+        <!-- Quote CTA -->
+        <div>
+          <a href="#" class="btn-quote-header">REQUEST A QUOTE</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================================================
+       2. HERO SECTION
+       ========================================================================== */
+  <section class="hero-section">
+    <div class="hero-bg-building"></div>
+    <div class="custom-container position-relative" style="z-index: 5;">
+      <div class="row align-items-center">
+        <!-- Left Content Column -->
+        <div class="col-lg-6">
+          <span class="eyebrow-label">ALL-ELECTRIC. ZERO COMPROMISE.</span>
+          <h1 class="hero-title">
+            REACH HIGHER.<br />
+            WORK SMARTER.<br />
+            <span class="text-red">BUILD</span> <span class="text-amber">BETTER.</span>
+          </h1>
+          <p class="hero-desc">
+            Next-generation electric aerial work platforms designed for unmatched performance, safety and sustainability.
+          </p>
+
+          <!-- Buttons -->
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#" class="btn-blue">EXPLORE EQUIPMENT <i class="bi bi-arrow-right"></i></a>
+            <a href="#" class="btn-outline-custom">TALK TO AN EXPERT</a>
+          </div>
+
+          <!-- Feature Metrics -->
+          <div class="hero-metrics-row">
+            <div class="metric-item">
+              <strong>100% Electric</strong>
+              <span>Zero Emissions.</span>
+            </div>
+            <div class="metric-item">
+              <strong>Built for Safety</strong>
+              <span>Reliable at Every Height</span>
+            </div>
+            <div class="metric-item">
+              <strong>Sustainable Choice</strong>
+              <span>For a Greener Tomorrow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="col-lg-6 position-relative mt-5 mt-lg-0">
+          <div class="hero-visual-wrapper">
+            <img src="assets/cutouts/boom-lift-main.png" alt="Elevex Boom Lift" class="hero-lift-img" />
+            
+            <!-- Next Gen Fleet Badge -->
+            <div class="next-gen-badge">
+              <div class="icon-box">
+                <i class="bi bi-lightning-charge-fill"></i>
+              </div>
+              <div>
+                <span class="badge-tag">NEXT GENERATION</span>
+                <span class="badge-title">ELECTRIC FLEET</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       3. OUR EQUIPMENT RANGE
+       ========================================================================== -->
+  <section class="equipment-section">
+    <div class="custom-container">
+      <div class="text-center mb-5">
+        <span class="eyebrow-label">OUR EQUIPMENT RANGE</span>
+        <h2 class="section-title">Machines That Move You Forward</h2>
+        <p class="section-subtitle mx-auto">
+          A complete range of electric lifts for every application and working environment.
+        </p>
+      </div>
+
+      <!-- 4 Cards Grid -->
+      <div class="row g-4 mb-5">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="equipment-card">
+            <div class="img-container">
+              <img src="assets/cutouts/scissor-lift-main.png" alt="Scissor Lifts" />
+            </div>
+            <h3 class="card-title">SCISSOR LIFTS</h3>
+            <p class="card-text">
+              Stable and spacious platforms designed for safe vertical access indoors and outdoors.
+            </p>
+            <a href="#" class="card-link">VIEW DETAILS <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="equipment-card">
+            <div class="img-container">
+              <img src="assets/cutouts/boom-lift-main.png" alt="Articulating Boom Lifts" />
+            </div>
+            <h3 class="card-title">ARTICULATING BOOM LIFTS</h3>
+            <p class="card-text">
+              Navigate obstacles with ease and reach more with precision and flexibility.
+            </p>
+            <a href="#" class="card-link">VIEW DETAILS <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="equipment-card">
+            <div class="img-container">
+              <img src="assets/cutouts/terrain-lift-main.png" alt="Telescopic Boom Lifts" />
+            </div>
+            <h3 class="card-title">TELESCOPIC BOOM LIFTS</h3>
+            <p class="card-text">
+              Maximum outreach and height for the toughest jobs at any site.
+            </p>
+            <a href="#" class="card-link">VIEW DETAILS <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="equipment-card">
+            <div class="img-container">
+              <img src="assets/cutouts/scissor-lift-hero-clean.png" alt="Vertical Mast Lifts" />
+            </div>
+            <h3 class="card-title">VERTICAL MAST LIFTS</h3>
+            <p class="card-text">
+              Compact, lightweight and ideal for narrow spaces and indoor work.
+            </p>
+            <a href="#" class="card-link">VIEW DETAILS <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Action -->
+      <div class="text-center">
+        <a href="#" class="btn-outline-center">VIEW ALL EQUIPMENT</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       4. SOLUTIONS FOR EVERY INDUSTRY
+       ========================================================================== -->
+  <section class="solutions-section">
+    <div class="custom-container">
+      <div class="text-center mb-5">
+        <span class="eyebrow-label">SOLUTIONS FOR EVERY INDUSTRY</span>
+        <h2 class="section-title">One Partner. Many Industries.</h2>
+      </div>
+
+      <!-- 6 Columns Grid -->
+      <div class="row g-3 mb-5">
+        <!-- 1. Construction -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="#" class="industry-card">
+            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?w=600&auto=format&fit=crop&q=80" alt="Construction" />
+            <div class="overlay"></div>
+            <div class="card-title-wrap">
+              <span>Construction</span>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- 2. Warehousing -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="#" class="industry-card">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&auto=format&fit=crop&q=80" alt="Warehousing" />
+            <div class="overlay"></div>
+            <div class="card-title-wrap">
+              <span>Warehousing</span>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- 3. Manufacturing -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="#" class="industry-card">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Manufacturing" />
+            <div class="overlay"></div>
+            <div class="card-title-wrap">
+              <span>Manufacturing</span>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- 4. Maintenance -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="#" class="industry-card">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="Maintenance" />
+            <div class="overlay"></div>
+            <div class="card-title-wrap">
+              <span>Maintenance</span>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- 5. Facilities -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="#" class="industry-card">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop&q=80" alt="Facilities" />
+            <div class="overlay"></div>
+            <div class="card-title-wrap">
+              <span>Facilities</span>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- 6. Events -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="#" class="industry-card">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&auto=format&fit=crop&q=80" alt="Events" />
+            <div class="overlay"></div>
+            <div class="card-title-wrap">
+              <span>Events</span>
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Center Action -->
+      <div class="text-center">
+        <a href="#" class="btn-outline-center">EXPLORE ALL SOLUTIONS</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       5. FEATURE BANNER (SUSTAINABLE. SMART. SUPERIOR.)
+       ========================================================================== -->
+  <section class="feature-banner-section">
+    <div class="custom-container">
+      <div class="feature-banner-card">
+        <div class="row g-0 align-items-center">
+          <!-- Left Image -->
+          <div class="col-lg-5">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop&q=80" alt="Sustainable Electric Lifts" class="feature-banner-img" />
+          </div>
+
+          <!-- Right Content -->
+          <div class="col-lg-7">
+            <div class="feature-banner-content">
+              <span class="eyebrow">BUILT FOR A BETTER TOMORROW</span>
+              <h2>Sustainable. Smart. Superior.</h2>
+              <p>
+                Our electric lifts are engineered to deliver high performance with zero emissions and minimal maintenance.
+              </p>
+
+              <!-- 3 Columns -->
+              <div class="feature-banner-cols">
+                <div class="feature-col">
+                  <strong>Zero Emissions</strong>
+                  <span>Cleaner environment for a healthier future.</span>
+                </div>
+                <div class="feature-col">
+                  <strong>Lower Operating Cost</strong>
+                  <span>Reduce energy usage and maintenance.</span>
+                </div>
+                <div class="feature-col">
+                  <strong>High Reliability</strong>
+                  <span>Built to perform, job after job.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       6. HOW IT WORKS
+       ========================================================================== -->
+  <section class="how-it-works-section">
+    <div class="custom-container">
+      <div class="text-center mb-4">
+        <span class="eyebrow-label">HOW IT WORKS</span>
+        <h2 class="section-title">Simple Steps. Seamless Experience.</h2>
+      </div>
+
+      <!-- Timeline Steps -->
+      <div class="timeline-wrapper">
+        <div class="timeline-line d-none d-md-block"></div>
+        <div class="row g-4">
+          <!-- Step 01 -->
+          <div class="col-12 col-md-2-4 timeline-step col-md">
+            <div class="timeline-number">01</div>
+            <h5>Choose Equipment</h5>
+            <p>Select the right lift for your job.</p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="col-12 col-md-2-4 timeline-step col-md">
+            <div class="timeline-number">02</div>
+            <h5>Get a Quote</h5>
+            <p>Quick and transparent pricing.</p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="col-12 col-md-2-4 timeline-step col-md">
+            <div class="timeline-number">03</div>
+            <h5>We Deliver</h5>
+            <p>On-time delivery, anywhere you need.</p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="col-12 col-md-2-4 timeline-step col-md">
+            <div class="timeline-number">04</div>
+            <h5>Get the Job Done</h5>
+            <p>Work with confidence and safety.</p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="col-12 col-md-2-4 timeline-step col-md">
+            <div class="timeline-number">05</div>
+            <h5>Ongoing Support</h5>
+            <p>We're here anytime you need us.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       7. 2-COLUMN HIGHLIGHT CARDS
+       ========================================================================== -->
+  <section class="highlight-cards-section">
+    <div class="custom-container">
+      <div class="row g-4">
+        <!-- Left Box -->
+        <div class="col-lg-6">
+          <div class="card-light-box">
+            <div>
+              <span class="eyebrow-label">TRUSTED BY BUSINESSES</span>
+              <h3 class="section-title" style="font-size: 26px;">Reliability You Can Count On</h3>
+              <p class="section-subtitle mt-2" style="font-size: 14px;">
+                Our customers trust Elevex for performance, safety and support that never lets them down.
+              </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+              <div class="stat-box">
+                <strong>500+</strong>
+                <span>Happy Customers</span>
+              </div>
+              <div class="stat-box">
+                <strong>99%</strong>
+                <span>Uptime Reliability</span>
+              </div>
+              <div class="stat-box">
+                <strong>24/7</strong>
+                <span>Expert Support</span>
+              </div>
+              <div class="stat-box">
+                <strong>Nationwide</strong>
+                <span>Service Network</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Box -->
+        <div class="col-lg-6">
+          <div class="card-dark-box">
+            <div>
+              <span class="eyebrow-label" style="color: #2DD4BF;">INNOVATION AT THE CORE</span>
+              <h3 class="section-title text-white" style="font-size: 26px;">Technology That Elevates Performance</h3>
+              <p class="mt-2" style="color: #94A3B8; font-size: 14px;">
+                Advanced electric systems and smart controls ensure better efficiency, safety and productivity.
+              </p>
+            </div>
+
+            <div class="tech-card-graphic">
+              <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80" alt="High Tech Control Panel" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       8. TESTIMONIALS & LATEST INSIGHTS
+       ========================================================================== -->
+  <section class="testimonials-insights-section">
+    <div class="custom-container">
+      <div class="row g-4">
+        <!-- Left: Testimonial -->
+        <div class="col-lg-4">
+          <div class="testimonial-card">
+            <div>
+              <span class="eyebrow-label">WHAT OUR CUSTOMERS SAY</span>
+              <div class="quote-icon"><i class="bi bi-quote"></i></div>
+              <p class="quote-text">
+                "Elevex lifts are reliable, efficient and perfect for our high-reach operations. Their support team is excellent."
+              </p>
+            </div>
+
+            <div>
+              <div class="author-info">
+                <strong>- Rajesh P.</strong>
+                <span>Project Manager, L&T</span>
+              </div>
+
+              <div class="carousel-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Latest Insights -->
+        <div class="col-lg-8">
+          <span class="eyebrow-label mb-3">LATEST INSIGHTS</span>
+          <div class="row g-3">
+            <!-- Article 1 -->
+            <div class="col-12 col-md-4">
+              <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?w=600&auto=format&fit=crop&q=80" alt="Article 1" />
+                <div class="card-body-custom">
+                  <div class="date">15 May 2024</div>
+                  <h6>Why All-Electric Lifts Are the Future of Work at Height</h6>
+                  <a href="#" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-12 col-md-4">
+              <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="Article 2" />
+                <div class="card-body-custom">
+                  <div class="date">03 May 2024</div>
+                  <h6>8 Safety Tips for Operating Aerial Work Platforms</h6>
+                  <a href="#" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-12 col-md-4">
+              <div class="insight-card">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80" alt="Article 3" />
+                <div class="card-body-custom">
+                  <div class="date">20 Apr 2024</div>
+                  <h6>How to Choose the Right Lift for Your Project</h6>
+                  <a href="#" class="read-more">READ MORE <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       9. READY TO ELEVATE YOUR BUSINESS (CTA BANNER)
+       ========================================================================== -->
+  <section class="cta-banner-section">
+    <div class="custom-container">
+      <div class="cta-banner-card">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2>Ready to Elevate Your Business?</h2>
+            <p>
+              Reliable equipment. Expert support. Let's build something great together.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#" class="btn-blue">GET A QUOTE <i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="btn-dark-outline">TALK TO OUR EXPERTS</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-lift-bg d-none d-lg-block">
+          <img src="assets/cutouts/boom-lift-main.png" alt="Boom Lift CTA" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       10. FOOTER
+       ========================================================================== -->
+  <footer class="footer-elevex">
+    <div class="custom-container">
+      <div class="footer-flex flex-column flex-md-row gap-3 text-center text-md-start">
+        <a href="#" class="brand-logo">
+          <div class="logo-main text-white" style="font-size: 20px;">ELEVEX <span>RENTALS</span></div>
+        </a>
+
+        <ul class="footer-links flex-wrap justify-content-center">
+          <li><a href="#">COMPANY</a></li>
+          <li><a href="#">EQUIPMENT</a></li>
+          <li><a href="#">SOLUTIONS</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">RESOURCES</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
