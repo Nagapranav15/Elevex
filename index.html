@@ -103,14 +103,14 @@
     .loader-stage { position: relative; width: min(92vw, 1000px); margin: 10px 0; }
     .loader-svg { width: 100%; height: auto; display: block; overflow: visible; }
     .ground-line { stroke: #CBD5E1; stroke-width: 2; }
-    .hyd-barrel { stroke: #143B52; stroke-width: 7; stroke-linecap: round; }
+    .hyd-barrel { stroke: #059669; stroke-width: 7; stroke-linecap: round; }
     .hyd-rod { stroke: url(#metalGradient); stroke-width: 3.5; stroke-linecap: round; }
-    .hyd-piston-head { fill: #143B52; }
+    .hyd-piston-head { fill: #047857; }
     .hyd-bolt { fill: var(--brand-yellow); }
-    .scissor-rod { stroke: url(#metalGradient); stroke-width: 9; stroke-linecap: round; }
-    .scissor-rod.accent { stroke: #143B52; stroke-width: 9; stroke-linecap: round; opacity: 0.92; }
-    .scissor-pivot { fill: #143B52; }
-    .scissor-pivot-ring { fill: none; stroke: var(--brand-yellow); stroke-width: 1.4; opacity: 0.9; }
+    .scissor-rod { stroke: #059669; stroke-width: 9; stroke-linecap: round; }
+    .scissor-rod.accent { stroke: #10B981; stroke-width: 9; stroke-linecap: round; opacity: 0.95; }
+    .scissor-pivot { fill: #047857; }
+    .scissor-pivot-ring { fill: none; stroke: var(--brand-yellow); stroke-width: 1.6; opacity: 0.95; }
     .wheel-spoke { stroke: #526B7A; stroke-width: 2; stroke-linecap: round; }
     .wheel-bolt { fill: var(--brand-yellow); }
     .elevation-gauge { position: absolute; left: 1%; bottom: 14%; display: flex; align-items: flex-end; gap: 6px; z-index: 1; pointer-events: none; }
@@ -1144,7 +1144,7 @@
               <stop offset="0%" stop-color="#cfd3d8"/><stop offset="50%" stop-color="#f5f6f8"/><stop offset="100%" stop-color="#a9adb3"/>
             </linearGradient>
             <linearGradient id="platformGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stop-color="#215676"/><stop offset="100%" stop-color="#143B52"/>
+              <stop offset="0%" stop-color="#10B981"/><stop offset="100%" stop-color="#047857"/>
             </linearGradient>
             <radialGradient id="wheelGradient" cx="35%" cy="35%" r="70%">
               <stop offset="0%" stop-color="#4a4f57"/><stop offset="100%" stop-color="#1c1e22"/>
@@ -1155,8 +1155,8 @@
           <g id="machineGroup">
             <g id="machineJitter">
               <g id="baseChassis">
-                <rect x="118" y="322" width="204" height="34" rx="6" fill="#1c1e22"/>
-                <rect x="118" y="322" width="204" height="8" rx="4" fill="#FCB040"/>
+                <rect x="118" y="322" width="204" height="34" rx="6" fill="#15803D"/>
+                <rect x="118" y="322" width="204" height="8" rx="4" fill="#34D399"/>
                 <g class="wheel-group" id="wheelLeft"><circle cx="150" cy="358" r="21" fill="url(#wheelGradient)"/></g>
                 <g class="wheel-group" id="wheelRight"><circle cx="290" cy="358" r="21" fill="url(#wheelGradient)"/></g>
               </g>
